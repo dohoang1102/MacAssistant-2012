@@ -169,6 +169,12 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
+    
+    if ([controller gameDBVersion] == FM2012_12_2) {
+        // 0x01 ???
+        *byteOffset += 1;
+    }
+    
 	for (i=0; i<count; i++) {
 		[self setCurrentRecord:(i+1)];
 		id object = [Loader readAwardFromData:data atOffset:byteOffset];
@@ -204,11 +210,22 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[awardThread start];
 	
 #pragma mark Cities
+    if ([controller gameDBVersion] == FM2012_12_2) {
+        // 0x05 ???
+        *byteOffset += 5;
+    }
+    
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"loading cities...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
+    
+    if ([controller gameDBVersion] == FM2012_12_2) {
+        // 0x01 ???
+        *byteOffset += 1;
+    }
+    
 	for (i=0; i<count; i++) {
 		[self setCurrentRecord:(i+1)];
 		id object = [Loader readCityFromData:data atOffset:byteOffset];
@@ -247,11 +264,22 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[pool drain];
 	
 #pragma mark Clubs
+    if ([controller gameDBVersion] == FM2012_12_2) {
+        // 0x05 ???
+        *byteOffset += 5;
+    }
+    
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"loading clubs...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
+    
+    if ([controller gameDBVersion] == FM2012_12_2) {
+        // 0x01 ???
+        *byteOffset += 1;
+    }
+    
 	for (i=0; i<count; i++) {
 		[self setCurrentRecord:(i+1)];
 		id object = [Loader readClubFromData:data atOffset:byteOffset version:[controller gameDBVersion]];

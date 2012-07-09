@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "+[Loader(CityLoader) readCityFromData:atOffset:]:CityLoader.m">
+      </ContextState>
+      <ContextState
+         contextName = "+[Loader(AwardLoader) readAwardFromData:atOffset:]:AwardLoader.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[Loader(ClubLoader) readClubFromData:atOffset:version:]:ClubLoader.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Database readGameDB:atOffset:]:Database.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "*byteOffset">
+            </PersistentString>
+            <PersistentString
+               value = "[self awards]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -49,7 +49,12 @@
 	}
 	[object setColours:tempArray];
 	[tempArray release];
+    
+    // FM 2012 skip to the end
+    // 87 bytes of unknown data
+    offset += 87;
 	
+    /*
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	tempArray = [[NSMutableArray alloc] init];
 	for (int i=0;i<cbuffer;i++) {
@@ -168,7 +173,7 @@
 	
 	if (debug) { NSLog(@"after TIs at %d",offset); }
 	
-	[tempArray release];
+	// [tempArray release]; */
 	
 	*byteOffset = offset;
 	

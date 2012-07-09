@@ -231,6 +231,8 @@
 		[object setUnknownChar30:cbuffer];
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar31:cbuffer];
+        [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		// [object setUnknownChar32:cbuffer];
 		[object setTransferEmbargoStartDate:[FMDateLoader readFromData:data atOffset:&offset]];
 		[object setTransferEmbargoEndDate:[FMDateLoader readFromData:data atOffset:&offset]];
 		[object setTransferEmbargoAppealDate:[FMDateLoader readFromData:data atOffset:&offset]];
@@ -285,7 +287,6 @@
 		[object setUnknownChar38:cbuffer];
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar39:cbuffer];
-		
 		
 	}
 	

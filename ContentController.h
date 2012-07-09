@@ -7,7 +7,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <BWToolkitFramework/BWToolkitFramework.h>
 
 @interface ContentController : NSObject<NSSplitViewDelegate> {
 	IBOutlet Controller						*controller;
@@ -17,12 +16,12 @@
 	IBOutlet NSPredicateEditor				*playerFilter, *physicalFilter, *technicalFilter, *mentalFilter;
 	IBOutlet NSTableView					*playersTableView;
 	IBOutlet NSPredicateEditorRowTemplate	*predicateRow;
-	IBOutlet BWStyledTextField				*styledText;
-	IBOutlet BWStyledTextField				*physicalText;
-	IBOutlet BWStyledTextField				*personalText;
-	IBOutlet BWStyledTextField				*technicalText;
-	IBOutlet BWStyledTextField				*mentalText;
-	IBOutlet BWSheetController				*sheetController;
+	IBOutlet NSTextField                    *styledText;
+	IBOutlet NSTextField                    *physicalText;
+	IBOutlet NSTextField                    *personalText;
+	IBOutlet NSTextField                    *technicalText;
+	IBOutlet NSTextField                    *mentalText;
+	IBOutlet NSTextField                    *sheetController;
 	IBOutlet NSButton						*searchButton;
 }
 

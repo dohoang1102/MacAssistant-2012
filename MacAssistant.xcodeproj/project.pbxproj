@@ -44,7 +44,6 @@
 		E20D2CEB12D9F97600A0238C /* CompetitionHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CEA12D9F97600A0238C /* CompetitionHistory.m */; };
 		E20D2CF112D9F98E00A0238C /* CompetitionHistoryLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CF012D9F98E00A0238C /* CompetitionHistoryLoader.m */; };
 		E20D2CF412D9F99900A0238C /* CompetitionHistorySaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CF312D9F99900A0238C /* CompetitionHistorySaver.m */; };
-		E2595FD512395E21000444A6 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2595FD412395E21000444A6 /* BWToolkitFramework.framework */; };
 		E26586631236C7BB00545D25 /* PlayerStatsTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E26586601236C7BB00545D25 /* PlayerStatsTransformer.m */; };
 		E26586641236C7BB00545D25 /* PlayerRatingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E26586621236C7BB00545D25 /* PlayerRatingTransformer.m */; };
 		E26586791236CDF400545D25 /* ContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = E26586781236CDF400545D25 /* ContentController.m */; };
@@ -402,7 +401,6 @@
 		E20D2CF012D9F98E00A0238C /* CompetitionHistoryLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompetitionHistoryLoader.m; sourceTree = "<group>"; };
 		E20D2CF212D9F99900A0238C /* CompetitionHistorySaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompetitionHistorySaver.h; sourceTree = "<group>"; };
 		E20D2CF312D9F99900A0238C /* CompetitionHistorySaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompetitionHistorySaver.m; sourceTree = "<group>"; };
-		E2595FD412395E21000444A6 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = Library/Frameworks/BWToolkitFramework.framework; sourceTree = DEVELOPER_DIR; };
 		E265865F1236C7BB00545D25 /* PlayerStatsTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerStatsTransformer.h; sourceTree = "<group>"; };
 		E26586601236C7BB00545D25 /* PlayerStatsTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerStatsTransformer.m; sourceTree = "<group>"; };
 		E26586611236C7BB00545D25 /* PlayerRatingTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerRatingTransformer.h; sourceTree = "<group>"; };
@@ -966,7 +964,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				E2595FD512395E21000444A6 /* BWToolkitFramework.framework in Frameworks */,
 				E20D2C6612D9F6D800A0238C /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -987,7 +984,6 @@
 			isa = PBXGroup;
 			children = (
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
-				E2595FD412395E21000444A6 /* BWToolkitFramework.framework */,
 				E20D2C6512D9F6D800A0238C /* QuartzCore.framework */,
 			);
 			name = "Linked Frameworks";

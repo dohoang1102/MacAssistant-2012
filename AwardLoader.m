@@ -60,7 +60,7 @@
 	[object setType:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setPeriod:cbuffer];
-	if ([object period]>AP_MAX) { 
+	if ([object period]>AP_MAX) { // FM 2012 has a 9th Period??
 		return [NSString stringWithFormat:@"Invalid period value - %d",[object period]];
 	}
 	[object setAwardDate:[FMDateLoader readFromData:data atOffset:&offset]];
@@ -139,8 +139,13 @@
 	[object setRowID:ibuffer];
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setUID:ibuffer];
-	*byteOffset = offset;
-	
+    
+    // FM 2012 UNKNOWN -- Needs to be made conditional
+    [data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+    //[object setUnknownChar8:ibuffer];
+    
+    *byteOffset = offset;
+    
 	if (debug) { NSLog(@"Award %d at %d",[object rowID],offset); }
 	
 	return object;

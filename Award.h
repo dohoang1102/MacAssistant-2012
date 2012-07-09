@@ -16,8 +16,9 @@
 #define	AP_ON_SPECIFIED_DATE				6
 #define	AP_OF_THE_ROUND						7
 #define	AP_OF_THE_OPENING_OR_CLOSING_SEASON	8
+#define	AP_UNKNOWN_2012                     9
 
-#define AP_MAX								8
+#define AP_MAX								9
 
 // recipient type
 #define	ART_NOT_SET					0

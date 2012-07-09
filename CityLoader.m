@@ -56,6 +56,10 @@
 	[object setRowID:ibuffer];
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setUID:ibuffer];
+    
+    // FM 2012 -- Needs to be conditional
+    [data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+    // [object setUnknownChar2:ibuffer];
 	
 	*byteOffset = offset;
 	

@@ -130,9 +130,9 @@
 	[loader setHidden:NO];
 	BOOL isNewFormat = TRUE;
 	
-	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"loadLangDB"] == TRUE) {
+	if (true)  /*[[NSUserDefaults standardUserDefaults] boolForKey:@"loadLangDB"] == TRUE)*/ {
 		[database setStatus:NSLocalizedString(@"loading lang_db.dat", @"editor status")];
-		[database readLangDB:[[NSUserDefaults standardUserDefaults] stringForKey:@"lang_db_location"]];
+		[database readLangDB:@"/Users/Tom/Library/Application Support/Steam/SteamApps/common/football manager 2012/data/db/1220/lang_db.dat"];
 	}
 		
 	unsigned int fileLength, gameLength;
@@ -321,7 +321,7 @@
 	NSLog(@"Game Version: %d at %d",gameDBVersion, fileOffset);
 	
 	//Check version is compatiable with supported versions
-	if (gameDBVersion != FM2011_11_1 && gameDBVersion != FM2011_11_2) { 
+	if (gameDBVersion != FM2012_12_2 && gameDBVersion != FM2011_11_1 && gameDBVersion != FM2011_11_2) {
 		NSAlert *alert = [NSAlert alertWithMessageText:[NSString stringWithFormat:NSLocalizedString(@"Incompatible Database Version - %hu",@"error"),gameDBVersion] defaultButton:@"OK" alternateButton:nil 
 										   otherButton:nil informativeTextWithFormat:NSLocalizedString(@"The version of FM this game was saved under is not compatible with this editor",@"error message")];
 		NSLog(@"Incompatible Database Version.");
@@ -371,7 +371,10 @@
 	// 0x1537 unknown
 	
 	// Skip bytes (as comment above)
-	if (isNewFormat) { fileOffset += 1526; }
+    if (gameDBVersion >= FM2012_12_2) {
+        fileOffset += 1361;
+    }
+	else if (isNewFormat) { fileOffset += 1526; }
 	else {
 		fileOffset += 1537;
 		
