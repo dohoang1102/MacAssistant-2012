@@ -1,0 +1,1052 @@
+_0.0.t0-0 add-dir false false /MacAssistant
+
+_2.0.t0-0 add-file true false /MacAssistant/AwardLoader.m
+
+_2.0.t0-0 modify-file true false /MacAssistant/AwardLoader.m
+
+_5.0.t0-0 add-file true false /MacAssistant/FootballStadiumSaver.h
+
+_5.0.t0-0 modify-file true false /MacAssistant/FootballStadiumSaver.h
+
+_7.0.t0-0 add-file true false /MacAssistant/Unknown5Saver.m
+
+_7.0.t0-0 modify-file true false /MacAssistant/Unknown5Saver.m
+
+_9.0.t0-0 add-file true false /MacAssistant/NonPlayerStatsSaver.m
+
+_9.0.t0-0 modify-file true false /MacAssistant/NonPlayerStatsSaver.m
+
+_b.0.t0-0 add-file true false /MacAssistant/AlliterationSaver.m
+
+_b.0.t0-0 modify-file true false /MacAssistant/AlliterationSaver.m
+
+_d.0.t0-0 add-file true false /MacAssistant/FootballStadiumSaver.m
+
+_d.0.t0-0 modify-file true false /MacAssistant/FootballStadiumSaver.m
+
+_f.0.t0-0 add-file true false /MacAssistant/FMDateSaver.h
+
+_f.0.t0-0 modify-file true false /MacAssistant/FMDateSaver.h
+
+_h.0.t0-0 add-file true false /MacAssistant/PlayerReplacementLoader.h
+
+_h.0.t0-0 modify-file true false /MacAssistant/PlayerReplacementLoader.h
+
+_j.0.t0-0 add-file true false /MacAssistant/FMDateSaver.m
+
+_j.0.t0-0 modify-file true false /MacAssistant/FMDateSaver.m
+
+_l.0.t0-0 add-file true false /MacAssistant/PlayerReplacementLoader.m
+
+_l.0.t0-0 modify-file true false /MacAssistant/PlayerReplacementLoader.m
+
+_n.0.t0-0 add-file true false /MacAssistant/City.h
+
+_n.0.t0-0 modify-file true false /MacAssistant/City.h
+
+_p.0.t0-0 add-file true false /MacAssistant/City.m
+
+_p.0.t0-0 modify-file true false /MacAssistant/City.m
+
+_r.0.t0-0 add-file true false /MacAssistant/FootballStadiumLoader.h
+
+_r.0.t0-0 modify-file true false /MacAssistant/FootballStadiumLoader.h
+
+_t.0.t0-0 add-file true false /MacAssistant/IDPCSaver.h
+
+_t.0.t0-0 modify-file true false /MacAssistant/IDPCSaver.h
+
+_v.0.t0-0 add-file true false /MacAssistant/OfficialPastGameLoader.h
+
+_v.0.t0-0 modify-file true false /MacAssistant/OfficialPastGameLoader.h
+
+_x.0.t0-0 add-file true false /MacAssistant/Club.h
+
+_x.0.t0-0 modify-file true false /MacAssistant/Club.h
+
+_z.0.t0-0 add-file true false /MacAssistant/FootballStadiumLoader.m
+
+_z.0.t0-0 modify-file true false /MacAssistant/FootballStadiumLoader.m
+
+_11.0.t0-0 add-file true false /MacAssistant/IDPCSaver.m
+
+_11.0.t0-0 modify-file true false /MacAssistant/IDPCSaver.m
+
+_13.0.t0-0 add-file true false /MacAssistant/Fixture.h
+
+_13.0.t0-0 modify-file true false /MacAssistant/Fixture.h
+
+_15.0.t0-0 add-file true false /MacAssistant/BookmarkFolderLoader.h
+
+_15.0.t0-0 modify-file true false /MacAssistant/BookmarkFolderLoader.h
+
+_17.0.t0-0 add-file true false /MacAssistant/OfficialPastGameLoader.m
+
+_17.0.t0-0 modify-file true false /MacAssistant/OfficialPastGameLoader.m
+
+_19.0.t0-0 add-file true false /MacAssistant/Club.m
+
+_19.0.t0-0 modify-file true false /MacAssistant/Club.m
+
+_1b.0.t0-0 add-file true false /MacAssistant/Fixture.m
+
+_1b.0.t0-0 modify-file true false /MacAssistant/Fixture.m
+
+_1d.0.t0-0 add-file true false /MacAssistant/BookmarkFolderLoader.m
+
+_1d.0.t0-0 modify-file true false /MacAssistant/BookmarkFolderLoader.m
+
+_1f.0.t0-0 add-file true false /MacAssistant/FifaRankingMatchSaver.h
+
+_1f.0.t0-0 modify-file true false /MacAssistant/FifaRankingMatchSaver.h
+
+_1h.0.t0-0 add-file true false /MacAssistant/Weather.h
+
+_1h.0.t0-0 modify-file true false /MacAssistant/Weather.h
+
+_1j.0.t0-0 add-file true false /MacAssistant/Relationship.h
+
+_1j.0.t0-0 modify-file true false /MacAssistant/Relationship.h
+
+_1l.0.t0-0 add-file true false /MacAssistant/ClubFinanceRevenueRecord.h
+
+_1l.0.t0-0 modify-file true false /MacAssistant/ClubFinanceRevenueRecord.h
+
+_1n.0.t0-0 add-file true false /MacAssistant/FifaRankingMatchSaver.m
+
+_1n.0.t0-0 modify-file true false /MacAssistant/FifaRankingMatchSaver.m
+
+_1p.0.t0-0 add-file true false /MacAssistant/CompetitionHistoryLoader.h
+
+_1p.0.t0-0 modify-file true false /MacAssistant/CompetitionHistoryLoader.h
+
+_1r.0.t0-0 add-file true false /MacAssistant/InterestedClubLoader.h
+
+_1r.0.t0-0 modify-file true false /MacAssistant/InterestedClubLoader.h
+
+_1t.0.t0-0 add-file true false /MacAssistant/Weather.m
+
+_1t.0.t0-0 modify-file true false /MacAssistant/Weather.m
+
+_1v.0.t0-0 add-file true false /MacAssistant/NewsFilterListLoader.h
+
+_1v.0.t0-0 modify-file true false /MacAssistant/NewsFilterListLoader.h
+
+_1x.0.t0-0 add-file true false /MacAssistant/Relationship.m
+
+_1x.0.t0-0 modify-file true false /MacAssistant/Relationship.m
+
+_1z.0.t0-0 add-file true false /MacAssistant/ClubFinanceRevenueRecord.m
+
+_1z.0.t0-0 modify-file true false /MacAssistant/ClubFinanceRevenueRecord.m
+
+_21.0.t0-0 add-file true false /MacAssistant/FamousPlayer.h
+
+_21.0.t0-0 modify-file true false /MacAssistant/FamousPlayer.h
+
+_23.0.t0-0 add-file true false /MacAssistant/CompetitionHistoryLoader.m
+
+_23.0.t0-0 modify-file true false /MacAssistant/CompetitionHistoryLoader.m
+
+_25.0.t0-0 add-file true false /MacAssistant/InterestedClubLoader.m
+
+_25.0.t0-0 modify-file true false /MacAssistant/InterestedClubLoader.m
+
+_27.0.t0-0 add-file true false /MacAssistant/NewsFilterListLoader.m
+
+_27.0.t0-0 modify-file true false /MacAssistant/NewsFilterListLoader.m
+
+_29.0.t0-0 add-file true false /MacAssistant/ContractClauseSaver.h
+
+_29.0.t0-0 modify-file true false /MacAssistant/ContractClauseSaver.h
+
+_2b.0.t0-0 add-file true false /MacAssistant/StadiumChange.h
+
+_2b.0.t0-0 modify-file true false /MacAssistant/StadiumChange.h
+
+_2d.0.t0-0 add-file true false /MacAssistant/FamousPlayer.m
+
+_2d.0.t0-0 modify-file true false /MacAssistant/FamousPlayer.m
+
+_2f.0.t0-0 add-file true false /MacAssistant/ContractClauseSaver.m
+
+_2f.0.t0-0 modify-file true false /MacAssistant/ContractClauseSaver.m
+
+_2h.0.t0-0 add-file true false /MacAssistant/StadiumChange.m
+
+_2h.0.t0-0 modify-file true false /MacAssistant/StadiumChange.m
+
+_2j.0.t0-0 add-file true false /MacAssistant/LanguageIDs.h
+
+_2j.0.t0-0 modify-file true false /MacAssistant/LanguageIDs.h
+
+_2l.0.t0-0 add-file true false /MacAssistant/TransferPreferenceSaver.h
+
+_2l.0.t0-0 modify-file true false /MacAssistant/TransferPreferenceSaver.h
+
+_2n.0.t0-0 add-file true false /MacAssistant/README.txt
+
+_2n.0.t0-0 modify-file true false /MacAssistant/README.txt
+
+_2p.0.t0-0 add-file true false /MacAssistant/boss-icon.png
+
+_2p.0.t0-0 modify-file false true /MacAssistant/boss-icon.png
+
+_2p.0.t0-0 modify-file true false /MacAssistant/boss-icon.png
+
+_2r.0.t0-0 add-file true false /MacAssistant/TransferPreferenceSaver.m
+
+_2r.0.t0-0 modify-file true false /MacAssistant/TransferPreferenceSaver.m
+
+_2t.0.t0-0 add-dir false false /MacAssistant/conf
+
+_2u.0.t0-0 add-file true false /MacAssistant/conf/svnserve.conf
+
+_2u.0.t0-0 modify-file true false /MacAssistant/conf/svnserve.conf
+
+_2x.0.t0-0 add-file true false /MacAssistant/conf/passwd
+
+_2x.0.t0-0 modify-file true false /MacAssistant/conf/passwd
+
+_2z.0.t0-0 add-file true false /MacAssistant/conf/authz
+
+_2z.0.t0-0 modify-file true false /MacAssistant/conf/authz
+
+_31.0.t0-0 add-file true false /MacAssistant/FixtureBlockSaver.h
+
+_31.0.t0-0 modify-file true false /MacAssistant/FixtureBlockSaver.h
+
+_33.0.t0-0 add-file true false /MacAssistant/FixtureBlockSaver.m
+
+_33.0.t0-0 modify-file true false /MacAssistant/FixtureBlockSaver.m
+
+_35.0.t0-0 add-file true false /MacAssistant/PersonStats.h
+
+_35.0.t0-0 modify-file true false /MacAssistant/PersonStats.h
+
+_37.0.t0-0 add-file true false /MacAssistant/PersonStats.m
+
+_37.0.t0-0 modify-file true false /MacAssistant/PersonStats.m
+
+_39.0.t0-0 add-file true false /MacAssistant/ScoutingKnowledgeSaver.h
+
+_39.0.t0-0 modify-file true false /MacAssistant/ScoutingKnowledgeSaver.h
+
+_3b.0.t0-0 add-file true false /MacAssistant/WeatherSaver.h
+
+_3b.0.t0-0 modify-file true false /MacAssistant/WeatherSaver.h
+
+_3d.0.t0-0 add-file true false /MacAssistant/ScoutingKnowledgeSaver.m
+
+_3d.0.t0-0 modify-file true false /MacAssistant/ScoutingKnowledgeSaver.m
+
+_3f.0.t0-0 add-file true false /MacAssistant/PersonNicknameLoader.h
+
+_3f.0.t0-0 modify-file true false /MacAssistant/PersonNicknameLoader.h
+
+_3h.0.t0-0 add-file true false /MacAssistant/WeatherSaver.m
+
+_3h.0.t0-0 modify-file true false /MacAssistant/WeatherSaver.m
+
+_3j.0.t0-0 add-file true false /MacAssistant/Person.h
+
+_3j.0.t0-0 modify-file true false /MacAssistant/Person.h
+
+_3l.0.t0-0 add-file true false /MacAssistant/PersonNicknameLoader.m
+
+_3l.0.t0-0 modify-file true false /MacAssistant/PersonNicknameLoader.m
+
+_3n.0.t0-0 add-file true false /MacAssistant/Unknown2Loader.h
+
+_3n.0.t0-0 modify-file true false /MacAssistant/Unknown2Loader.h
+
+_3p.0.t0-0 add-file true false /MacAssistant/Person.m
+
+_3p.0.t0-0 modify-file true false /MacAssistant/Person.m
+
+_3r.0.t0-0 add-file true false /MacAssistant/Unknown6Loader.h
+
+_3r.0.t0-0 modify-file true false /MacAssistant/Unknown6Loader.h
+
+_3t.0.t0-0 add-file true false /MacAssistant/Unknown2Loader.m
+
+_3t.0.t0-0 modify-file true false /MacAssistant/Unknown2Loader.m
+
+_3v.0.t0-0 add-file true false /MacAssistant/ContentController.h
+
+_3v.0.t0-0 modify-file true false /MacAssistant/ContentController.h
+
+_3x.0.t0-0 add-file true false /MacAssistant/Unknown1Saver.h
+
+_3x.0.t0-0 modify-file true false /MacAssistant/Unknown1Saver.h
+
+_3z.0.t0-0 add-file true false /MacAssistant/Unknown6Loader.m
+
+_3z.0.t0-0 modify-file true false /MacAssistant/Unknown6Loader.m
+
+_41.0.t0-0 add-file true false /MacAssistant/ContentController.m
+
+_41.0.t0-0 modify-file true false /MacAssistant/ContentController.m
+
+_43.0.t0-0 add-file true false /MacAssistant/MediaClub.h
+
+_43.0.t0-0 modify-file true false /MacAssistant/MediaClub.h
+
+_45.0.t0-0 add-file true false /MacAssistant/Unknown1Saver.m
+
+_45.0.t0-0 modify-file true false /MacAssistant/Unknown1Saver.m
+
+_47.0.t0-0 add-file true false /MacAssistant/BookingCountLoader.h
+
+_47.0.t0-0 modify-file true false /MacAssistant/BookingCountLoader.h
+
+_49.0.t0-0 add-file true false /MacAssistant/MediaClub.m
+
+_49.0.t0-0 modify-file true false /MacAssistant/MediaClub.m
+
+_4b.0.t0-0 add-file true false /MacAssistant/BookingCountLoader.m
+
+_4b.0.t0-0 modify-file true false /MacAssistant/BookingCountLoader.m
+
+_4d.0.t0-0 add-dir false false /MacAssistant/MacAssistant.xcodeproj
+
+_4e.0.t0-0 add-file true false /MacAssistant/MacAssistant.xcodeproj/Tom.pbxuser
+
+_4e.0.t0-0 modify-file true false /MacAssistant/MacAssistant.xcodeproj/Tom.pbxuser
+
+_4h.0.t0-0 add-file true false /MacAssistant/MacAssistant.xcodeproj/project.pbxproj
+
+_4h.0.t0-0 modify-file true false /MacAssistant/MacAssistant.xcodeproj/project.pbxproj
+
+_4j.0.t0-0 add-file true false /MacAssistant/MacAssistant.xcodeproj/Tom.mode1v3
+
+_4j.0.t0-0 modify-file true false /MacAssistant/MacAssistant.xcodeproj/Tom.mode1v3
+
+_4l.0.t0-0 add-file true false /MacAssistant/Stadium.h
+
+_4l.0.t0-0 modify-file true false /MacAssistant/Stadium.h
+
+_4n.0.t0-0 add-file true false /MacAssistant/Stadium.m
+
+_4n.0.t0-0 modify-file true false /MacAssistant/Stadium.m
+
+_4p.0.t0-0 add-file true false /MacAssistant/StadiumChangeSaver.h
+
+_4p.0.t0-0 modify-file true false /MacAssistant/StadiumChangeSaver.h
+
+_4r.0.t0-0 add-file true false /MacAssistant/PlayerForm.h
+
+_4r.0.t0-0 modify-file true false /MacAssistant/PlayerForm.h
+
+_4t.0.t0-0 add-file true false /MacAssistant/StadiumChangeSaver.m
+
+_4t.0.t0-0 modify-file true false /MacAssistant/StadiumChangeSaver.m
+
+_4v.0.t0-0 add-file true false /MacAssistant/NewsFilter.h
+
+_4v.0.t0-0 modify-file true false /MacAssistant/NewsFilter.h
+
+_4x.0.t0-0 add-file true false /MacAssistant/FifaRankingMatchLoader.h
+
+_4x.0.t0-0 modify-file true false /MacAssistant/FifaRankingMatchLoader.h
+
+_4z.0.t0-0 add-file true false /MacAssistant/PlayerRatingTransformer.h
+
+_4z.0.t0-0 modify-file true false /MacAssistant/PlayerRatingTransformer.h
+
+_51.0.t0-0 add-file true false /MacAssistant/PlayerForm.m
+
+_51.0.t0-0 modify-file true false /MacAssistant/PlayerForm.m
+
+_53.0.t0-0 add-file true false /MacAssistant/NewsFilter.m
+
+_53.0.t0-0 modify-file true false /MacAssistant/NewsFilter.m
+
+_55.0.t0-0 add-file true false /MacAssistant/FifaRankingMatchLoader.m
+
+_55.0.t0-0 modify-file true false /MacAssistant/FifaRankingMatchLoader.m
+
+_57.0.t0-0 add-file true false /MacAssistant/PlayerRatingTransformer.m
+
+_57.0.t0-0 modify-file true false /MacAssistant/PlayerRatingTransformer.m
+
+_59.0.t0-0 add-file true false /MacAssistant/ActualPersonSaver.h
+
+_59.0.t0-0 modify-file true false /MacAssistant/ActualPersonSaver.h
+
+_5b.0.t0-0 add-file true false /MacAssistant/ClubLink.h
+
+_5b.0.t0-0 modify-file true false /MacAssistant/ClubLink.h
+
+_5d.0.t0-0 add-file true false /MacAssistant/SponsorSaver.h
+
+_5d.0.t0-0 modify-file true false /MacAssistant/SponsorSaver.h
+
+_5f.0.t0-0 add-file true false /MacAssistant/ContractLoader.h
+
+_5f.0.t0-0 modify-file true false /MacAssistant/ContractLoader.h
+
+_5h.0.t0-0 add-file true false /MacAssistant/RegionalDivision.h
+
+_5h.0.t0-0 modify-file true false /MacAssistant/RegionalDivision.h
+
+_5j.0.t0-0 add-file true false /MacAssistant/RegionalDivisionSaver.h
+
+_5j.0.t0-0 modify-file true false /MacAssistant/RegionalDivisionSaver.h
+
+_5l.0.t0-0 add-file true false /MacAssistant/ActualPersonSaver.m
+
+_5l.0.t0-0 modify-file true false /MacAssistant/ActualPersonSaver.m
+
+_5n.0.t0-0 add-file true false /MacAssistant/ClubLink.m
+
+_5n.0.t0-0 modify-file true false /MacAssistant/ClubLink.m
+
+_5p.0.t0-0 add-file true false /MacAssistant/SponsorSaver.m
+
+_5p.0.t0-0 modify-file true false /MacAssistant/SponsorSaver.m
+
+_5r.0.t0-0 add-file true false /MacAssistant/ContractLoader.m
+
+_5r.0.t0-0 modify-file true false /MacAssistant/ContractLoader.m
+
+_5t.0.t0-0 add-file true false /MacAssistant/RegionalDivision.m
+
+_5t.0.t0-0 modify-file true false /MacAssistant/RegionalDivision.m
+
+_5v.0.t0-0 add-file true false /MacAssistant/RegionalDivisionSaver.m
+
+_5v.0.t0-0 modify-file true false /MacAssistant/RegionalDivisionSaver.m
+
+_5x.0.t0-0 add-file true false /MacAssistant/PlayerStatsSaver.h
+
+_5x.0.t0-0 modify-file true false /MacAssistant/PlayerStatsSaver.h
+
+_5z.0.t0-0 add-file true false /MacAssistant/PlayerStatsSaver.m
+
+_5z.0.t0-0 modify-file true false /MacAssistant/PlayerStatsSaver.m
+
+_61.0.t0-0 add-file true false /MacAssistant/ScoutingKnowledgeLoader.h
+
+_61.0.t0-0 modify-file true false /MacAssistant/ScoutingKnowledgeLoader.h
+
+_63.0.t0-0 add-file true false /MacAssistant/NewsFilterSaver.h
+
+_63.0.t0-0 modify-file true false /MacAssistant/NewsFilterSaver.h
+
+_65.0.t0-0 add-file true false /MacAssistant/ScoutingKnowledgeLoader.m
+
+_65.0.t0-0 modify-file true false /MacAssistant/ScoutingKnowledgeLoader.m
+
+_67.0.t0-0 add-file true false /MacAssistant/Alliteration.h
+
+_67.0.t0-0 modify-file true false /MacAssistant/Alliteration.h
+
+_69.0.t0-0 add-file true false /MacAssistant/NewsFilterSaver.m
+
+_69.0.t0-0 modify-file true false /MacAssistant/NewsFilterSaver.m
+
+_6b.0.t0-0 add-file true false /MacAssistant/ClubLinkLoader.h
+
+_6b.0.t0-0 modify-file true false /MacAssistant/ClubLinkLoader.h
+
+_6d.0.t0-0 add-file true false /MacAssistant/Currency.h
+
+_6d.0.t0-0 modify-file true false /MacAssistant/Currency.h
+
+_6f.0.t0-0 add-file true false /MacAssistant/Alliteration.m
+
+_6f.0.t0-0 modify-file true false /MacAssistant/Alliteration.m
+
+_6h.0.t0-0 add-file true false /MacAssistant/ClubLinkLoader.m
+
+_6h.0.t0-0 modify-file true false /MacAssistant/ClubLinkLoader.m
+
+_6j.0.t0-0 add-file true false /MacAssistant/ClubFinanceRecordLoader.h
+
+_6j.0.t0-0 modify-file true false /MacAssistant/ClubFinanceRecordLoader.h
+
+_6l.0.t0-0 add-file true false /MacAssistant/Currency.m
+
+_6l.0.t0-0 modify-file true false /MacAssistant/Currency.m
+
+_6n.0.t0-0 add-file true false /MacAssistant/ColourSaver.h
+
+_6n.0.t0-0 modify-file true false /MacAssistant/ColourSaver.h
+
+_6p.0.t0-0 add-file true false /MacAssistant/ClubFinanceRecordLoader.m
+
+_6p.0.t0-0 modify-file true false /MacAssistant/ClubFinanceRecordLoader.m
+
+_6r.0.t0-0 add-file true false /MacAssistant/NonPlayer.h
+
+_6r.0.t0-0 modify-file true false /MacAssistant/NonPlayer.h
+
+_6t.0.t0-0 add-file true false /MacAssistant/ColourSaver.m
+
+_6t.0.t0-0 modify-file true false /MacAssistant/ColourSaver.m
+
+_6v.0.t0-0 add-file true false /MacAssistant/NonPlayer.m
+
+_6v.0.t0-0 modify-file true false /MacAssistant/NonPlayer.m
+
+_6x.0.t0-0 add-file true false /MacAssistant/TeamLoader.h
+
+_6x.0.t0-0 modify-file true false /MacAssistant/TeamLoader.h
+
+_6z.0.t0-0 add-file true false /MacAssistant/TeamLoader.m
+
+_6z.0.t0-0 modify-file true false /MacAssistant/TeamLoader.m
+
+_71.0.t0-0 add-file true false /MacAssistant/Unknown6Saver.h
+
+_71.0.t0-0 modify-file true false /MacAssistant/Unknown6Saver.h
+
+_73.0.t0-0 add-dir false false /MacAssistant/English.lproj
+
+_74.0.t0-0 add-file true false /MacAssistant/English.lproj/InfoPlist.strings
+
+_74.0.t0-0 modify-file true false /MacAssistant/English.lproj/InfoPlist.strings
+
+_77.0.t0-0 add-file true false /MacAssistant/English.lproj/MainMenu.xib
+
+_77.0.t0-0 modify-file true false /MacAssistant/English.lproj/MainMenu.xib
+
+_79.0.t0-0 add-file true false /MacAssistant/Spokesperson.h
+
+_79.0.t0-0 modify-file true false /MacAssistant/Spokesperson.h
+
+_7b.0.t0-0 add-file true false /MacAssistant/Unknown6Saver.m
+
+_7b.0.t0-0 modify-file true false /MacAssistant/Unknown6Saver.m
+
+_7d.0.t0-0 add-dir false false /MacAssistant/hooks
+
+_7e.0.t0-0 add-file true false /MacAssistant/hooks/pre-revprop-change.tmpl
+
+_7e.0.t0-0 modify-file true false /MacAssistant/hooks/pre-revprop-change.tmpl
+
+_7h.0.t0-0 add-file true false /MacAssistant/hooks/post-commit.tmpl
+
+_7h.0.t0-0 modify-file true false /MacAssistant/hooks/post-commit.tmpl
+
+_7j.0.t0-0 add-file true false /MacAssistant/hooks/post-lock.tmpl
+
+_7j.0.t0-0 modify-file true false /MacAssistant/hooks/post-lock.tmpl
+
+_7l.0.t0-0 add-file true false /MacAssistant/hooks/pre-commit.tmpl
+
+_7l.0.t0-0 modify-file true false /MacAssistant/hooks/pre-commit.tmpl
+
+_7n.0.t0-0 add-file true false /MacAssistant/hooks/pre-lock.tmpl
+
+_7n.0.t0-0 modify-file true false /MacAssistant/hooks/pre-lock.tmpl
+
+_7p.0.t0-0 add-file true false /MacAssistant/hooks/post-unlock.tmpl
+
+_7p.0.t0-0 modify-file true false /MacAssistant/hooks/post-unlock.tmpl
+
+_7r.0.t0-0 add-file true false /MacAssistant/hooks/pre-unlock.tmpl
+
+_7r.0.t0-0 modify-file true false /MacAssistant/hooks/pre-unlock.tmpl
+
+_7t.0.t0-0 add-file true false /MacAssistant/hooks/post-revprop-change.tmpl
+
+_7t.0.t0-0 modify-file true false /MacAssistant/hooks/post-revprop-change.tmpl
+
+_7v.0.t0-0 add-file true false /MacAssistant/hooks/start-commit.tmpl
+
+_7v.0.t0-0 modify-file true false /MacAssistant/hooks/start-commit.tmpl
+
+_7x.0.t0-0 add-file true false /MacAssistant/Spokesperson.m
+
+_7x.0.t0-0 modify-file true false /MacAssistant/Spokesperson.m
+
+_7z.0.t0-0 add-file true false /MacAssistant/OfficialLoader.h
+
+_7z.0.t0-0 modify-file true false /MacAssistant/OfficialLoader.h
+
+_81.0.t0-0 add-file true false /MacAssistant/OfficialLoader.m
+
+_81.0.t0-0 modify-file true false /MacAssistant/OfficialLoader.m
+
+_83.0.t0-0 add-file true false /MacAssistant/ClubFinanceRecord.h
+
+_83.0.t0-0 modify-file true false /MacAssistant/ClubFinanceRecord.h
+
+_85.0.t0-0 add-file true false /MacAssistant/ClubSponsor.h
+
+_85.0.t0-0 modify-file true false /MacAssistant/ClubSponsor.h
+
+_87.0.t0-0 add-file true false /MacAssistant/ClubFinanceSaver.h
+
+_87.0.t0-0 modify-file true false /MacAssistant/ClubFinanceSaver.h
+
+_89.0.t0-0 add-file true false /MacAssistant/PlayerStats.h
+
+_89.0.t0-0 modify-file true false /MacAssistant/PlayerStats.h
+
+_8b.0.t0-0 add-file true false /MacAssistant/footballer-icon.png
+
+_8b.0.t0-0 modify-file false true /MacAssistant/footballer-icon.png
+
+_8b.0.t0-0 modify-file true false /MacAssistant/footballer-icon.png
+
+_8d.0.t0-0 add-file true false /MacAssistant/ClubFinanceRecord.m
+
+_8d.0.t0-0 modify-file true false /MacAssistant/ClubFinanceRecord.m
+
+_8f.0.t0-0 add-file true false /MacAssistant/ClubSponsor.m
+
+_8f.0.t0-0 modify-file true false /MacAssistant/ClubSponsor.m
+
+_8h.0.t0-0 add-file true false /MacAssistant/LangDBLoader.h
+
+_8h.0.t0-0 modify-file true false /MacAssistant/LangDBLoader.h
+
+_8j.0.t0-0 add-file true false /MacAssistant/ClubFinanceSaver.m
+
+_8j.0.t0-0 modify-file true false /MacAssistant/ClubFinanceSaver.m
+
+_8l.0.t0-0 add-file true false /MacAssistant/PlayerStats.m
+
+_8l.0.t0-0 modify-file true false /MacAssistant/PlayerStats.m
+
+_8n.0.t0-0 add-file true false /MacAssistant/MediaSaver.h
+
+_8n.0.t0-0 modify-file true false /MacAssistant/MediaSaver.h
+
+_8p.0.t0-0 add-file true false /MacAssistant/Injury.h
+
+_8p.0.t0-0 modify-file true false /MacAssistant/Injury.h
+
+_8r.0.t0-0 add-file true false /MacAssistant/LangDBLoader.m
+
+_8r.0.t0-0 modify-file true false /MacAssistant/LangDBLoader.m
+
+_8t.0.t0-0 add-file true false /MacAssistant/MediaSaver.m
+
+_8t.0.t0-0 modify-file true false /MacAssistant/MediaSaver.m
+
+_8v.0.t0-0 add-file true false /MacAssistant/Injury.m
+
+_8v.0.t0-0 modify-file true false /MacAssistant/Injury.m
+
+_8x.0.t0-0 add-file true false /MacAssistant/FMDateLoader.h
+
+_8x.0.t0-0 modify-file true false /MacAssistant/FMDateLoader.h
+
+_8z.0.t0-0 add-file true false /MacAssistant/ContinentLoader.h
+
+_8z.0.t0-0 modify-file true false /MacAssistant/ContinentLoader.h
+
+_91.0.t0-0 add-file true false /MacAssistant/FMDateLoader.m
+
+_91.0.t0-0 modify-file true false /MacAssistant/FMDateLoader.m
+
+_93.0.t0-0 add-file true false /MacAssistant/ShortFixtureLoader.h
+
+_93.0.t0-0 modify-file true false /MacAssistant/ShortFixtureLoader.h
+
+_95.0.t0-0 add-file true false /MacAssistant/ContinentLoader.m
+
+_95.0.t0-0 modify-file true false /MacAssistant/ContinentLoader.m
+
+_97.0.t0-0 add-file true false /MacAssistant/ShortFixtureLoader.m
+
+_97.0.t0-0 modify-file true false /MacAssistant/ShortFixtureLoader.m
+
+_99.0.t0-0 add-file true false /MacAssistant/SpokenLanguageSaver.h
+
+_99.0.t0-0 modify-file true false /MacAssistant/SpokenLanguageSaver.h
+
+_9b.0.t0-0 add-file true false /MacAssistant/PersonSaver.h
+
+_9b.0.t0-0 modify-file true false /MacAssistant/PersonSaver.h
+
+_9d.0.t0-0 add-file true false /MacAssistant/NameLoader.h
+
+_9d.0.t0-0 modify-file true false /MacAssistant/NameLoader.h
+
+_9f.0.t0-0 add-file true false /MacAssistant/SpokenLanguageSaver.m
+
+_9f.0.t0-0 modify-file true false /MacAssistant/SpokenLanguageSaver.m
+
+_9h.0.t0-0 add-file true false /MacAssistant/ContractClause.h
+
+_9h.0.t0-0 modify-file true false /MacAssistant/ContractClause.h
+
+_9j.0.t0-0 add-file true false /MacAssistant/PersonSaver.m
+
+_9j.0.t0-0 modify-file true false /MacAssistant/PersonSaver.m
+
+_9l.0.t0-0 add-file true false /MacAssistant/NameLoader.m
+
+_9l.0.t0-0 modify-file true false /MacAssistant/NameLoader.m
+
+_9n.0.t0-0 add-file true false /MacAssistant/Contract.h
+
+_9n.0.t0-0 modify-file true false /MacAssistant/Contract.h
+
+_9p.0.t0-0 add-file true false /MacAssistant/ContractClause.m
+
+_9p.0.t0-0 modify-file true false /MacAssistant/ContractClause.m
+
+_9r.0.t0-0 add-file true false /MacAssistant/MatchForm.h
+
+_9r.0.t0-0 modify-file true false /MacAssistant/MatchForm.h
+
+_9t.0.t0-0 add-file true false /MacAssistant/Contract.m
+
+_9t.0.t0-0 modify-file true false /MacAssistant/Contract.m
+
+_9v.0.t0-0 add-file true false /MacAssistant/MatchForm.m
+
+_9v.0.t0-0 modify-file true false /MacAssistant/MatchForm.m
+
+_9x.0.t0-0 add-file true false /MacAssistant/MacAssistantAppDelegate.h
+
+_9x.0.t0-0 modify-file true false /MacAssistant/MacAssistantAppDelegate.h
+
+_9z.0.t0-0 add-file true false /MacAssistant/TeamSaver.h
+
+_9z.0.t0-0 modify-file true false /MacAssistant/TeamSaver.h
+
+_a1.0.t0-0 add-file true false /MacAssistant/FutureRegen.h
+
+_a1.0.t0-0 modify-file true false /MacAssistant/FutureRegen.h
+
+_a3.0.t0-0 add-file true false /MacAssistant/MacAssistantAppDelegate.m
+
+_a3.0.t0-0 modify-file true false /MacAssistant/MacAssistantAppDelegate.m
+
+_a5.0.t0-0 add-file true false /MacAssistant/TeamSaver.m
+
+_a5.0.t0-0 modify-file true false /MacAssistant/TeamSaver.m
+
+_a7.0.t0-0 add-file true false /MacAssistant/FutureRegen.m
+
+_a7.0.t0-0 modify-file true false /MacAssistant/FutureRegen.m
+
+_a9.0.t0-0 add-file true false /MacAssistant/VirtualPlayer.h
+
+_a9.0.t0-0 modify-file true false /MacAssistant/VirtualPlayer.h
+
+_ab.0.t0-0 add-file true false /MacAssistant/VirtualPlayer.m
+
+_ab.0.t0-0 modify-file true false /MacAssistant/VirtualPlayer.m
+
+_ad.0.t0-0 add-file true false /MacAssistant/PlayerReplacement.h
+
+_ad.0.t0-0 modify-file true false /MacAssistant/PlayerReplacement.h
+
+_af.0.t0-0 add-file true false /MacAssistant/PlayerReplacement.m
+
+_af.0.t0-0 modify-file true false /MacAssistant/PlayerReplacement.m
+
+_ah.0.t0-0 add-file true false /MacAssistant/WeatherLoader.h
+
+_ah.0.t0-0 modify-file true false /MacAssistant/WeatherLoader.h
+
+_aj.0.t0-0 add-file true false /MacAssistant/VirtualPlayerLoader.h
+
+_aj.0.t0-0 modify-file true false /MacAssistant/VirtualPlayerLoader.h
+
+_al.0.t0-0 add-file true false /MacAssistant/ShortlistedPerson.h
+
+_al.0.t0-0 modify-file true false /MacAssistant/ShortlistedPerson.h
+
+_an.0.t0-0 add-file true false /MacAssistant/WeatherLoader.m
+
+_an.0.t0-0 modify-file true false /MacAssistant/WeatherLoader.m
+
+_ap.0.t0-0 add-dir false false /MacAssistant/db
+
+_aq.0.t0-0 add-dir false false /MacAssistant/db/revs
+
+_as.0.t0-0 add-dir false false /MacAssistant/db/revs/0
+
+_au.0.t0-0 add-file true false /MacAssistant/db/revs/0/0
+
+_au.0.t0-0 modify-file true false /MacAssistant/db/revs/0/0
+
+_ax.0.t0-0 add-file true false /MacAssistant/db/txn-current-lock
+
+_ax.0.t0-0 modify-file true false /MacAssistant/db/txn-current-lock
+
+_az.0.t0-0 add-dir false false /MacAssistant/db/revprops
+
+_b0.0.t0-0 add-dir false false /MacAssistant/db/revprops/0
+
+_b2.0.t0-0 add-file true false /MacAssistant/db/revprops/0/0
+
+_b2.0.t0-0 modify-file true false /MacAssistant/db/revprops/0/0
+
+_b5.0.t0-0 add-file true false /MacAssistant/db/write-lock
+
+_b5.0.t0-0 modify-file true false /MacAssistant/db/write-lock
+
+_b7.0.t0-0 add-file true false /MacAssistant/db/current
+
+_b7.0.t0-0 modify-file true false /MacAssistant/db/current
+
+_b9.0.t0-0 add-file true false /MacAssistant/db/fsfs.conf
+
+_b9.0.t0-0 modify-file true false /MacAssistant/db/fsfs.conf
+
+_bb.0.t0-0 add-file true false /MacAssistant/db/min-unpacked-rev
+
+_bb.0.t0-0 modify-file true false /MacAssistant/db/min-unpacked-rev
+
+_bd.0.t0-0 add-file true false /MacAssistant/db/uuid
+
+_bd.0.t0-0 modify-file true false /MacAssistant/db/uuid
+
+_bf.0.t0-0 add-file true false /MacAssistant/db/fs-type
+
+_bf.0.t0-0 modify-file true false /MacAssistant/db/fs-type
+
+_bh.0.t0-0 add-file true false /MacAssistant/db/format
+
+_bh.0.t0-0 modify-file true false /MacAssistant/db/format
+
+_bj.0.t0-0 add-dir false false /MacAssistant/db/transactions
+
+_bk.0.t0-0 add-dir false false /MacAssistant/db/transactions/0-0.txn
+
+_bm.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._6z.0
+
+_bm.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._6z.0
+
+_bp.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._aq.0
+
+_bp.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._aq.0
+
+_br.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._1b.0
+
+_br.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._1b.0
+
+_bt.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._au.0
+
+_bt.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._au.0
+
+_bv.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._1f.0
+
+_bv.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._1f.0
+
+_bx.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._5d.0
+
+_bx.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._5d.0
+
+_bz.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._1j.0
+
+_bz.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._1j.0
+
+_c1.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._9b.0
+
+_c1.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._9b.0
+
+_c3.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._7e.0
+
+_c3.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._7e.0
+
+_c5.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._5h.0
+
+_c5.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._5h.0
+
+_c7.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._1n.0
+
+_c7.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._1n.0
+
+_c9.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._9f.0
+
+_c9.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._9f.0
+
+_cb.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._73.0.children
+
+_cb.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._73.0.children
+
+_cd.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._5l.0
+
+_cd.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._5l.0
+
+_cf.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._b.0
+
+_cf.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._b.0
+
+_ch.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._1r.0
+
+_ch.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._1r.0
+
+_cj.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._9j.0
+
+_cj.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._9j.0
+
+_cl.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._13.0
+
+_cl.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._13.0
+
+_cn.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._5p.0
+
+_cn.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._5p.0
+
+_cp.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._51.0
+
+_cp.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._51.0
+
+_cr.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._bd.0
+
+_cr.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._bd.0
+
+_ct.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._f.0
+
+_ct.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._f.0
+
+_cv.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._1v.0
+
+_cv.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._1v.0
+
+_cx.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._9n.0
+
+_cx.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._9n.0
+
+_cz.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._17.0
+
+_cz.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._17.0
+
+_d1.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._5t.0
+
+_d1.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._5t.0
+
+_d3.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._55.0
+
+_d3.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._55.0
+
+_d5.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._bh.0
+
+_d5.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._bh.0
+
+_d7.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._j.0
+
+_d7.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._j.0
+
+_d9.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._1z.0
+
+_d9.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._1z.0
+
+_db.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._9r.0
+
+_db.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._9r.0
+
+_dd.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._93.0
+
+_dd.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._93.0
+
+_df.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._5x.0
+
+_df.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._5x.0
+
+_dh.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._59.0
+
+_dh.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._59.0
+
+_dj.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._n.0
+
+_dj.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._n.0
+
+_dl.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._4d.0.children
+
+_dl.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._4d.0.children
+
+_dn.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._9v.0
+
+_dn.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._9v.0
+
+_dp.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._97.0
+
+_dp.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._97.0
+
+_dr.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._az.0.children
+
+_dr.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._az.0.children
+
+_dt.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._r.0
+
+_dt.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._r.0
+
+_dv.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._9z.0
+
+_dv.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._9z.0
+
+_dx.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._4b.0
+
+_dx.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._4b.0
+
+_dz.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._v.0
+
+_dz.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._v.0
+
+_e1.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._7.0
+
+_e1.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._7.0
+
+_e3.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._b5.0
+
+_e3.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._b5.0
+
+_e5.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._z.0
+
+_e5.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._z.0
+
+_e7.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._b9.0
+
+_e7.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._b9.0
+
+_e9.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._8d.0
+
+_e9.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._8d.0
+
+_eb.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._2t.0.children
+
+_eb.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._2t.0.children
+
+_ed.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._4j.0
+
+_ed.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._4j.0
+
+_ef.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._8h.0
+
+_ef.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._8h.0
+
+_eh.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._4n.0
+
+_eh.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._4n.0
+
+_ej.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._ab.0
+
+_ej.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._ab.0
+
+_el.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._8l.0
+
+_el.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._8l.0
+
+_en.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._4r.0
+
+_en.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._4r.0
+
+_ep.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._43.0
+
+_ep.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._43.0
+
+_er.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._2u.0
+
+_er.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._2u.0
+
+_et.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/node._af.0
+
+_et.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/node._af.0
+
+_ev.0.t0-0 add-file true false /MacAssistant/db/transactions/0-0.txn/changes
+
+_ev.0.t0-0 modify-file true false /MacAssistant/db/transactions/0-0.txn/changes
+

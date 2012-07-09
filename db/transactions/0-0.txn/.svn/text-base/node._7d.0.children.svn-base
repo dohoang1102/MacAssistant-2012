@@ -1,0 +1,37 @@
+END
+K 23
+pre-revprop-change.tmpl
+V 15
+file _7e.0.t0-0
+K 16
+post-commit.tmpl
+V 15
+file _7h.0.t0-0
+K 14
+post-lock.tmpl
+V 15
+file _7j.0.t0-0
+K 15
+pre-commit.tmpl
+V 15
+file _7l.0.t0-0
+K 13
+pre-lock.tmpl
+V 15
+file _7n.0.t0-0
+K 16
+post-unlock.tmpl
+V 15
+file _7p.0.t0-0
+K 15
+pre-unlock.tmpl
+V 15
+file _7r.0.t0-0
+K 24
+post-revprop-change.tmpl
+V 15
+file _7t.0.t0-0
+K 17
+start-commit.tmpl
+V 15
+file _7v.0.t0-0
