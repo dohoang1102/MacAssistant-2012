@@ -48,6 +48,10 @@
 		[object setType:cbuffer];
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setCompetitionUID:ibuffer];
+        
+        // ?? 4 extra bytes here? What's this?
+        offset += 4;
+        
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setAlternativeKitNumber:cbuffer];
 	}

@@ -22,4 +22,5 @@
 #define FM2011_DEMO			1567
 #define FM2011_11_1			1569
 #define FM2011_11_2			1572
+#define FM2012_12_1         1686
 #define FM2012_12_2         1694

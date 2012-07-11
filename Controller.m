@@ -107,7 +107,7 @@
 			
 			// Setup GameDB Thread
 			gameDBThread = [[NSThread alloc] initWithTarget:self selector:@selector(initGame:) object:gamePath];
-			
+            
 			// Graphics Thread HERE
 			if ([[NSUserDefaults standardUserDefaults] boolForKey:@"parseGraphics"]==TRUE) { [parseGraphicsThread start]; }
 			
@@ -321,7 +321,7 @@
 	NSLog(@"Game Version: %d at %d",gameDBVersion, fileOffset);
 	
 	//Check version is compatiable with supported versions
-	if (gameDBVersion != FM2012_12_2 && gameDBVersion != FM2011_11_1 && gameDBVersion != FM2011_11_2) {
+	if (gameDBVersion != FM2012_12_2 && gameDBVersion != FM2012_12_1) {
 		NSAlert *alert = [NSAlert alertWithMessageText:[NSString stringWithFormat:NSLocalizedString(@"Incompatible Database Version - %hu",@"error"),gameDBVersion] defaultButton:@"OK" alternateButton:nil 
 										   otherButton:nil informativeTextWithFormat:NSLocalizedString(@"The version of FM this game was saved under is not compatible with this editor",@"error message")];
 		NSLog(@"Incompatible Database Version.");
@@ -371,7 +371,7 @@
 	// 0x1537 unknown
 	
 	// Skip bytes (as comment above)
-    if (gameDBVersion >= FM2012_12_2) {
+    if (gameDBVersion >= FM2012_12_1) {
         fileOffset += 1361;
     }
 	else if (isNewFormat) { fileOffset += 1526; }
@@ -394,6 +394,7 @@
 	if (!compressed) { saveStartOffset += 18; }
 	
 	// read game DB
+    [fileData writeToFile:@"/Users/Tom/Desktop/data.tad" atomically:YES];
 	[database readGameDB:fileData atOffset:&fileOffset];
 	
 	if (!compressed) { [database setSaveEndOffset:([database saveEndOffset] + 18)]; }

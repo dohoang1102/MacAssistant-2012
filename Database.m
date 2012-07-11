@@ -170,7 +170,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
     
-    if ([controller gameDBVersion] == FM2012_12_2) {
+    if ([controller gameDBVersion] >= FM2012_12_1) {
         // 0x01 ???
         *byteOffset += 1;
     }
@@ -210,7 +210,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[awardThread start];
 	
 #pragma mark Cities
-    if ([controller gameDBVersion] == FM2012_12_2) {
+    if ([controller gameDBVersion] >= FM2012_12_1) {
         // 0x05 ???
         *byteOffset += 5;
     }
@@ -221,7 +221,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
     
-    if ([controller gameDBVersion] == FM2012_12_2) {
+    if ([controller gameDBVersion] >= FM2012_12_1) {
         // 0x01 ???
         *byteOffset += 1;
     }
@@ -264,7 +264,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[pool drain];
 	
 #pragma mark Clubs
-    if ([controller gameDBVersion] == FM2012_12_2) {
+    if ([controller gameDBVersion] >= FM2012_12_1) {
         // 0x05 ???
         *byteOffset += 5;
     }
@@ -275,7 +275,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
     
-    if ([controller gameDBVersion] == FM2012_12_2) {
+    if ([controller gameDBVersion] >= FM2012_12_1) {
         // 0x01 ???
         *byteOffset += 1;
     }

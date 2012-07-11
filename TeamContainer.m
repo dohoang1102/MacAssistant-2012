@@ -15,7 +15,7 @@
 alternateKits, teamContainerType, nameGender, shortNameGender, attacking, depth, directness, 
 flamboyancy, flexibility, freeRoles, marking, offside, pressing, sittingBack, tempo, 
 useOfPlaymaker, width, preferredFormation, preferredFormation2, defensiveFormation, 
-attackingFormation, controller, unknowns1, unknowns2, transferInfos, unknowns3, unknowns4;
+attackingFormation, controller, unknowns1, unknowns2, transferInfos, unknowns3, unknowns4, nickname;
 
 - (NSArray *)teamObjects
 {

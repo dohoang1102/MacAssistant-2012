@@ -21,6 +21,7 @@
 	float fbuffer;
 	
 	unsigned int offset = *byteOffset;
+    BOOL FmFirst = YES;
 	
 	ClubFinance *object = [[ClubFinance alloc] init];
 	
@@ -219,6 +220,14 @@
 	}
 	
 	if ([object type]!=FT_INVALID_TYPE) {
+        // FM 2012
+        // ??? Jump 0x1 Bytes if current byte is 0x0
+        [data getBytes:&cbuffer range:NSMakeRange(offset, 1)];
+        if (cbuffer == 0) {
+            FmFirst = NO;
+            offset += 1;
+        }
+        
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setBalance:ibuffer];
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
@@ -231,8 +240,7 @@
 		[object setUnknownChar30:cbuffer];
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar31:cbuffer];
-        [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		// [object setUnknownChar32:cbuffer];
+        
 		[object setTransferEmbargoStartDate:[FMDateLoader readFromData:data atOffset:&offset]];
 		[object setTransferEmbargoEndDate:[FMDateLoader readFromData:data atOffset:&offset]];
 		[object setTransferEmbargoAppealDate:[FMDateLoader readFromData:data atOffset:&offset]];
@@ -288,6 +296,16 @@
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar39:cbuffer];
 		
+        
+        if (FmFirst) {
+            [data getBytes:&cbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+            for (int i=0; i<cbuffer; i++) {
+                offset += 4;
+            }
+        }
+        else {
+            offset += 1;
+        }
 	}
 	
 	*byteOffset = offset;

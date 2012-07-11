@@ -50,7 +50,7 @@
 
 
 @interface Club : NSObject {
-	char databaseClass, nickname1Gender, nickname2Gender, youthSetup;
+	char databaseClass, nickname1Gender, nickname2Gender, youthFacilities;
 	char professionalStatus, trainingFacilities, morale;
 	char firstTeamStrengthRating, firstTeamQuicknessRating, firstTeamGoalkeepingRating,
 	firstTeamTacticsRating, firstTeamBallControlRating, firstTeamDefendingRating,
@@ -66,7 +66,8 @@
 	youthTeamAttackingWorkload, youthTeamShootingWorkload, youthTeamSetPiecesWorkload;
 	char UEFAPoints, UEFAMatches, unknownChar1, roughFinancialState, unknownChar2, unknownChar3, 
 	unknownChar4, unknownChar5, unknownChar6, unknownChar7, unknownChar8, unknownChar9,
-	unknownChar10, unknownChar11, unknownChar12, youthAcademy, youthRecruitment;
+	unknownChar10, unknownChar11, unknownChar12, youthCoaching, youthRecruitment;
+    char supporterLoyalty, supporterPassion, supporterPatience, supporterAffluence, supporterTemperament;
 	unsigned char flags;
 	short yearFounded, unknownShort1, unknownShort2;
 	float UEFATempCoefficient;
@@ -87,7 +88,7 @@
 }
 
 @property(assign,readwrite) char databaseClass, nickname1Gender, nickname2Gender,
-youthSetup, professionalStatus, trainingFacilities, morale,
+youthFacilities, professionalStatus, trainingFacilities, morale,
 firstTeamStrengthRating, firstTeamQuicknessRating, firstTeamGoalkeepingRating,
 firstTeamTacticsRating, firstTeamBallControlRating, firstTeamDefendingRating,
 firstTeamAttackingRating, firstTeamShootingRating, firstTeamSetPiecesRating,
@@ -102,10 +103,11 @@ youthTeamTacticsWorkload, youthTeamBallControlWorkload, youthTeamDefendingWorklo
 youthTeamAttackingWorkload, youthTeamShootingWorkload, youthTeamSetPiecesWorkload,
 UEFAPoints, UEFAMatches, unknownChar1, unknownChar2, roughFinancialState, unknownChar3, 
 unknownChar4, unknownChar5, unknownChar6, unknownChar7, unknownChar8, unknownChar9,
-unknownChar10, unknownChar11, unknownChar12, youthAcademy, youthRecruitment;
+unknownChar10, unknownChar11, unknownChar12, youthCoaching, youthRecruitment;
 @property(assign,readwrite) float UEFATempCoefficient;
 @property(assign,readwrite) unsigned char flags;
 @property(assign,readwrite) short yearFounded, unknownShort1, unknownShort2;
+@property(assign, readwrite) char supporterLoyalty, supporterPassion, supporterPatience, supporterAffluence, supporterTemperament;
 @property(assign,readwrite) BOOL hasYouthAcademy, hasUEFACoefficient, hasScoutingKnowledges,
 allowSponsorshipForTopPlayers, isPLC, paysHighWages, needsShortlistUpdate, isLeagueBodyClub;
 @property(assign,readwrite) int nationID, averageAttendance, minimumAttendance, 

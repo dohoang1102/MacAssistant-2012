@@ -14,7 +14,7 @@
 
 @synthesize databaseClass, nickname1Gender, nickname2Gender, nationID, nickname1,
 nickname2, averageAttendance, minimumAttendance, maximumAttendance, futureTransferManagerID,
-hasYouthAcademy, yearFounded, professionalStatus, youthSetup, trainingFacilities, flags,
+hasYouthAcademy, yearFounded, professionalStatus, youthFacilities, trainingFacilities, flags,
 directors, morale, chairmanID, firstTeamStrengthRating, firstTeamQuicknessRating, 
 firstTeamGoalkeepingRating, firstTeamTacticsRating, firstTeamBallControlRating, 
 firstTeamDefendingRating, firstTeamAttackingRating, firstTeamShootingRating, 
@@ -35,8 +35,9 @@ maximumWeeklyWage, competitionID, allowSponsorshipForTopPlayers, transferOffers,
 teamContainer, isLeagueBodyClub, controller, unknownChar1, roughFinancialState, 
 unknownChar2, unknownChar3, unknownChar4, unknownChar5, unknownChar6, unknownChar7, 
 unknownChar8, unknownChar9, unknownChar10, unknownChar11, unknownDate1, unknownDate2, logoPath, 
-youthAcademy, youthRecruitment, unknownChar12, unknownShort1, unknownShort2,
-unknownData1, unknownData2, unknownData3, unknownData4, unknownData5, unknownData6;
+youthCoaching, youthRecruitment, unknownChar12, unknownShort1, unknownShort2,
+unknownData1, unknownData2, unknownData3, unknownData4, unknownData5, unknownData6,
+supporterLoyalty, supporterPassion, supporterPatience, supporterAffluence, supporterTemperament;
 
 - (NSArray *)professionalStatusStrings
 {

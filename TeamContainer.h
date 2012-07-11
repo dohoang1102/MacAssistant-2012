@@ -16,7 +16,7 @@
 		 preferredFormation2, defensiveFormation, attackingFormation;
 	
 	Controller *controller;
-	NSString *name, *shortName;
+	NSString *name, *shortName, *nickname;
 	NSMutableArray	*colours, *teams, *relationships, *alternativeStadiums, *alternateKits, *unknowns1, 
 	*unknowns2, *unknowns3, *unknowns4, *transferInfos;
 }
@@ -26,7 +26,7 @@
 attacking, depth, directness, flamboyancy, flexibility, freeRoles, marking, 
 offside, pressing, sittingBack, tempo, useOfPlaymaker, width, preferredFormation, 
 preferredFormation2, defensiveFormation, attackingFormation;
-@property(copy,readwrite) NSString *name, *shortName;
+@property(copy,readwrite) NSString *name, *shortName, *nickname;
 @property(copy,readwrite) NSMutableArray *colours, *teams, *relationships, 
 *alternativeStadiums, *alternateKits, *unknowns1, *unknowns2, *unknowns3, *unknowns4, 
 *transferInfos;

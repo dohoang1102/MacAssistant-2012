@@ -37,7 +37,10 @@
 	[object setShortNameGender:cbuffer];
 	[object setName:[FMString readFromData:data atOffset:&offset]];
 	[object setShortName:[FMString readFromData:data atOffset:&offset]];
+    [object setNickname:[FMString readFromData:data atOffset:&offset]];
 	
+    // FM 2011: 1377819
+    // FM 2012: 1660051
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	tempArray = [[NSMutableArray alloc] init];
 	for (int i=0;i<cbuffer;i++) {
@@ -50,11 +53,12 @@
 	[object setColours:tempArray];
 	[tempArray release];
     
-    // FM 2012 skip to the end
-    // 87 bytes of unknown data
-    offset += 87;
-	
-    /*
+    // FM 2012
+    // ?? 0x2 Unknown
+    offset += 2;
+    
+    // FM 2011: 1377820
+    // FM 2012: 1660052
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	tempArray = [[NSMutableArray alloc] init];
 	for (int i=0;i<cbuffer;i++) {
@@ -64,9 +68,10 @@
 	[object setTeams:tempArray];
 	[tempArray release];
 	
+    // FM 2011: 1377821
+    // FM 2012: 1660053
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	if (cbuffer>0 && debug) { NSLog(@"mystery count 1 > 0 at %d",offset); }
-	
 	tempArray = [[NSMutableArray alloc] init];
 	for (int i=0;i<cbuffer;i++) {
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
@@ -75,6 +80,8 @@
 	[object setUnknowns1:tempArray];
 	[tempArray release];
 	
+    // FM 2011: 1377822
+    // FM 2012: 1660054
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	if (cbuffer>0 && debug) { NSLog(@"mystery count 3 > 0 at %d",offset); }
 	
@@ -86,6 +93,8 @@
 	[object setUnknowns3:tempArray];
 	[tempArray release];
 	
+    // FM 2011: 1377863
+    // FM 2012: 1660083
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	if (cbuffer>0 && debug) { NSLog(@"mystery count 4 > 0 at %d",offset); }
 	
@@ -96,7 +105,9 @@
 	}
 	[object setUnknowns4:tempArray];
 	[tempArray release];
-	
+    
+    // FM 2011: 1377864
+    // FM 2012: 1660084
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	tempArray = [[NSMutableArray alloc] init];
 	for (int i=0;i<cbuffer;i++) {
@@ -105,6 +116,8 @@
 	[object setRelationships:tempArray];
 	[tempArray release];
 	
+    // FM 2011: 1377865
+    // FM 2012: 1660085
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 	tempArray = [[NSMutableArray alloc] init];
 	for (int i=0;i<sbuffer;i++) {
@@ -172,8 +185,8 @@
 	[tempArray release];
 	
 	if (debug) { NSLog(@"after TIs at %d",offset); }
-	
-	// [tempArray release]; */
+    
+	// [tempArray release];
 	
 	*byteOffset = offset;
 	
