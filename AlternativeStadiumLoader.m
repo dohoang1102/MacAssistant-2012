@@ -24,7 +24,7 @@
 	[object setStadiumID:ibuffer];
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setClubID:ibuffer];
-	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; // Double Relationship ID 2012
 	[object setCompetitionID:ibuffer];
 	
 	// ???
@@ -34,6 +34,9 @@
 	[object setUnknownChar2:cbuffer];
 	[object setUnknownDate1:[FMDateLoader readFromData:data atOffset:&offset]];
 	[object setUnknownDate2:[FMDateLoader readFromData:data atOffset:&offset]];
+    
+    // 2012 + 0x1 ??
+    offset += 1;
 	
 	*byteOffset = offset;
 	

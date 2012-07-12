@@ -134,6 +134,14 @@
 	}
 	[object setUnknowns2:tempArray];
 	[tempArray release];
+    
+    // Unknown container
+    offset += 1;
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    if (cbuffer > 0) {
+        offset += cbuffer * 6;
+    }
+    
 	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setAttacking:cbuffer];
@@ -169,24 +177,6 @@
 	[object setDefensiveFormation:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setAttackingFormation:cbuffer];
-	
-	if (debug) { NSLog(@"before TIs at %d",offset); }
-	
-    // Unknown 2 bytes
-	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-    /*
-    tempArray = [[NSMutableArray alloc] init];
-	for (int i=0;i<sbuffer;i++) {
-		id ti = [TransferInfoLoader readFromData:data atOffset:&offset];
-		if ([[ti className] isEqualToString:@"TransferInfo"]) {
-			[tempArray addObject:ti];
-		}
-		else { return [NSString stringWithFormat:@"Transfer Info - %@",ti]; }
-	}
-	[object setTransferInfos:tempArray];
-	[tempArray release];  */
-	
-	if (debug) { NSLog(@"after TIs at %d",offset); }
     
 	// [tempArray release];
 	

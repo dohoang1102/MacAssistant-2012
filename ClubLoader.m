@@ -318,22 +318,16 @@
             offset += 101;
         }
         [data getBytes:&counterBuffer range:NSMakeRange(offset, 1)]; offset += 1;
-        if (counterBuffer > 0) {
-            // Skip another 12 bytes
-            offset += 12;
+        tempArray = [[NSMutableArray alloc] init];
+        for (int i=0;i<counterBuffer;i++) {
+            [tempArray addObject:[IDPCLoader readFromData:data atOffset:&offset]];
         }
+        [object setIDPCs:tempArray];
+        [tempArray release];
     }
     else {
         offset += 1;
     }
-    
-    /*
-	tempArray = [[NSMutableArray alloc] init];
-	for (int i=0;i<cbuffer;i++) {
-		[tempArray addObject:[IDPCLoader readFromData:data atOffset:&offset]];
-	}
-	[object setIDPCs:tempArray];
-	[tempArray release]; */
     
     // Offsets:
     //FM2011: 1377700
@@ -365,22 +359,31 @@
     //FM2011: 1377702
     // FM 2012: 1659014
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    if (cbuffer > 0) {
+        [object setUnknownData6:[data subdataWithRange:NSMakeRange(offset, (cbuffer*16))]]; offset += (cbuffer*16);
+        // FM 2012: 1659015
+        [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    
+        for (int i=0; i<cbuffer; i++) {
+            offset += 4;
+        }
+        offset += 1;
+    }
+    else {
+        offset += 1;
+    }
+    
+    /* --- Unknown For now
 	[object setHasUEFACoefficient:cbuffer];
 	if ([object hasUEFACoefficient]) {
-		
-        // FM 2012
-        // ??? Skip 37 bytes for now!
-        offset += 37;
-        
-		// [object setUnknownData5:[data subdataWithRange:NSMakeRange(offset, 4)]]; offset += 4;
+		[object setUnknownData5:[data subdataWithRange:NSMakeRange(offset, 4)]]; offset += 4;
 	
-		/*
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		[object setUEFAPoints:cbuffer];
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		[object setUEFAMatches:cbuffer];
-		*/
-		/*
+		
+		// [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		// [object setUEFAPoints:cbuffer];
+		// [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		// [object setUEFAMatches:cbuffer];
+		
 		[data getBytes:&fbuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setUEFATempCoefficient:fbuffer];
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
@@ -393,13 +396,11 @@
 		}
 		[object setCoefficients:tempArray];
 		[tempArray release];
-        */
-	}
+	} */
 	
 	if (debug) { NSLog(@"after coefficients at %d",offset); }
-	
-    // FM 2012: 1659015
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    
+    /*
 	[object setHasScoutingKnowledges:cbuffer];
 	if ([object hasScoutingKnowledges]) {
 		if (debug) { NSLog(@"SKs at %d",offset); }
@@ -415,7 +416,7 @@
 		}
 		[object setScoutingKnowledges:tempArray];
 		[tempArray release];
-	}
+	} */
 	
 	if (debug) { NSLog(@"after sks at %d",offset); }
 	
