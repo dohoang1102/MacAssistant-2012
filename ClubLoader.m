@@ -525,19 +525,11 @@
     [data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
     [object setMaximumAttendance:ibuffer];
     
-    // FM 2012
-    // 0x2 ??? Unknown Person(s?)
-    [data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-	tempArray = [[NSMutableArray alloc] init];
-	for (int i=0;i<sbuffer;i++) {
-		offset += 21; // This includes the PersonID
-        NSString *name = [FMString readFromData:data atOffset:&offset];
-        NSString *surname = [FMString readFromData:data atOffset:&offset];
-        NSString *name2 = [FMString readFromData:data atOffset:&offset];
-        NSString *surname2 = [FMString readFromData:data atOffset:&offset];
-	}
-	// [object setRegionalDivisions:tempArray];
-	[tempArray release];
+    id newTc = [TeamContainerLoader readTransferInfosFromData:data atOffset:&offset withTeamContainer: tc];
+    if ([[newTc className] isEqualToString:@"TeamContainer"]) {
+        [object setTeamContainer:newTc];
+    }
+    else { return [NSString stringWithFormat:@"Team Container - %@", newTc]; }
     
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setRowID:ibuffer];

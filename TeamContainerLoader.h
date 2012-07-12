@@ -14,5 +14,6 @@
 }
 
 + (id)readFromData:(NSData *)data atOffset:(unsigned int *)byteOffset;
++ (id)readTransferInfosFromData:(NSData *)data atOffset:(unsigned int *)byteOffset withTeamContainer:(TeamContainer *)tc;
 
 @end

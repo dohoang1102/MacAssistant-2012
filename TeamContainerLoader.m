@@ -172,8 +172,10 @@
 	
 	if (debug) { NSLog(@"before TIs at %d",offset); }
 	
+    // Unknown 2 bytes
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-	tempArray = [[NSMutableArray alloc] init];
+    /*
+    tempArray = [[NSMutableArray alloc] init];
 	for (int i=0;i<sbuffer;i++) {
 		id ti = [TransferInfoLoader readFromData:data atOffset:&offset];
 		if ([[ti className] isEqualToString:@"TransferInfo"]) {
@@ -182,7 +184,7 @@
 		else { return [NSString stringWithFormat:@"Transfer Info - %@",ti]; }
 	}
 	[object setTransferInfos:tempArray];
-	[tempArray release];
+	[tempArray release];  */
 	
 	if (debug) { NSLog(@"after TIs at %d",offset); }
     
@@ -191,6 +193,29 @@
 	*byteOffset = offset;
 	
 	return object;
+}
+
++ (id)readTransferInfosFromData:(NSData *)data atOffset:(unsigned int *)byteOffset withTeamContainer:(TeamContainer *)tc {
+    short sbuffer;
+    unsigned int offset = *byteOffset;
+    NSMutableArray *tempArray;
+    TeamContainer *object = tc;
+    
+    [data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+    tempArray = [[NSMutableArray alloc] init];
+    for (int i=0;i<sbuffer;i++) {
+        id ti = [TransferInfoLoader readFromData:data atOffset:&offset];
+        if ([[ti className] isEqualToString:@"TransferInfo"]) {
+            [tempArray addObject:ti];
+        }
+        else { return [NSString stringWithFormat:@"Transfer Info - %@",ti]; }
+    }
+    [object setTransferInfos:tempArray];
+    [tempArray release];
+    
+    *byteOffset = offset;
+    
+    return object;
 }
 
 @end

@@ -64,7 +64,7 @@
 		[object setLastUpdateDate:[FMDateLoader readFromData:data atOffset:&offset]];
 		 */
 		
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; // Double Relationship ID in 2012
 		[object setUnknownInt1:ibuffer];
 		[object setUnknownDate1:[FMDateLoader readFromData:data atOffset:&offset]];
 		
@@ -79,7 +79,7 @@
 		[object setFirstOptionEndDate:[FMDateLoader readFromData:data atOffset:&offset]];
 	}
 	else if ([object type]==TI_NEXT_SALE_PERCENTAGE_INFO) {
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; // Double Relationship ID in 2012
 		[object setPlayerID:ibuffer];
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setSellingClubID:ibuffer];
@@ -110,7 +110,7 @@
 		[object setUnknownChar10:cbuffer];
 	}
 	else if ([object type]==TI_APPEARANCE_MONEY_INFO) {
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; // Double Relationship ID in 2012
 		[object setPlayerID:ibuffer];
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setSellingClubID:ibuffer];
@@ -147,11 +147,11 @@
 		[tempArray release];
 	}
 	else if ([object type]==TI_STARTING_PLAYER_RECORD_INFO) {
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; // Double Relationship ID in 2012
 		[object setMostAppsPersonID:ibuffer];
 		[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 		[object setMostApps:sbuffer];
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; // Double Relationship ID in 2012
 		[object setMostGoalsPersonID:ibuffer];
 		[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 		[object setMostGoals:sbuffer];
