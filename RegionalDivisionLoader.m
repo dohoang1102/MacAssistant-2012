@@ -23,6 +23,9 @@
 	[object setLevel:cbuffer];
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setDivisionID:ibuffer];
+    
+    // Skip 4 bytes
+    offset += 4;
 	
 	*byteOffset = offset;
 	

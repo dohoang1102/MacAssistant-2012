@@ -491,10 +491,17 @@
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setUnknownChar11:cbuffer];
 	
-    // FM 2012: 1659076
-	// ???
+    // FM 2012: Season Ticket Cup Matches
+	// Length 0x1 bytes
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setUnknownChar12:cbuffer];
+	for (int i=0; i<cbuffer; i++) {
+        offset += 4; // Competition UID 1
+        offset += 4; // Competition UID 2
+        offset += 1; // No Matches (Unverified)
+        offset += 4; // Name (Unverified)
+        offset += 4; // Name 2 (Unverified)
+        offset += 4; // EOF
+    }
     
     // FM 2012: 1659077
 	//[object setUnknownData6:[data subdataWithRange:NSMakeRange(offset, (cbuffer*13))]]; offset += (cbuffer*13);
