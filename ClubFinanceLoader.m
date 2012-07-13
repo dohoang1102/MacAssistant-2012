@@ -29,6 +29,9 @@
 	[object setType:cbuffer];
 	
 	if ([object type]==FT_FULL_TYPE) {
+        // jump finance until we find the next complex one
+        offset += 4340;
+        /*
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setSeasonTransferBudget:ibuffer];
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
@@ -216,14 +219,14 @@
 		[object setUnknownChar34:cbuffer];
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar35:cbuffer];
-		
+		*/
 	}
 	
 	if ([object type]!=FT_INVALID_TYPE) {
         // FM 2012
         // ??? Jump 0x1 Bytes if current byte is 0x0
         [data getBytes:&cbuffer range:NSMakeRange(offset, 1)];
-        if (cbuffer == 0) {
+        if (cbuffer == 0 && [object type]!=FT_FULL_TYPE) {
             FmFirst = NO;
             offset += 1;
         }

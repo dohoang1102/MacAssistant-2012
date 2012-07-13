@@ -367,10 +367,15 @@
         for (int i=0; i<cbuffer; i++) {
             offset += 4;
         }
-        offset += 1;
     }
-    else {
+    // Unknown Container
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    if (cbuffer > 0) {
         offset += 1;
+        [data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+        for (int i=0; i<sbuffer; i++) {
+            offset += 22;
+        }
     }
     
     /* --- Unknown For now
@@ -503,12 +508,17 @@
         offset += 4; // Name 2 (Unverified)
         offset += 4; // EOF
     }
-    
-    // FM 2012: 1659077
-	//[object setUnknownData6:[data subdataWithRange:NSMakeRange(offset, (cbuffer*13))]]; offset += (cbuffer*13);
 	
-    // FM 2012 Skip 5 bytes
-    offset += 5;
+    // Possibly Debts
+    [data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+    for (int i=0; i<ibuffer; i++) {
+        offset += 4; // Amount
+        offset += 4; // Unknown
+        offset += 4; // End Date
+        offset += 1; // Type
+        offset += 4; // Start Date
+    }
+    offset += 1;
     
 	if (debug) { NSLog(@"before TC at %d",offset); }
 	

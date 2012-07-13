@@ -126,7 +126,7 @@
 		[object setUnknownChar1:cbuffer];
 	}
 	else if ([object type]==TI_BUY_BACK_INFO) {
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; // Double Relationship ID in 2012
 		[object setPlayerID:ibuffer];
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setCash:ibuffer];
@@ -176,7 +176,7 @@
 		[object setPlayersSigned:cbuffer];
 	}
 	else if ([object type]==TI_PROMOTION_CASH_INFO) {
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; // Double Relationship ID in 2012
 		[object setPlayerID:ibuffer];
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setCash:ibuffer];
