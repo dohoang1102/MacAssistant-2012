@@ -126,7 +126,7 @@
 	[object setAlternativeStadiums:tempArray];
 	[tempArray release];
 	
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 2;
 	if (cbuffer>0 && debug) { NSLog(@"mystery count 2 > 0 at %d",offset); }
 	tempArray = [[NSMutableArray alloc] init];
 	for (int i=0;i<cbuffer;i++) {
@@ -136,7 +136,7 @@
 	[tempArray release];
     
     // Unknown container
-    offset += 1;
+    // offset += 1;
     [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
     if (cbuffer > 0) {
         offset += cbuffer * 6;

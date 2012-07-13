@@ -239,11 +239,11 @@
 		if (debug) { NSLog(@"UTI6:%d - %d",ibuffer,cbuffer); }
 	}
 	else if ([object type]==TI_UNKNOWN_7) {
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setUnknownChar1:cbuffer];
 		
-		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, ((cbuffer*16)+6))]]; 
-		offset += ((cbuffer*16) + 6);
+		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, ((ibuffer*16)+6))]]; 
+		offset += ((ibuffer*16) + 6);
 		
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar2:cbuffer];
@@ -303,11 +303,11 @@
 		if (debug) { NSLog(@"UTI13:%d - %d - %d - %d - %d - %d",[object unknownChar1],[object unknownChar2],[object unknownChar3],[object unknownChar4],[object unknownChar5],[object unknownChar6]); }
 	}
 	else if ([object type]==TI_UNKNOWN_14) {
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setUnknownChar1:cbuffer];
 		
-		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, (cbuffer*4))]]; 
-		offset += (cbuffer*4);
+		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, (ibuffer*4))]]; 
+		offset += (ibuffer*4);
 	
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar2:cbuffer];

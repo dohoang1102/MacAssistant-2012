@@ -19,6 +19,7 @@
 	char cbuffer;
 	int ibuffer;
 	float fbuffer;
+    short sbuffer;
 	
 	unsigned int offset = *byteOffset;
     BOOL FmFirst = YES;
@@ -30,8 +31,6 @@
 	
 	if ([object type]==FT_FULL_TYPE) {
         // jump finance until we find the next complex one
-        offset += 4340;
-        /*
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setSeasonTransferBudget:ibuffer];
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
@@ -99,8 +98,8 @@
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setUnknownInt3:ibuffer];
 		
-		// ???
-		[object setUnknownDate2:[FMDateLoader readFromData:data atOffset:&offset]];
+		// ??? Unknown 4 bytes?
+        offset += 4;
 		
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setPlayersSold:ibuffer];
@@ -110,11 +109,6 @@
 		[object setEstimatedWeeklyMerchandise:ibuffer];
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setWeeklyWageBudget:ibuffer];
-		
-		[object setThisMonth:[ClubFinanceRecordLoader readFromData:data atOffset:&offset]];
-		[object setLastMonth:[ClubFinanceRecordLoader readFromData:data atOffset:&offset]];
-		[object setLastYear:[ClubFinanceRecordLoader readFromData:data atOffset:&offset]];
-		[object setThisYear:[ClubFinanceRecordLoader readFromData:data atOffset:&offset]];
 		
 		// ???
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
@@ -159,78 +153,23 @@
 		[object setUnknownChar32:cbuffer];
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar33:cbuffer];
+        
+        offset += 7;
+        offset += 176; // Unknown 174 bytes
+        offset += 322;
+        
+        [object setUnknownDate1:[FMDateLoader readFromData:data atOffset:&offset]];
+        [object setUnknownDate2:[FMDateLoader readFromData:data atOffset:&offset]];
+        
+        [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 2;
+        for (int i=0; i<cbuffer; i++) {
+            offset += 144;
+        }
 		
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-		[object setTransferIncomePercentage:ibuffer];
-		
-		// ???
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		[object setUnknownChar1:cbuffer];
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		[object setUnknownChar2:cbuffer];
-		
-		[object setLastBudgetIncreaseDate:[FMDateLoader readFromData:data atOffset:&offset]];
-		[object setLastSeasonUpdateDate:[FMDateLoader readFromData:data atOffset:&offset]];
-		
-		// ???
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-		[object setUnknownInt8:ibuffer];
-		
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		
-		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-		for (int i=0;i<cbuffer;i++) {
-			[tempArray addObject:[ClubFinanceRecordLoader readFromData:data atOffset:&offset]];
-		}
-		[object setPastRecords:tempArray];
-		[tempArray release];
-		
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		tempArray = [[NSMutableArray alloc] init];
-		for (int i=0;i<cbuffer;i++) {
-			[tempArray addObject:[ClubFinanceRevenueRecordLoader readFromData:data atOffset:&offset]];
-		}
-		[object setPastRevenueRecords:tempArray];
-		[tempArray release];
-		
-		// ???
-		[object setUnknownDate1:[FMDateLoader readFromData:data atOffset:&offset]];
-		
-		// ???
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		[object setUnknownChar18:cbuffer];
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-		[object setUnknownInt9:ibuffer];
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-		[object setUnknownInt10:ibuffer];
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-		[object setUnknownInt11:ibuffer];
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-		[object setUnknownInt12:ibuffer];
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-		[object setUnknownInt13:ibuffer];
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-		[object setUnknownInt14:ibuffer];
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-		[object setUnknownInt15:ibuffer];
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		[object setUnknownChar19:cbuffer];
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		[object setUnknownChar34:cbuffer];
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		[object setUnknownChar35:cbuffer];
-		*/
+        offset += 58; // Unknown 58 bytes
 	}
 	
 	if ([object type]!=FT_INVALID_TYPE) {
-        // FM 2012
-        // ??? Jump 0x1 Bytes if current byte is 0x0
-        [data getBytes:&cbuffer range:NSMakeRange(offset, 1)];
-        if (cbuffer == 0 && [object type]!=FT_FULL_TYPE) {
-            FmFirst = NO;
-            offset += 1;
-        }
-        
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setBalance:ibuffer];
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
@@ -301,8 +240,8 @@
 		
         
         if (FmFirst) {
-            [data getBytes:&cbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-            for (int i=0; i<cbuffer; i++) {
+            [data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+            for (int i=0; i<sbuffer; i++) {
                 offset += 4;
             }
         }
@@ -310,6 +249,13 @@
             offset += 1;
         }
 	}
+    
+    if ([object type]==FT_INVALID_TYPE) {
+        [data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+        for (int i=0; i<sbuffer; i++) {
+            offset += 4;
+        }
+    }
 	
 	*byteOffset = offset;
 	

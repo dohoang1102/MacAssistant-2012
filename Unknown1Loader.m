@@ -19,12 +19,15 @@
 	
 	Unknown1 *object = [[Unknown1 alloc] init];
 	
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setUnknownChar1:cbuffer];
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setUnknownInt:ibuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    offset += 4;
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar1:cbuffer];
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setUnknownChar2:cbuffer];
+    offset += 4; // Date
+    offset += 4; // Date
 	
 	*byteOffset = offset;
 	
