@@ -17,6 +17,7 @@
 {
 	char cbuffer;
 	int ibuffer, count;
+    BOOL debug = NO;
 	
 	unsigned int offset = *byteOffset;
 	
@@ -68,13 +69,15 @@
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setContinentID:ibuffer];
 	
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	tempArray = [[NSMutableArray alloc] init];
-	for (int i=0;i<cbuffer;i++) {
+	for (int i=0;i<ibuffer;i++) {
 		[tempArray addObject:[MediaClubLoader readFromData:data atOffset:&offset]];
 	}
 	[object setClubs:tempArray];
 	[tempArray release];
+    
+    // FM 2012 
 	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setPeriod:cbuffer];
@@ -104,9 +107,11 @@
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setRowID:ibuffer];
-	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; //FM 2012 Double ID
 	[object setUID:ibuffer];
 	
+    if (debug) { NSLog(@"Media %d (%@) at %d",[object rowID],[object name],offset); }
+    
 	*byteOffset = offset;
 	
 	return object;

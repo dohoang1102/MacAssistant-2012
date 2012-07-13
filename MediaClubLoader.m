@@ -19,7 +19,7 @@
 	
 	MediaClub *object = [[MediaClub alloc] init];
 	
-	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; // FM 2012 Double ID
 	[object setClubID:ibuffer];
 	[object setURL:[FMString readFromData:data atOffset:&offset]];
 	
