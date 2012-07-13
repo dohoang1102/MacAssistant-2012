@@ -18,13 +18,13 @@
 	char cbuffer;
 	short sbuffer;
 	int ibuffer;
-	BOOL debug = NO;
+	BOOL debug = YES;
 	NSMutableArray *tempArray;
 	
 	unsigned int offset = *byteOffset;
 	
 	Competition *object = [[Competition alloc] init];
-	
+    
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setDatabaseClass:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
@@ -63,16 +63,25 @@
 		[object setShortName:[FMString readFromData:data atOffset:&offset]];
 		[object setName:[FMString readFromData:data atOffset:&offset]];
 	}
-	
+    
+    // FM 2012
+    // 14 Unknown bytes
+	offset += 14;
+    
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setContinentID:ibuffer];
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setNationID:ibuffer];
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setLeagueBodyClubID:ibuffer];
-	
-	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-	[object setReputation:sbuffer];
+    // FM 2012
+    // Skip 4 bytes (2x 4bytes??)
+    offset += 4;
+    
+    // Skip unknown 2x shorts 0x4 ??
+    offset += 2;
+    [data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+	[object setUnknownShort1:sbuffer];
 	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setUnknownChar6:cbuffer];
@@ -85,9 +94,9 @@
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setUnknownChar10:cbuffer];
 	
-	// same as reputation?
-	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-	[object setUnknownShort1:sbuffer];
+	// same as reputation? Maybe this one's the reputation?
+    [data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+	[object setReputation:sbuffer];
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setLastHistoryID:ibuffer];
@@ -145,9 +154,22 @@
 	[object setEastBoundaryCityID:ibuffer];
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setWestBoundaryCityID:ibuffer];
+    
+    // FM 2012
+    // Unknown 2x 0x1 bytes
+    offset += 1;
+    offset += 1;
+    
+    // Unknown 2 dates
+    offset += 4; // Date
+    offset += 4; // Date
+    
+    // Unknown 2 bytes
+    offset += 2;
+    
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setRowID:ibuffer];
-	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; // Double ID in FM 2012
 	[object setUID:ibuffer];
 	
 	if (debug) { NSLog(@"comp %d (%d) at %d",[object rowID], [object UID], offset); }
