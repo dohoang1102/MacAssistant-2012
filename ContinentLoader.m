@@ -42,6 +42,8 @@
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setHasInfos:cbuffer];
 	
+    // FM 2012 - no infos?
+    /*
 	if ([object hasInfos]) {
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		tempArray = [[NSMutableArray alloc] init];
@@ -54,11 +56,15 @@
 		}
 		[object setInfos:tempArray];
 		[tempArray release];
-	}
+	} */
+    
+    // FM 2012
+    // 0x2 ???
+    offset += 2;
 		
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setRowID:ibuffer];
-	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; // FM 2012 Double ID
 	[object setUID:ibuffer];
 	
 	*byteOffset = offset;
