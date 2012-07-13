@@ -16,6 +16,7 @@
 	char cbuffer;
 	float fbuffer;
 	int ibuffer;
+    BOOL debug = NO;
 	
 	unsigned int offset = *byteOffset;
 	
@@ -29,15 +30,29 @@
 	[object setSymbol:[FMString readFromData:data atOffset:&offset]];
 	[data getBytes:&fbuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setExchangeRate:fbuffer];
-	[data getBytes:&fbuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	
+    /*
+    [data getBytes:&fbuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setApproxExchangeRate:fbuffer];
 	[data getBytes:&fbuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setVeryApproxExchangeRate:fbuffer];
+     */
+    
+    // FM 2012 Exchange history
+    [data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+    for (int i=0; i<ibuffer; i++) {
+        offset += 2; // Year
+        offset += 4; // Float Exchange Rate
+        
+    }
+     
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setRowID:ibuffer];
-	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; // FM 2012 Double ID
 	[object setUID:ibuffer];
 	
+    if (debug) { NSLog(@"Currency %d (%@) at %d",[object rowID],[object name],offset); }
+    
 	*byteOffset = offset;
 	
 	return object;
