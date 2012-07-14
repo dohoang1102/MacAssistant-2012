@@ -394,7 +394,6 @@
 	if (!compressed) { saveStartOffset += 18; }
 	
 	// read game DB
-    [fileData writeToFile:@"/Users/Tom/Desktop/data.tad" atomically:YES];
 	[database readGameDB:fileData atOffset:&fileOffset];
 	
 	if (!compressed) { [database setSaveEndOffset:([database saveEndOffset] + 18)]; }
