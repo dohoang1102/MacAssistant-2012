@@ -38,12 +38,12 @@
 	[object setAlternativeStadiumID:ibuffer];
 	
 	// ???
-	[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 5)]]; 
-	offset += 5;
+	[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 9)]]; 
+	offset += 9;
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setRowID:ibuffer];
-	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; // FM 2012 Double ID
 	[object setUID:ibuffer];
 	
 	*byteOffset = offset;
