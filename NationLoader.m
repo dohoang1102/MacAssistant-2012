@@ -30,7 +30,7 @@
 	short sbuffer;
 	float fbuffer;
 	int ibuffer, count;
-	BOOL debug = YES;
+	BOOL debug = NO;
 	NSMutableArray *tempArray;
 	
 	unsigned int offset = *byteOffset;

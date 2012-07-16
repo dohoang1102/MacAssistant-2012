@@ -29,9 +29,16 @@
 	[object setUnknownChar:cbuffer];
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setNationID:ibuffer];
+    
+    // FM 2012
+    // Unknown 0x4 ?
+    offset += 4;
+    // Unknown 0x1 ??
+    offset += 1;
+    
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setRowID:ibuffer];
-	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; // FM 2012 Double ID
 	[object setUID:ibuffer];
 	
 	*byteOffset = offset;
