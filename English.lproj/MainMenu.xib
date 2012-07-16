@@ -3,41 +3,41 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1070</int>
 		<string key="IBDocument.SystemVersion">11E53</string>
-		<string key="IBDocument.InterfaceBuilderVersion">2809</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2182</string>
 		<string key="IBDocument.AppKitVersion">1138.47</string>
 		<string key="IBDocument.HIToolboxVersion">569.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">2809</string>
+			<string key="NS.object.0">2182</string>
 		</object>
 		<object class="NSArray" key="IBDocument.IntegratedClassDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<string>NSArrayController</string>
-			<string>NSButton</string>
-			<string>NSButtonCell</string>
-			<string>NSCustomObject</string>
-			<string>NSCustomView</string>
 			<string>NSMenu</string>
-			<string>NSMenuItem</string>
-			<string>NSObjectController</string>
-			<string>NSOutlineView</string>
-			<string>NSPredicateEditor</string>
-			<string>NSPredicateEditorRowTemplate</string>
-			<string>NSScrollView</string>
-			<string>NSScroller</string>
-			<string>NSSplitView</string>
-			<string>NSTableColumn</string>
-			<string>NSTableHeaderView</string>
-			<string>NSTableView</string>
-			<string>NSTextFieldCell</string>
-			<string>NSToolbar</string>
-			<string>NSToolbarFlexibleSpaceItem</string>
 			<string>NSToolbarItem</string>
+			<string>NSButton</string>
+			<string>NSToolbarFlexibleSpaceItem</string>
+			<string>NSCustomObject</string>
+			<string>NSArrayController</string>
+			<string>NSSplitView</string>
+			<string>NSPredicateEditor</string>
+			<string>NSTableView</string>
+			<string>NSCustomView</string>
+			<string>NSPredicateEditorRowTemplate</string>
 			<string>NSToolbarSeparatorItem</string>
-			<string>NSToolbarSpaceItem</string>
-			<string>NSUserDefaultsController</string>
-			<string>NSView</string>
 			<string>NSWindowTemplate</string>
+			<string>NSTextFieldCell</string>
+			<string>NSButtonCell</string>
+			<string>NSTableColumn</string>
+			<string>NSOutlineView</string>
+			<string>NSView</string>
+			<string>NSToolbarSpaceItem</string>
+			<string>NSObjectController</string>
+			<string>NSScrollView</string>
+			<string>NSToolbar</string>
+			<string>NSUserDefaultsController</string>
+			<string>NSScroller</string>
+			<string>NSMenuItem</string>
+			<string>NSTableHeaderView</string>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -4094,6 +4094,7 @@
 							<string key="NSFrame">{{671, 4}, {154, 28}}</string>
 							<reference key="NSSuperview" ref="469324715"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="511128059">
 								<int key="NSCellFlags">-2080244224</int>
@@ -7770,7 +7771,7 @@
 									<string key="NSFrame">{{620, 0}, {15, 154}}</string>
 									<reference key="NSSuperview" ref="897552103"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView"/>
+									<reference key="NSNextKeyView" ref="225391050"/>
 									<reference key="NSTarget" ref="897552103"/>
 									<string key="NSAction">_doScroller:</string>
 									<double key="NSPercent">0.97701150178909302</double>
@@ -14179,7 +14180,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{320, 132}, {843, 448}}</string>
-					<boolean value="YES"/>
+					<boolean value="NO"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -14687,19 +14688,19 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>Controller</string>
 							<string>NSPredicateEditor</string>
-							<string>BWStyledTextField</string>
-							<string>BWStyledTextField</string>
+							<string>NSTextField</string>
+							<string>NSTextField</string>
 							<string>NSPredicateEditor</string>
-							<string>BWStyledTextField</string>
+							<string>NSTextField</string>
 							<string>NSPredicateEditor</string>
 							<string>NSTextField</string>
 							<string>NSTableView</string>
 							<string>NSPredicateEditorRowTemplate</string>
 							<string>NSButton</string>
-							<string>BWSheetController</string>
-							<string>BWStyledTextField</string>
+							<string>NSTextField</string>
+							<string>NSTextField</string>
 							<string>NSPredicateEditor</string>
-							<string>BWStyledTextField</string>
+							<string>NSTextField</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -14734,11 +14735,11 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">mentalText</string>
-								<string key="candidateClassName">BWStyledTextField</string>
+								<string key="candidateClassName">NSTextField</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">personalText</string>
-								<string key="candidateClassName">BWStyledTextField</string>
+								<string key="candidateClassName">NSTextField</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">physicalFilter</string>
@@ -14746,7 +14747,7 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">physicalText</string>
-								<string key="candidateClassName">BWStyledTextField</string>
+								<string key="candidateClassName">NSTextField</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">playerFilter</string>
@@ -14770,11 +14771,11 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">sheetController</string>
-								<string key="candidateClassName">BWSheetController</string>
+								<string key="candidateClassName">NSTextField</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">styledText</string>
-								<string key="candidateClassName">BWStyledTextField</string>
+								<string key="candidateClassName">NSTextField</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">technicalFilter</string>
@@ -14782,7 +14783,7 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">technicalText</string>
-								<string key="candidateClassName">BWStyledTextField</string>
+								<string key="candidateClassName">NSTextField</string>
 							</object>
 						</object>
 					</object>

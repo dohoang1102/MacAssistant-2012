@@ -16,7 +16,7 @@
 	
 	Unknown6 *object = [[Unknown6 alloc] init];
 	
-	[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 38)]]; offset += 38;
+	[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 32)]]; offset += 32;
 	
 	*byteOffset = offset;
 	

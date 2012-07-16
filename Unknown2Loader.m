@@ -36,8 +36,8 @@
 	[object setUnknownInt3:ibuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setUnknownChar1:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setUnknownChar2:cbuffer];
+	//[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	//[object setUnknownChar2:cbuffer];
 	
 	[object setBusinessName:[FMString readFromData:data atOffset:&offset]];
 	

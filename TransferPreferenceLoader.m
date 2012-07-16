@@ -25,6 +25,9 @@
 	[object setRating:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setScoutingKnowledge:cbuffer];
+    // FM2012 NEW
+    offset += 1; // Minimum Age
+    offset += 1; // Maximum Age
 	
 	*byteOffset = offset;
 	

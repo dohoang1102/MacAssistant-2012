@@ -30,7 +30,7 @@
 	short sbuffer;
 	float fbuffer;
 	int ibuffer, count;
-	BOOL debug = NO;
+	BOOL debug = YES;
 	NSMutableArray *tempArray;
 	
 	unsigned int offset = *byteOffset;
@@ -110,9 +110,9 @@
 	
 	if (debug) { NSLog(@"after infos at %d",offset); }
 	
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	tempArray = [[NSMutableArray alloc] init];
-	for (int i=0;i<cbuffer;i++) {
+	for (int i=0;i<ibuffer;i++) {
 		[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 		[tempArray addObject:[NSNumber numberWithShort:sbuffer]];
 	}
@@ -310,6 +310,28 @@
 	}
 	[object setU19FwShortlist:tempArray];
 	[tempArray release];
+    
+    // FM 2012 4 unknown shortlists?
+    offset += 2; // MinRep
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    for (int i=0;i<cbuffer;i++) {
+		offset += 4;
+	}
+    offset += 2; // MinRep
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    for (int i=0;i<cbuffer;i++) {
+		offset += 4;
+	}
+    offset += 2; // MinRep
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    for (int i=0;i<cbuffer;i++) {
+		offset += 4;
+	}
+    offset += 2; // MinRep
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    for (int i=0;i<cbuffer;i++) {
+		offset += 4;
+	}
 	
 	/*
 	
@@ -369,7 +391,7 @@
 	
 	if (debug) { NSLog(@"at unknown array at %d",offset); }
 	
-	/*
+	
 	
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 	if (sbuffer>0 && debug) { NSLog(@"unknown array at %d",offset); }
@@ -380,6 +402,7 @@
 	[object setUnknowns3:tempArray];
 	[tempArray release];
 	
+     /*
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 	tempArray = [[NSMutableArray alloc] init];
 	for (int i=0;i<sbuffer;i++) {
@@ -388,13 +411,11 @@
 	[object setFamousPlayers:tempArray];
 	[tempArray release];
 	
-	if (debug) { NSLog(@"after famous players at %d",offset); }
-	
-	 */
+	if (debug) { NSLog(@"after famous players at %d",offset); } */
 	
 	// ???
-	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-	[object setUnknownShort1:sbuffer];
+	//[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+	// [object setUnknownShort1:sbuffer];
 	 
 	// ???
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
@@ -450,7 +471,7 @@
 	if (debug) { NSLog(@"after capital at %d",offset); }
 	
 	// ???
-	[object setUnknownData2:[data subdataWithRange:NSMakeRange(offset, 19)]]; offset += 19;
+	[object setUnknownData2:[data subdataWithRange:NSMakeRange(offset, 32)]]; offset += 32;
 	
 	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
@@ -470,6 +491,28 @@
 	[tempArray release];
 	
 	if (debug) { NSLog(@"at new things at %d",offset); }
+    
+    // 1 byte Continent Prefs length
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    for (int i=0; i<cbuffer; i++) {
+        // Load the preferences
+        offset += 4; //Continent ID
+        offset += 1; // Rating
+        offset += 1; // Minimum Age
+        offset += 1; // Maximum Age
+    }
+    
+    
+    // 1 byte Region Prefs length
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    for (int i=0; i<cbuffer; i++) {
+        // Load the preferences
+        offset += 4; // Region ID
+        offset += 1; // Rating
+        offset += 1; // Minimum Age
+        offset += 1; // Maximum Age
+    }
+    
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	tempArray = [[NSMutableArray alloc] init];
@@ -496,13 +539,9 @@
 	[object setAgreements:tempArray];
 	[tempArray release];
 	
-//	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-//	offset += (ibuffer*22);
-	
-//	offset += 100;
-	
+    
 	// ???
-	[object setUnknownData3:[data subdataWithRange:NSMakeRange(offset, 16)]]; offset += 16;
+	[object setUnknownData3:[data subdataWithRange:NSMakeRange(offset, 24)]]; offset += 24;
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setLength:ibuffer];
@@ -514,7 +553,7 @@
 	[object setPopulation:ibuffer];
 		
 	// ???
-	[object setUnknownData4:[data subdataWithRange:NSMakeRange(offset, 31)]]; offset += 31;
+	[object setUnknownData4:[data subdataWithRange:NSMakeRange(offset, 43)]]; offset += 43;
 	
 	// ???
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
@@ -525,6 +564,9 @@
 	}
 	[object setUnknowns5:tempArray];
 	[tempArray release];
+    
+    // FM 2012
+    offset += 1;
 	
 	if (debug) { NSLog(@"before TC at %d",offset); }
 	
@@ -535,10 +577,21 @@
 	else { return [NSString stringWithFormat:@"Team Container - %@",tc]; }
 	
 	if (debug) { NSLog(@"after TC at %d",offset); }
+    
+    // FM 2012
+    offset += 4; // Average Attendance
+    offset += 4; // Minimum Attendance
+    offset += 4; // Maximum Attandance
+    
+    id newTc = [TeamContainerLoader readTransferInfosFromData:data atOffset:&offset withTeamContainer: tc];
+    if ([[newTc className] isEqualToString:@"TeamContainer"]) {
+        [object setTeamContainer:newTc];
+    }
+    else { return [NSString stringWithFormat:@"Team Container - %@", newTc]; }
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setRowID:ibuffer];
-	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; // FM 2012 Double ID
 	[object setUID:ibuffer];
 	
 	if (debug) { NSLog(@"Nation %d (%@) at %d",[object rowID],[[object teamContainer] name], offset); }
