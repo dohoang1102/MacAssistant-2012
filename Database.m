@@ -867,11 +867,21 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[pool drain];
 	
 #pragma mark Sponsors
+    if ([controller gameDBVersion] >= FM2012_12_1) {
+        // 0x05 ???
+        *byteOffset += 5;
+    }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"loading sponsors...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
+    
+    if ([controller gameDBVersion] >= FM2012_12_1) {
+        // 0x01 ???
+        *byteOffset += 1;
+    }
+    
 	for (i=0; i<count; i++) {
 		[self setCurrentRecord:(i+1)];
 		
@@ -901,11 +911,21 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[pool drain];
 	
 #pragma mark Stadiums
+    if ([controller gameDBVersion] >= FM2012_12_1) {
+        // 0x05 ???
+        *byteOffset += 5;
+    }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"loading stadiums...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
+    
+    if ([controller gameDBVersion] >= FM2012_12_1) {
+        // 0x01 ???
+        *byteOffset += 1;
+    }
+    
 	for (i=0; i<count; i++) {
 		[self setCurrentRecord:(i+1)];
 		
