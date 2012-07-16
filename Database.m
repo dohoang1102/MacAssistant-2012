@@ -686,11 +686,21 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[pool drain];
 		
 #pragma mark Surnames
+    if ([controller gameDBVersion] >= FM2012_12_1) {
+        // 0x05 ???
+        *byteOffset += 5;
+    }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"loading surnames...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
+    
+    if ([controller gameDBVersion] >= FM2012_12_1) {
+        // 0x01 ???
+        *byteOffset += 1;
+    }
+    
 	for (i=0; i<count; i++) {
 		[self setCurrentRecord:(i+1)];
 		
@@ -718,11 +728,21 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[pool drain];
 	
 #pragma mark Common Names
+    if ([controller gameDBVersion] >= FM2012_12_1) {
+        // 0x05 ???
+        *byteOffset += 5;
+    }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"loading common names...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
+    
+    if ([controller gameDBVersion] >= FM2012_12_1) {
+        // 0x01 ???
+        *byteOffset += 1;
+    }
+    
 	for (i=0; i<count; i++) {
 		[self setCurrentRecord:(i+1)];
 		
@@ -750,11 +770,21 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[pool drain];
 	
 #pragma mark Unknowns 1
+    if ([controller gameDBVersion] >= FM2012_12_1) {
+        // 0x05 ???
+        *byteOffset += 5;
+    }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"loading unknowns 1...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
+    
+    if ([controller gameDBVersion] >= FM2012_12_1) {
+        // 0x01 ???
+        *byteOffset += 1;
+    }
+    
 	for (i=0; i<count; i++) {
 		[self setCurrentRecord:(i+1)];
 		
