@@ -54,8 +54,15 @@
 		[tempArray release];
 		
 		// ???
-		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 114)]]; 
-		offset += 114;
+        [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+        for (int i=0; i<cbuffer; i++) {
+            offset += 4;
+            offset += 4;
+            offset += 1;
+        }
+        
+		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 118)]]; 
+		offset += 118;
 		
 		[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 		[object setUnknownShort1:sbuffer];
@@ -152,20 +159,35 @@
 	[tempArray release];
 	
 	if (debug) { NSLog(@"after arrays at %d",offset); }
-	
-	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-	tempArray = [[NSMutableArray alloc] init];
-	for (int i=0;i<sbuffer;i++) {
-		[tempArray addObject:[Unknown8Loader readFromData:data atOffset:&offset]];
-	}
-	[object setUnknown8s:tempArray];
-	[tempArray release];
+    
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    bool hasUnknownArray = (bool)cbuffer;
+    
+    if (hasUnknownArray) {
+        offset += 1;
+        [data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 4;
+        tempArray = [[NSMutableArray alloc] init];
+        for (int i=0;i<sbuffer;i++) {
+            // if (debug) { NSLog(@"Unknown Array %d at %d",i, offset); }
+            [tempArray addObject:[Unknown8Loader readFromData:data atOffset:&offset]];
+        }
+        [object setUnknown8s:tempArray];
+        [tempArray release]; 
+    }
+    
+    [data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+    offset += ibuffer * 10;
 	
 	// ???
-	[object setUnknownData3:[data subdataWithRange:NSMakeRange(offset, 16)]]; 
-	offset += 16;
-	
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    // 2x 0x4
+	[object setUnknownData3:[data subdataWithRange:NSMakeRange(offset, 8)]]; 
+	offset += 8;
+    
+    // FM 2012 Unknown Data
+    offset += 4; // Date
+    offset += 4; // Date
+    
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	tempArray = [[NSMutableArray alloc] init];
 	for (int i=0;i<cbuffer;i++) {
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
@@ -173,8 +195,13 @@
 	}
 	[object setUnknowns1:tempArray];
 	[tempArray release];
-	
+    
+    offset += 8; // ???
+    
 	// ???
+    offset += 7; // Unknown below?
+    
+    /*
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setUnknownChar2:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
@@ -195,15 +222,18 @@
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setTeamContainerID:ibuffer];
+     */
 	[object setName:[FMString readFromData:data atOffset:&offset]];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setNameGender:cbuffer];
+     
 	[object setShortName:[FMString readFromData:data atOffset:&offset]];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setShortNameGender:cbuffer];
+     
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setRowID:ibuffer];
-	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; // FM 2012 Double ID
 	[object setUID:ibuffer];
 	
 	if (debug) { NSLog(@"Team %d at %d",[object rowID], offset); }

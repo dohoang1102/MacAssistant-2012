@@ -22,6 +22,9 @@
 	
 	[object setStartDate:[FMDateLoader readFromData:data atOffset:&offset]];
 	[object setEndDate:[FMDateLoader readFromData:data atOffset:&offset]];
+    
+    // FM 2012 Extra Date
+    offset += 4;
 	
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 	[object setFixtureBlockID:sbuffer];
@@ -29,6 +32,9 @@
 	[object setType:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setActualCompetitionType:cbuffer];
+    
+    // FM 2012 4 unknown bytes at the end
+    offset += 4;
 	
 	*byteOffset = offset;
 	
