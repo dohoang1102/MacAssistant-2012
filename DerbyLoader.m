@@ -17,6 +17,7 @@
 	char cbuffer;
 	short sbuffer;
 	int ibuffer;
+    unsigned char ucbuffer;
 	BOOL debug = FALSE;
 	
 	unsigned int offset = *byteOffset;
@@ -61,13 +62,13 @@
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setUnknownChar4:cbuffer];
 	
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setWorldReputation:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setNationalReputation:cbuffer];
+	[data getBytes:&ucbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setWorldReputation:ucbuffer];
+	[data getBytes:&ucbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setNationalReputation:ucbuffer];
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setRowID:ibuffer];
-	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; // FM 2012 Double ID
 	[object setUID:ibuffer];
 	
 	if (debug) { NSLog(@"%@ (%d) at %d",[object name],[object rowID], offset); }
