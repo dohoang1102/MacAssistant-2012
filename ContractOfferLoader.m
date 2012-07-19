@@ -34,14 +34,14 @@
 	[object setContract:[ContractLoader readFromData:data atOffset:&offset type:[object type] version:version]];
 	
 	// ???
-	[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 18)]]; 
-	offset += 18;
+	[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 6)]]; 
+	offset += 6;
 	
 	[object setUnknownDate1:[FMDateLoader readFromData:data atOffset:&offset]];
 	
 	// ???
-	[object setUnknownData2:[data subdataWithRange:NSMakeRange(offset, 3)]]; 
-	offset += 3;
+	[object setUnknownData2:[data subdataWithRange:NSMakeRange(offset, 7)]]; 
+	offset += 7;
 	
 	*byteOffset = offset;
 	

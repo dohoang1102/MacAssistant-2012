@@ -1235,10 +1235,20 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[pool drain];
 
 #pragma mark Agreements
+    if ([controller gameDBVersion] >= FM2012_12_1) {
+        // 0x05 ???
+        *byteOffset += 5;
+    }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"loading agreements...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+    
+    if ([controller gameDBVersion] >= FM2012_12_1) {
+        // 0x01 ???
+        *byteOffset += 1;
+    }
+    
 	for (i=0; i<count; i++) {
 		[self setCurrentRecord:(i+1)];
 		id object = [Loader readAgreementFromData:data atOffset:byteOffset];
@@ -1279,10 +1289,20 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 	
 #pragma mark People
+    if ([controller gameDBVersion] >= FM2012_12_1) {
+        // 0x05 ???
+        *byteOffset += 5;
+    }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"loading people...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+    
+    if ([controller gameDBVersion] >= FM2012_12_1) {
+        // 0x01 ???
+        *byteOffset += 1;
+    }
+    
 	NSLog(@"%d people",count);
 	[self setTotalRecords:count];
 	

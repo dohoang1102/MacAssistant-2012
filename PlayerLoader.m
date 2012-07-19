@@ -83,6 +83,9 @@
 	// ???
 	[object setUnknownData2:[data subdataWithRange:NSMakeRange(offset, cbuffer)]]; 
 	offset += cbuffer;
+    
+    // FM 2012 ???
+    offset += 3;
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setAskingPrice:ibuffer];
@@ -98,9 +101,11 @@
 	offset += (cbuffer*12);
 	
 	// ???
-	[object setUnknownData5:[data subdataWithRange:NSMakeRange(offset, 30)]]; 
-	offset += 30;
-	
+    offset += 4;
+    
+	[object setUnknownData5:[data subdataWithRange:NSMakeRange(offset, 31)]]; 
+	offset += 31;
+    
 	[object setUnknownDate3:[FMDateLoader readFromData:data atOffset:&offset]];
 	[object setUnknownDate4:[FMDateLoader readFromData:data atOffset:&offset]];
 	[object setUnknownDate5:[FMDateLoader readFromData:data atOffset:&offset]];
@@ -124,6 +129,9 @@
 	[object setUnknownInt1:ibuffer];
 	
 	[object setUnknownDate7:[FMDateLoader readFromData:data atOffset:&offset]];
+    
+    // ???
+    offset += 4;
 	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setHasCareerStats:cbuffer];
@@ -268,6 +276,9 @@
 		[object setUnknownChar15:cbuffer];
 		[object setUnknownData17:[data subdataWithRange:NSMakeRange(offset, cbuffer)]]; 
 		offset += cbuffer;
+        
+        // ???
+        offset += 3;
 		
 		// last full international match?
 		[object setLastInternationalMatch:[FMDateLoader readFromData:data atOffset:&offset]];
@@ -352,6 +363,10 @@
 	[object setLastInjuryTypeID:ibuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setTrainingLevel:cbuffer];
+    
+    // ??? 2012
+    offset += 1;
+    
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 	[object setDaysSinceLastMatch:sbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;

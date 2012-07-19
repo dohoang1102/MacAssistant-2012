@@ -93,6 +93,17 @@
 	[tempArray release];
 	
 	//NSLog(@"After For 2");
+    
+    // FM 2012 unknown arrays???
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    for (int i=0; i<cbuffer; i++) {
+        offset += 5;
+    }
+    
+    [data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+    for (int i=0; i<ibuffer; i++) {
+        offset += 11;
+    }
 	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setHasStaffRoles:cbuffer];

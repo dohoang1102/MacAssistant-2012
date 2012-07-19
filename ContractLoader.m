@@ -43,12 +43,15 @@
 //		[object setCleanSheetBonus:ibuffer];
 		
 		// ???
-		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 11)]]; 
-		offset += 11;
+		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 10)]]; 
+		offset += 10;
 		
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setJob:cbuffer];
 		
+        // FM 2012 ???
+        offset += 1;
+        
 		// ???
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar1:cbuffer];
@@ -98,6 +101,10 @@
 		[object setClubID:ibuffer];
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setWeeklyWage:ibuffer];
+        
+        // FM 2012 ???
+        offset += 4;
+        
 		[object setEndDate:[FMDateLoader readFromData:data atOffset:&offset]];
 		
 		// ???
