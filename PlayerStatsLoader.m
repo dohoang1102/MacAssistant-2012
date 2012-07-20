@@ -18,6 +18,8 @@
 	unsigned int offset = *byteOffset;
 	
 	PlayerStats *object = [[PlayerStats alloc] init];
+    
+    // Stats need debugging, temporarily removed extra bytes
 	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setDatabaseClass:cbuffer];
@@ -71,7 +73,9 @@
 	[object setLeftWingBack:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setRightWingBack:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	
+    
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setCrossing:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setDribbling:cbuffer];
@@ -93,7 +97,8 @@
 	[object setTackling:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setCreativity:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setHandling:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setAerialAbility:cbuffer];
@@ -106,28 +111,34 @@
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setThrowing:cbuffer];
 	
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setUnknownChar1:cbuffer];
+	// [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	// [object setUnknownChar1:cbuffer];
 	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setAnticipation:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setDecisions:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setOneOnOnes:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setPositioning:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setReflexes:cbuffer];
+    
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setFirstTouch:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setTechnique:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setLeftFoot:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setRightFoot:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setFlair:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setCorners:cbuffer];
@@ -135,14 +146,17 @@
 	[object setTeamwork:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setWorkRate:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setLongThrows:cbuffer];
+    
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setEccentricity:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setRushingOut:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setTendencyToPunch:cbuffer];
+    
+    
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setAcceleration:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
@@ -161,8 +175,10 @@
 	[object setDirtiness:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setBalance:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setBravery:cbuffer];
+    
+    /*
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setConsistency:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
@@ -183,9 +199,11 @@
 	[object setComposure:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setConcentration:cbuffer];
+    */
+     
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setRowID:ibuffer];
-	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 8; // FM 2012 Double ID
 	[object setUID:ibuffer];
 	
 	*byteOffset = offset;
