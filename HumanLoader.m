@@ -6,6 +6,7 @@
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
+#import "GameVersions.h"
 #import "HumanLoader.h"
 #import "FMDateLoader.h"
 #import "FMString.h"
@@ -28,15 +29,15 @@
 	Human *object = [[Human alloc] init];
 	
 	// ???
-	[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 6)]]; 
-	offset += 6;
+	[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 10)]]; 
+	offset += 10;
 	
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 	[object setUnreadNewsItems:sbuffer];
 	
 	// ???
-	[object setUnknownData2:[data subdataWithRange:NSMakeRange(offset, 2)]]; 
-	offset += 2;
+	//[object setUnknownData2:[data subdataWithRange:NSMakeRange(offset, 2)]]; 
+	//offset += 2;
 	
 	[object setHolidayReturnDate:[FMDateLoader readFromData:data atOffset:&offset]];
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
@@ -69,11 +70,11 @@
 	[object setUnknownChar1:cbuffer];
 	[object setUnknownData5:[data subdataWithRange:NSMakeRange(offset, (cbuffer*8))]]; 
 	offset += (cbuffer*8);
-	
-	//	commented out til i store
-	//	for (int i=0; i<MAX_HUMAN_PREFERRED_PLAYERS; i++) {
-	//		offset += 8;
-	//	}
+    
+    //	commented out til i store
+    //	for (int i=0; i<MAX_HUMAN_PREFERRED_PLAYERS; i++) {
+    //		offset += 8;
+    //	}
 	[object setUnknownData6:[data subdataWithRange:NSMakeRange(offset, (MAX_HUMAN_PREFERRED_PLAYERS*8))]]; 
 	offset += (MAX_HUMAN_PREFERRED_PLAYERS*8);
 	
@@ -82,7 +83,7 @@
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	tempArray = [[NSMutableArray alloc] init];
 	for (int i=0;i<ibuffer;i++) {
-		[tempArray addObject:[NewsFilterListLoader readFromData:data atOffset:&offset version:version]];
+		[tempArray addObject:[NewsFilterListLoader readFromData:data atOffset:&offset version: version]];
 		NSLog(@"done filter list %d at %d",(i+1),offset);
 	}
 	[object setNewsFilterLists:tempArray];
@@ -108,7 +109,6 @@
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		for (int j=0;j<ibuffer;j++) {
 			[tempArray2 addObject:[GeneralInfoLoader readFromData:data atOffset:&offset readInfo:YES]];
-			//	NSLog(@"%@ done at %d",[[tempArray2 objectAtIndex:j] name],offset);
 		}
 		[tempArray addObject:tempArray2];
 		[tempArray2 release];
@@ -133,63 +133,73 @@
 	NSLog(@"after 215-2 at %d",offset);
 	
 	// ???
-	NSLog(@"Crash Catcher 1");
 	[object setUnknownData10:[data subdataWithRange:NSMakeRange(offset, 18)]]; 
 	offset += 18;
 	
-	NSLog(@"Crash Catcher 2");
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 	[object setUnknownShort3:sbuffer];
 	[object setUnknownData11:[data subdataWithRange:NSMakeRange(offset, (sbuffer*16))]]; 
 	offset += (sbuffer*16);
 	
-	NSLog(@"Crash Catcher 3");
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 	[object setUnknownShort4:sbuffer];
 	[object setUnknownData13:[data subdataWithRange:NSMakeRange(offset, (sbuffer*8))]]; 
 	offset += (sbuffer*8);
 	
-	NSLog(@"Crash Catcher 4");
+	NSLog(@"after 2 arrays at %d",offset);
+	
 	// date
 	[object setUnknownData12:[data subdataWithRange:NSMakeRange(offset, 4)]]; 
 	offset += 4;
 	
-	NSLog(@"Crash Catcher 5");
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setUnknownInt1:ibuffer];
-	[object setUnknownData15:[data subdataWithRange:NSMakeRange(offset, (ibuffer*18))]]; 
-	offset += (ibuffer*18);
 	
-	NSLog(@"Crash Catcher 6");
+	NSMutableData *newData = [[NSMutableData alloc] init];
+	
+	for (int i=0;i<ibuffer;i++)
+	{
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)];
+		
+		// seen in 11.2.1 and earlier
+		if (cbuffer==5) {
+			[newData appendData:[data subdataWithRange:NSMakeRange(offset, 18)]]; offset += 18;
+		}
+		
+		// seen in 11.3
+		else if (cbuffer==6) {
+			[newData appendData:[data subdataWithRange:NSMakeRange(offset, 19)]]; offset += 19;
+		}
+	}
+	[object setUnknownData15:newData]; 
+	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setUnknownInt3:ibuffer];
 	[object setUnknownData14:[data subdataWithRange:NSMakeRange(offset, (ibuffer*22))]]; 
 	offset += (ibuffer*22);
 	
-	NSLog(@"Crash Catcher 7");
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setUnknownInt2:ibuffer];
 	[object setUnknownData18:[data subdataWithRange:NSMakeRange(offset, (ibuffer*18))]]; 
 	offset += (ibuffer*18);
 	
+	NSLog(@"after 3 arrays at %d",offset);
 	
-	NSLog(@"Crash Catcher 8");
 	// ???
-	[object setUnknownData16:[data subdataWithRange:NSMakeRange(offset, 21)]]; 
-	offset += 21;
+    // 24 bytes, date, char
+    [object setUnknownData16:[data subdataWithRange:NSMakeRange(offset, 29)]]; 
+    offset += 29;
 	
-	NSLog(@"Crash Catcher 9");
 	// encrypted strings
 	[object setTwitterLogin:[FMString readFromData:data atOffset:&offset]];
 	[object setTwitterPassword:[FMString readFromData:data atOffset:&offset]];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setTwitterUpdateType:cbuffer];
 	
-	NSLog(@"Crash Catcher 10");
-	//[object setYoutubeLogin:[FMString readFromData:data atOffset:&offset]];
-	//[object setYoutubePassword:[FMString readFromData:data atOffset:&offset]];
+	[object setYoutubeLogin:[FMString readFromData:data atOffset:&offset]];
+	[object setYoutubePassword:[FMString readFromData:data atOffset:&offset]];
 	
-	
+    
 	NSLog(@"at bookmarks at %d",offset);
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 	[object setTopLevelBookmarkItems:sbuffer];

@@ -16,7 +16,7 @@
 {
 	char cbuffer;
 	short sbuffer;
-	int ibuffer;
+	int ibuffer, counter;
 	NSMutableArray *tempArray;
 	
 	unsigned int offset = *byteOffset;
@@ -60,18 +60,18 @@
 	[object setPastGames:tempArray];
 	[tempArray release];
 	
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[data getBytes:&counter range:NSMakeRange(offset, 4)]; offset += 4;
 	tempArray = [[NSMutableArray alloc] init];
-	for (int i=0;i<cbuffer;i++) {
+	for (int i=0;i<counter;i++) {
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[tempArray addObject:[NSNumber numberWithInt:ibuffer]];
 	}
 	[object setCompetitionsAsReferee:tempArray];
 	[tempArray release];
 	
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[data getBytes:&counter range:NSMakeRange(offset, 4)]; offset += 4;
 	tempArray = [[NSMutableArray alloc] init];
-	for (int i=0;i<cbuffer;i++) {
+	for (int i=0;i<counter;i++) {
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[tempArray addObject:[NSNumber numberWithInt:ibuffer]];
 	}

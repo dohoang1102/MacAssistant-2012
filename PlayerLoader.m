@@ -235,7 +235,9 @@
 		[object setMLSLastDraftRound:cbuffer];
 		[data getBytes:&bbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setMLSGuaranteedDealPlayer:bbuffer];
-		[object setMLSDiscoveryPlayerDate:[FMDateLoader readFromData:data atOffset:&offset]];
+		
+        offset += 1; // need to check
+        //[object setMLSDiscoveryPlayerDate:[FMDateLoader readFromData:data atOffset:&offset]];
 	}
 	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
@@ -264,21 +266,22 @@
 		[object setUnknownChar12:cbuffer];
 		[object setUnknownData16:[data subdataWithRange:NSMakeRange(offset, (cbuffer*7))]]; 
 		offset += (cbuffer*7);
-		
-		// ???
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		[object setUnknownChar13:cbuffer];
+        
+        offset += 3;
+        
+        
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar14:cbuffer];
 		
 		// ???
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar15:cbuffer];
-		[object setUnknownData17:[data subdataWithRange:NSMakeRange(offset, cbuffer)]]; 
-		offset += cbuffer;
-        
+		
         // ???
-        offset += 3;
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar13:cbuffer];
+        offset += cbuffer;
+        
 		
 		// last full international match?
 		[object setLastInternationalMatch:[FMDateLoader readFromData:data atOffset:&offset]];
