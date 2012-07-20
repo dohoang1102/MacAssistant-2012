@@ -567,6 +567,9 @@
     
     // FM 2012
     offset += 1;
+    if (version == FM2012_12_2) {
+        offset += 4;
+    }
 	
 	if (debug) { NSLog(@"before TC at %d",offset); }
 	
