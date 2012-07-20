@@ -1429,11 +1429,21 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[pool drain];
 	
 #pragma mark Non-Player Stats
+    if ([controller gameDBVersion] >= FM2012_12_1) {
+        // 0x05 ???
+        *byteOffset += 5;
+    }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"loading non-player stats...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
+    
+    if ([controller gameDBVersion] >= FM2012_12_1) {
+        // 0x01 ???
+        *byteOffset += 1;
+    }
+    
 	for (i=0; i<count; i++) {
 		[self setCurrentRecord:(i+1)];
 		
@@ -1463,11 +1473,20 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[pool drain];
 
 #pragma mark Competition Histories
-	
+	if ([controller gameDBVersion] >= FM2012_12_1) {
+        // 0x05 ???
+        *byteOffset += 5;
+    }
 	[self setStatus:NSLocalizedString(@"loading competition histories...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
+    
+    if ([controller gameDBVersion] >= FM2012_12_1) {
+        // 0x01 ???
+        *byteOffset += 1;
+    }
+    
 	for (i=0; i<count; i++) {
 		[self setCurrentRecord:(i+1)];
 		
@@ -1496,14 +1515,14 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[tempArray removeAllObjects];
 	
 	// ???
-	[self setUnknownData1:[data subdataWithRange:NSMakeRange(*byteOffset, 76)]]; 
-	*byteOffset += 76;
+	[self setUnknownData1:[data subdataWithRange:NSMakeRange(*byteOffset, 213)]]; 
+	*byteOffset += 213;
 	
 	// ???
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setUnknownInt1:count];
-	[self setUnknownData2:[data subdataWithRange:NSMakeRange(*byteOffset, (count*8))]]; 
-	*byteOffset += (count*8);
+	// [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+	// [self setUnknownInt1:count];
+	// [self setUnknownData2:[data subdataWithRange:NSMakeRange(*byteOffset, (count*8))]]; 
+	// *byteOffset += (count*8);
 	/*
 	for (i=0; i<count; i++) {
 		// int
@@ -1511,13 +1530,13 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		*byteOffset += 8;
 	}
 	*/
-	NSLog(@"End of post-unknowns 1 at %d",*byteOffset);
+	//NSLog(@"End of post-unknowns 1 at %d",*byteOffset);
 	
 	// ???
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setUnknownInt2:count];
-	[self setUnknownData3:[data subdataWithRange:NSMakeRange(*byteOffset, (count*8))]]; 
-	*byteOffset += (count*8);
+	//[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+	//[self setUnknownInt2:count];
+	//[self setUnknownData3:[data subdataWithRange:NSMakeRange(*byteOffset, (count*8))]]; 
+	//*byteOffset += (count*8);
 	/*
 	for (i=0; i<count; i++) {
 		// int
@@ -1525,19 +1544,19 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		*byteOffset += 8;
 	}
 	*/
-	NSLog(@"End of post-unknowns 2 at %d",*byteOffset);
+	//NSLog(@"End of post-unknowns 2 at %d",*byteOffset);
 	
 	// ???
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setUnknownInt3:count];
-	[self setUnknownData4:[data subdataWithRange:NSMakeRange(*byteOffset, (count*9))]]; 
-	*byteOffset += (count*9);
+	//[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+	//[self setUnknownInt3:count];
+	//[self setUnknownData4:[data subdataWithRange:NSMakeRange(*byteOffset, (count*9))]]; 
+	//*byteOffset += (count*9);
 	/*
 	 for (i=0; i<count; i++) {
 		*byteOffset += 9;
 	}
 	*/
-	NSLog(@"End of post-unknowns 3 at %d",*byteOffset);
+	//NSLog(@"End of post-unknowns 3 at %d",*byteOffset);
 	
 	// ???
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;

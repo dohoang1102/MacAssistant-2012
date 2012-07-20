@@ -46,6 +46,9 @@
 	
 	[object setCanCancelFromDate:[FMDateLoader readFromData:data atOffset:&offset]];
 	
+    // ???
+    offset += 1;
+    
 	*byteOffset = offset;
 	
 	return object;
