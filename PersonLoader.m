@@ -28,7 +28,7 @@
 {
 	char cbuffer;
 	int ibuffer;
-	BOOL debug = YES;
+	BOOL debug = NO;
 	
 	unsigned int offset = *byteOffset;
 	
@@ -84,7 +84,7 @@
 		NSLog(@"Human");
 	}
 	else if ([object databaseClass]==DBC_UNKNOWN_PERSON_TYPE_1) {
-		NSLog(@"Unknown");
+		// NSLog(@"Unknown");
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar1:cbuffer];
 		if ([object unknownChar1]==0) { 
@@ -125,7 +125,7 @@
 	
 	if ([object databaseClass]==DBC_PLAYER_AND_NON_PLAYER) {
 		[object setPlayerAndNonPlayerData:[PlayerAndNonPlayerLoader readFromData:data atOffset:&offset]];
-		NSLog(@"P AND NP 2");
+		// NSLog(@"P AND NP 2");
 	}
 	if (debug) { NSLog(@"person %d (%d) at %d",[object rowID],[object UID],offset); }
 	
