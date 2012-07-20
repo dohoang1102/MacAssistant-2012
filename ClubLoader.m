@@ -134,9 +134,10 @@
     offset += 1;
 	[object setMorale:cbuffer];
 	
-    // Offsets:
-    //FM2011: 1377396
-    //FM 2012: 1658903
+    if (version == FM2012_12_2) {
+        offset += 1;
+    }
+    
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)];
     offset += 1;
 	tempArray = [[NSMutableArray alloc] init];
@@ -147,10 +148,7 @@
 	}
 	[object setDirectors:tempArray];
 	[tempArray release];
-	
-    // Offsets:
-    //FM2011: 1377397
-    //FM 2012: 1658904
+    
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)];
     offset += 1;
 	tempArray = [[NSMutableArray alloc] init];
@@ -167,9 +165,6 @@
 	
 	if (debug) { NSLog(@"before finance at %d",offset); }
 	
-    // Offsets:
-    //FM2011: 1377398
-    //FM 2012: 1658905
 	id finance = [ClubFinanceLoader readFromData:data atOffset:&offset version:version];
 	if ([[finance className] isEqualToString:@"ClubFinance"]) {
 		[object setFinance:finance];
@@ -177,23 +172,7 @@
 	else { return [NSString stringWithFormat:@"Finance - %@",finance]; }
 	
 	if (debug) { NSLog(@"after finance at %d",offset); }
-	
-    // Offsets:
-    //FM2011: 1377465
-    //FM 2012: 1658973
-	// [data getBytes:&sbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	/*
-    tempArray = [[NSMutableArray alloc] init];
-	for (int i=0;i<sbuffer;i++) {
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-		[tempArray addObject:[NSNumber numberWithInt:ibuffer]];
-	}
-	[object setTransferOffers:tempArray];
-	[tempArray release]; */
-	
-    // Offsets:
-    //FM2011: 1377467
-    //FM 2012: 1658975
+    
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setFirstTeamStrengthRating:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
@@ -289,28 +268,7 @@
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setYouthTeamSetPiecesWorkload:cbuffer];
 	
-    // Offsets:
-    //FM2011: 1377601
-    //FM 2012: 1659011
-    
-	// youth team
-    // NOT NEEDED BY FM 2012
-	// [object setUnknownData3:[data subdataWithRange:NSMakeRange(offset, 94)]]; offset += 94;
-	
-    // Offsets:
-    //FM2011: 1377695
-    // FM 2012: 1659011
-	//[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-	//[object setUnknownShort2:sbuffer];
-    
-    // Offsets:
-    //FM2011: 1377697
-    // FM 2012: 1659011
-	// [object setUnknownData4:[data subdataWithRange:NSMakeRange(offset, (sbuffer * 2))]];  offset += (sbuffer * 2);
-	
-    // Offsets:
-    //FM2011: 1377699
-    // FM 2012: 1659011
+    // ???
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
     // FM2012 Skip 100 bytes for now
     if (cbuffer > 0) {
@@ -372,58 +330,17 @@
     [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
     if (cbuffer > 0) {
         offset += 1;
+        
         [data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
         for (int i=0; i<sbuffer; i++) {
             offset += 22;
+            if (version == FM2012_12_2) {
+                offset += 1;
+            }
         }
     }
-    
-    /* --- Unknown For now
-	[object setHasUEFACoefficient:cbuffer];
-	if ([object hasUEFACoefficient]) {
-		[object setUnknownData5:[data subdataWithRange:NSMakeRange(offset, 4)]]; offset += 4;
 	
-		
-		// [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		// [object setUEFAPoints:cbuffer];
-		// [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		// [object setUEFAMatches:cbuffer];
-		
-		[data getBytes:&fbuffer range:NSMakeRange(offset, 4)]; offset += 4;
-		[object setUEFATempCoefficient:fbuffer];
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-		[object setUEFA5YearTotal:ibuffer];
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		tempArray = [[NSMutableArray alloc] init];
-		for (int i=0;i<cbuffer;i++) {
-			[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-			[tempArray addObject:[NSNumber numberWithInt:ibuffer]];
-		}
-		[object setCoefficients:tempArray];
-		[tempArray release];
-	} */
-	
-	if (debug) { NSLog(@"after coefficients at %d",offset); }
-    
-    /*
-	[object setHasScoutingKnowledges:cbuffer];
-	if ([object hasScoutingKnowledges]) {
-		if (debug) { NSLog(@"SKs at %d",offset); }
-		
-		// ???
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		[object setUnknownChar2:cbuffer];
-		
-		[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-		tempArray = [[NSMutableArray alloc] init];
-		for (int i=0;i<sbuffer;i++) {
-			[tempArray addObject:[ScoutingKnowledgeLoader readFromData:data atOffset:&offset]];
-		}
-		[object setScoutingKnowledges:tempArray];
-		[tempArray release];
-	} */
-	
-	if (debug) { NSLog(@"after sks at %d",offset); }
+	if (debug) { NSLog(@"after unknown container at %d",offset); }
 	
 	// ???
     // FM 2012: 1659016

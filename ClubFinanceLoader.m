@@ -245,9 +245,6 @@
                 offset += 4;
             }
         }
-        else {
-            offset += 1;
-        }
 	}
     
     if ([object type]==FT_INVALID_TYPE) {
