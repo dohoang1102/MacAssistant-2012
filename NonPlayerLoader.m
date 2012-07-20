@@ -12,7 +12,7 @@
 
 @implementation NonPlayerLoader
 
-+ (NonPlayer *)readFromData:(NSData *)data atOffset:(unsigned int *)byteOffset
++ (NonPlayer *)readFromData:(NSData *)data atOffset:(unsigned int *)byteOffset version:(short)version
 {
 	char cbuffer;
 	short sbuffer;
@@ -67,7 +67,7 @@
         [data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
         tempArray = [[NSMutableArray alloc] init];
         for (int i=0;i<sbuffer;i++) {
-            [tempArray addObject:[ScoutingKnowledgeLoader readFromData:data atOffset:&offset]];
+            [tempArray addObject:[ScoutingKnowledgeLoader readFromData:data atOffset:&offset version:version]];
         }
         [object setScoutingKnowledges:tempArray];
         [tempArray release];

@@ -74,6 +74,10 @@
 	// ???
 	[data getBytes:&fbuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setUnknownFloat1:fbuffer];
+    if (version == FM2012_12_2) {
+        offset += 4;
+    }
+    
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setUnknownChar1:cbuffer];
 	
@@ -223,6 +227,11 @@
 		[object setMLSRightsExpiryDate:[FMDateLoader readFromData:data atOffset:&offset]];
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setMLSDraftType:cbuffer];
+        
+        if (version == FM2012_12_2) {
+            offset += 2; // ???
+        }
+        
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setMLSLastDraftClubID:ibuffer];
 		[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;

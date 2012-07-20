@@ -8,11 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import "ScoutingKnowledge.h"
+#import "GameVersions.h"
 
 @interface ScoutingKnowledgeLoader : NSObject {
 
 }
 
-+ (ScoutingKnowledge *)readFromData:(NSData *)data atOffset:(unsigned int *)byteOffset;
++ (ScoutingKnowledge *)readFromData:(NSData *)data atOffset:(unsigned int *)byteOffset version:(short)version;
 
 @end

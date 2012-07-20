@@ -13,6 +13,6 @@
 
 }
 
-+ (NonPlayer *)readFromData:(NSData *)data atOffset:(unsigned int *)byteOffset;
++ (NonPlayer *)readFromData:(NSData *)data atOffset:(unsigned int *)byteOffset version:(short) version;
 
 @end

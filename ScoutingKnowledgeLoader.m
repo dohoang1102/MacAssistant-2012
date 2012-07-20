@@ -8,10 +8,11 @@
 
 #import "ScoutingKnowledgeLoader.h"
 #import "FMDateLoader.h"
+#import "GameVersions.h"
 
 @implementation ScoutingKnowledgeLoader
 
-+ (ScoutingKnowledge *)readFromData:(NSData *)data atOffset:(unsigned int *)byteOffset
++ (ScoutingKnowledge *)readFromData:(NSData *)data atOffset:(unsigned int *)byteOffset version:(short)version
 {
 	char cbuffer;
 	int ibuffer;
@@ -39,6 +40,10 @@
 	// recheck this
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setSourcePlayerID:ibuffer];
+    
+    if (version == FM2012_12_2) {
+        offset += 1;
+    }
 	
 	*byteOffset = offset;
 	

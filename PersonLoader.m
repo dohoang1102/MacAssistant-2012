@@ -33,7 +33,6 @@
 	unsigned int offset = *byteOffset;
 	
 	Person *object = [[Person alloc] init];
-	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setDatabaseClass:cbuffer];
 	if (debug) { NSLog(@"type: %d",[object databaseClass]); }
@@ -44,13 +43,13 @@
 		[object setPersonData:[ActualPersonLoader readFromData:data atOffset:&offset]];
 	}
 	else if ([object databaseClass]==DBC_NON_PLAYER) {
-		[object setNonPlayerData:[NonPlayerLoader readFromData:data atOffset:&offset]];
+		[object setNonPlayerData:[NonPlayerLoader readFromData:data atOffset:&offset version:version]];
 		[object setStaffData:[StaffLoader readFromData:data atOffset:&offset version:version]];
 		[object setPersonData:[ActualPersonLoader readFromData:data atOffset:&offset]];
 	}
 	else if ([object databaseClass]==DBC_PLAYER_AND_NON_PLAYER) {
 		[object setPlayerData:[PlayerLoader readFromData:data atOffset:&offset version:version]];
-		[object setNonPlayerData:[NonPlayerLoader readFromData:data atOffset:&offset]];
+		[object setNonPlayerData:[NonPlayerLoader readFromData:data atOffset:&offset version:version]];
 		[object setStaffData:[StaffLoader readFromData:data atOffset:&offset version:version]];
 		[object setPersonData:[ActualPersonLoader readFromData:data atOffset:&offset]];
 	}
@@ -74,13 +73,11 @@
 	}
 	else if ([object databaseClass]==DBC_HUMAN) {
 		// NSLog(@"CurrentOffset: %d, New Offset: %d", offset, (offset + 1201));
-		offset += 1157;
-        /* NEED TO FIND THE STRUCTURE, WILL PROBABLY CAUSE CRASHES
+		//offset += 1157;
 		[object setHumanData:[HumanLoader readFromData:data atOffset:&offset version:version]];
 		[object setNonPlayerData:[NonPlayerLoader readFromData:data atOffset:&offset]];
 		[object setStaffData:[StaffLoader readFromData:data atOffset:&offset version:version]];
 		[object setPersonData:[ActualPersonLoader readFromData:data atOffset:&offset]];
-        */ 
 		NSLog(@"Human");
 	}
 	else if ([object databaseClass]==DBC_UNKNOWN_PERSON_TYPE_1) {
