@@ -1517,46 +1517,10 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	// ???
 	[self setUnknownData1:[data subdataWithRange:NSMakeRange(*byteOffset, 213)]]; 
 	*byteOffset += 213;
-	
-	// ???
-	// [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	// [self setUnknownInt1:count];
-	// [self setUnknownData2:[data subdataWithRange:NSMakeRange(*byteOffset, (count*8))]]; 
-	// *byteOffset += (count*8);
-	/*
-	for (i=0; i<count; i++) {
-		// int
-		// int (counting - 0,1,2,3,4, etc)
-		*byteOffset += 8;
-	}
-	*/
-	//NSLog(@"End of post-unknowns 1 at %d",*byteOffset);
-	
-	// ???
-	//[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	//[self setUnknownInt2:count];
-	//[self setUnknownData3:[data subdataWithRange:NSMakeRange(*byteOffset, (count*8))]]; 
-	//*byteOffset += (count*8);
-	/*
-	for (i=0; i<count; i++) {
-		// int
-		// int (counting - 0,1,2,3,4, etc)
-		*byteOffset += 8;
-	}
-	*/
-	//NSLog(@"End of post-unknowns 2 at %d",*byteOffset);
-	
-	// ???
-	//[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	//[self setUnknownInt3:count];
-	//[self setUnknownData4:[data subdataWithRange:NSMakeRange(*byteOffset, (count*9))]]; 
-	//*byteOffset += (count*9);
-	/*
-	 for (i=0; i<count; i++) {
-		*byteOffset += 9;
-	}
-	*/
-	//NSLog(@"End of post-unknowns 3 at %d",*byteOffset);
+    
+    if ([controller gameDBVersion] == FM2012_12_2) {
+        *byteOffset += 32;
+    }
 	
 	// ???
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
