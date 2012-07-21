@@ -75,7 +75,7 @@
 		// NSLog(@"CurrentOffset: %d, New Offset: %d", offset, (offset + 1201));
 		//offset += 1157;
 		[object setHumanData:[HumanLoader readFromData:data atOffset:&offset version:version]];
-		[object setNonPlayerData:[NonPlayerLoader readFromData:data atOffset:&offset]];
+		[object setNonPlayerData:[NonPlayerLoader readFromData:data atOffset:&offset version:version]];
 		[object setStaffData:[StaffLoader readFromData:data atOffset:&offset version:version]];
 		[object setPersonData:[ActualPersonLoader readFromData:data atOffset:&offset]];
 		NSLog(@"Human");

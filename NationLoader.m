@@ -566,8 +566,9 @@
 	[tempArray release];
     
     // FM 2012
-    offset += 1;
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
     if (version == FM2012_12_2) {
+        offset += cbuffer*12;
         offset += 4;
     }
 	
