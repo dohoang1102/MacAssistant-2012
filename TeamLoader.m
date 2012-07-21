@@ -199,7 +199,7 @@
     offset += 8; // ???
     
 	// ???
-    offset += 7; // Unknown below?
+    offset += 3; // Unknown below?
     
     /*
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
@@ -217,12 +217,11 @@
 	[object setNewTeam:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setMaximumAge:cbuffer];
-	
+	*/
 	if (debug) { NSLog(@"before tcid at %d",offset); }
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setTeamContainerID:ibuffer];
-     */
 	[object setName:[FMString readFromData:data atOffset:&offset]];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setNameGender:cbuffer];
