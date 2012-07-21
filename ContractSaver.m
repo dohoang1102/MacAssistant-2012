@@ -16,9 +16,7 @@
 + (void)saveContract:(Contract *)object toData:(NSMutableData *)data type:(char)type offer:(BOOL)isOffer
 {
 	char cbuffer;
-	short sbuffer;
 	int ibuffer;
-	long long llbuffer;
 	
 	if (!isOffer) {
 		cbuffer = [object type];
@@ -30,17 +28,6 @@
 		[data appendBytes:&cbuffer length:1];
 		cbuffer = [object leavingOnBosman];
 		[data appendBytes:&cbuffer length:1];
-		
-		/*
-		sbuffer = [object leagueGamesPlayedSinceJoined];
-		[data appendBytes:&sbuffer length:2];
-		ibuffer = [object appearanceBonus];
-		[data appendBytes:&ibuffer length:4];
-		ibuffer = [object goalBonus];
-		[data appendBytes:&ibuffer length:4];
-		ibuffer = [object cleanSheetBonus];
-		[data appendBytes:&ibuffer length:4];
-		*/
 		
 		[data appendData:[object unknownData1]];
 		cbuffer = [object job];

@@ -20,13 +20,13 @@
 	FMDate *leaveDate, *moveInDate;
 	NSData *unknownData1;
 	NSString *name;
-	Stadium *oldStadium, *alternativeStadium, *newStadium;
+	Stadium *oldStadium, *alternativeStadium, *theNewStadium;
 }
 
 @property(assign,readwrite) int rowID, UID, alternativeStadiumID, oldStadiumID, 
 newStadiumID, teamID, newCapacity;
 @property(assign,readwrite) char databaseClass, type;
-@property(assign,readwrite) Stadium *oldStadium, *alternativeStadium, *newStadium;
+@property(assign,readwrite) Stadium *oldStadium, *alternativeStadium, *theNewStadium;
 @property(copy,readwrite) NSString *name;
 @property(readwrite,copy) NSData *unknownData1;
 @property(assign,readwrite) FMDate *leaveDate, *moveInDate;

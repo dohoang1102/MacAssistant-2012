@@ -12,6 +12,23 @@
 
 @synthesize window;
 
+- (IBAction) showTheSheet:(id)sender {
+    
+    [NSApp beginSheet:sheet
+       modalForWindow:(NSWindow *)window
+        modalDelegate:self
+       didEndSelector:nil
+          contextInfo:nil];
+    
+}
+
+-(IBAction)endTheSheet:(id)sender {
+    
+    [NSApp endSheet:sheet];
+    [sheet orderOut:sender];
+    
+}
+
 /**
  Returns the support directory for the application, used to store the Core Data
  store file.  This code uses a directory named "FM10SX" for
@@ -55,7 +72,7 @@
     NSManagedObjectModel *mom = [self managedObjectModel];
     if (!mom) {
         NSAssert(NO, @"Managed object model is nil");
-        NSLog(@"%@:%s No model to generate a store from", [self class], _cmd);
+        NSLog(@"%@:%s No model to generate a store from", [self class], (char *)_cmd);
         return nil;
     }
 	
@@ -131,7 +148,7 @@
     NSError *error = nil;
     
     if (![[self managedObjectContext] commitEditing]) {
-        NSLog(@"%@:%s unable to commit editing before saving", [self class], _cmd);
+        NSLog(@"%@:%s unable to commit editing before saving", [self class], (char *)_cmd);
     }
 	
     if (![[self managedObjectContext] save:&error]) {
@@ -151,7 +168,7 @@
     if (!managedObjectContext) return NSTerminateNow;
 	
     if (![managedObjectContext commitEditing]) {
-        NSLog(@"%@:%s unable to commit editing to terminate", [self class], _cmd);
+        NSLog(@"%@:%s unable to commit editing to terminate", [self class], (char *)_cmd);
         return NSTerminateCancel;
     }
 	

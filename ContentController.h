@@ -23,6 +23,7 @@
 	IBOutlet NSTextField                    *mentalText;
 	IBOutlet NSTextField                    *sheetController;
 	IBOutlet NSButton						*searchButton;
+    IBOutlet NSPanel                        *sheet;
 }
 
 - (IBAction)searchPlayers:(id)sender;

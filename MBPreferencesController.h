@@ -111,7 +111,7 @@
  *
  * @see         moduleForIdentifier:
  */
-@property(retain) NSArray *modules;
+@property(nonatomic, retain) NSArray *modules;
 
 /**
  * @brief       The preference module that corresponds to the given identifier.

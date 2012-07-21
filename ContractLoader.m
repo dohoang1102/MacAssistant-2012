@@ -17,9 +17,7 @@
 + (Contract *)readFromData:(NSData *)data atOffset:(unsigned int *)byteOffset type:(char)type version:(short)version
 {
 	int ibuffer;
-	short sbuffer;
 	char cbuffer;
-	long long llbuffer;
 	NSMutableArray *tempArray;
 	
 	unsigned int offset = *byteOffset;

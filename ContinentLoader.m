@@ -16,7 +16,6 @@
 	char cbuffer;
 	float fbuffer;
 	int ibuffer;
-	NSMutableArray *tempArray;
 	
 	unsigned int offset = *byteOffset;
 	

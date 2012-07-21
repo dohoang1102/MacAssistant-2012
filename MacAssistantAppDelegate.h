@@ -14,6 +14,7 @@
 	NSPersistentStoreCoordinator *persistentStoreCoordinator;
     NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;
+    IBOutlet NSPanel *sheet;
 }
 
 @property (assign) IBOutlet NSWindow *window;

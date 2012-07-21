@@ -116,7 +116,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Alliterations
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading good alliterations...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Good Alliterations...", @"editor status")];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
 	for (i=0; i<count; i++) {
@@ -138,7 +138,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[tempArray removeAllObjects];
 	NSLog(@"End of %d good alliterations at %d",[goodAlliterations count],*byteOffset);
 
-	[self setStatus:NSLocalizedString(@"loading bad alliterations...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading bad alliterations...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -165,7 +165,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Awards
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading awards...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Awards...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -216,7 +216,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
     }
     
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading cities...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Cities...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -255,7 +255,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 			[tempArray addObject:object];
 		}
 	}
-	[self setStatus:NSLocalizedString(@"assigning cities...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Assigning Cities...", @"editor status")];
 	[self setCities:tempArray];
 	
 	NSLog(@"End of %d cities at %d",[cities count],*byteOffset);
@@ -270,7 +270,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
     }
     
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading clubs...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Clubs...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -306,7 +306,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 			[tempArray addObject:object];
 		}
 	}
-	[self setStatus:NSLocalizedString(@"assigning clubs...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Assigning Clubs...", @"editor status")];
 	[self setClubs:tempArray];
 	
 	NSLog(@"End of %d clubs at %d",[clubs count],*byteOffset);
@@ -320,7 +320,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading competitions...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Competitions...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -364,7 +364,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		}
 		
 	}
-	[self setStatus:NSLocalizedString(@"assigning competitions...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Assigning Competitions...", @"editor status")];
 	[self setCompetitions:tempArray];
 	NSLog(@"End of %d competitions at %d",[competitions count],*byteOffset);
 	
@@ -377,7 +377,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading continents...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Continents...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -424,7 +424,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading currencies...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Currencies...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -469,7 +469,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading injuries...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Injuries...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -517,7 +517,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading media...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Media...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -559,7 +559,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading languages...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Languages...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -602,7 +602,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading nations...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Nations...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -649,7 +649,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading first names...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading First names...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -691,7 +691,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading surnames...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Surnames...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -733,7 +733,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading common names...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Common names...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -775,7 +775,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading unknowns 1...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Unknowns 1...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -819,7 +819,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading local areas...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Local areas...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -872,7 +872,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading sponsors...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Sponsors...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -916,7 +916,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading stadiums...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Stadiums...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -956,7 +956,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 			[tempArray addObject:object];
 		}
 	}
-	[self setStatus:NSLocalizedString(@"assigning stadiums...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Assigning Stadiums...", @"editor status")];
 	[self setStadiums:tempArray];
 	NSLog(@"End of %d stadiums at %d",[stadiums count],*byteOffset);
 	
@@ -969,7 +969,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading stadium changes...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Stadium changes...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -991,18 +991,9 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 					[NSString stringWithFormat:@"%@",object],			// entity error
 					nil]; 
 		}
-//		else if ([object rowID]!=i) {
-//			NSLog(@"%d",[object rowID]);
-//			return [NSArray arrayWithObjects:
-//					@"Stadium Change",
-//					[NSString stringWithFormat:@"%d",i],				// entity
-//					[NSString stringWithFormat:@"%d",startingOffset],	// entity start
-//					@"Invalid ID",										// entity error
-//					nil]; 
-//		}
 		else { [tempArray addObject:object]; }
 	}
-	[self setStatus:NSLocalizedString(@"assigning stadium changes...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Assigning Stadium changes...", @"editor status")];
 	[self setStadiumChanges:tempArray];
 	NSLog(@"End of %d stadium changes at %d",[stadiumChanges count],*byteOffset);	
 	
@@ -1015,7 +1006,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading stage names...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Stage names...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -1062,7 +1053,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading teams...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Teams...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -1109,7 +1100,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading weather...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Weather...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -1153,7 +1144,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading descriptions...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Descriptions...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
     
@@ -1198,7 +1189,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading derbies...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Derbies...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
     
@@ -1240,7 +1231,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading agreements...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Agreements...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
     
@@ -1294,7 +1285,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading people...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading People...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
     
@@ -1333,7 +1324,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		}
 		// NSLog(@"person %d - %d at %d ( %@ )",i,[object UID],*byteOffset,[object name]);
 	}
-	[self setStatus:NSLocalizedString(@"assigning people...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Assigning People...", @"editor status")];
 	[self setPeople:tempArray];
 	NSLog(@"End of %d people at %d",[people count],*byteOffset);
 	
@@ -1346,7 +1337,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading person stats...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Person stats...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -1390,7 +1381,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading player stats...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Player stats...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -1434,7 +1425,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         *byteOffset += 5;
     }
 	pool = [[NSAutoreleasePool alloc] init];
-	[self setStatus:NSLocalizedString(@"loading non-player stats...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Non-player stats...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -1477,7 +1468,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
         // 0x05 ???
         *byteOffset += 5;
     }
-	[self setStatus:NSLocalizedString(@"loading competition histories...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Competition histories...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -1516,22 +1507,16 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 	// ???
 	[self setUnknownData1:[data subdataWithRange:NSMakeRange(*byteOffset, 213)]]; 
-	*byteOffset += 213;
+	*byteOffset += 209;
     
-    if ([controller gameDBVersion] == FM2012_12_2) {
-        *byteOffset += 32;
-    }
+    [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+    *byteOffset += (count * 8);
 	
 	// ???
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setUnknownInt4:count];
 	[self setUnknownData5:[data subdataWithRange:NSMakeRange(*byteOffset, (count*10))]]; 
 	*byteOffset += (count*10);
-	/*
-	 for (i=0; i<count; i++) {
-		*byteOffset += 10;
-	}
-	*/
 	NSLog(@"End of post-unknowns 4 at %d",*byteOffset);
 	
 	[self setUnknownData6:[data subdataWithRange:NSMakeRange(*byteOffset, 4)]]; 
@@ -1539,7 +1524,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Club Links
 	
-	[self setStatus:NSLocalizedString(@"loading club links...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Loading Club links...", @"editor status")];
 	[self setCurrentRecord:0];
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setTotalRecords:count];
@@ -1569,195 +1554,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 /**************************************/
 	
 	
-	/*
-#pragma mark Unknowns 2
-	[self setStatus:NSLocalizedString(@"loading unknowns 2...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-
-#pragma mark Unknowns 3
-	[self setStatus:NSLocalizedString(@"loading unknowns 3...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-	
-#pragma mark Unknowns 4
-	[self setStatus:NSLocalizedString(@"loading unknowns 4...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-	
-#pragma mark Unknowns 5
-	[self setStatus:NSLocalizedString(@"loading unknowns 5...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-	
-#pragma mark Unknowns 6
-	[self setStatus:NSLocalizedString(@"loading unknowns 6...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-	
-#pragma mark Unknowns 7
-	[self setStatus:NSLocalizedString(@"loading unknowns 7...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-	
-#pragma mark Unknowns 8
-	[self setStatus:NSLocalizedString(@"loading unknowns 8...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-	
-#pragma mark Unknowns 9
-	[self setStatus:NSLocalizedString(@"loading unknowns 9...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-	
-#pragma mark Unknowns 10
-	[self setStatus:NSLocalizedString(@"loading unknowns 10...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-	for (i=0; i<count; i++) {
-		[self setCurrentRecord:(i+1)];
-		//	0x01 db class
-		//	0x0C ???
-		//	0x02 ???
-		//	0x02 ???
-		//	0x04 rowID
-		//	0x04 UID
-		*byteOffset += 25;
-	}
-	NSLog(@"End of %d unknown 10s at %d",count,*byteOffset);
-
-#pragma mark Unknowns 11
-	[self setStatus:NSLocalizedString(@"loading unknowns 11...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-
-#pragma mark Unknowns 12
-	[self setStatus:NSLocalizedString(@"loading unknowns 12...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-
-#pragma mark Unknowns 13
-	[self setStatus:NSLocalizedString(@"loading unknowns 13...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-
-#pragma mark Unknowns 14
-	[self setStatus:NSLocalizedString(@"loading unknowns 14...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-
-#pragma mark Unknowns 15
-	[self setStatus:NSLocalizedString(@"loading unknowns 15...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-	
-#pragma mark Unknowns 16
-	[self setStatus:NSLocalizedString(@"loading unknowns 16...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-	for (i=0; i<count; i++) {
-		[self setCurrentRecord:(i+1)];
-		//	0x01 db class
-		//	0x02 year
-		//	0x08 ???
-		//	0x02 year
-		//	0x04 rowID
-		//	0x04 UID
-		*byteOffset += 21;
-	}
-	NSLog(@"End of %d unknown 16s at %d",count,*byteOffset);
-
-#pragma mark Unknowns 17
-	[self setStatus:NSLocalizedString(@"loading unknowns 17...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-	
-#pragma mark Unknowns 18
-	[self setStatus:NSLocalizedString(@"loading unknowns 18...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-	
-#pragma mark Unknowns 19
-	[self setStatus:NSLocalizedString(@"loading unknowns 19...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-	for (i=0; i<count; i++) {
-		[self setCurrentRecord:(i+1)];
-		//	0x01 db class
-		//	0x09 year
-		//	0x04 date
-		//	0x04 rowID
-		//	0x04 UID
-		*byteOffset += 22;
-	}
-	NSLog(@"End of %d unknown 19s at %d",count,*byteOffset);
-	
-#pragma mark Unknowns 20
-	[self setStatus:NSLocalizedString(@"loading unknowns 20...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-
-#pragma mark Unknowns 21
-	[self setStatus:NSLocalizedString(@"loading unknowns 21...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-
-#pragma mark Unknowns 21.5
-	
-	if ([controller gameDBVersion]>=FM2010_10_2) {
-		[self setStatus:NSLocalizedString(@"loading unknowns 21.5...", @"editor status")];
-		[self setCurrentRecord:0];
-		[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-		[self setTotalRecords:count];
-		NSLog(@"End of %d unknown 21.5s at %d",count,*byteOffset);
-	}	
-	
-#pragma mark Unknowns 22
-	[self setStatus:NSLocalizedString(@"loading unknowns 22...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-	*byteOffset += (count*9);
-	NSLog(@"End of %d unknown 22s at %d",count,*byteOffset);
-	
-#pragma mark Unknowns 23
-	[self setStatus:NSLocalizedString(@"loading unknowns 23...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-	*byteOffset += (count*9);
-	NSLog(@"End of %d unknown 23s at %d",count,*byteOffset);
-
-#pragma mark Unknowns 24
-	[self setStatus:NSLocalizedString(@"loading unknowns 24...", @"editor status")];
-	[self setCurrentRecord:0];
-	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	[self setTotalRecords:count];
-	NSLog(@"End of %d unknown 24s at %d",count,*byteOffset);
-	
-	*/
-	
-	[self setStatus:NSLocalizedString(@"assigning Person Stats...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Assigning Person Stats...", @"editor status")];
 	for (id item in people) {
 		if ([item personData] && [[item personData] personStatsID] > -1) {
 			[item setPersonStats:[personStats objectAtIndex:[[item personData] personStatsID]]];
@@ -1770,7 +1567,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		}
 	}
 	
-	[self setStatus:NSLocalizedString(@"sorting Stadium Changes...", @"editor status")];
+	[self setStatus:NSLocalizedString(@"Sorting Stadium Changes...", @"editor status")];
 	NSEnumerator *oEnum = [[self stadiumChanges] objectEnumerator];
 	StadiumChange *item;
 	while (item = [oEnum nextObject]) {
@@ -1778,7 +1575,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 			[item setOldStadium:[stadiums objectAtIndex:[item oldStadiumID]]];
 		}
 		if ([item newStadiumID]>-1) {
-			[item setNewStadium:[stadiums objectAtIndex:[item newStadiumID]]];
+			[item setTheNewStadium:[stadiums objectAtIndex:[item newStadiumID]]];
 		}
 		if ([item alternativeStadiumID]>-1) {
 			[item setAlternativeStadium:[stadiums objectAtIndex:[item alternativeStadiumID]]];

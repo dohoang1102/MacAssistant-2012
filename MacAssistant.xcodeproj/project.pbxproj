@@ -1010,6 +1010,7 @@
 		29B97314FDCFA39411CA2CEA /* MacAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				E221ED1815BB071700B79B32 /* User Interface */,
 				E20D2BAF12D9F30600A0238C /* OtherDefaultSources */,
 				E29AC7761221AE8D00097EB5 /* Support Classes */,
 				E29AC7721221AE7C00097EB5 /* Definitions */,
@@ -1034,7 +1035,6 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				E2EF01BA12294B2200118797 /* Sidebar */,
 				256AC3F00F4B6AF500CF3369 /* MacAssistant_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -1044,13 +1044,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E2EB22D2123CE75600F9DE7A /* search.png */,
-				E2EF10E1122C606A00F08172 /* boss-icon.png */,
-				E2EF10D4122C5FD400F08172 /* footballer-icon.png */,
-				E2EF01871229472100118797 /* Elastic Generic Black.icns */,
 				8D1107310486CEB800E47090 /* MacAssistant-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1082,6 +1077,35 @@
 				E20D2BB812D9F31100A0238C /* MGScopeBarDelegateProtocol.h */,
 			);
 			name = OtherDefaultSources;
+			sourceTree = "<group>";
+		};
+		E221ED1815BB071700B79B32 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				E221ED1A15BB077600B79B32 /* Delegates */,
+				E221ED1915BB073900B79B32 /* Images */,
+				E2EF01BA12294B2200118797 /* Sidebar */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		E221ED1915BB073900B79B32 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E2EB22D2123CE75600F9DE7A /* search.png */,
+				E2EF10E1122C606A00F08172 /* boss-icon.png */,
+				E2EF10D4122C5FD400F08172 /* footballer-icon.png */,
+				E2EF01871229472100118797 /* Elastic Generic Black.icns */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		E221ED1A15BB077600B79B32 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Delegates;
 			sourceTree = "<group>";
 		};
 		E265865E1236C7BB00545D25 /* Transformers */ = {
@@ -2214,10 +2238,7 @@
 				GCC_PREFIX_HEADER = MacAssistant_Prefix.pch;
 				INFOPLIST_FILE = "MacAssistant-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_FRAMEWORKS_DIR)/BWToolkitFramework.framework\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = MacAssistant;
 			};
 			name = Debug;
@@ -2237,10 +2258,7 @@
 				GCC_PREFIX_HEADER = MacAssistant_Prefix.pch;
 				INFOPLIST_FILE = "MacAssistant-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_FRAMEWORKS_DIR)/BWToolkitFramework.framework\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = MacAssistant;
 			};
 			name = Release;

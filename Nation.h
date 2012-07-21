@@ -100,8 +100,8 @@ gainNationalityType;
 mainSquadGkShortlistMinimumReputation, mainSquadDefShortlistMinimumReputation, mainSquadMidShortlistMinimumReputation,
 mainSquadFwShortlistMinimumReputation, u21GkShortlistMinimumReputation, u21DefShortlistMinimumReputation,
 u21MidShortlistMinimumReputation, u21FwShortlistMinimumReputation, u19GkShortlistMinimumReputation, 
-u19DefShortlistMinimumReputation, u19MidShortlistMinimumReputation, u19FwShortlistMinimumReputation,
-reputation, unknownShort1, unknownShort2;
+u19DefShortlistMinimumReputation, u19MidShortlistMinimumReputation, u19FwShortlistMinimumReputation, unknownShort1, unknownShort2;
+@property(nonatomic,readwrite,assign) short reputation;
 @property(readwrite,assign) int numberOfStaff, numberOfPlayers, numberOfCities, nationalStadiumID, firstNameStartIndex,
 surnameStartIndex, commonNameStartIndex, firstNameCount, surnameCount, commonNameCount,
 continentID, regionID, capitalID, rowID, UID, length, width, area, population;

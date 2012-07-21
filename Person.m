@@ -23,7 +23,7 @@
 @synthesize databaseClass, rowID, UID, playerData, staffData, personData, nonPlayerData, flags,
 playerAndNonPlayerData, officialData, retiredPersonData, virtualPlayerData, spokespersonData,
 journalistData, humanData, controller, name, personStats, nonPlayerStats, playerStats,
-unknownData1, unknownChar1, newFirstName, newSurname, newCommonName, transferID, agentData;
+unknownData1, unknownChar1, theNewFirstName, theNewSurname, theNewCommonName, transferID, agentData;
 
 - (id)init
 {
@@ -52,18 +52,25 @@ unknownData1, unknownChar1, newFirstName, newSurname, newCommonName, transferID,
 
 - (NSString *)name {
 	if (personData) {
-		if ([personData commonNameID]>-1 && [personData commonNameID]<[[controller valueForKeyPath:@"database.commonNames"] count]) {
+		if ([personData commonNameID]>-1 && [personData commonNameID]<[(NSMutableArray *)[controller valueForKeyPath:@"database.commonNames"] count]) {
 			return [[[controller valueForKeyPath:@"database.commonNames"] objectAtIndex:[personData commonNameID]] name];
 		}
 		else if ([personData firstNameID]>-1 || [personData surnameID]>-1) {
 			NSString *firstName, *surname;
-			
-			if ([personData firstNameID]>-1 && [personData firstNameID]<[[controller valueForKeyPath:@"database.firstNames"] count]) {
+            
+			if ([personData firstNameID]>-1 && [personData firstNameID]<[(NSMutableArray *)[controller valueForKeyPath:@"database.firstNames"] count]) {
 				firstName = [[[controller valueForKeyPath:@"database.firstNames"] objectAtIndex:[personData firstNameID]] name];
 			}
-			if ([personData surnameID]>-1 && [personData surnameID]<[[controller valueForKeyPath:@"database.surnames"] count]) {
+            else {
+                    firstName = @"";
+            }
+            
+			if ([personData surnameID]>-1 && [personData surnameID]<[(NSMutableArray *)[controller valueForKeyPath:@"database.surnames"] count]) {
 				surname = [[[controller valueForKeyPath:@"database.surnames"] objectAtIndex:[personData surnameID]] name];
 			}
+            else {
+                surname = @"";
+            }
 			
 			return [NSString stringWithFormat:@"%@ %@",firstName, surname];
 		}
@@ -425,9 +432,9 @@ unknownData1, unknownChar1, newFirstName, newSurname, newCommonName, transferID,
 	NSMutableArray *tempArray;
 	
 	// first name
-	if ([newFirstName length]>0) {
+	if ([theNewFirstName length]>0) {
 		// search for an existing name & nation
-		expression = [NSMutableString stringWithFormat:@"(name == '%@')",newFirstName];
+		expression = [NSMutableString stringWithFormat:@"(name == '%@')",theNewFirstName];
 		[expression appendFormat:@" AND (nationID == %d)",[personData nationID]];
 		predicate = [NSPredicate predicateWithFormat:expression];
 		tempArray = [[NSMutableArray alloc] init];
@@ -436,7 +443,7 @@ unknownData1, unknownChar1, newFirstName, newSurname, newCommonName, transferID,
 		if ([tempArray count]==0) {
 			Name *name1 = [[Name alloc] init];
 			[name1 setNationID:[personData nationID]];
-			[name1 setName:newFirstName];
+			[name1 setName:theNewFirstName];
 			[name1 setRowID:[[[controller database] firstNames] count]];
 			[name1 setUID:UID];
 			[name1 setCount:1];
@@ -446,7 +453,7 @@ unknownData1, unknownChar1, newFirstName, newSurname, newCommonName, transferID,
 		}
 		else {
 			[personData setFirstNameID:[[tempArray objectAtIndex:0] rowID]];
-			short newCount = [[tempArray objectAtIndex:0] count] + 1;
+			short newCount = [(NSMutableArray *)[tempArray objectAtIndex:0] count] + 1;
 			[[[[controller database] firstNames] objectAtIndex:[[tempArray objectAtIndex:0] rowID]] setCount:newCount];
 		}
 		
@@ -454,9 +461,9 @@ unknownData1, unknownChar1, newFirstName, newSurname, newCommonName, transferID,
 	}
 	
 	// surname
-	if ([newSurname length]>0) {
+	if ([theNewSurname length]>0) {
 		// search for an existing name & nation
-		expression = [NSMutableString stringWithFormat:@"(name == '%@')",newSurname];
+		expression = [NSMutableString stringWithFormat:@"(name == '%@')",theNewSurname];
 		[expression appendFormat:@" AND (nationID == %d)",[personData nationID]];
 		predicate = [NSPredicate predicateWithFormat:expression];
 		tempArray = [[NSMutableArray alloc] init];
@@ -465,7 +472,7 @@ unknownData1, unknownChar1, newFirstName, newSurname, newCommonName, transferID,
 		if ([tempArray count]==0) {
 			Name *name1 = [[Name alloc] init];
 			[name1 setNationID:[personData nationID]];
-			[name1 setName:newSurname];
+			[name1 setName:theNewSurname];
 			[name1 setRowID:[[[controller database] surnames] count]];
 			[name1 setUID:UID];
 			[name1 setCount:1];
@@ -475,7 +482,7 @@ unknownData1, unknownChar1, newFirstName, newSurname, newCommonName, transferID,
 		}
 		else {
 			[personData setSurnameID:[[tempArray objectAtIndex:0] rowID]];
-			short newCount = [[tempArray objectAtIndex:0] count] + 1;
+			short newCount = [(NSMutableArray *)[tempArray objectAtIndex:0] count] + 1;
 			[[[[controller database] surnames] objectAtIndex:[[tempArray objectAtIndex:0] rowID]] setCount:newCount];
 		}
 		
@@ -483,9 +490,9 @@ unknownData1, unknownChar1, newFirstName, newSurname, newCommonName, transferID,
 	}
 	
 	// common name
-	if ([newCommonName length]>0) {
+	if ([theNewCommonName length]>0) {
 		// search for an existing name & nation
-		expression = [NSMutableString stringWithFormat:@"(name == '%@')",newCommonName];
+		expression = [NSMutableString stringWithFormat:@"(name == '%@')",theNewCommonName];
 		[expression appendFormat:@" AND (nationID == %d)",[personData nationID]];
 		predicate = [NSPredicate predicateWithFormat:expression];
 		tempArray = [[NSMutableArray alloc] init];
@@ -494,7 +501,7 @@ unknownData1, unknownChar1, newFirstName, newSurname, newCommonName, transferID,
 		if ([tempArray count]==0) {
 			Name *name1 = [[Name alloc] init];
 			[name1 setNationID:[personData nationID]];
-			[name1 setName:newCommonName];
+			[name1 setName:theNewCommonName];
 			[name1 setRowID:[[[controller database] commonNames] count]];
 			[name1 setUID:UID];
 			[name1 setCount:1];
@@ -504,7 +511,7 @@ unknownData1, unknownChar1, newFirstName, newSurname, newCommonName, transferID,
 		}
 		else {
 			[personData setCommonNameID:[[tempArray objectAtIndex:0] rowID]];
-			short newCount = [[tempArray objectAtIndex:0] count] + 1;
+			short newCount = [(NSMutableArray *)[tempArray objectAtIndex:0] count] + 1;
 			[[[[controller database] commonNames] objectAtIndex:[[tempArray objectAtIndex:0] rowID]] setCount:newCount];
 		}
 		

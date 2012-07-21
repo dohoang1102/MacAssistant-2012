@@ -51,9 +51,9 @@
 	cbuffer = [object nickname2Gender];
 	[data appendBytes:&cbuffer length:1];
 	[FMString saveString:[object nickname2] toData:data];
-	cbuffer = [object youthAcademy];
+	//cbuffer = [object youthAcademy];
 	[data appendBytes:&cbuffer length:1];
-	cbuffer = [object youthSetup];
+	//cbuffer = [object youthSetup];
 	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object youthRecruitment];
 	[data appendBytes:&cbuffer length:1];

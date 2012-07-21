@@ -13,7 +13,7 @@
 
 @synthesize rowID, UID, databaseClass, alternativeStadiumID, oldStadiumID, 
 newStadiumID, teamID, newCapacity, leaveDate, moveInDate, oldStadium, 
-alternativeStadium, newStadium, name, type, unknownData1;
+alternativeStadium, theNewStadium, name, type, unknownData1;
 
 - (id)init
 {

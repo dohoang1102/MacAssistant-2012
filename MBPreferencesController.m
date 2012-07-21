@@ -100,11 +100,6 @@ static MBPreferencesController *sharedPreferencesController = nil;
 	return UINT_MAX; // denotes an object that cannot be released
 }
 
-- (void)release
-{
-	// do nothing
-}
-
 - (id)autorelease
 {
 	return self;
@@ -127,7 +122,7 @@ static MBPreferencesController *sharedPreferencesController = nil;
 	NSToolbar *toolbar = [[NSToolbar alloc] initWithIdentifier:@"PreferencesToolbar"];
 	[toolbar setDisplayMode:NSToolbarDisplayModeIconAndLabel];
 	[toolbar setAllowsUserCustomization:NO];
-	[toolbar setDelegate:self];
+	//[toolbar setDelegate:self];
 	[toolbar setAutosavesConfiguration:NO];
 	[self.window setToolbar:toolbar];
 }

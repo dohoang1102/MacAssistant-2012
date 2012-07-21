@@ -29,7 +29,7 @@
 	unsigned char flags;
 	int rowID, UID, transferID;
 	NSData *unknownData1;
-	NSString *name, *newFirstName, *newSurname, *newCommonName;
+	NSString *name, *theNewFirstName, *theNewSurname, *theNewCommonName;
 	
 	Player *playerData;
 	PlayerAndNonPlayer *playerAndNonPlayerData;
@@ -54,7 +54,8 @@
 @property(assign,readwrite) unsigned char flags;
 @property(assign,readwrite) int rowID, UID, transferID;
 @property(readwrite,copy) NSData *unknownData1;
-@property(copy,readwrite) NSString *name, *newFirstName, *newSurname, *newCommonName;
+@property(copy,readwrite) NSString *theNewFirstName, *theNewSurname, *theNewCommonName;
+@property(nonatomic,copy,readwrite) NSString *name;
 @property(assign,readwrite) Player *playerData;
 @property(assign,readwrite) NonPlayer *nonPlayerData;
 @property(assign,readwrite) Staff *staffData;

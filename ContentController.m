@@ -67,8 +67,6 @@
 	NSMutableArray *pSearchResults = [[NSMutableArray alloc] init];
 	NSMutableString *expression = [[NSMutableString alloc] init];
 	
-	
-	
 	if ([[playerName stringValue] length] > 0) {
 		[expression appendFormat:@"(name contains[cd] '%@')", [playerName stringValue]];
 	}
@@ -119,8 +117,8 @@
 		[self setPlayerSearchResults:pSearchResults];
 		
 		[controller setBadgeNumber:[pSearchResults count] atIndex:@"1.1"];
-		[sheetController closeSheet:sender];
 	}
+    [NSApp endSheet:sheet];
 }
 
 - (void)splitViewWillResizeSubviews:(NSNotification *)aNotification {

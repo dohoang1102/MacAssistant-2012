@@ -75,7 +75,8 @@ playersBought, estimatedWeeklyMerchandise, weeklyWageBudget,
 unknownInt1, unknownInt2, unknownInt3, unknownInt4, unknownInt5, unknownInt6, 
 unknownInt7, unknownInt8, unknownInt9, unknownInt10, unknownInt11, unknownInt12, 
 unknownInt13, unknownInt14, unknownInt15, unknownInt16;
-@property(assign,readwrite) BOOL sugarDaddyIncreasesStartingFinances, isFullFinance, isValidFinance;
+@property(assign,readwrite) BOOL sugarDaddyIncreasesStartingFinances;
+@property(nonatomic, assign, readwrite) BOOL isFullFinance, isValidFinance;
 @property(assign,readwrite) float averageMatchTicketPrice, averageSeasonTicketPrice,
 unknownFloat1, unknownFloat2, unknownFloat3;
 @property(assign,readwrite) FMDate *lastBudgetIncreaseDate, *lastSeasonUpdateDate, *unknownDate2,

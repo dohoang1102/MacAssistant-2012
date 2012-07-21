@@ -25,7 +25,6 @@
 	char cbuffer;
     char counterBuffer;
 	short sbuffer;
-	float fbuffer;
 	int ibuffer;
 	BOOL debug = NO;
 	NSMutableArray *tempArray;

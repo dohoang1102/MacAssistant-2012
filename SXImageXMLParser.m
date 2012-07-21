@@ -80,7 +80,7 @@ hugeContinentLogos, personPhotos, smallPersonPhotos;
 				NSString *filePath = [[NSString alloc] initWithFormat:@"%@/%@",basePath,item];
 				fileBase = [filePath stringByDeletingLastPathComponent];
 				NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:[NSURL fileURLWithPath:filePath]];
-				[parser setDelegate:self];
+				//[parser setDelegate:self];
 				[parser parse];
 				[parser release];
 				[filePath release];
