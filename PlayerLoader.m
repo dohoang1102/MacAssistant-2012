@@ -351,6 +351,10 @@
 			[object setUnknownData22:[data subdataWithRange:NSMakeRange(offset, (cbuffer*59))]];
 			offset += (cbuffer*59);
 		}
+        
+        if (version == FM2012_12_2) {
+            offset += 4;
+        }
 	}
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
