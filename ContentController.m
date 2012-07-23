@@ -21,7 +21,6 @@
 #import "SupportFunctions.h"
 
 
-
 @implementation ContentController
 
 @synthesize playerSearchResults, selectedRows;
@@ -54,22 +53,13 @@
 		frame.size.width = 200;
 		[v setFrame:frame];
 	}
-	
+    
 	[playersTableView setFont:[NSFont fontWithName:@"Helvetica" size:10.0f]];
-	[styledText setFont:[NSFont fontWithName:@"Lucida Grande Bold" size:11.0f]];
-	[personalText setFont:[NSFont fontWithName:@"Lucida Grande Bold" size:11.0f]];
-	[physicalText setFont:[NSFont fontWithName:@"Lucida Grande Bold" size:11.0f]];
-	[technicalText setFont:[NSFont fontWithName:@"Lucida Grande Bold" size:11.0f]];
-	[mentalText setFont:[NSFont fontWithName:@"Lucida Grande Bold" size:11.0f]];
 }
 
 - (IBAction)searchPlayers:(id)sender {
 	NSMutableArray *pSearchResults = [[NSMutableArray alloc] init];
 	NSMutableString *expression = [[NSMutableString alloc] init];
-	
-	if ([[playerName stringValue] length] > 0) {
-		[expression appendFormat:@"(name contains[cd] '%@')", [playerName stringValue]];
-	}
 	
 	if ([[[playerFilter predicate] predicateFormat] length] > 0 &&
 		[playerFilter numberOfRows]>1) {
@@ -118,7 +108,7 @@
 		
 		[controller setBadgeNumber:[pSearchResults count] atIndex:@"1.1"];
 	}
-    [NSApp endSheet:sheet];
+    [appDlg endTheSheet:sheet];
 }
 
 - (void)splitViewWillResizeSubviews:(NSNotification *)aNotification {

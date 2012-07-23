@@ -404,13 +404,11 @@
 	
 	[self setIdle:TRUE];
 	[self setDataLoaded:TRUE];
-	
-	// [contentController setFavourites];
-	// [contentController reloadOutlineView];
-	
+    [appDlg setDataLoaded:TRUE];
 	
 	[loader setHidden:YES];
 	[self populateOutlineContents:nil];
+    [[appDlg topToolbar] validateVisibleItems];
 	
 	[pool drain];
 	/////////////////////////////////

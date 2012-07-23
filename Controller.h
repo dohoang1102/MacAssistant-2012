@@ -8,23 +8,26 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Sidebar.h"
+#import "MacAssistantAppDelegate.h"
 
 @class Database;
 @class FMDate;
 
 @interface Controller : NSWindowController {
-	NSString						*gamePath;
-	BOOL							idle, dataLoaded, compressed;
-	unsigned short					gameDBVersion;
-	Database						*database;
-	FMDate							*currentDate, *startDate;
-	NSThread						*gameDBThread;
-	NSThread						*parseGraphicsThread;
-	int								databaseChanges, timesSaved, startBuildVersion, saveStartOffset, currentBuildVersion, gameID;
-	NSMutableDictionary				*infoStrings;
-	IBOutlet NSProgressIndicator	*loader;
-	IBOutlet Sidebar				*sidebar;
-	IBOutlet NSWindow				*mainWin;
+	NSString                            *gamePath;
+	BOOL                                idle, dataLoaded, compressed;
+	unsigned short                      gameDBVersion;
+	Database                            *database;
+	FMDate                              *currentDate, *startDate;
+	NSThread                            *gameDBThread;
+	NSThread                            *parseGraphicsThread;
+	int                                 databaseChanges, timesSaved, startBuildVersion, saveStartOffset, currentBuildVersion, gameID;
+	NSMutableDictionary                 *infoStrings;
+    
+	IBOutlet NSProgressIndicator        *loader;
+	IBOutlet Sidebar                    *sidebar;
+	IBOutlet NSWindow                   *mainWin;
+    IBOutlet MacAssistantAppDelegate    *appDlg;
 }
 
 - (IBAction) loadGame: (id) sender;

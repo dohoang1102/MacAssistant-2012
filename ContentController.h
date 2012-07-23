@@ -7,23 +7,18 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "MacAssistantAppDelegate.h"
 
-@interface ContentController : NSObject<NSSplitViewDelegate> {
+@interface ContentController : NSObject<NSSplitViewDelegate,NSTableViewDelegate> {
 	IBOutlet Controller						*controller;
 	NSMutableArray							*playerSearchResults;
 	NSMutableDictionary						*selectedRows;
-	IBOutlet NSTextField					*playerName;
 	IBOutlet NSPredicateEditor				*playerFilter, *physicalFilter, *technicalFilter, *mentalFilter;
 	IBOutlet NSTableView					*playersTableView;
 	IBOutlet NSPredicateEditorRowTemplate	*predicateRow;
-	IBOutlet NSTextField                    *styledText;
-	IBOutlet NSTextField                    *physicalText;
-	IBOutlet NSTextField                    *personalText;
-	IBOutlet NSTextField                    *technicalText;
-	IBOutlet NSTextField                    *mentalText;
-	IBOutlet NSTextField                    *sheetController;
 	IBOutlet NSButton						*searchButton;
     IBOutlet NSPanel                        *sheet;
+    IBOutlet MacAssistantAppDelegate        *appDlg;
 }
 
 - (IBAction)searchPlayers:(id)sender;

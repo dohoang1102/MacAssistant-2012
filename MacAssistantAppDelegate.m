@@ -10,7 +10,7 @@
 
 @implementation MacAssistantAppDelegate
 
-@synthesize window;
+@synthesize window, dataLoaded, topToolbar;
 
 - (IBAction) showTheSheet:(id)sender {
     
@@ -27,6 +27,15 @@
     [NSApp endSheet:sheet];
     [sheet orderOut:sender];
     
+}
+
+- (BOOL)validateToolbarItem:(NSToolbarItem *)theItem {
+    if ([[theItem itemIdentifier] isEqualTo:[searchToolbarItem itemIdentifier]]) {
+        return dataLoaded;
+    }
+    else {
+        return YES;
+    }
 }
 
 /**
