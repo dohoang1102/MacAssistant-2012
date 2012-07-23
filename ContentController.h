@@ -8,11 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 #import "MacAssistantAppDelegate.h"
+#import "Controller.h"
 
 @interface ContentController : NSObject<NSSplitViewDelegate,NSTableViewDelegate> {
-	IBOutlet Controller						*controller;
 	NSMutableArray							*playerSearchResults;
 	NSMutableDictionary						*selectedRows;
+    
+    IBOutlet Controller						*controller;
 	IBOutlet NSPredicateEditor				*playerFilter, *physicalFilter, *technicalFilter, *mentalFilter;
 	IBOutlet NSTableView					*playersTableView;
 	IBOutlet NSPredicateEditorRowTemplate	*predicateRow;

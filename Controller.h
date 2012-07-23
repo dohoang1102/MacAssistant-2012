@@ -9,11 +9,12 @@
 #import <Cocoa/Cocoa.h>
 #import "Sidebar.h"
 #import "MacAssistantAppDelegate.h"
+#import "MAView.h"
 
 @class Database;
 @class FMDate;
 
-@interface Controller : NSWindowController {
+@interface Controller : NSWindowController<NSAnimationDelegate> {
 	NSString                            *gamePath;
 	BOOL                                idle, dataLoaded, compressed;
 	unsigned short                      gameDBVersion;
@@ -28,6 +29,8 @@
 	IBOutlet Sidebar                    *sidebar;
 	IBOutlet NSWindow                   *mainWin;
     IBOutlet MacAssistantAppDelegate    *appDlg;
+    IBOutlet NSTextField                *statusText;
+    IBOutlet MAView                     *loaderContainer;
 }
 
 - (IBAction) loadGame: (id) sender;

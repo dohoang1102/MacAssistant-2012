@@ -45,6 +45,7 @@
 		E26586631236C7BB00545D25 /* PlayerStatsTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E26586601236C7BB00545D25 /* PlayerStatsTransformer.m */; };
 		E26586641236C7BB00545D25 /* PlayerRatingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E26586621236C7BB00545D25 /* PlayerRatingTransformer.m */; };
 		E26586791236CDF400545D25 /* ContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = E26586781236CDF400545D25 /* ContentController.m */; };
+		E28CD0A015BDB52C003BE96B /* MAView.m in Sources */ = {isa = PBXBuildFile; fileRef = E28CD09F15BDB52C003BE96B /* MAView.m */; };
 		E29AC43B122179EF00097EB5 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC43A122179EF00097EB5 /* Controller.m */; };
 		E29AC4491221ADD700097EB5 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4481221ADD700097EB5 /* Database.m */; };
 		E29AC4F91221AE2E00097EB5 /* ActualPersonSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC44F1221AE2D00097EB5 /* ActualPersonSaver.m */; };
@@ -405,6 +406,8 @@
 		E26586621236C7BB00545D25 /* PlayerRatingTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerRatingTransformer.m; sourceTree = "<group>"; };
 		E26586771236CDF400545D25 /* ContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentController.h; sourceTree = "<group>"; };
 		E26586781236CDF400545D25 /* ContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentController.m; sourceTree = "<group>"; };
+		E28CD09E15BDB52C003BE96B /* MAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAView.h; sourceTree = "<group>"; };
+		E28CD09F15BDB52C003BE96B /* MAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAView.m; sourceTree = "<group>"; };
 		E29AC439122179EF00097EB5 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
 		E29AC43A122179EF00097EB5 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
 		E29AC4471221ADD700097EB5 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
@@ -1121,6 +1124,8 @@
 		E28A614315BB891000089DE0 /* SubClasses */ = {
 			isa = PBXGroup;
 			children = (
+				E28CD09E15BDB52C003BE96B /* MAView.h */,
+				E28CD09F15BDB52C003BE96B /* MAView.m */,
 			);
 			name = SubClasses;
 			sourceTree = "<group>";
@@ -2202,6 +2207,7 @@
 				E20D2CEB12D9F97600A0238C /* CompetitionHistory.m in Sources */,
 				E20D2CF112D9F98E00A0238C /* CompetitionHistoryLoader.m in Sources */,
 				E20D2CF412D9F99900A0238C /* CompetitionHistorySaver.m in Sources */,
+				E28CD0A015BDB52C003BE96B /* MAView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,9 +36,10 @@
 
 - (void)awakeFromNib {
 	[loader setUsesThreadedAnimation:YES];
-	[loader setHidden:YES];
-	//[NSThread detachNewThreadSelector:@selector(populateOutlineContents:) toTarget:self withObject:nil];
-	// [self populateOutlineContents:nil];
+    [loaderContainer setFrame:NSRectFromCGRect(CGRectMake(loaderContainer.frame.origin.x, 
+                                         -(loaderContainer.frame.size.height), 
+                                         loaderContainer.frame.size.width, 
+                                         loaderContainer.frame.size.height))];
 }
 
 - (void)populateOutlineContents:(id)inObject {
@@ -50,19 +51,29 @@
 	[sidebar addSection:@"2" caption:@"PLACES"];
 	[sidebar addSection:@"3" caption:@"OTHER"];
 	
-	[sidebar addChild:@"1" key:@"1.1" caption:@"Players" icon:[NSImage imageNamed:@"footballer-icon.png"] action:@selector(buttonPres:) target:self];
-	[sidebar addChild:@"1" key:@"1.2" caption:@"Staff" icon:[NSImage imageNamed:@"boss-icon.png"] action:@selector(buttonPres:) target:self];
+	[sidebar addChild:@"1" key:@"1.1" caption:@"Players" icon:[NSImage imageNamed:@"footballer-icon.png"] action:@selector(selectedSidebarItemPlayers:) target:self];
+	[sidebar addChild:@"1" key:@"1.2" caption:@"Staff" icon:[NSImage imageNamed:@"boss-icon.png"] action:@selector(selectedSidebarItemStaff:) target:self];
 	
 	[sidebar addChild:@"2" key:@"2.1" caption:@"Clubs" icon:nil action:@selector(buttonPres:) target:self];
 	[sidebar addChild:@"2" key:@"2.2" caption:@"Nations" icon:nil action:@selector(buttonPres:) target:self];
 	
 	[sidebar addChild:@"3" key:@"3.1" caption:@"Game Info" icon:nil action:@selector(buttonPres:) target:self];
-	
+    
 	[sidebar reloadData];
 	
-	[sidebar expandAll];
-	
 	[pool release];
+}
+     
+- (void) selectedSidebarItemPlayers: (id)sender {
+    NSLog(@"Clicked Players");
+    [appDlg setDataLoaded:TRUE];
+	[[appDlg topToolbar] validateVisibleItems];
+}
+
+- (void) selectedSidebarItemStaff: (id)sender {
+    NSLog(@"Selected Staff");
+    [appDlg setDataLoaded:TRUE];
+	[[appDlg topToolbar] validateVisibleItems];
 }
 
 - (void) setBadgeNumber: (NSInteger)total atIndex: (NSString *)index {
@@ -96,6 +107,8 @@
 		NSLog(@"handler closed with %d", result);
 		if (result == NSFileHandlingPanelOKButton) {
 			
+            [self revealLoaderContainer];
+            
 			// Set the saved game path
 			[self setGamePath:[filesearch filename]];
 			
@@ -104,7 +117,7 @@
 			
 			// Check if saved game has been Loaded
 			if (dataLoaded) { [self resetdb]; }
-			
+            
 			// Setup GameDB Thread
 			gameDBThread = [[NSThread alloc] initWithTarget:self selector:@selector(initGame:) object:gamePath];
             
@@ -122,12 +135,80 @@
 	database = [[Database alloc] init];
 }
 
+- (void) revealLoaderContainer {
+    NSViewAnimation *theAnim;
+    NSRect firstViewFrame;
+    NSRect newViewFrame;
+    NSMutableDictionary* firstViewDict;
+    
+    {
+        firstViewDict = [NSMutableDictionary dictionaryWithCapacity:3];
+        firstViewFrame = [loaderContainer frame];
+        
+        [firstViewDict setObject:loaderContainer forKey:NSViewAnimationTargetKey];
+        [firstViewDict setObject:[NSValue valueWithRect:firstViewFrame]
+                          forKey:NSViewAnimationStartFrameKey];
+        
+        // Change the ending position of the view.
+        newViewFrame = firstViewFrame;
+        newViewFrame.origin.y += newViewFrame.size.height;
+        
+        [firstViewDict setObject:[NSValue valueWithRect:newViewFrame]
+                          forKey:NSViewAnimationEndFrameKey];
+    }
+    
+    // Create the view animation object.
+    theAnim = [[NSViewAnimation alloc] initWithViewAnimations:[NSArray
+                                                               arrayWithObjects:firstViewDict, nil]];
+    
+    [theAnim setDuration: 0.5];
+    [theAnim setAnimationCurve:NSAnimationEaseIn];
+    // Run the animation.
+    [theAnim startAnimation];
+    
+    // The animation has finished, so go ahead and release it.
+    [theAnim release];
+}
+
+- (void) hideLoaderContainer {
+    NSViewAnimation *theAnim;
+    NSRect firstViewFrame;
+    NSRect newViewFrame;
+    NSMutableDictionary* firstViewDict;
+    
+    {
+        firstViewDict = [NSMutableDictionary dictionaryWithCapacity:3];
+        firstViewFrame = [loaderContainer frame];
+        
+        [firstViewDict setObject:loaderContainer forKey:NSViewAnimationTargetKey];
+        [firstViewDict setObject:[NSValue valueWithRect:firstViewFrame]
+                          forKey:NSViewAnimationStartFrameKey];
+        
+        // Change the ending position of the view.
+        newViewFrame = firstViewFrame;
+        newViewFrame.origin.y -= newViewFrame.size.height;
+        
+        [firstViewDict setObject:[NSValue valueWithRect:newViewFrame]
+                          forKey:NSViewAnimationEndFrameKey];
+    }
+    
+    // Create the view animation object.
+    theAnim = [[NSViewAnimation alloc] initWithViewAnimations:[NSArray
+                                                               arrayWithObjects:firstViewDict, nil]];
+    
+    [theAnim setDuration: 0.3];
+    [theAnim setAnimationCurve:NSAnimationEaseIn];
+    // Run the animation.
+    [theAnim startAnimation];
+    
+    // The animation has finished, so go ahead and release it.
+    [theAnim release];
+}
 						
 - (void) initGame: (NSString*) path {
 	
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	
-	[loader setHidden:NO];
 	BOOL isNewFormat = TRUE;
 	
 	if (true)  /*[[NSUserDefaults standardUserDefaults] boolForKey:@"loadLangDB"] == TRUE)*/ {
@@ -404,12 +485,12 @@
 	
 	[self setIdle:TRUE];
 	[self setDataLoaded:TRUE];
-    [appDlg setDataLoaded:TRUE];
-	
-	[loader setHidden:YES];
+    
 	[self populateOutlineContents:nil];
-    [[appDlg topToolbar] validateVisibleItems];
+    [self doneLoadingSaveGame];
 	
+    [self performSelectorOnMainThread:@selector(hideLoaderContainer) withObject:nil waitUntilDone:NO];
+    
 	[pool drain];
 	/////////////////////////////////
 }
@@ -439,6 +520,28 @@
 	[self setDataLoaded:FALSE];
 	[database release];
 	database = [[Database alloc] init];
+}
+
+- (void)setStatusViewTextFieldText: (NSString *)text {
+    [statusText setStringValue:text];
+}
+
+- (void)doneLoadingSaveGame {
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    
+    NSNumberFormatter *numFormatter = [[NSNumberFormatter alloc] init];
+    [numFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    
+    NSString *countries = [numFormatter stringFromNumber:[NSNumber numberWithUnsignedInt:[[database nations] count]]];
+    NSString *clubs = [numFormatter stringFromNumber:[NSNumber numberWithUnsignedInt:[[database clubs] count]]];
+    NSString *people = [numFormatter stringFromNumber:[NSNumber numberWithUnsignedInt:[[database people] count]]];
+    
+    [self setStatusViewTextFieldText:[NSString stringWithFormat:@"Loaded %@ Countries, %@ Clubs and %@ Persons", 
+                                     countries, 
+                                     clubs, 
+                                     people]];
+    
+    [pool release];
 }
 						
 @end
