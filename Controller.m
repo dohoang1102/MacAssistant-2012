@@ -107,10 +107,11 @@
 		NSLog(@"handler closed with %d", result);
 		if (result == NSFileHandlingPanelOKButton) {
 			
+            [self setStatusViewTextFieldText:@"Loading..."];
             [self revealLoaderContainer];
             
 			// Set the saved game path
-			[self setGamePath:[filesearch filename]];
+			[self setGamePath:[[filesearch URL] path]];
 			
 			// Add the path to the "recently opened" menus in OSX
 			[[NSDocumentController sharedDocumentController] noteNewRecentDocumentURL:[filesearch URL]];

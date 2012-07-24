@@ -42,6 +42,8 @@
 		E20D2CEB12D9F97600A0238C /* CompetitionHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CEA12D9F97600A0238C /* CompetitionHistory.m */; };
 		E20D2CF112D9F98E00A0238C /* CompetitionHistoryLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CF012D9F98E00A0238C /* CompetitionHistoryLoader.m */; };
 		E20D2CF412D9F99900A0238C /* CompetitionHistorySaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CF312D9F99900A0238C /* CompetitionHistorySaver.m */; };
+		E25EDE9A15BEB4AD00019FA3 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25EDE9915BEB4AD00019FA3 /* Sparkle.framework */; };
+		E25EDE9C15BEB53300019FA3 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E25EDE9915BEB4AD00019FA3 /* Sparkle.framework */; };
 		E26586631236C7BB00545D25 /* PlayerStatsTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E26586601236C7BB00545D25 /* PlayerStatsTransformer.m */; };
 		E26586641236C7BB00545D25 /* PlayerRatingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E26586621236C7BB00545D25 /* PlayerRatingTransformer.m */; };
 		E26586791236CDF400545D25 /* ContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = E26586781236CDF400545D25 /* ContentController.m */; };
@@ -323,6 +325,19 @@
 		E2EF10E2122C606A00F08172 /* boss-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E2EF10E1122C606A00F08172 /* boss-icon.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E25EDE9B15BEB50F00019FA3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E25EDE9C15BEB53300019FA3 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -400,6 +415,7 @@
 		E20D2CF012D9F98E00A0238C /* CompetitionHistoryLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompetitionHistoryLoader.m; sourceTree = "<group>"; };
 		E20D2CF212D9F99900A0238C /* CompetitionHistorySaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompetitionHistorySaver.h; sourceTree = "<group>"; };
 		E20D2CF312D9F99900A0238C /* CompetitionHistorySaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompetitionHistorySaver.m; sourceTree = "<group>"; };
+		E25EDE9915BEB4AD00019FA3 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		E265865F1236C7BB00545D25 /* PlayerStatsTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerStatsTransformer.h; sourceTree = "<group>"; };
 		E26586601236C7BB00545D25 /* PlayerStatsTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerStatsTransformer.m; sourceTree = "<group>"; };
 		E26586611236C7BB00545D25 /* PlayerRatingTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerRatingTransformer.h; sourceTree = "<group>"; };
@@ -966,6 +982,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				E20D2C6612D9F6D800A0238C /* QuartzCore.framework in Frameworks */,
+				E25EDE9A15BEB4AD00019FA3 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1054,6 +1071,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E25EDE9915BEB4AD00019FA3 /* Sparkle.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
@@ -1846,6 +1864,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				E25EDE9B15BEB50F00019FA3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -2242,6 +2261,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Downloads\"",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
@@ -2264,6 +2284,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Downloads\"",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
