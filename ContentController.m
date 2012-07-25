@@ -23,7 +23,7 @@
 
 @implementation ContentController
 
-@synthesize playerSearchResults, selectedRows;
+@synthesize playerSearchResults, selectedRows, selectedPlayer;
 
 - (id)init
 {
@@ -124,14 +124,7 @@
 
 - (void) showPlayerPanel:(id)sender {
     if (sender == nil) return;
-    
     if ([sender isKindOfClass:[NSTableView class]]) {
-        
-        Person *selectedPlayer = [[pSearchResultsController selectedObjects] objectAtIndex:0];
-        [playerName setStringValue:[selectedPlayer name]];
-        [playerCA setStringValue: [NSString stringWithFormat:@"%i", [[selectedPlayer playerData] currentAbility]]];
-        [playerPA setStringValue: [NSString stringWithFormat:@"%i", [[selectedPlayer playerData] potentialAbility]]];
-        
         if (![playerDetails isVisible]) {
             [playerDetails makeKeyAndOrderFront:sender];
         }

@@ -56,21 +56,16 @@ unknownData1, unknownChar1, theNewFirstName, theNewSurname, theNewCommonName, tr
 			return [[[controller valueForKeyPath:@"database.commonNames"] objectAtIndex:[personData commonNameID]] name];
 		}
 		else if ([personData firstNameID]>-1 || [personData surnameID]>-1) {
-			NSString *firstName, *surname;
+			NSString *firstName = @"";
+            NSString *surname = @"";
             
 			if ([personData firstNameID]>-1 && [personData firstNameID]<[(NSMutableArray *)[controller valueForKeyPath:@"database.firstNames"] count]) {
 				firstName = [[[controller valueForKeyPath:@"database.firstNames"] objectAtIndex:[personData firstNameID]] name];
 			}
-            else {
-                    firstName = @"";
-            }
             
 			if ([personData surnameID]>-1 && [personData surnameID]<[(NSMutableArray *)[controller valueForKeyPath:@"database.surnames"] count]) {
 				surname = [[[controller valueForKeyPath:@"database.surnames"] objectAtIndex:[personData surnameID]] name];
 			}
-            else {
-                surname = @"";
-            }
 			
 			return [NSString stringWithFormat:@"%@ %@",firstName, surname];
 		}

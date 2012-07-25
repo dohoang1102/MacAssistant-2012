@@ -23,57 +23,38 @@
 	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setDatabaseClass:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    
+    // Positions (???)
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setGoalkeeper:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setSweeper:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setDefender:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setDefensiveMidfielder:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setMidfielder:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setAttackingMidfielder:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setForward:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setWingBack:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setFreeRole:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setRightSide:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setLeftSide:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setCentral:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setLeftDefender:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setCentralDefender:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setRightDefender:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setCentralDefensiveMidfielder:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setLeftMidfielder:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setCentralMidfielder:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    [object setCentralMidfielder:cbuffer];
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setRightMidfielder:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setLeftAttackingMidfielder:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setCentralAttackingMidfielder:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setRightAttackingMidfielder:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setCentreForward:cbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setLeftWingBack:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setRightWingBack:cbuffer];
-	
     
     [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setCrossing:cbuffer];
@@ -178,7 +159,6 @@
     [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setBravery:cbuffer];
     
-    /*
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setConsistency:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
@@ -199,7 +179,6 @@
 	[object setComposure:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setConcentration:cbuffer];
-    */
      
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setRowID:ibuffer];

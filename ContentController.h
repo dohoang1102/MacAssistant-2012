@@ -12,6 +12,7 @@
 
 @interface ContentController : NSObject<NSSplitViewDelegate,NSTableViewDelegate> {
 	NSMutableArray							*playerSearchResults;
+    NSMutableArray                          *selectedPlayer;
 	NSMutableDictionary						*selectedRows;
     
     IBOutlet NSArrayController              *pSearchResultsController;
@@ -34,6 +35,7 @@
 - (BOOL)shouldCloseSheet:(id)sender;
 
 @property(readwrite, copy) NSMutableArray		*playerSearchResults;
+@property(readwrite, copy) NSMutableArray		*selectedPlayer;
 @property(readwrite, copy) NSMutableDictionary	*selectedRows;
 
 @end
