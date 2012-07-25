@@ -14,6 +14,7 @@
 	NSMutableArray							*playerSearchResults;
 	NSMutableDictionary						*selectedRows;
     
+    IBOutlet NSArrayController              *pSearchResultsController;
     IBOutlet Controller						*controller;
 	IBOutlet NSPredicateEditor				*playerFilter, *physicalFilter, *technicalFilter, *mentalFilter;
 	IBOutlet NSTableView					*playersTableView;
@@ -21,6 +22,12 @@
 	IBOutlet NSButton						*searchButton;
     IBOutlet NSPanel                        *sheet;
     IBOutlet MacAssistantAppDelegate        *appDlg;
+
+    // playerDetailPanel IBOutlets
+    IBOutlet NSPanel                        *playerDetails;
+    IBOutlet NSTextField                    *playerName;
+    IBOutlet NSTextField                    *playerCA;
+    IBOutlet NSTextField                    *playerPA;
 }
 
 - (IBAction)searchPlayers:(id)sender;

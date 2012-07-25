@@ -28,8 +28,8 @@
 - (id)init
 {
 	[super init];
-	
-	selectedRows = [[NSMutableDictionary alloc] init];
+    selectedRows = [[NSMutableDictionary alloc] init];
+    
 	return self;
 }
 
@@ -55,6 +55,8 @@
 	}
     
 	[playersTableView setFont:[NSFont fontWithName:@"Helvetica" size:10.0f]];
+    [playersTableView setTarget:self];
+    [playersTableView setDoubleAction:@selector(showPlayerPanel:)];
 }
 
 - (IBAction)searchPlayers:(id)sender {
@@ -118,6 +120,25 @@
 
 - (BOOL)shouldCloseSheet:(id)sender {
 	return YES;
+}
+
+- (void) showPlayerPanel:(id)sender {
+    if (sender == nil) return;
+    
+    if ([sender isKindOfClass:[NSTableView class]]) {
+        
+        Person *selectedPlayer = [[pSearchResultsController selectedObjects] objectAtIndex:0];
+        [playerName setStringValue:[selectedPlayer name]];
+        [playerCA setStringValue: [NSString stringWithFormat:@"%i", [[selectedPlayer playerData] currentAbility]]];
+        [playerPA setStringValue: [NSString stringWithFormat:@"%i", [[selectedPlayer playerData] potentialAbility]]];
+        
+        if (![playerDetails isVisible]) {
+            [playerDetails makeKeyAndOrderFront:sender];
+        }
+    }
+    else {
+        NSLog(@"Type is not NSTableView!!");
+    }
 }
 
 @end
