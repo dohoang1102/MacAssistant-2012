@@ -48,18 +48,19 @@
 	[sidebar setDefaultAction:@selector(buttonDefaultHandler:) target:self];
 	
 	[sidebar addSection:@"1" caption:@"PEOPLE"];
-	[sidebar addSection:@"2" caption:@"PLACES"];
-	[sidebar addSection:@"3" caption:@"OTHER"];
+	//[sidebar addSection:@"2" caption:@"PLACES"];
+	//[sidebar addSection:@"3" caption:@"OTHER"];
 	
 	[sidebar addChild:@"1" key:@"1.1" caption:@"Players" icon:[NSImage imageNamed:@"footballer-icon.png"] action:@selector(selectedSidebarItemPlayers:) target:self];
-	[sidebar addChild:@"1" key:@"1.2" caption:@"Staff" icon:[NSImage imageNamed:@"boss-icon.png"] action:@selector(selectedSidebarItemStaff:) target:self];
+	//[sidebar addChild:@"1" key:@"1.2" caption:@"Staff" icon:[NSImage imageNamed:@"boss-icon.png"] action:@selector(selectedSidebarItemStaff:) target:self];
 	
-	[sidebar addChild:@"2" key:@"2.1" caption:@"Clubs" icon:nil action:@selector(buttonPres:) target:self];
-	[sidebar addChild:@"2" key:@"2.2" caption:@"Nations" icon:nil action:@selector(buttonPres:) target:self];
+	//[sidebar addChild:@"2" key:@"2.1" caption:@"Clubs" icon:nil action:@selector(buttonPres:) target:self];
+	//[sidebar addChild:@"2" key:@"2.2" caption:@"Nations" icon:nil action:@selector(buttonPres:) target:self];
 	
-	[sidebar addChild:@"3" key:@"3.1" caption:@"Game Info" icon:nil action:@selector(buttonPres:) target:self];
-    
+	//[sidebar addChild:@"3" key:@"3.1" caption:@"Game Info" icon:nil action:@selector(buttonPres:) target:self];
 	[sidebar reloadData];
+    
+    [sidebar expandAll];
 	
 	[pool release];
 }

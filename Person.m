@@ -286,6 +286,38 @@ unknownData1, unknownChar1, theNewFirstName, theNewSurname, theNewCommonName, tr
 	return 0;
 }
 
+- (NSString *)ageString
+{
+	if (personData) {
+		short dobYear = [[personData dateOfBirth] year];
+		short currentYear = [[controller currentDate] year];
+		short dobMonth = [[[[controller currentDate] date] descriptionWithCalendarFormat:@"%m" timeZone:nil locale:nil] intValue]; 
+		short currentMonth = [[[[personData dateOfBirth] date] descriptionWithCalendarFormat:@"%m" timeZone:nil locale:nil] intValue]; 
+		short dobDay = [[[[controller currentDate] date] descriptionWithCalendarFormat:@"%d" timeZone:nil locale:nil] intValue]; 
+		short currentDay = [[[[personData dateOfBirth] date] descriptionWithCalendarFormat:@"%d" timeZone:nil locale:nil] intValue]; 
+		
+		short monthDiff = currentMonth - dobMonth;
+		short dayDiff = currentDay - dobDay;
+		
+		int age = currentYear - dobYear;
+		
+		if (monthDiff <= 0 && dayDiff < 0) { age--; }
+		
+		return [NSString stringWithFormat:@"%i years old", age];
+	}
+	
+	return @"Unknown Age";
+}
+
+- (int)contractWage {
+    if ([[staffData contracts] count] > 0) {
+        return [[[staffData contracts] objectAtIndex:0] weeklyWage];
+    }
+    else {
+        return 0;
+    }
+}
+
 - (BOOL)contractIsExpiring
 {
 	if ([[staffData contracts] count]>0) {
