@@ -136,7 +136,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	}
 	[self setGoodAlliterations:tempArray];
 	[tempArray removeAllObjects];
-	NSLog(@"End of %d good alliterations at %d",[goodAlliterations count],*byteOffset);
+	NSLog(@"End of %ld good alliterations at %d",[goodAlliterations count],*byteOffset);
 
 	[self setStatus:NSLocalizedString(@"Loading bad alliterations...", @"editor status")];
 	[self setCurrentRecord:0];
@@ -157,7 +157,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	}
 	[self setBadAlliterations:tempArray];
 	[tempArray removeAllObjects];
-	NSLog(@"End of %d bad alliterations at %d",[badAlliterations count],*byteOffset);
+	NSLog(@"End of %ld bad alliterations at %d",[badAlliterations count],*byteOffset);
 	[pool drain];
 	
 	// 0x01 ???
@@ -201,7 +201,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 //		NSLog(@"Award %d (%d) done at %d",i,[object UID],*byteOffset);
 	}
 	[self setAwards:tempArray];
-	NSLog(@"End of %d awards at %d",[awards count],*byteOffset);
+	NSLog(@"End of %ld awards at %d",[awards count],*byteOffset);
 
 	NSThread *awardThread = [[NSThread alloc] initWithTarget:self selector:@selector(assignAwardNames:) object:nil];
 	
@@ -258,7 +258,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[self setStatus:NSLocalizedString(@"Assigning Cities...", @"editor status")];
 	[self setCities:tempArray];
 	
-	NSLog(@"End of %d cities at %d",[cities count],*byteOffset);
+	NSLog(@"End of %ld cities at %d",[cities count],*byteOffset);
 	
 	[tempArray removeAllObjects];
 	[pool drain];
@@ -309,7 +309,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[self setStatus:NSLocalizedString(@"Assigning Clubs...", @"editor status")];
 	[self setClubs:tempArray];
 	
-	NSLog(@"End of %d clubs at %d",[clubs count],*byteOffset);
+	NSLog(@"End of %ld clubs at %d",[clubs count],*byteOffset);
 	
 	[tempArray removeAllObjects];
 	[pool drain];
@@ -366,7 +366,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	}
 	[self setStatus:NSLocalizedString(@"Assigning Competitions...", @"editor status")];
 	[self setCompetitions:tempArray];
-	NSLog(@"End of %d competitions at %d",[competitions count],*byteOffset);
+	NSLog(@"End of %ld competitions at %d",[competitions count],*byteOffset);
 	
 	[tempArray removeAllObjects];
 	[pool drain];
@@ -410,7 +410,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		else { [tempArray addObject:object]; }
 	}
 	[self setContinents:tempArray];
-	NSLog(@"End of %d continents at %d",[continents count],*byteOffset);
+	NSLog(@"End of %ld continents at %d",[continents count],*byteOffset);
 	
 	NSThread *continentThread = [[NSThread alloc] initWithTarget:self selector:@selector(assignContinentNames:) object:nil];
 	
@@ -458,7 +458,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		
 	}
 	[self setCurrencies:tempArray];
-	NSLog(@"End of %d currencies at %d",[currencies count],*byteOffset);
+	NSLog(@"End of %ld currencies at %d",[currencies count],*byteOffset);
 	
 	[tempArray removeAllObjects];
 	[pool drain];
@@ -503,7 +503,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		
 	}
 	[self setInjuries:tempArray];
-	NSLog(@"End of %d injuries at %d",[injuries count],*byteOffset);
+	NSLog(@"End of %ld injuries at %d",[injuries count],*byteOffset);
 	
 	NSThread *injuryThread = [[NSThread alloc] initWithTarget:self selector:@selector(assignInjuryNames:) object:nil];
 	
@@ -548,7 +548,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		else { [tempArray addObject:object]; }
 	}
 	[self setMedia:tempArray];
-	NSLog(@"End of %d media at %d",[media count],*byteOffset);
+	NSLog(@"End of %ld media at %d",[media count],*byteOffset);
 	
 	[tempArray removeAllObjects];
 	[pool release];
@@ -591,7 +591,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 	}
 	[self setLanguages:tempArray];
-	NSLog(@"End of %d languages at %d",[languages count],*byteOffset);
+	NSLog(@"End of %ld languages at %d",[languages count],*byteOffset);
 	
 	[tempArray removeAllObjects];
 	[pool release];
@@ -638,7 +638,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		}
 	}
 	[self setNations:tempArray];
-	NSLog(@"End of %d nations at %d",[nations count],*byteOffset);
+	NSLog(@"End of %ld nations at %d",[nations count],*byteOffset);
 	
 	[tempArray removeAllObjects];
 	[pool release];
@@ -682,7 +682,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		else { [firstNames addObject:object]; }
 		
 	}
-	NSLog(@"End of %d first names at %d",[firstNames count],*byteOffset);	
+	NSLog(@"End of %ld first names at %d",[firstNames count],*byteOffset);	
 	[pool drain];
 		
 #pragma mark Surnames
@@ -723,7 +723,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		}
 		else { [surnames addObject:object]; }
 	}
-	NSLog(@"End of %d surnames at %d",[surnames count],*byteOffset);
+	NSLog(@"End of %ld surnames at %d",[surnames count],*byteOffset);
 	
 	[pool drain];
 	
@@ -765,7 +765,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		}
 		else { [commonNames addObject:object]; }
 	}
-	NSLog(@"End of %d common names at %d",[commonNames count],*byteOffset);	
+	NSLog(@"End of %ld common names at %d",[commonNames count],*byteOffset);	
 	
 	[pool drain];
 	
@@ -861,7 +861,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		}
 	}
 	[self setLocalAreas:tempArray];
-	NSLog(@"End of %d local areas at %d",[localAreas count],*byteOffset);	
+	NSLog(@"End of %ld local areas at %d",[localAreas count],*byteOffset);	
 	
 	[tempArray removeAllObjects];
 	[pool drain];
@@ -905,7 +905,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		else { [tempArray addObject:object]; }
 	}
 	[self setSponsors:tempArray];
-	NSLog(@"End of %d sponsors at %d",[sponsors count],*byteOffset);
+	NSLog(@"End of %ld sponsors at %d",[sponsors count],*byteOffset);
 	
 	[tempArray removeAllObjects];
 	[pool drain];
@@ -958,7 +958,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	}
 	[self setStatus:NSLocalizedString(@"Assigning Stadiums...", @"editor status")];
 	[self setStadiums:tempArray];
-	NSLog(@"End of %d stadiums at %d",[stadiums count],*byteOffset);
+	NSLog(@"End of %ld stadiums at %d",[stadiums count],*byteOffset);
 	
 	[tempArray removeAllObjects];
 	[pool drain];
@@ -995,7 +995,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	}
 	[self setStatus:NSLocalizedString(@"Assigning Stadium changes...", @"editor status")];
 	[self setStadiumChanges:tempArray];
-	NSLog(@"End of %d stadium changes at %d",[stadiumChanges count],*byteOffset);	
+	NSLog(@"End of %ld stadium changes at %d",[stadiumChanges count],*byteOffset);	
 	
 	[tempArray removeAllObjects];
 	[pool drain];
@@ -1039,7 +1039,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		else { [tempArray addObject:object]; }
 	}
 	[self setStageNames:tempArray];
-	NSLog(@"End of %d stage names at %d",[stageNames count],*byteOffset);	
+	NSLog(@"End of %ld stage names at %d",[stageNames count],*byteOffset);	
 	
 	NSThread *stageNameThread = [[NSThread alloc] initWithTarget:self selector:@selector(assignStageNames:) object:nil];
 	
@@ -1089,7 +1089,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		}
 	}
 	[self setTeams:tempArray];
-	NSLog(@"End of %d teams at %d",[teams count],*byteOffset);
+	NSLog(@"End of %ld teams at %d",[teams count],*byteOffset);
 	
 	[tempArray removeAllObjects];
 	[pool drain];
@@ -1133,7 +1133,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		else { [tempArray addObject:object]; }
 	}
 	[self setWeather:tempArray];
-	NSLog(@"End of %d weather at %d",[weather count],*byteOffset);
+	NSLog(@"End of %ld weather at %d",[weather count],*byteOffset);
 	
 	[tempArray removeAllObjects];
 	[pool drain];
@@ -1175,7 +1175,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		else { [tempArray addObject:object]; }
 	}
 	[self setDescriptions:tempArray];
-	NSLog(@"End of %d descriptions at %d",[descriptions count],*byteOffset);	
+	NSLog(@"End of %ld descriptions at %d",[descriptions count],*byteOffset);	
 	
 	NSThread *descriptionThread = [[NSThread alloc] initWithTarget:self selector:@selector(assignDescriptionNames:) object:nil];
 	
@@ -1220,7 +1220,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		else { [tempArray addObject:object]; }
 	}
 	[self setDerbies:tempArray];
-	NSLog(@"End of %d derbies at %d",[derbies count],*byteOffset);	
+	NSLog(@"End of %ld derbies at %d",[derbies count],*byteOffset);	
 	
 	[tempArray removeAllObjects];
 	[pool drain];
@@ -1273,7 +1273,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		}
 	}
 	[self setAgreements:tempArray];
-	NSLog(@"End of %d agreements at %d",[agreements count],*byteOffset);	
+	NSLog(@"End of %ld agreements at %d",[agreements count],*byteOffset);	
 	
 	[tempArray removeAllObjects];
 	[pool drain];
@@ -1326,7 +1326,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	}
 	[self setStatus:NSLocalizedString(@"Assigning People...", @"editor status")];
 	[self setPeople:tempArray];
-	NSLog(@"End of %d people at %d",[people count],*byteOffset);
+	NSLog(@"End of %ld people at %d",[people count],*byteOffset);
 	
 	[tempArray removeAllObjects];
 	[pool drain];
@@ -1370,7 +1370,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		else { [tempArray addObject:object]; }
 	}
 	[self setPersonStats:tempArray];
-	NSLog(@"End of %d person stats at %d",[personStats count],*byteOffset);
+	NSLog(@"End of %ld person stats at %d",[personStats count],*byteOffset);
 	
 	[tempArray removeAllObjects];
 	[pool drain];
@@ -1414,7 +1414,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		else { [tempArray addObject:object]; }
 	}
 	[self setPlayerStats:tempArray];
-	NSLog(@"End of %d player stats at %d",[playerStats count],*byteOffset);
+	NSLog(@"End of %ld player stats at %d",[playerStats count],*byteOffset);
 	
 	[tempArray removeAllObjects];
 	[pool drain];
@@ -1458,7 +1458,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		else { [tempArray addObject:object]; }
 	}
 	[self setNonPlayerStats:tempArray];
-	NSLog(@"End of %d non-player stats at %d",[nonPlayerStats count],*byteOffset);
+	NSLog(@"End of %ld non-player stats at %d",[nonPlayerStats count],*byteOffset);
 	
 	[tempArray removeAllObjects];
 	[pool drain];
@@ -1501,7 +1501,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		else { [tempArray addObject:object]; }
 	}
 	[self setCompetitionHistories:tempArray];
-	NSLog(@"End of %d competition histories at %d",[competitionHistories count],*byteOffset);
+	NSLog(@"End of %ld competition histories at %d",[competitionHistories count],*byteOffset);
 	
 	[tempArray removeAllObjects];
 	
@@ -1533,7 +1533,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		[tempArray addObject:[Loader readClubLinkFromData:data atOffset:byteOffset]];
 	}
 	[self setClubLinks:tempArray];
-	NSLog(@"End of %d club links at %d",[clubLinks count],*byteOffset);
+	NSLog(@"End of %ld club links at %d",[clubLinks count],*byteOffset);
 	
 	saveEndOffset = *byteOffset;
 	

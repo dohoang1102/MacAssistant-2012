@@ -47,10 +47,10 @@ unknownFixture1;
 		[val appendFormat:@"%@",stringValue];
 	}
 	else if (type==10) {
-		[val appendFormat:@"Array (%d objects)",[infos count]];
+		[val appendFormat:@"Array (%ld objects)",[infos count]];
 	}
 	else if (type==11) {
-		[val appendFormat:@"Array (%d objects)",[infos count]];
+		[val appendFormat:@"Array (%ld objects)",[infos count]];
 	}
 	else if (type==13) {
 		[val appendFormat:@"%d - %@",charValue,[dateValue date]];

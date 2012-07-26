@@ -43,7 +43,7 @@ unknownData1, unknownChar1, theNewFirstName, theNewSurname, theNewCommonName, tr
 		NSDateComponents *components =
 		[gregorian components:(NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit) fromDate:[[personData dateOfBirth] date]];
 		
-		NSString *str = [[NSString alloc] initWithFormat:@"%d.%d.%d",[components day],[components month],[components year]];
+		NSString *str = [[NSString alloc] initWithFormat:@"%ld.%ld.%ld",[components day],[components month],[components year]];
 		[gregorian release];
 		return str;
 	}

@@ -14,12 +14,14 @@
 	NSMutableArray							*playerSearchResults;
     NSMutableArray                          *selectedPlayer;
 	NSMutableDictionary						*selectedRows;
+    NSThread                                *searchThread;
     
     IBOutlet NSArrayController              *pSearchResultsController;
     IBOutlet Controller						*controller;
-	IBOutlet NSPredicateEditor				*playerFilter, *physicalFilter, *technicalFilter, *mentalFilter;
+	IBOutlet NSPredicateEditor				*playerFilter, *statsFilter;
 	IBOutlet NSTableView					*playersTableView;
 	IBOutlet NSPredicateEditorRowTemplate	*predicateRow;
+    IBOutlet NSPredicateEditorRowTemplate	*predicateRow2;
 	IBOutlet NSButton						*searchButton;
     IBOutlet NSPanel                        *sheet;
     IBOutlet MacAssistantAppDelegate        *appDlg;

@@ -31,14 +31,19 @@
     IBOutlet MacAssistantAppDelegate    *appDlg;
     IBOutlet NSTextField                *statusText;
     IBOutlet MAView                     *loaderContainer;
+    IBOutlet NSToolbarItem              *loadGameToolbarItem;
 }
 
 - (IBAction) loadGame: (id) sender;
 - (void) resetdb;
 - (void) initGame: (NSString *)path;
 - (void) resetDB;
-- (void)populateOutlineContents:(id)inObject;
+- (void) populateOutlineContents:(id)inObject;
 - (void) setBadgeNumber: (NSInteger)total atIndex: (NSString *)index;
+- (void) revealLoaderContainer;
+- (void) hideLoaderContainer;
+
+@property(nonatomic, retain) IBOutlet NSProgressIndicator *loader;
 
 @property(copy, readwrite) NSString *gamePath;
 @property(copy, readwrite) FMDate *currentDate;

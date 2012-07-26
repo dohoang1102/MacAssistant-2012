@@ -19,7 +19,7 @@
 
 @implementation Controller
 
-@synthesize gamePath, dataLoaded, gameDBVersion, database, currentDate, idle;
+@synthesize gamePath, dataLoaded, gameDBVersion, database, currentDate, idle, loader;
 
 - (id)init
 {
@@ -40,6 +40,15 @@
                                          -(loaderContainer.frame.size.height), 
                                          loaderContainer.frame.size.width, 
                                          loaderContainer.frame.size.height))];
+}
+
+- (BOOL)validateToolbarItem:(NSToolbarItem *)theItem {
+    if ([[theItem itemIdentifier] isEqualTo:[loadGameToolbarItem itemIdentifier]]) {
+        return (!dataLoaded && idle);
+    }
+    else {
+        return YES;
+    }
 }
 
 - (void)populateOutlineContents:(id)inObject {
@@ -82,22 +91,6 @@
 	[sidebar reloadData];
 }
 
-- (void)buttonPres:(id)sender {
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	
-	//NSRunInformationalAlertPanel(@"Sidebar Item Clicked", [NSString stringWithFormat:@"Sidebar Item Clicked '%@'", [sender caption]], @"Ok", nil, nil);
-	
-	[pool release];
-}
-
-- (void)buttonDefaultHandler:(id)sender {
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	
-	//NSRunInformationalAlertPanel(@"DEFAULT Sidebar Item Handler", [NSString stringWithFormat:@"Sidebar Item Clicked '%@'", [sender caption]], @"Ok", nil, nil);
-	
-	[pool release];
-}
-
 - (IBAction) loadGame: (id) sender {
 	NSOpenPanel *filesearch = [NSOpenPanel openPanel];
 	
@@ -105,9 +98,10 @@
 	[filesearch setAllowedFileTypes:[NSArray arrayWithObjects:@"fm",nil]];
 	
 	[filesearch beginSheetModalForWindow:mainWin completionHandler:^(NSInteger result) {
-		NSLog(@"handler closed with %d", result);
+		NSLog(@"handler closed with %ld", result);
 		if (result == NSFileHandlingPanelOKButton) {
-			
+            [self setIdle:FALSE];
+            [self validateToolbarItem:loadGameToolbarItem];
             [self setStatusViewTextFieldText:@"Loading..."];
             [self revealLoaderContainer];
             
@@ -220,7 +214,6 @@
 		
 	unsigned int fileLength, gameLength;
 	
-	[self setIdle:FALSE];
 	[database setStatus:NSLocalizedString(@"Reading File Header...", @"editor status")];
 	
 	// Create file data object
@@ -327,7 +320,7 @@
 	fileOffset += 10;
 	
 	// Log current progress
-	NSLog(@"game_info.dat: %d of %d [%d of %d] read",fileOffset,[fileData length],byteOffset,[gameData length]);
+	NSLog(@"game_info.dat: %d of %ld [%d of %ld] read",fileOffset,[fileData length],byteOffset,[gameData length]);
 	
 	// Output current status to user
 	[database setStatus:NSLocalizedString(@"Reading save_game_summary.dat...", @"editor status")];
@@ -371,7 +364,7 @@
 	// Skip 8 bytes (as comment above)
 	fileOffset += 8;
 	
-	NSLog(@"save_game_summary.dat: %d of %d [%d of %d] read",fileOffset,[fileData length],byteOffset,[gameData length]);
+	NSLog(@"save_game_summary.dat: %d of %ld [%d of %ld] read",fileOffset,[fileData length],byteOffset,[gameData length]);
 	
 	[database setStatus:NSLocalizedString(@"Reading game_db.dat header...", @"editor status")];
 #pragma mark game_db.dat
@@ -406,7 +399,7 @@
 	//Check version is compatiable with supported versions
 	if (gameDBVersion != FM2012_12_2 && gameDBVersion != FM2012_12_1) {
 		NSAlert *alert = [NSAlert alertWithMessageText:[NSString stringWithFormat:NSLocalizedString(@"Incompatible Database Version - %hu",@"error"),gameDBVersion] defaultButton:@"OK" alternateButton:nil 
-										   otherButton:nil informativeTextWithFormat:NSLocalizedString(@"The version of FM this game was saved under is not compatible with this editor",@"error message")];
+										   otherButton:nil informativeTextWithFormat:NSLocalizedString(@"The version of FM this game was saved under is not compatible with MacAssistant 2012. Please upload a copy of your save game to a filehost and file a new bug at the project's github page (https://github.com/thanoulas/MacAssistant-2012/issues)",@"error message")];
 		NSLog(@"Incompatible Database Version.");
 		[alert runModal];
 		

@@ -60,7 +60,7 @@ managerRole, assistantManagerRole, coachRole, physioRole, scoutRole, goalkeeping
 		NSDateComponents *components =
 		[gregorian components:(NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit) fromDate:[[[contracts objectAtIndex:0] endDate] date]];
 		
-		NSString *str = [[NSString alloc] initWithFormat:@"%d.%d.%d",[components day],[components month],[components year]];
+		NSString *str = [[NSString alloc] initWithFormat:@"%ld.%ld.%ld",[components day],[components month],[components year]];
 		[gregorian release];
 		return str;
 	}

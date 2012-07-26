@@ -77,7 +77,7 @@
 		[decompressedData getBytes:&ibuffer range:NSMakeRange(fmf2Offset, 4)]; fmf2Offset += 4;
 		[fileInfo setObject:[NSNumber numberWithUnsignedInt:ibuffer] forKey:@"fileLength"];
 		
-		NSMutableString *newPath = [NSMutableString stringWithFormat:[NSString stringWithFormat:@"%@/",filePath]];
+		NSMutableString *newPath = [NSMutableString stringWithFormat:@"%@/",filePath];
 		if ([path length]>0) { [newPath appendString:[NSString stringWithFormat:@"%@/",path]] ; }
 		[newPath appendString:[NSString stringWithFormat:@"%@",[fileInfo objectForKey:@"filename"]]];
 		
