@@ -361,6 +361,23 @@ unknownData1, unknownChar1, theNewFirstName, theNewSurname, theNewCommonName, tr
 	return FALSE;
 }
 
+- (NSString *) currentStatusMessages {
+    NSString *retVal = @"";
+    
+    if ([[staffData contractOffers] count] > 0) {
+        retVal = @"bid";
+        for (ContractOffer *item in [staffData contractOffers]) {
+            if ([item decision]==COD_ACCEPTED) { retVal = @"trn"; }
+        }
+    }
+    
+    if ([[playerData injuries] count] > 0) {
+        retVal = @"inj";
+    }
+    
+    return retVal;
+}
+
 - (BOOL)acceptedContractOffer
 {
 	if ([[staffData contractOffers] count]>0) {
