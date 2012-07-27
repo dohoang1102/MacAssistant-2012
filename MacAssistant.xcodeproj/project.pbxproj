@@ -42,6 +42,7 @@
 		E20D2CEB12D9F97600A0238C /* CompetitionHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CEA12D9F97600A0238C /* CompetitionHistory.m */; };
 		E20D2CF112D9F98E00A0238C /* CompetitionHistoryLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CF012D9F98E00A0238C /* CompetitionHistoryLoader.m */; };
 		E20D2CF412D9F99900A0238C /* CompetitionHistorySaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CF312D9F99900A0238C /* CompetitionHistorySaver.m */; };
+		E211183615C20D2F00CEEFB6 /* ma12icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E211183515C20D2F00CEEFB6 /* ma12icon.icns */; };
 		E25EDE9A15BEB4AD00019FA3 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25EDE9915BEB4AD00019FA3 /* Sparkle.framework */; };
 		E25EDE9C15BEB53300019FA3 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E25EDE9915BEB4AD00019FA3 /* Sparkle.framework */; };
 		E25EDE9F15BEBE2F00019FA3 /* CurrencyFormatTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E25EDE9E15BEBE2F00019FA3 /* CurrencyFormatTransformer.m */; };
@@ -324,6 +325,8 @@
 		E2EF01C512294B4400118797 /* SidebarBadgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EF01C212294B4400118797 /* SidebarBadgeCell.m */; };
 		E2EF10D5122C5FD400F08172 /* footballer-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E2EF10D4122C5FD400F08172 /* footballer-icon.png */; };
 		E2EF10E2122C606A00F08172 /* boss-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E2EF10E1122C606A00F08172 /* boss-icon.png */; };
+		E2F2F5D015C1C96C00BF7661 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2F2F5CF15C1C96C00BF7661 /* Preferences.xib */; };
+		E2F2F5D415C1D2F100BF7661 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F2F5D315C1D2F100BF7661 /* PreferencesController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -416,6 +419,7 @@
 		E20D2CF012D9F98E00A0238C /* CompetitionHistoryLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompetitionHistoryLoader.m; sourceTree = "<group>"; };
 		E20D2CF212D9F99900A0238C /* CompetitionHistorySaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompetitionHistorySaver.h; sourceTree = "<group>"; };
 		E20D2CF312D9F99900A0238C /* CompetitionHistorySaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompetitionHistorySaver.m; sourceTree = "<group>"; };
+		E211183515C20D2F00CEEFB6 /* ma12icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ma12icon.icns; sourceTree = "<group>"; };
 		E25EDE9915BEB4AD00019FA3 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		E25EDE9D15BEBE2F00019FA3 /* CurrencyFormatTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyFormatTransformer.h; sourceTree = "<group>"; };
 		E25EDE9E15BEBE2F00019FA3 /* CurrencyFormatTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyFormatTransformer.m; sourceTree = "<group>"; };
@@ -976,6 +980,9 @@
 		E2EF01C212294B4400118797 /* SidebarBadgeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarBadgeCell.m; sourceTree = "<group>"; };
 		E2EF10D4122C5FD400F08172 /* footballer-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "footballer-icon.png"; sourceTree = "<group>"; };
 		E2EF10E1122C606A00F08172 /* boss-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "boss-icon.png"; sourceTree = "<group>"; };
+		E2F2F5CF15C1C96C00BF7661 /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		E2F2F5D215C1D2F100BF7661 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
+		E2F2F5D315C1D2F100BF7661 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1104,11 +1111,13 @@
 		E221ED1815BB071700B79B32 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				E2F2F5D115C1D2D500BF7661 /* Controllers */,
 				E28A614315BB891000089DE0 /* SubClasses */,
 				E221ED1A15BB077600B79B32 /* Delegates */,
 				E221ED1915BB073900B79B32 /* Images */,
 				E2EF01BA12294B2200118797 /* Sidebar */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				E2F2F5CF15C1C96C00BF7661 /* Preferences.xib */,
 			);
 			name = "User Interface";
 			sourceTree = "<group>";
@@ -1116,6 +1125,7 @@
 		E221ED1915BB073900B79B32 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E211183515C20D2F00CEEFB6 /* ma12icon.icns */,
 				E2EB22D2123CE75600F9DE7A /* search.png */,
 				E2EF10E1122C606A00F08172 /* boss-icon.png */,
 				E2EF10D4122C5FD400F08172 /* footballer-icon.png */,
@@ -1859,6 +1869,15 @@
 			name = Sidebar;
 			sourceTree = "<group>";
 		};
+		E2F2F5D115C1D2D500BF7661 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2F2F5D215C1D2F100BF7661 /* PreferencesController.h */,
+				E2F2F5D315C1D2F100BF7661 /* PreferencesController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1916,6 +1935,8 @@
 				E2EF10D5122C5FD400F08172 /* footballer-icon.png in Resources */,
 				E2EF10E2122C606A00F08172 /* boss-icon.png in Resources */,
 				E2EB22D3123CE75600F9DE7A /* search.png in Resources */,
+				E2F2F5D015C1C96C00BF7661 /* Preferences.xib in Resources */,
+				E211183615C20D2F00CEEFB6 /* ma12icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2233,6 +2254,7 @@
 				E20D2CF412D9F99900A0238C /* CompetitionHistorySaver.m in Sources */,
 				E28CD0A015BDB52C003BE96B /* MAView.m in Sources */,
 				E25EDE9F15BEBE2F00019FA3 /* CurrencyFormatTransformer.m in Sources */,
+				E2F2F5D415C1D2F100BF7661 /* PreferencesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2264,6 +2286,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2291,6 +2315,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2305,6 +2331,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = MacAssistant;
 				SDKROOT = macosx;
 			};
@@ -2318,6 +2345,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-lz";
 				SDKROOT = macosx;
@@ -2331,6 +2359,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
 			name = Release;

@@ -19,7 +19,7 @@
 
 @implementation Controller
 
-@synthesize gamePath, dataLoaded, gameDBVersion, database, currentDate, idle, loader;
+@synthesize gamePath, dataLoaded, gameDBVersion, database, currentDate, idle, loader, prefWindow;
 
 - (id)init
 {
@@ -200,17 +200,22 @@
     // The animation has finished, so go ahead and release it.
     [theAnim release];
 }
-						
+			
+- (IBAction) showPreferences:(id)sender {
+    if (!prefWindow) {
+        prefWindow = [[PreferencesController alloc] initWithWindowNibName:@"Preferences"];
+    }
+    if (![[prefWindow window] isVisible]) {
+        [[prefWindow window] makeKeyAndOrderFront:self];
+    }
+    [[prefWindow window] center];
+}
+
 - (void) initGame: (NSString*) path {
 	
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	
 	BOOL isNewFormat = TRUE;
-	
-	if (true)  /*[[NSUserDefaults standardUserDefaults] boolForKey:@"loadLangDB"] == TRUE)*/ {
-		[database setStatus:NSLocalizedString(@"loading lang_db.dat", @"editor status")];
-		[database readLangDB:@"/Users/Tom/Library/Application Support/Steam/SteamApps/common/football manager 2012/data/db/1220/lang_db.dat"];
-	}
 		
 	unsigned int fileLength, gameLength;
 	
@@ -281,15 +286,40 @@
 	fileOffset += 17;
 	
 	char marker;
+    int counter = 0;
+    NSString *dbFolder = @"/Volumes";
+    
 	[fileData getBytes:&marker range:NSMakeRange(fileOffset,1)];	fileOffset += 1;
 	
 	// Marker indicates subdirectory. Once reached, read.
 	while (marker==6)
 	{
 		// Read subdirectory
-		[FMString readFromData:fileData atOffset:&fileOffset];	
+        if (counter == 0) {
+            [FMString readFromData:fileData atOffset:&fileOffset];
+        }
+        else {
+            dbFolder = [dbFolder stringByAppendingString:[NSString stringWithFormat:@"/%@", [FMString readFromData:fileData atOffset:&fileOffset]]];
+        }
 		[fileData getBytes:&marker range:NSMakeRange(fileOffset,1)];	
 		fileOffset += 1;
+        counter++;
+	}
+    
+    NSLog(@"lang db location: %@", dbFolder);
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"loadLangDB"] == TRUE) {
+        // We need to check here if the lang_db.dat file exists!
+        dbFolder = [dbFolder stringByAppendingString:@"/lang_db.dat"];
+        if ([[NSFileManager defaultManager] fileExistsAtPath:dbFolder]) {
+            // Since we found lang_db.dat make sure it's stored in the NSUserDefaults
+            if ([[[NSUserDefaults standardUserDefaults] stringForKey:@"langDBPath"] length] < 2) {
+                [[NSUserDefaults standardUserDefaults] setValue:dbFolder forKey:@"langDBPath"];
+            }
+            
+            [database setStatus:NSLocalizedString(@"loading lang_db.dat", @"editor status")];
+            [database readLangDB:dbFolder];
+        }
 	}
 	
 	//	0x03 unknown

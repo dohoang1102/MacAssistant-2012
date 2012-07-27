@@ -34,7 +34,19 @@
     
     NSNumberFormatter *numFormatter = [[NSNumberFormatter alloc] init];
     [numFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
-    [numFormatter setCurrencySymbol:@"£"]; // Needs to be selectable from the preferences in the future
+    NSString *cSymbol = @"";
+    
+    if ([[[NSUserDefaults standardUserDefaults] stringForKey:@"selectedCurrency"] isEqualToString:@"British Pound Sterling"]) {
+        cSymbol = @"£";
+    }
+    else if ([[[NSUserDefaults standardUserDefaults] stringForKey:@"selectedCurrency"] isEqualToString:@"US Dollar"]) {
+        cSymbol = @"$";
+    }
+    else if ([[[NSUserDefaults standardUserDefaults] stringForKey:@"selectedCurrency"] isEqualToString:@"European Euro"]) {
+        cSymbol = @"€";
+    }
+    
+    [numFormatter setCurrencySymbol:cSymbol]; // Needs to be selectable from the preferences in the future
     [numFormatter setMaximumFractionDigits:0];
     
     NSString *returnValue = [numFormatter stringFromNumber:currencyValue];

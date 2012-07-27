@@ -10,6 +10,7 @@
 #import "Sidebar.h"
 #import "MacAssistantAppDelegate.h"
 #import "MAView.h"
+#import "PreferencesController.h"
 
 @class Database;
 @class FMDate;
@@ -32,8 +33,10 @@
     IBOutlet NSTextField                *statusText;
     IBOutlet MAView                     *loaderContainer;
     IBOutlet NSToolbarItem              *loadGameToolbarItem;
+    IBOutlet PreferencesController      *prefWindow;
 }
 
+- (IBAction) showPreferences:(id)sender;
 - (IBAction) loadGame: (id) sender;
 - (void) resetdb;
 - (void) initGame: (NSString *)path;
@@ -44,6 +47,7 @@
 - (void) hideLoaderContainer;
 
 @property(nonatomic, retain) IBOutlet NSProgressIndicator *loader;
+@property(nonatomic, retain) IBOutlet PreferencesController *prefWindow;
 
 @property(copy, readwrite) NSString *gamePath;
 @property(copy, readwrite) FMDate *currentDate;
