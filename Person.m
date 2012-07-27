@@ -480,8 +480,8 @@ unknownData1, unknownChar1, theNewFirstName, theNewSurname, theNewCommonName, tr
 		}
 		else {
 			[personData setFirstNameID:[[tempArray objectAtIndex:0] rowID]];
-			short newCount = [(NSMutableArray *)[tempArray objectAtIndex:0] count] + 1;
-			[[[[controller database] firstNames] objectAtIndex:[[tempArray objectAtIndex:0] rowID]] setCount:newCount];
+			//short newCount = [(NSMutableArray *)[tempArray objectAtIndex:0] count] + 1;
+			//[[[[controller database] firstNames] objectAtIndex:[[tempArray objectAtIndex:0] rowID]] setCount:newCount];
 		}
 		
 		[tempArray release];
@@ -509,8 +509,8 @@ unknownData1, unknownChar1, theNewFirstName, theNewSurname, theNewCommonName, tr
 		}
 		else {
 			[personData setSurnameID:[[tempArray objectAtIndex:0] rowID]];
-			short newCount = [(NSMutableArray *)[tempArray objectAtIndex:0] count] + 1;
-			[[[[controller database] surnames] objectAtIndex:[[tempArray objectAtIndex:0] rowID]] setCount:newCount];
+			//short newCount = [(NSMutableArray *)[tempArray objectAtIndex:0] count] + 1;
+			//[[[[controller database] surnames] objectAtIndex:[[tempArray objectAtIndex:0] rowID]] setCount:newCount];
 		}
 		
 		[tempArray release];
@@ -538,8 +538,8 @@ unknownData1, unknownChar1, theNewFirstName, theNewSurname, theNewCommonName, tr
 		}
 		else {
 			[personData setCommonNameID:[[tempArray objectAtIndex:0] rowID]];
-			short newCount = [(NSMutableArray *)[tempArray objectAtIndex:0] count] + 1;
-			[[[[controller database] commonNames] objectAtIndex:[[tempArray objectAtIndex:0] rowID]] setCount:newCount];
+			//short newCount = [(NSMutableArray *)[tempArray objectAtIndex:0] count] + 1;
+			//[[[[controller database] commonNames] objectAtIndex:[[tempArray objectAtIndex:0] rowID]] setCount:newCount];
 		}
 		
 		[tempArray release];
