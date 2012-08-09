@@ -317,7 +317,13 @@
 		[object setUnknownInt1:ibuffer];
 		if (debug) { NSLog(@"UTI16:%d",ibuffer); }
 	}
-	
+	else if ([object type]==TI_UNKNOWN_17) {
+        [data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+        for (int i=0; i<sbuffer; i++) {
+            offset += 4;
+            offset += 1;
+        }
+    }
 	
 	else {
 		return [NSString stringWithFormat:@"Unknown Type - %d at offset %d",[object type],offset];

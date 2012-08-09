@@ -375,6 +375,11 @@ unknownData1, unknownChar1, theNewFirstName, theNewSurname, theNewCommonName, tr
         retVal = @"inj";
     }
     
+    if ([[staffData contracts] count] > 0) {
+        for (Contract *item in [staffData contracts]) {
+            
+        }
+    }
     return retVal;
 }
 
