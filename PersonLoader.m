@@ -29,6 +29,7 @@
 	char cbuffer;
 	int ibuffer;
 	BOOL debug = NO;
+    BOOL miniDebug = YES;
 	
 	unsigned int offset = *byteOffset;
 	
@@ -125,6 +126,7 @@
 		// NSLog(@"P AND NP 2");
 	}
 	if (debug) { NSLog(@"person %d (%d) at %d",[object rowID],[object UID],offset); }
+    if (miniDebug) { NSLog(@"Person %d", [object rowID]); }
 	
 	*byteOffset = offset;
 	

@@ -13,7 +13,6 @@
 
 + (PlayerForm *)readFromData:(NSData *)data atOffset:(unsigned int *)byteOffset
 {
-	char cbuffer;
 	int ibuffer;
 	NSMutableArray *tempArray;
 	
@@ -24,9 +23,9 @@
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setTeamID:ibuffer];
 	
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	tempArray = [[NSMutableArray alloc] init];
-	for (int i=0;i<cbuffer;i++) {
+	for (int i=0;i<ibuffer;i++) {
 		[tempArray addObject:[MatchFormLoader readFromData:data atOffset:&offset]];
 	}
 	[object setMatchForms:tempArray];

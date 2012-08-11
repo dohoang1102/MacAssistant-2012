@@ -62,9 +62,22 @@
     offset += 8;
     
     [data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-    offset += (sbuffer * 16);
+    //offset += (sbuffer * 16);
     
-    offset += 21;
+    offset += 128;
+    
+    offset += 20;
+    
+    [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+    for (int x=0; x<cbuffer; x++) {
+        [data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+		tempArray = [[NSMutableArray alloc] init];
+		for (int i=0;i<ibuffer;i++) {
+			[tempArray addObject:[GeneralInfoLoader readFromData:data atOffset:&offset readInfo:YES]];
+		}
+		// [object setHomePageInfos:tempArray];
+		[tempArray release];
+    }
     
     [data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
     for (int i=0; i<sbuffer; i++) {
@@ -86,7 +99,14 @@
         offset += 19;
     }
     
-    offset += 44;
+    offset += 8;
+    [data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+    offset += (ibuffer * 21);
+    
+    [data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+    offset += (ibuffer * 18);
+    
+    offset += 28;
     
     offset += 24;
     

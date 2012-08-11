@@ -276,8 +276,11 @@
 		[object setUnknownData16:[data subdataWithRange:NSMakeRange(offset, (cbuffer*7))]]; 
 		offset += (cbuffer*7);
         
-        offset += 3;
-        
+        [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+        if (cbuffer > 0) {
+            offset += 
+        }
+        offset += 2;
         
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar14:cbuffer];
@@ -333,9 +336,9 @@
 	[object setHasForms:cbuffer];
 	
 	if ([object hasForms]) {
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		tempArray = [[NSMutableArray alloc] init];
-		for (int i=0;i<cbuffer;i++) {
+		for (int i=0;i<ibuffer;i++) {
 			[tempArray addObject:[PlayerFormLoader readFromData:data atOffset:&offset]];
 		}
 		[object setForms:tempArray];
@@ -353,7 +356,7 @@
 		}
         
         if (version == FM2012_12_2) {
-            offset += 4;
+            offset += 1;
         }
 	}
 	
