@@ -364,20 +364,38 @@ unknownData1, unknownChar1, theNewFirstName, theNewSurname, theNewCommonName, tr
 - (NSString *) currentStatusMessages {
     NSString *retVal = @"";
     
-    if ([[staffData contractOffers] count] > 0) {
-        retVal = @"bid";
-        for (ContractOffer *item in [staffData contractOffers]) {
-            if ([item decision]==COD_ACCEPTED) { retVal = @"trn"; }
-        }
-    }
     
     if ([[playerData injuries] count] > 0) {
         retVal = @"inj";
     }
     
+    if ([[playerData bans] count] > 0) {
+        retVal = @"sus";
+    }
+    
+    if ([[staffData interestedClubs] count] > 0) {
+        retVal = @"wnt";
+    }
+    
     if ([[staffData contracts] count] > 0) {
         for (Contract *item in [staffData contracts]) {
-            
+            if ([item status] == COT_YOUTH) {
+                retVal = @"yth";
+            }
+            if ([item type] == CT_LOAN_CONTRACT) {
+                retVal = @"loa";
+            }
+        }
+        if ([[[staffData contracts] objectAtIndex:0] transferListedByClub] ||
+            [[[staffData contracts] objectAtIndex:0] transferListedByRequest]) {
+            retVal = @"lst";
+        }
+    }
+    
+    if ([[staffData contractOffers] count] > 0) {
+        retVal = @"bid";
+        for (ContractOffer *item in [staffData contractOffers]) {
+            if ([item decision]==COD_ACCEPTED) { retVal = @"trn"; }
         }
     }
     return retVal;
