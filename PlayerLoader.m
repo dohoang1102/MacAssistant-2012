@@ -105,7 +105,11 @@
 	offset += (cbuffer*12);
 	
 	// ???
-    offset += 4;
+    [data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+    for (int i=0; i<ibuffer; i++) {
+        offset += 4; // Int
+        offset += 4; // Date
+    }
     
 	[object setUnknownData5:[data subdataWithRange:NSMakeRange(offset, 31)]]; 
 	offset += 31;
@@ -277,9 +281,6 @@
 		offset += (cbuffer*7);
         
         [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-        if (cbuffer > 0) {
-            offset += 
-        }
         offset += 2;
         
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
@@ -348,15 +349,28 @@
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownBool2:cbuffer];
 		if (cbuffer) {
-			[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+			[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 			[object setUnknownChar17:cbuffer];
 		//	NSLog(@"%d PTIs at %d",cbuffer,offset);
-			[object setUnknownData22:[data subdataWithRange:NSMakeRange(offset, (cbuffer*59))]];
-			offset += (cbuffer*59);
+			[object setUnknownData22:[data subdataWithRange:NSMakeRange(offset, (ibuffer*59))]];
+			offset += (ibuffer*59);
 		}
         
         if (version == FM2012_12_2) {
-            offset += 1;
+            [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+            if (cbuffer) {
+                [data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+                for (int i=0; i<sbuffer; i++) {
+                    offset += 4; // Date
+                    offset += 1; // Char
+                    offset += 4; // Int
+                    offset += 4; // Int
+                    offset += 2; // Short
+                    
+                    [data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+                    offset += (ibuffer * 10);
+                }
+            }
         }
 	}
 	

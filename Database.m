@@ -1299,9 +1299,6 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 	for (i=0; i<count; i++) {
 		[self setCurrentRecord:(i+1)];
-		if (i == 164742) {
-            NSLog(@"BreakMe");
-        }
 		//NSLog(@"Will read from address: %d", *byteOffset);
 		id object = [Loader readPersonFromData:data atOffset:byteOffset version:[controller gameDBVersion]];
 		if (![[object className] isEqualToString:@"Person"]) {
