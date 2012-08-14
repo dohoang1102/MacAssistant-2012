@@ -555,8 +555,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Languages
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Languages...", @"editor status")];

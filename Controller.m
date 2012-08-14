@@ -500,7 +500,7 @@
 	if (!compressed) { saveStartOffset += 18; }
 	
     // Write uncompressed data to desktop (for debug purposes)
-    // [fileData writeToFile:@"/Users/Tom/Desktop/data.tad" atomically:YES];
+    [fileData writeToFile:@"/Users/Tom/Desktop/data.tad" atomically:YES];
     
 	// read game DB
 	[database readGameDB:fileData atOffset:&fileOffset];

@@ -44,7 +44,7 @@
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setPaymentsRemaining:cbuffer];
 	}
-	else if ([object type]==TI_UNKNOWN_15) {
+	else if ([object type]==TI_UNKNOWN_15 || [object type]==TI_UNKNOWN_18) {
 		/*
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setTotalValuesExist:cbuffer];
