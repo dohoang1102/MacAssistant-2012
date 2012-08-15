@@ -21,7 +21,7 @@
 {
 	char cbuffer;
 	short sbuffer;
-	int ibuffer;
+	int ibuffer, ibufinner;
     
     NSMutableArray *tempArray;
 	
@@ -89,7 +89,19 @@
         }
     }
     
-    offset += 28;
+    // Rinse and repeat
+    [data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+    for (int i=0; i<sbuffer; i++) {
+        offset += 216;
+        offset += 25;
+        [data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+        for (int x=0; x<ibuffer; x++) {
+            offset += 17;
+        }
+    }
+    
+    offset += 26;
+    
     if (version == FM2012_12_2) {
         offset += 8; // Two extra dates
     }
@@ -100,11 +112,24 @@
     }
     
     offset += 8;
-    [data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-    offset += (ibuffer * 21);
     
     [data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-    offset += (ibuffer * 18);
+    for (int i=0; i<ibuffer; i++) {
+        offset += 17;
+        [data getBytes:&ibufinner range:NSMakeRange(offset, 4)]; offset += 4;
+        for (int x=0; x<ibufinner; x++) {
+            offset += 16;
+        }
+    }
+    
+    [data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+    for (int i=0; i<ibuffer; i++) {
+        offset += 4; //INT
+        offset += 4; //Date
+        offset += 4; //Date
+        offset += 4; //Date
+        offset += 2; //Char
+    }
     
     offset += 28;
     

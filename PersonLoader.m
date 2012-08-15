@@ -29,7 +29,7 @@
 	char cbuffer;
 	int ibuffer;
 	BOOL debug = NO;
-    BOOL miniDebug = YES;
+    BOOL miniDebug = NO;
 	
 	unsigned int offset = *byteOffset;
 	
@@ -107,8 +107,14 @@
 		offset += 36;
 	}
     else if ([object databaseClass] == DBC_UNKNOWN_PERSON_TYPE_3) {
-        [object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 17)]];
-        offset += 17;
+        offset += 4;
+        [data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+        if (cbuffer == 0) {
+            offset += 12;
+        }
+        else {
+            offset += 8;
+        }
     }
 	else if ([object databaseClass]==DBC_AGENT) {
 		[object setAgentData:[AgentLoader readFromData:data atOffset:&offset]];
