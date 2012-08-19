@@ -45,6 +45,8 @@
 - (void) setBadgeNumber: (NSInteger)total atIndex: (NSString *)index;
 - (void) revealLoaderContainer;
 - (void) hideLoaderContainer;
+- (void)setStatusViewTextFieldText: (NSString *)text;
+- (void)doneLoadingSaveGame;
 
 @property(nonatomic, retain) IBOutlet NSProgressIndicator *loader;
 @property(nonatomic, retain) IBOutlet PreferencesController *prefWindow;

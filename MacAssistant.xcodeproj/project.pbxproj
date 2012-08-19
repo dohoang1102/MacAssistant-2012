@@ -43,6 +43,8 @@
 		E20D2CF112D9F98E00A0238C /* CompetitionHistoryLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CF012D9F98E00A0238C /* CompetitionHistoryLoader.m */; };
 		E20D2CF412D9F99900A0238C /* CompetitionHistorySaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CF312D9F99900A0238C /* CompetitionHistorySaver.m */; };
 		E211183615C20D2F00CEEFB6 /* ma12icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E211183515C20D2F00CEEFB6 /* ma12icon.icns */; };
+		E23EB9FA15E1A1DC0081BEFA /* RegexKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23EB9F915E1A1DC0081BEFA /* RegexKit.framework */; };
+		E23EB9FB15E1A1E00081BEFA /* RegexKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E23EB9F915E1A1DC0081BEFA /* RegexKit.framework */; };
 		E25EDE9A15BEB4AD00019FA3 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25EDE9915BEB4AD00019FA3 /* Sparkle.framework */; };
 		E25EDE9C15BEB53300019FA3 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E25EDE9915BEB4AD00019FA3 /* Sparkle.framework */; };
 		E25EDE9F15BEBE2F00019FA3 /* CurrencyFormatTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E25EDE9E15BEBE2F00019FA3 /* CurrencyFormatTransformer.m */; };
@@ -329,6 +331,338 @@
 		E29AC77E1221AE8D00097EB5 /* SXImageXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC77A1221AE8D00097EB5 /* SXImageXMLParser.m */; };
 		E29AC77F1221AE8D00097EB5 /* SXzlib.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC77C1221AE8D00097EB5 /* SXzlib.m */; };
 		E29AC7841221AEC400097EB5 /* LangDB.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7831221AEC400097EB5 /* LangDB.m */; };
+		E2A4852815DE8218004A26B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		E2A4852915DE8218004A26B5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		E2A4852A15DE8218004A26B5 /* Elastic Generic Black.icns in Resources */ = {isa = PBXBuildFile; fileRef = E2EF01871229472100118797 /* Elastic Generic Black.icns */; };
+		E2A4852B15DE8218004A26B5 /* footballer-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E2EF10D4122C5FD400F08172 /* footballer-icon.png */; };
+		E2A4852C15DE8218004A26B5 /* boss-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E2EF10E1122C606A00F08172 /* boss-icon.png */; };
+		E2A4852D15DE8218004A26B5 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = E2EB22D2123CE75600F9DE7A /* search.png */; };
+		E2A4852E15DE8218004A26B5 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2F2F5CF15C1C96C00BF7661 /* Preferences.xib */; };
+		E2A4852F15DE8218004A26B5 /* ma12icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E211183515C20D2F00CEEFB6 /* ma12icon.icns */; };
+		E2A4853015DE8218004A26B5 /* status_bid.png in Resources */ = {isa = PBXBuildFile; fileRef = E2864E3E15C2A88700E5F46B /* status_bid.png */; };
+		E2A4853115DE8218004A26B5 /* status_ctr.png in Resources */ = {isa = PBXBuildFile; fileRef = E2864E3F15C2A88700E5F46B /* status_ctr.png */; };
+		E2A4853215DE8218004A26B5 /* status_inj.png in Resources */ = {isa = PBXBuildFile; fileRef = E2864E4015C2A88700E5F46B /* status_inj.png */; };
+		E2A4853315DE8218004A26B5 /* status_loa.png in Resources */ = {isa = PBXBuildFile; fileRef = E2864E4115C2A88700E5F46B /* status_loa.png */; };
+		E2A4853415DE8218004A26B5 /* status_lst.png in Resources */ = {isa = PBXBuildFile; fileRef = E2864E4215C2A88700E5F46B /* status_lst.png */; };
+		E2A4853515DE8218004A26B5 /* status_sus.png in Resources */ = {isa = PBXBuildFile; fileRef = E2864E4315C2A88700E5F46B /* status_sus.png */; };
+		E2A4853615DE8218004A26B5 /* status_trn.png in Resources */ = {isa = PBXBuildFile; fileRef = E2864E4415C2A88700E5F46B /* status_trn.png */; };
+		E2A4853715DE8218004A26B5 /* status_wnt.png in Resources */ = {isa = PBXBuildFile; fileRef = E2864E4515C2A88700E5F46B /* status_wnt.png */; };
+		E2A4853815DE8218004A26B5 /* status_yth.png in Resources */ = {isa = PBXBuildFile; fileRef = E2864E4615C2A88700E5F46B /* status_yth.png */; };
+		E2A4853915DE8218004A26B5 /* defaultperson_male.png in Resources */ = {isa = PBXBuildFile; fileRef = E28116DF15D97BA900FAD7DD /* defaultperson_male.png */; };
+		E2A4853A15DE8218004A26B5 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = E28116E115D9848800FAD7DD /* dsa_pub.pem */; };
+		E2A4853C15DE8218004A26B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		E2A4853D15DE8218004A26B5 /* MacAssistantAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* MacAssistantAppDelegate.m */; };
+		E2A4853E15DE8218004A26B5 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC43A122179EF00097EB5 /* Controller.m */; };
+		E2A4853F15DE8218004A26B5 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4481221ADD700097EB5 /* Database.m */; };
+		E2A4854015DE8218004A26B5 /* ActualPersonSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC44F1221AE2D00097EB5 /* ActualPersonSaver.m */; };
+		E2A4854115DE8218004A26B5 /* ContractSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4511221AE2D00097EB5 /* ContractSaver.m */; };
+		E2A4854215DE8218004A26B5 /* ContractClauseSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4531221AE2D00097EB5 /* ContractClauseSaver.m */; };
+		E2A4854315DE8218004A26B5 /* ContractOfferSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4551221AE2D00097EB5 /* ContractOfferSaver.m */; };
+		E2A4854415DE8218004A26B5 /* HumanSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4571221AE2D00097EB5 /* HumanSaver.m */; };
+		E2A4854515DE8218004A26B5 /* InterestedClubSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4591221AE2D00097EB5 /* InterestedClubSaver.m */; };
+		E2A4854615DE8218004A26B5 /* JournalistSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC45B1221AE2D00097EB5 /* JournalistSaver.m */; };
+		E2A4854715DE8218004A26B5 /* NonPlayerSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC45D1221AE2D00097EB5 /* NonPlayerSaver.m */; };
+		E2A4854815DE8218004A26B5 /* OfficialSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC45F1221AE2D00097EB5 /* OfficialSaver.m */; };
+		E2A4854915DE8218004A26B5 /* OfficialPastGameSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4611221AE2D00097EB5 /* OfficialPastGameSaver.m */; };
+		E2A4854A15DE8218004A26B5 /* PersonNicknameSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4631221AE2D00097EB5 /* PersonNicknameSaver.m */; };
+		E2A4854B15DE8218004A26B5 /* PlayerSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4651221AE2D00097EB5 /* PlayerSaver.m */; };
+		E2A4854C15DE8218004A26B5 /* PlayerAndNonPlayerSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4671221AE2D00097EB5 /* PlayerAndNonPlayerSaver.m */; };
+		E2A4854D15DE8218004A26B5 /* PlayerBanSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4691221AE2D00097EB5 /* PlayerBanSaver.m */; };
+		E2A4854E15DE8218004A26B5 /* RetiredPersonSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC46B1221AE2D00097EB5 /* RetiredPersonSaver.m */; };
+		E2A4854F15DE8218004A26B5 /* SpokespersonSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC46D1221AE2D00097EB5 /* SpokespersonSaver.m */; };
+		E2A4855015DE8218004A26B5 /* StaffSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC46F1221AE2D00097EB5 /* StaffSaver.m */; };
+		E2A4855115DE8218004A26B5 /* StaffTendencySaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4711221AE2D00097EB5 /* StaffTendencySaver.m */; };
+		E2A4855215DE8218004A26B5 /* VirtualPlayerSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4731221AE2D00097EB5 /* VirtualPlayerSaver.m */; };
+		E2A4855315DE8218004A26B5 /* PlayerInjurySaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4751221AE2D00097EB5 /* PlayerInjurySaver.m */; };
+		E2A4855415DE8218004A26B5 /* BookingCountSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4771221AE2D00097EB5 /* BookingCountSaver.m */; };
+		E2A4855515DE8218004A26B5 /* MatchFormSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4791221AE2D00097EB5 /* MatchFormSaver.m */; };
+		E2A4855615DE8218004A26B5 /* PlayerFormSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC47B1221AE2D00097EB5 /* PlayerFormSaver.m */; };
+		E2A4855715DE8218004A26B5 /* BookmarkFolderSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC47D1221AE2D00097EB5 /* BookmarkFolderSaver.m */; };
+		E2A4855815DE8218004A26B5 /* NewsFilterListSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC47F1221AE2D00097EB5 /* NewsFilterListSaver.m */; };
+		E2A4855915DE8218004A26B5 /* NewsFilterSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4811221AE2D00097EB5 /* NewsFilterSaver.m */; };
+		E2A4855A15DE8218004A26B5 /* NewsInfoSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4831221AE2D00097EB5 /* NewsInfoSaver.m */; };
+		E2A4855B15DE8218004A26B5 /* AlternativeKitSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4861221AE2D00097EB5 /* AlternativeKitSaver.m */; };
+		E2A4855C15DE8218004A26B5 /* AlternativeStadiumSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4881221AE2D00097EB5 /* AlternativeStadiumSaver.m */; };
+		E2A4855D15DE8218004A26B5 /* ClubFinanceSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC48A1221AE2D00097EB5 /* ClubFinanceSaver.m */; };
+		E2A4855E15DE8218004A26B5 /* ClubFinanceRecordSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC48C1221AE2D00097EB5 /* ClubFinanceRecordSaver.m */; };
+		E2A4855F15DE8218004A26B5 /* ClubFinanceRevenueRecordSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC48E1221AE2D00097EB5 /* ClubFinanceRevenueRecordSaver.m */; };
+		E2A4856015DE8218004A26B5 /* ClubSponsorSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4901221AE2D00097EB5 /* ClubSponsorSaver.m */; };
+		E2A4856115DE8218004A26B5 /* ColourSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4921221AE2D00097EB5 /* ColourSaver.m */; };
+		E2A4856215DE8218004A26B5 /* FamousPlayerSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4941221AE2D00097EB5 /* FamousPlayerSaver.m */; };
+		E2A4856315DE8218004A26B5 /* FifaRankingMatchSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4961221AE2D00097EB5 /* FifaRankingMatchSaver.m */; };
+		E2A4856415DE8218004A26B5 /* FixtureSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4981221AE2D00097EB5 /* FixtureSaver.m */; };
+		E2A4856515DE8218004A26B5 /* FMDateSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC49A1221AE2D00097EB5 /* FMDateSaver.m */; };
+		E2A4856615DE8218004A26B5 /* FutureRegenSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC49C1221AE2D00097EB5 /* FutureRegenSaver.m */; };
+		E2A4856715DE8218004A26B5 /* GeneralInfoSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC49E1221AE2D00097EB5 /* GeneralInfoSaver.m */; };
+		E2A4856815DE8218004A26B5 /* IDPCSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4A01221AE2D00097EB5 /* IDPCSaver.m */; };
+		E2A4856915DE8218004A26B5 /* MediaClubSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4A21221AE2D00097EB5 /* MediaClubSaver.m */; };
+		E2A4856A15DE8218004A26B5 /* RegionalDivisionSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4A41221AE2D00097EB5 /* RegionalDivisionSaver.m */; };
+		E2A4856B15DE8218004A26B5 /* RelationshipSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4A61221AE2E00097EB5 /* RelationshipSaver.m */; };
+		E2A4856C15DE8218004A26B5 /* ScoutingKnowledgeSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4A81221AE2E00097EB5 /* ScoutingKnowledgeSaver.m */; };
+		E2A4856D15DE8218004A26B5 /* ShortlistedPersonSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4AA1221AE2E00097EB5 /* ShortlistedPersonSaver.m */; };
+		E2A4856E15DE8218004A26B5 /* SpokenLanguageSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4AC1221AE2E00097EB5 /* SpokenLanguageSaver.m */; };
+		E2A4856F15DE8218004A26B5 /* TeamContainerSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4AE1221AE2E00097EB5 /* TeamContainerSaver.m */; };
+		E2A4857015DE8218004A26B5 /* TransferInfoSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4B01221AE2E00097EB5 /* TransferInfoSaver.m */; };
+		E2A4857115DE8218004A26B5 /* TransferPreferenceSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4B21221AE2E00097EB5 /* TransferPreferenceSaver.m */; };
+		E2A4857215DE8218004A26B5 /* Unknown1Saver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4B41221AE2E00097EB5 /* Unknown1Saver.m */; };
+		E2A4857315DE8218004A26B5 /* Unknown2Saver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4B61221AE2E00097EB5 /* Unknown2Saver.m */; };
+		E2A4857415DE8218004A26B5 /* Unknown3Saver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4B81221AE2E00097EB5 /* Unknown3Saver.m */; };
+		E2A4857515DE8218004A26B5 /* Unknown4Saver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4BA1221AE2E00097EB5 /* Unknown4Saver.m */; };
+		E2A4857615DE8218004A26B5 /* Unknown5Saver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4BC1221AE2E00097EB5 /* Unknown5Saver.m */; };
+		E2A4857715DE8218004A26B5 /* Unknown6Saver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4BE1221AE2E00097EB5 /* Unknown6Saver.m */; };
+		E2A4857815DE8218004A26B5 /* PlayerReplacementSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4C01221AE2E00097EB5 /* PlayerReplacementSaver.m */; };
+		E2A4857915DE8218004A26B5 /* FixtureBlockSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4C21221AE2E00097EB5 /* FixtureBlockSaver.m */; };
+		E2A4857A15DE8218004A26B5 /* Unknown8Saver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4C41221AE2E00097EB5 /* Unknown8Saver.m */; };
+		E2A4857B15DE8218004A26B5 /* ShortFixtureSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4C61221AE2E00097EB5 /* ShortFixtureSaver.m */; };
+		E2A4857C15DE8218004A26B5 /* AlliterationSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4C81221AE2E00097EB5 /* AlliterationSaver.m */; };
+		E2A4857D15DE8218004A26B5 /* AwardSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4CA1221AE2E00097EB5 /* AwardSaver.m */; };
+		E2A4857E15DE8218004A26B5 /* CitySaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4CC1221AE2E00097EB5 /* CitySaver.m */; };
+		E2A4857F15DE8218004A26B5 /* ClubSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4CE1221AE2E00097EB5 /* ClubSaver.m */; };
+		E2A4858015DE8218004A26B5 /* CompetitionSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4D01221AE2E00097EB5 /* CompetitionSaver.m */; };
+		E2A4858115DE8218004A26B5 /* ContinentSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4D21221AE2E00097EB5 /* ContinentSaver.m */; };
+		E2A4858215DE8218004A26B5 /* CurrencySaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4D41221AE2E00097EB5 /* CurrencySaver.m */; };
+		E2A4858315DE8218004A26B5 /* DescriptionSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4D61221AE2E00097EB5 /* DescriptionSaver.m */; };
+		E2A4858415DE8218004A26B5 /* FootballStadiumSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4D81221AE2E00097EB5 /* FootballStadiumSaver.m */; };
+		E2A4858515DE8218004A26B5 /* InjurySaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4DA1221AE2E00097EB5 /* InjurySaver.m */; };
+		E2A4858615DE8218004A26B5 /* LanguageSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4DC1221AE2E00097EB5 /* LanguageSaver.m */; };
+		E2A4858715DE8218004A26B5 /* LocalAreaSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4DE1221AE2E00097EB5 /* LocalAreaSaver.m */; };
+		E2A4858815DE8218004A26B5 /* MediaSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4E01221AE2E00097EB5 /* MediaSaver.m */; };
+		E2A4858915DE8218004A26B5 /* NameSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4E21221AE2E00097EB5 /* NameSaver.m */; };
+		E2A4858A15DE8218004A26B5 /* NationSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4E41221AE2E00097EB5 /* NationSaver.m */; };
+		E2A4858B15DE8218004A26B5 /* SponsorSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4E61221AE2E00097EB5 /* SponsorSaver.m */; };
+		E2A4858C15DE8218004A26B5 /* Unknown7Saver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4E81221AE2E00097EB5 /* Unknown7Saver.m */; };
+		E2A4858D15DE8218004A26B5 /* StadiumChangeSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4EA1221AE2E00097EB5 /* StadiumChangeSaver.m */; };
+		E2A4858E15DE8218004A26B5 /* WeatherSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4EC1221AE2E00097EB5 /* WeatherSaver.m */; };
+		E2A4858F15DE8218004A26B5 /* StageNameSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4EE1221AE2E00097EB5 /* StageNameSaver.m */; };
+		E2A4859015DE8218004A26B5 /* TeamSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4F01221AE2E00097EB5 /* TeamSaver.m */; };
+		E2A4859115DE8218004A26B5 /* PersonSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4F21221AE2E00097EB5 /* PersonSaver.m */; };
+		E2A4859215DE8218004A26B5 /* PersonStatsSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4F41221AE2E00097EB5 /* PersonStatsSaver.m */; };
+		E2A4859315DE8218004A26B5 /* NonPlayerStatsSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4F61221AE2E00097EB5 /* NonPlayerStatsSaver.m */; };
+		E2A4859415DE8218004A26B5 /* PlayerStatsSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC4F81221AE2E00097EB5 /* PlayerStatsSaver.m */; };
+		E2A4859515DE8218004A26B5 /* ActualPersonLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5531221AE4400097EB5 /* ActualPersonLoader.m */; };
+		E2A4859615DE8218004A26B5 /* BookingCountLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5551221AE4400097EB5 /* BookingCountLoader.m */; };
+		E2A4859715DE8218004A26B5 /* BookmarkFolderLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5571221AE4400097EB5 /* BookmarkFolderLoader.m */; };
+		E2A4859815DE8218004A26B5 /* ContractLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5591221AE4400097EB5 /* ContractLoader.m */; };
+		E2A4859915DE8218004A26B5 /* ContractClauseLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC55B1221AE4400097EB5 /* ContractClauseLoader.m */; };
+		E2A4859A15DE8218004A26B5 /* ContractOfferLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC55D1221AE4400097EB5 /* ContractOfferLoader.m */; };
+		E2A4859B15DE8218004A26B5 /* HumanLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC55F1221AE4400097EB5 /* HumanLoader.m */; };
+		E2A4859C15DE8218004A26B5 /* InterestedClubLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5611221AE4400097EB5 /* InterestedClubLoader.m */; };
+		E2A4859D15DE8218004A26B5 /* JournalistLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5631221AE4400097EB5 /* JournalistLoader.m */; };
+		E2A4859E15DE8218004A26B5 /* MatchFormLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5651221AE4400097EB5 /* MatchFormLoader.m */; };
+		E2A4859F15DE8218004A26B5 /* NewsFilterListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5671221AE4400097EB5 /* NewsFilterListLoader.m */; };
+		E2A485A015DE8218004A26B5 /* NewsFilterLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5691221AE4400097EB5 /* NewsFilterLoader.m */; };
+		E2A485A115DE8218004A26B5 /* NewsInfoLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC56B1221AE4400097EB5 /* NewsInfoLoader.m */; };
+		E2A485A215DE8218004A26B5 /* NonPlayerLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC56D1221AE4400097EB5 /* NonPlayerLoader.m */; };
+		E2A485A315DE8218004A26B5 /* OfficialLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC56F1221AE4400097EB5 /* OfficialLoader.m */; };
+		E2A485A415DE8218004A26B5 /* OfficialPastGameLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5711221AE4400097EB5 /* OfficialPastGameLoader.m */; };
+		E2A485A515DE8218004A26B5 /* PersonNicknameLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5731221AE4400097EB5 /* PersonNicknameLoader.m */; };
+		E2A485A615DE8218004A26B5 /* PlayerBanLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5751221AE4400097EB5 /* PlayerBanLoader.m */; };
+		E2A485A715DE8218004A26B5 /* PlayerFormLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5771221AE4400097EB5 /* PlayerFormLoader.m */; };
+		E2A485A815DE8218004A26B5 /* PlayerLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5791221AE4400097EB5 /* PlayerLoader.m */; };
+		E2A485A915DE8218004A26B5 /* PlayerAndNonPlayerLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC57B1221AE4400097EB5 /* PlayerAndNonPlayerLoader.m */; };
+		E2A485AA15DE8218004A26B5 /* PlayerInjuryLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC57D1221AE4400097EB5 /* PlayerInjuryLoader.m */; };
+		E2A485AB15DE8218004A26B5 /* RetiredPersonLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC57F1221AE4400097EB5 /* RetiredPersonLoader.m */; };
+		E2A485AC15DE8218004A26B5 /* SpokespersonLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5811221AE4400097EB5 /* SpokespersonLoader.m */; };
+		E2A485AD15DE8218004A26B5 /* StaffLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5831221AE4400097EB5 /* StaffLoader.m */; };
+		E2A485AE15DE8218004A26B5 /* StaffTendencyLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5851221AE4400097EB5 /* StaffTendencyLoader.m */; };
+		E2A485AF15DE8218004A26B5 /* VirtualPlayerLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5871221AE4400097EB5 /* VirtualPlayerLoader.m */; };
+		E2A485B015DE8218004A26B5 /* AlternativeKitLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC58A1221AE4400097EB5 /* AlternativeKitLoader.m */; };
+		E2A485B115DE8218004A26B5 /* AlternativeStadiumLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC58C1221AE4400097EB5 /* AlternativeStadiumLoader.m */; };
+		E2A485B215DE8218004A26B5 /* ClubFinanceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC58E1221AE4400097EB5 /* ClubFinanceLoader.m */; };
+		E2A485B315DE8218004A26B5 /* ClubFinanceRecordLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5901221AE4400097EB5 /* ClubFinanceRecordLoader.m */; };
+		E2A485B415DE8218004A26B5 /* ClubFinanceRevenueRecordLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5921221AE4400097EB5 /* ClubFinanceRevenueRecordLoader.m */; };
+		E2A485B515DE8218004A26B5 /* ClubSponsorLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5941221AE4400097EB5 /* ClubSponsorLoader.m */; };
+		E2A485B615DE8218004A26B5 /* ColourLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5961221AE4400097EB5 /* ColourLoader.m */; };
+		E2A485B715DE8218004A26B5 /* FamousPlayerLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5981221AE4400097EB5 /* FamousPlayerLoader.m */; };
+		E2A485B815DE8218004A26B5 /* FifaRankingMatchLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC59A1221AE4400097EB5 /* FifaRankingMatchLoader.m */; };
+		E2A485B915DE8218004A26B5 /* FixtureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC59C1221AE4400097EB5 /* FixtureLoader.m */; };
+		E2A485BA15DE8218004A26B5 /* FixtureBlockLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC59E1221AE4400097EB5 /* FixtureBlockLoader.m */; };
+		E2A485BB15DE8218004A26B5 /* FMDateLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5A01221AE4400097EB5 /* FMDateLoader.m */; };
+		E2A485BC15DE8218004A26B5 /* FutureRegenLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5A21221AE4400097EB5 /* FutureRegenLoader.m */; };
+		E2A485BD15DE8218004A26B5 /* GeneralInfoLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5A41221AE4400097EB5 /* GeneralInfoLoader.m */; };
+		E2A485BE15DE8218004A26B5 /* IDPCLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5A61221AE4400097EB5 /* IDPCLoader.m */; };
+		E2A485BF15DE8218004A26B5 /* MediaClubLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5A81221AE4400097EB5 /* MediaClubLoader.m */; };
+		E2A485C015DE8218004A26B5 /* PlayerReplacementLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5AA1221AE4400097EB5 /* PlayerReplacementLoader.m */; };
+		E2A485C115DE8218004A26B5 /* RegionalDivisionLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5AC1221AE4400097EB5 /* RegionalDivisionLoader.m */; };
+		E2A485C215DE8218004A26B5 /* RelationshipLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5AE1221AE4500097EB5 /* RelationshipLoader.m */; };
+		E2A485C315DE8218004A26B5 /* ScoutingKnowledgeLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5B01221AE4500097EB5 /* ScoutingKnowledgeLoader.m */; };
+		E2A485C415DE8218004A26B5 /* ShortFixtureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5B21221AE4500097EB5 /* ShortFixtureLoader.m */; };
+		E2A485C515DE8218004A26B5 /* ShortlistedPersonLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5B41221AE4500097EB5 /* ShortlistedPersonLoader.m */; };
+		E2A485C615DE8218004A26B5 /* SpokenLanguageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5B61221AE4500097EB5 /* SpokenLanguageLoader.m */; };
+		E2A485C715DE8218004A26B5 /* TeamContainerLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5B81221AE4500097EB5 /* TeamContainerLoader.m */; };
+		E2A485C815DE8218004A26B5 /* TransferInfoLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5BA1221AE4500097EB5 /* TransferInfoLoader.m */; };
+		E2A485C915DE8218004A26B5 /* TransferPreferenceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5BC1221AE4500097EB5 /* TransferPreferenceLoader.m */; };
+		E2A485CA15DE8218004A26B5 /* Unknown1Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5BE1221AE4500097EB5 /* Unknown1Loader.m */; };
+		E2A485CB15DE8218004A26B5 /* Unknown2Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5C01221AE4500097EB5 /* Unknown2Loader.m */; };
+		E2A485CC15DE8218004A26B5 /* Unknown3Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5C21221AE4500097EB5 /* Unknown3Loader.m */; };
+		E2A485CD15DE8218004A26B5 /* Unknown4Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5C41221AE4500097EB5 /* Unknown4Loader.m */; };
+		E2A485CE15DE8218004A26B5 /* Unknown5Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5C61221AE4500097EB5 /* Unknown5Loader.m */; };
+		E2A485CF15DE8218004A26B5 /* Unknown6Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5C81221AE4500097EB5 /* Unknown6Loader.m */; };
+		E2A485D015DE8218004A26B5 /* Unknown8Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5CA1221AE4500097EB5 /* Unknown8Loader.m */; };
+		E2A485D115DE8218004A26B5 /* Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5CC1221AE4500097EB5 /* Loader.m */; };
+		E2A485D215DE8218004A26B5 /* LangDBLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5CE1221AE4500097EB5 /* LangDBLoader.m */; };
+		E2A485D315DE8218004A26B5 /* AlliterationLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5D01221AE4500097EB5 /* AlliterationLoader.m */; };
+		E2A485D415DE8218004A26B5 /* AwardLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5D21221AE4500097EB5 /* AwardLoader.m */; };
+		E2A485D515DE8218004A26B5 /* CityLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5D41221AE4500097EB5 /* CityLoader.m */; };
+		E2A485D615DE8218004A26B5 /* ClubLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5D61221AE4500097EB5 /* ClubLoader.m */; };
+		E2A485D715DE8218004A26B5 /* ClubLinkLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5D81221AE4500097EB5 /* ClubLinkLoader.m */; };
+		E2A485D815DE8218004A26B5 /* CompetitionLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5DA1221AE4500097EB5 /* CompetitionLoader.m */; };
+		E2A485D915DE8218004A26B5 /* ContinentLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5DE1221AE4500097EB5 /* ContinentLoader.m */; };
+		E2A485DA15DE8218004A26B5 /* CurrencyLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5E01221AE4500097EB5 /* CurrencyLoader.m */; };
+		E2A485DB15DE8218004A26B5 /* DescriptionLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5E21221AE4500097EB5 /* DescriptionLoader.m */; };
+		E2A485DC15DE8218004A26B5 /* FootballStadiumLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5E41221AE4500097EB5 /* FootballStadiumLoader.m */; };
+		E2A485DD15DE8218004A26B5 /* InjuryLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5E61221AE4500097EB5 /* InjuryLoader.m */; };
+		E2A485DE15DE8218004A26B5 /* LanguageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5E81221AE4500097EB5 /* LanguageLoader.m */; };
+		E2A485DF15DE8218004A26B5 /* LocalAreaLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5EA1221AE4500097EB5 /* LocalAreaLoader.m */; };
+		E2A485E015DE8218004A26B5 /* MediaLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5EC1221AE4500097EB5 /* MediaLoader.m */; };
+		E2A485E115DE8218004A26B5 /* NameLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5EE1221AE4500097EB5 /* NameLoader.m */; };
+		E2A485E215DE8218004A26B5 /* NationLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5F01221AE4500097EB5 /* NationLoader.m */; };
+		E2A485E315DE8218004A26B5 /* NonPlayerStatsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5F21221AE4500097EB5 /* NonPlayerStatsLoader.m */; };
+		E2A485E415DE8218004A26B5 /* PersonLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5F41221AE4500097EB5 /* PersonLoader.m */; };
+		E2A485E515DE8218004A26B5 /* PersonStatsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5F61221AE4500097EB5 /* PersonStatsLoader.m */; };
+		E2A485E615DE8218004A26B5 /* PlayerStatsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5F81221AE4500097EB5 /* PlayerStatsLoader.m */; };
+		E2A485E715DE8218004A26B5 /* RegionLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5FA1221AE4500097EB5 /* RegionLoader.m */; };
+		E2A485E815DE8218004A26B5 /* SponsorLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5FC1221AE4500097EB5 /* SponsorLoader.m */; };
+		E2A485E915DE8218004A26B5 /* StadiumChangeLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC5FE1221AE4500097EB5 /* StadiumChangeLoader.m */; };
+		E2A485EA15DE8218004A26B5 /* StageNameLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6001221AE4500097EB5 /* StageNameLoader.m */; };
+		E2A485EB15DE8218004A26B5 /* TeamLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6021221AE4500097EB5 /* TeamLoader.m */; };
+		E2A485EC15DE8218004A26B5 /* Unknown7Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6041221AE4500097EB5 /* Unknown7Loader.m */; };
+		E2A485ED15DE8218004A26B5 /* WeatherLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6061221AE4500097EB5 /* WeatherLoader.m */; };
+		E2A485EE15DE8218004A26B5 /* Alliteration.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6651221AE5B00097EB5 /* Alliteration.m */; };
+		E2A485EF15DE8218004A26B5 /* Award.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6671221AE5B00097EB5 /* Award.m */; };
+		E2A485F015DE8218004A26B5 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6691221AE5B00097EB5 /* City.m */; };
+		E2A485F115DE8218004A26B5 /* Club.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC66B1221AE5B00097EB5 /* Club.m */; };
+		E2A485F215DE8218004A26B5 /* Competition.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC66F1221AE5B00097EB5 /* Competition.m */; };
+		E2A485F315DE8218004A26B5 /* Continent.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6731221AE5B00097EB5 /* Continent.m */; };
+		E2A485F415DE8218004A26B5 /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6751221AE5B00097EB5 /* Currency.m */; };
+		E2A485F515DE8218004A26B5 /* Description.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6771221AE5B00097EB5 /* Description.m */; };
+		E2A485F615DE8218004A26B5 /* Injury.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6791221AE5B00097EB5 /* Injury.m */; };
+		E2A485F715DE8218004A26B5 /* Language.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC67B1221AE5B00097EB5 /* Language.m */; };
+		E2A485F815DE8218004A26B5 /* LocalArea.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC67D1221AE5B00097EB5 /* LocalArea.m */; };
+		E2A485F915DE8218004A26B5 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC67F1221AE5B00097EB5 /* Media.m */; };
+		E2A485FA15DE8218004A26B5 /* Name.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6811221AE5B00097EB5 /* Name.m */; };
+		E2A485FB15DE8218004A26B5 /* Nation.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6831221AE5B00097EB5 /* Nation.m */; };
+		E2A485FC15DE8218004A26B5 /* NonPlayerStats.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6851221AE5B00097EB5 /* NonPlayerStats.m */; };
+		E2A485FD15DE8218004A26B5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6871221AE5B00097EB5 /* Person.m */; };
+		E2A485FE15DE8218004A26B5 /* PersonStats.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6891221AE5B00097EB5 /* PersonStats.m */; };
+		E2A485FF15DE8218004A26B5 /* PlayerStats.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC68B1221AE5B00097EB5 /* PlayerStats.m */; };
+		E2A4860015DE8218004A26B5 /* Region.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC68D1221AE5B00097EB5 /* Region.m */; };
+		E2A4860115DE8218004A26B5 /* Sponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC68F1221AE5B00097EB5 /* Sponsor.m */; };
+		E2A4860215DE8218004A26B5 /* Stadium.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6911221AE5B00097EB5 /* Stadium.m */; };
+		E2A4860315DE8218004A26B5 /* StadiumChange.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6931221AE5B00097EB5 /* StadiumChange.m */; };
+		E2A4860415DE8218004A26B5 /* StageName.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6951221AE5B00097EB5 /* StageName.m */; };
+		E2A4860515DE8218004A26B5 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6971221AE5B00097EB5 /* Team.m */; };
+		E2A4860615DE8218004A26B5 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6991221AE5B00097EB5 /* Weather.m */; };
+		E2A4860715DE8218004A26B5 /* Unknown7.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC69B1221AE5B00097EB5 /* Unknown7.m */; };
+		E2A4860815DE8218004A26B5 /* AlternativeStadium.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6BA1221AE6200097EB5 /* AlternativeStadium.m */; };
+		E2A4860915DE8218004A26B5 /* ClubFinance.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6BC1221AE6200097EB5 /* ClubFinance.m */; };
+		E2A4860A15DE8218004A26B5 /* ClubFinanceRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6BE1221AE6200097EB5 /* ClubFinanceRecord.m */; };
+		E2A4860B15DE8218004A26B5 /* ClubFinanceRevenueRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6C01221AE6200097EB5 /* ClubFinanceRevenueRecord.m */; };
+		E2A4860C15DE8218004A26B5 /* AlternativeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6C21221AE6200097EB5 /* AlternativeKit.m */; };
+		E2A4860D15DE8218004A26B5 /* ClubSponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6C41221AE6200097EB5 /* ClubSponsor.m */; };
+		E2A4860E15DE8218004A26B5 /* FamousPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6C61221AE6200097EB5 /* FamousPlayer.m */; };
+		E2A4860F15DE8218004A26B5 /* FifaRankingMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6C81221AE6200097EB5 /* FifaRankingMatch.m */; };
+		E2A4861015DE8218004A26B5 /* FutureRegen.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6CA1221AE6200097EB5 /* FutureRegen.m */; };
+		E2A4861115DE8218004A26B5 /* IDPC.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6CC1221AE6300097EB5 /* IDPC.m */; };
+		E2A4861215DE8218004A26B5 /* MediaClub.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6CE1221AE6300097EB5 /* MediaClub.m */; };
+		E2A4861315DE8218004A26B5 /* RegionalDivision.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6D01221AE6300097EB5 /* RegionalDivision.m */; };
+		E2A4861415DE8218004A26B5 /* ScoutingKnowledge.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6D21221AE6300097EB5 /* ScoutingKnowledge.m */; };
+		E2A4861515DE8218004A26B5 /* ShortlistedPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6D41221AE6300097EB5 /* ShortlistedPerson.m */; };
+		E2A4861615DE8218004A26B5 /* SpokenLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6D61221AE6300097EB5 /* SpokenLanguage.m */; };
+		E2A4861715DE8218004A26B5 /* TransferPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6D81221AE6300097EB5 /* TransferPreference.m */; };
+		E2A4861815DE8218004A26B5 /* PlayerReplacement.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6DA1221AE6300097EB5 /* PlayerReplacement.m */; };
+		E2A4861915DE8218004A26B5 /* FixtureBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6DC1221AE6300097EB5 /* FixtureBlock.m */; };
+		E2A4861A15DE8218004A26B5 /* ContractClause.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6DE1221AE6300097EB5 /* ContractClause.m */; };
+		E2A4861B15DE8218004A26B5 /* ShortFixture.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6E01221AE6300097EB5 /* ShortFixture.m */; };
+		E2A4861C15DE8218004A26B5 /* Fixture.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6E21221AE6300097EB5 /* Fixture.m */; };
+		E2A4861D15DE8218004A26B5 /* Unknown1.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6E41221AE6300097EB5 /* Unknown1.m */; };
+		E2A4861E15DE8218004A26B5 /* Unknown2.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6E61221AE6300097EB5 /* Unknown2.m */; };
+		E2A4861F15DE8218004A26B5 /* Unknown3.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6E81221AE6300097EB5 /* Unknown3.m */; };
+		E2A4862015DE8218004A26B5 /* Unknown4.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6EA1221AE6300097EB5 /* Unknown4.m */; };
+		E2A4862115DE8218004A26B5 /* Unknown5.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6EC1221AE6300097EB5 /* Unknown5.m */; };
+		E2A4862215DE8218004A26B5 /* Unknown6.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6EE1221AE6300097EB5 /* Unknown6.m */; };
+		E2A4862315DE8218004A26B5 /* Unknown8.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC6F01221AE6300097EB5 /* Unknown8.m */; };
+		E2A4862415DE8218004A26B5 /* ActualPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC70F1221AE6D00097EB5 /* ActualPerson.m */; };
+		E2A4862515DE8218004A26B5 /* Contract.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7111221AE6D00097EB5 /* Contract.m */; };
+		E2A4862615DE8218004A26B5 /* ContractOffer.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7131221AE6D00097EB5 /* ContractOffer.m */; };
+		E2A4862715DE8218004A26B5 /* NonPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7151221AE6D00097EB5 /* NonPlayer.m */; };
+		E2A4862815DE8218004A26B5 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7171221AE6D00097EB5 /* Player.m */; };
+		E2A4862915DE8218004A26B5 /* Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7191221AE6D00097EB5 /* Staff.m */; };
+		E2A4862A15DE8218004A26B5 /* PersonNickname.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC71B1221AE6D00097EB5 /* PersonNickname.m */; };
+		E2A4862B15DE8218004A26B5 /* InterestedClub.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC71D1221AE6D00097EB5 /* InterestedClub.m */; };
+		E2A4862C15DE8218004A26B5 /* OfficialPastGame.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC71F1221AE6D00097EB5 /* OfficialPastGame.m */; };
+		E2A4862D15DE8218004A26B5 /* PlayerInjury.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7211221AE6D00097EB5 /* PlayerInjury.m */; };
+		E2A4862E15DE8218004A26B5 /* PlayerBan.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7231221AE6D00097EB5 /* PlayerBan.m */; };
+		E2A4862F15DE8218004A26B5 /* BookingCount.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7251221AE6D00097EB5 /* BookingCount.m */; };
+		E2A4863015DE8218004A26B5 /* PlayerForm.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7271221AE6D00097EB5 /* PlayerForm.m */; };
+		E2A4863115DE8218004A26B5 /* MatchForm.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7291221AE6D00097EB5 /* MatchForm.m */; };
+		E2A4863215DE8218004A26B5 /* PlayerAndNonPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC72B1221AE6D00097EB5 /* PlayerAndNonPlayer.m */; };
+		E2A4863315DE8218004A26B5 /* Official.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC72D1221AE6D00097EB5 /* Official.m */; };
+		E2A4863415DE8218004A26B5 /* RetiredPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC72F1221AE6D00097EB5 /* RetiredPerson.m */; };
+		E2A4863515DE8218004A26B5 /* VirtualPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7311221AE6D00097EB5 /* VirtualPlayer.m */; };
+		E2A4863615DE8218004A26B5 /* Spokesperson.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7331221AE6D00097EB5 /* Spokesperson.m */; };
+		E2A4863715DE8218004A26B5 /* Journalist.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7351221AE6D00097EB5 /* Journalist.m */; };
+		E2A4863815DE8218004A26B5 /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7371221AE6D00097EB5 /* Human.m */; };
+		E2A4863915DE8218004A26B5 /* BookmarkFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7391221AE6D00097EB5 /* BookmarkFolder.m */; };
+		E2A4863A15DE8218004A26B5 /* NewsFilterList.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC73B1221AE6D00097EB5 /* NewsFilterList.m */; };
+		E2A4863B15DE8218004A26B5 /* NewsFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC73D1221AE6D00097EB5 /* NewsFilter.m */; };
+		E2A4863C15DE8218004A26B5 /* NewsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC73F1221AE6D00097EB5 /* NewsInfo.m */; };
+		E2A4863D15DE8218004A26B5 /* StaffTendency.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7411221AE6D00097EB5 /* StaffTendency.m */; };
+		E2A4863E15DE8218004A26B5 /* Colour.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC75E1221AE7500097EB5 /* Colour.m */; };
+		E2A4863F15DE8218004A26B5 /* FMDate.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7601221AE7500097EB5 /* FMDate.m */; };
+		E2A4864015DE8218004A26B5 /* FMString.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7621221AE7500097EB5 /* FMString.m */; };
+		E2A4864115DE8218004A26B5 /* GeneralInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7641221AE7500097EB5 /* GeneralInfo.m */; };
+		E2A4864215DE8218004A26B5 /* Relationship.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7661221AE7500097EB5 /* Relationship.m */; };
+		E2A4864315DE8218004A26B5 /* TeamContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7681221AE7500097EB5 /* TeamContainer.m */; };
+		E2A4864415DE8218004A26B5 /* TransferInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC76A1221AE7500097EB5 /* TransferInfo.m */; };
+		E2A4864515DE8218004A26B5 /* SupportFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7781221AE8D00097EB5 /* SupportFunctions.m */; };
+		E2A4864615DE8218004A26B5 /* SXImageXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC77A1221AE8D00097EB5 /* SXImageXMLParser.m */; };
+		E2A4864715DE8218004A26B5 /* SXzlib.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC77C1221AE8D00097EB5 /* SXzlib.m */; };
+		E2A4864815DE8218004A26B5 /* LangDB.m in Sources */ = {isa = PBXBuildFile; fileRef = E29AC7831221AEC400097EB5 /* LangDB.m */; };
+		E2A4864915DE8218004A26B5 /* FMFArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EF00FA12292AF700118797 /* FMFArchiver.m */; };
+		E2A4864A15DE8218004A26B5 /* Sidebar.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EF01BE12294B4400118797 /* Sidebar.m */; };
+		E2A4864B15DE8218004A26B5 /* SidebarNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EF01C012294B4400118797 /* SidebarNode.m */; };
+		E2A4864C15DE8218004A26B5 /* SidebarBadgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EF01C212294B4400118797 /* SidebarBadgeCell.m */; };
+		E2A4864D15DE8218004A26B5 /* PlayerStatsTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E26586601236C7BB00545D25 /* PlayerStatsTransformer.m */; };
+		E2A4864E15DE8218004A26B5 /* PlayerRatingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E26586621236C7BB00545D25 /* PlayerRatingTransformer.m */; };
+		E2A4864F15DE8218004A26B5 /* ContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = E26586781236CDF400545D25 /* ContentController.m */; };
+		E2A4865015DE8218004A26B5 /* SXGeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BC312D9F32E00A0238C /* SXGeneralViewController.m */; };
+		E2A4865115DE8218004A26B5 /* SXLanguagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BC512D9F32E00A0238C /* SXLanguagesViewController.m */; };
+		E2A4865215DE8218004A26B5 /* SXMainMediaController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BC712D9F32E00A0238C /* SXMainMediaController.m */; };
+		E2A4865315DE8218004A26B5 /* MBPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BD412D9F34200A0238C /* MBPreferencesController.m */; };
+		E2A4865415DE8218004A26B5 /* SXUpdatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BDF12D9F35700A0238C /* SXUpdatesViewController.m */; };
+		E2A4865515DE8218004A26B5 /* LocationDaysSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BF412D9F3A500A0238C /* LocationDaysSaver.m */; };
+		E2A4865615DE8218004A26B5 /* LocationDaysLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BF712D9F3AF00A0238C /* LocationDaysLoader.m */; };
+		E2A4865715DE8218004A26B5 /* LocationDays.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C0212D9F3C100A0238C /* LocationDays.m */; };
+		E2A4865815DE8218004A26B5 /* ContractBonus.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C0D12D9F3D300A0238C /* ContractBonus.m */; };
+		E2A4865915DE8218004A26B5 /* ContractBonusLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C1012D9F3DC00A0238C /* ContractBonusLoader.m */; };
+		E2A4865A15DE8218004A26B5 /* ContractBonusSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C1312D9F3E300A0238C /* ContractBonusSaver.m */; };
+		E2A4865B15DE8218004A26B5 /* TreatedNations.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C2012D9F3FA00A0238C /* TreatedNations.m */; };
+		E2A4865C15DE8218004A26B5 /* TreatedNationsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C2312D9F40200A0238C /* TreatedNationsLoader.m */; };
+		E2A4865D15DE8218004A26B5 /* TreatedNationsSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C2612D9F41000A0238C /* TreatedNationsSaver.m */; };
+		E2A4865E15DE8218004A26B5 /* SXOutlineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C3612D9F42400A0238C /* SXOutlineViewCell.m */; };
+		E2A4865F15DE8218004A26B5 /* Derby.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C4E12D9F4D200A0238C /* Derby.m */; };
+		E2A4866015DE8218004A26B5 /* DerbyLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C5112D9F4DE00A0238C /* DerbyLoader.m */; };
+		E2A4866115DE8218004A26B5 /* DerbySaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C5412D9F4E700A0238C /* DerbySaver.m */; };
+		E2A4866215DE8218004A26B5 /* Agent.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C7612D9F70800A0238C /* Agent.m */; };
+		E2A4866315DE8218004A26B5 /* AgentLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C7912D9F71600A0238C /* AgentLoader.m */; };
+		E2A4866415DE8218004A26B5 /* AgentSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C7C12D9F72000A0238C /* AgentSaver.m */; };
+		E2A4866515DE8218004A26B5 /* Agreement.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CB612D9F8D600A0238C /* Agreement.m */; };
+		E2A4866615DE8218004A26B5 /* AgreementLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CB912D9F8E100A0238C /* AgreementLoader.m */; };
+		E2A4866715DE8218004A26B5 /* AgreementSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CBC12D9F8EC00A0238C /* AgreementSaver.m */; };
+		E2A4866815DE8218004A26B5 /* ClubLink.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CCC12D9F90500A0238C /* ClubLink.m */; };
+		E2A4866915DE8218004A26B5 /* ClubLinkSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CE012D9F94F00A0238C /* ClubLinkSaver.m */; };
+		E2A4866A15DE8218004A26B5 /* CompetitionHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CEA12D9F97600A0238C /* CompetitionHistory.m */; };
+		E2A4866B15DE8218004A26B5 /* CompetitionHistoryLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CF012D9F98E00A0238C /* CompetitionHistoryLoader.m */; };
+		E2A4866C15DE8218004A26B5 /* CompetitionHistorySaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2CF312D9F99900A0238C /* CompetitionHistorySaver.m */; };
+		E2A4866D15DE8218004A26B5 /* MAView.m in Sources */ = {isa = PBXBuildFile; fileRef = E28CD09F15BDB52C003BE96B /* MAView.m */; };
+		E2A4866E15DE8218004A26B5 /* CurrencyFormatTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E25EDE9E15BEBE2F00019FA3 /* CurrencyFormatTransformer.m */; };
+		E2A4866F15DE8218004A26B5 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F2F5D315C1D2F100BF7661 /* PreferencesController.m */; };
+		E2A4867015DE8218004A26B5 /* PlayerStatusTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E2864E5115C2AA0000E5F46B /* PlayerStatusTransformer.m */; };
+		E2A4867215DE8218004A26B5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		E2A4867315DE8218004A26B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20D2C6512D9F6D800A0238C /* QuartzCore.framework */; };
+		E2A4867415DE8218004A26B5 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E25EDE9915BEB4AD00019FA3 /* Sparkle.framework */; };
+		E2A4867615DE8218004A26B5 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E25EDE9915BEB4AD00019FA3 /* Sparkle.framework */; };
 		E2EB22D3123CE75600F9DE7A /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = E2EB22D2123CE75600F9DE7A /* search.png */; };
 		E2EF00FB12292AF700118797 /* FMFArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EF00FA12292AF700118797 /* FMFArchiver.m */; };
 		E2EF01881229472100118797 /* Elastic Generic Black.icns in Resources */ = {isa = PBXBuildFile; fileRef = E2EF01871229472100118797 /* Elastic Generic Black.icns */; };
@@ -349,6 +683,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				E25EDE9C15BEB53300019FA3 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2A4867515DE8218004A26B5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E2A4867615DE8218004A26B5 /* Sparkle.framework in CopyFiles */,
+				E23EB9FB15E1A1E00081BEFA /* RegexKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +777,7 @@
 		E20D2CF212D9F99900A0238C /* CompetitionHistorySaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompetitionHistorySaver.h; sourceTree = "<group>"; };
 		E20D2CF312D9F99900A0238C /* CompetitionHistorySaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompetitionHistorySaver.m; sourceTree = "<group>"; };
 		E211183515C20D2F00CEEFB6 /* ma12icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ma12icon.icns; sourceTree = "<group>"; };
+		E23EB9F915E1A1DC0081BEFA /* RegexKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RegexKit.framework; sourceTree = "<group>"; };
 		E25EDE9915BEB4AD00019FA3 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		E25EDE9D15BEBE2F00019FA3 /* CurrencyFormatTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyFormatTransformer.h; sourceTree = "<group>"; };
 		E25EDE9E15BEBE2F00019FA3 /* CurrencyFormatTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyFormatTransformer.m; sourceTree = "<group>"; };
@@ -993,6 +1339,8 @@
 		E29AC77C1221AE8D00097EB5 /* SXzlib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXzlib.m; sourceTree = "<group>"; };
 		E29AC7821221AEC300097EB5 /* LangDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LangDB.h; sourceTree = "<group>"; };
 		E29AC7831221AEC400097EB5 /* LangDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LangDB.m; sourceTree = "<group>"; };
+		E2A4867A15DE8218004A26B5 /* MacAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2A4867C15DE8218004A26B5 /* MacAssistant10.6-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MacAssistant10.6-Info.plist"; path = "/Users/Tom/Projects/MacAssistant-2012/MacAssistant10.6-Info.plist"; sourceTree = "<absolute>"; };
 		E2EB22D2123CE75600F9DE7A /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		E2EF00F912292AF700118797 /* FMFArchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMFArchiver.h; sourceTree = "<group>"; };
 		E2EF00FA12292AF700118797 /* FMFArchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMFArchiver.m; sourceTree = "<group>"; };
@@ -1018,6 +1366,17 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				E20D2C6612D9F6D800A0238C /* QuartzCore.framework in Frameworks */,
 				E25EDE9A15BEB4AD00019FA3 /* Sparkle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2A4867115DE8218004A26B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2A4867215DE8218004A26B5 /* Cocoa.framework in Frameworks */,
+				E2A4867315DE8218004A26B5 /* QuartzCore.framework in Frameworks */,
+				E2A4867415DE8218004A26B5 /* Sparkle.framework in Frameworks */,
+				E23EB9FA15E1A1DC0081BEFA /* RegexKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1056,6 +1415,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* MacAssistant.app */,
+				E2A4867A15DE8218004A26B5 /* MacAssistant.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1097,6 +1457,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E2A4867C15DE8218004A26B5 /* MacAssistant10.6-Info.plist */,
 				E28116E115D9848800FAD7DD /* dsa_pub.pem */,
 				8D1107310486CEB800E47090 /* MacAssistant-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
@@ -1107,6 +1468,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E23EB9F915E1A1DC0081BEFA /* RegexKit.framework */,
 				E25EDE9915BEB4AD00019FA3 /* Sparkle.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
@@ -1938,6 +2300,25 @@
 			productReference = 8D1107320486CEB800E47090 /* MacAssistant.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E2A4852615DE8218004A26B5 /* MacAssistant-Legacy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2A4867715DE8218004A26B5 /* Build configuration list for PBXNativeTarget "MacAssistant-Legacy" */;
+			buildPhases = (
+				E2A4852715DE8218004A26B5 /* Resources */,
+				E2A4853B15DE8218004A26B5 /* Sources */,
+				E2A4867115DE8218004A26B5 /* Frameworks */,
+				E2A4867515DE8218004A26B5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MacAssistant-Legacy";
+			productInstallPath = "$(HOME)/Applications";
+			productName = MacAssistant;
+			productReference = E2A4867A15DE8218004A26B5 /* MacAssistant.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1958,6 +2339,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* MacAssistant */,
+				E2A4852615DE8218004A26B5 /* MacAssistant-Legacy */,
 			);
 		};
 /* End PBXProject section */
@@ -1986,6 +2368,32 @@
 				E2864E4F15C2A88700E5F46B /* status_yth.png in Resources */,
 				E28116E015D97BA900FAD7DD /* defaultperson_male.png in Resources */,
 				E28116E215D9848800FAD7DD /* dsa_pub.pem in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2A4852715DE8218004A26B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2A4852815DE8218004A26B5 /* InfoPlist.strings in Resources */,
+				E2A4852915DE8218004A26B5 /* MainMenu.xib in Resources */,
+				E2A4852A15DE8218004A26B5 /* Elastic Generic Black.icns in Resources */,
+				E2A4852B15DE8218004A26B5 /* footballer-icon.png in Resources */,
+				E2A4852C15DE8218004A26B5 /* boss-icon.png in Resources */,
+				E2A4852D15DE8218004A26B5 /* search.png in Resources */,
+				E2A4852E15DE8218004A26B5 /* Preferences.xib in Resources */,
+				E2A4852F15DE8218004A26B5 /* ma12icon.icns in Resources */,
+				E2A4853015DE8218004A26B5 /* status_bid.png in Resources */,
+				E2A4853115DE8218004A26B5 /* status_ctr.png in Resources */,
+				E2A4853215DE8218004A26B5 /* status_inj.png in Resources */,
+				E2A4853315DE8218004A26B5 /* status_loa.png in Resources */,
+				E2A4853415DE8218004A26B5 /* status_lst.png in Resources */,
+				E2A4853515DE8218004A26B5 /* status_sus.png in Resources */,
+				E2A4853615DE8218004A26B5 /* status_trn.png in Resources */,
+				E2A4853715DE8218004A26B5 /* status_wnt.png in Resources */,
+				E2A4853815DE8218004A26B5 /* status_yth.png in Resources */,
+				E2A4853915DE8218004A26B5 /* defaultperson_male.png in Resources */,
+				E2A4853A15DE8218004A26B5 /* dsa_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2308,6 +2716,322 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E2A4853B15DE8218004A26B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2A4853C15DE8218004A26B5 /* main.m in Sources */,
+				E2A4853D15DE8218004A26B5 /* MacAssistantAppDelegate.m in Sources */,
+				E2A4853E15DE8218004A26B5 /* Controller.m in Sources */,
+				E2A4853F15DE8218004A26B5 /* Database.m in Sources */,
+				E2A4854015DE8218004A26B5 /* ActualPersonSaver.m in Sources */,
+				E2A4854115DE8218004A26B5 /* ContractSaver.m in Sources */,
+				E2A4854215DE8218004A26B5 /* ContractClauseSaver.m in Sources */,
+				E2A4854315DE8218004A26B5 /* ContractOfferSaver.m in Sources */,
+				E2A4854415DE8218004A26B5 /* HumanSaver.m in Sources */,
+				E2A4854515DE8218004A26B5 /* InterestedClubSaver.m in Sources */,
+				E2A4854615DE8218004A26B5 /* JournalistSaver.m in Sources */,
+				E2A4854715DE8218004A26B5 /* NonPlayerSaver.m in Sources */,
+				E2A4854815DE8218004A26B5 /* OfficialSaver.m in Sources */,
+				E2A4854915DE8218004A26B5 /* OfficialPastGameSaver.m in Sources */,
+				E2A4854A15DE8218004A26B5 /* PersonNicknameSaver.m in Sources */,
+				E2A4854B15DE8218004A26B5 /* PlayerSaver.m in Sources */,
+				E2A4854C15DE8218004A26B5 /* PlayerAndNonPlayerSaver.m in Sources */,
+				E2A4854D15DE8218004A26B5 /* PlayerBanSaver.m in Sources */,
+				E2A4854E15DE8218004A26B5 /* RetiredPersonSaver.m in Sources */,
+				E2A4854F15DE8218004A26B5 /* SpokespersonSaver.m in Sources */,
+				E2A4855015DE8218004A26B5 /* StaffSaver.m in Sources */,
+				E2A4855115DE8218004A26B5 /* StaffTendencySaver.m in Sources */,
+				E2A4855215DE8218004A26B5 /* VirtualPlayerSaver.m in Sources */,
+				E2A4855315DE8218004A26B5 /* PlayerInjurySaver.m in Sources */,
+				E2A4855415DE8218004A26B5 /* BookingCountSaver.m in Sources */,
+				E2A4855515DE8218004A26B5 /* MatchFormSaver.m in Sources */,
+				E2A4855615DE8218004A26B5 /* PlayerFormSaver.m in Sources */,
+				E2A4855715DE8218004A26B5 /* BookmarkFolderSaver.m in Sources */,
+				E2A4855815DE8218004A26B5 /* NewsFilterListSaver.m in Sources */,
+				E2A4855915DE8218004A26B5 /* NewsFilterSaver.m in Sources */,
+				E2A4855A15DE8218004A26B5 /* NewsInfoSaver.m in Sources */,
+				E2A4855B15DE8218004A26B5 /* AlternativeKitSaver.m in Sources */,
+				E2A4855C15DE8218004A26B5 /* AlternativeStadiumSaver.m in Sources */,
+				E2A4855D15DE8218004A26B5 /* ClubFinanceSaver.m in Sources */,
+				E2A4855E15DE8218004A26B5 /* ClubFinanceRecordSaver.m in Sources */,
+				E2A4855F15DE8218004A26B5 /* ClubFinanceRevenueRecordSaver.m in Sources */,
+				E2A4856015DE8218004A26B5 /* ClubSponsorSaver.m in Sources */,
+				E2A4856115DE8218004A26B5 /* ColourSaver.m in Sources */,
+				E2A4856215DE8218004A26B5 /* FamousPlayerSaver.m in Sources */,
+				E2A4856315DE8218004A26B5 /* FifaRankingMatchSaver.m in Sources */,
+				E2A4856415DE8218004A26B5 /* FixtureSaver.m in Sources */,
+				E2A4856515DE8218004A26B5 /* FMDateSaver.m in Sources */,
+				E2A4856615DE8218004A26B5 /* FutureRegenSaver.m in Sources */,
+				E2A4856715DE8218004A26B5 /* GeneralInfoSaver.m in Sources */,
+				E2A4856815DE8218004A26B5 /* IDPCSaver.m in Sources */,
+				E2A4856915DE8218004A26B5 /* MediaClubSaver.m in Sources */,
+				E2A4856A15DE8218004A26B5 /* RegionalDivisionSaver.m in Sources */,
+				E2A4856B15DE8218004A26B5 /* RelationshipSaver.m in Sources */,
+				E2A4856C15DE8218004A26B5 /* ScoutingKnowledgeSaver.m in Sources */,
+				E2A4856D15DE8218004A26B5 /* ShortlistedPersonSaver.m in Sources */,
+				E2A4856E15DE8218004A26B5 /* SpokenLanguageSaver.m in Sources */,
+				E2A4856F15DE8218004A26B5 /* TeamContainerSaver.m in Sources */,
+				E2A4857015DE8218004A26B5 /* TransferInfoSaver.m in Sources */,
+				E2A4857115DE8218004A26B5 /* TransferPreferenceSaver.m in Sources */,
+				E2A4857215DE8218004A26B5 /* Unknown1Saver.m in Sources */,
+				E2A4857315DE8218004A26B5 /* Unknown2Saver.m in Sources */,
+				E2A4857415DE8218004A26B5 /* Unknown3Saver.m in Sources */,
+				E2A4857515DE8218004A26B5 /* Unknown4Saver.m in Sources */,
+				E2A4857615DE8218004A26B5 /* Unknown5Saver.m in Sources */,
+				E2A4857715DE8218004A26B5 /* Unknown6Saver.m in Sources */,
+				E2A4857815DE8218004A26B5 /* PlayerReplacementSaver.m in Sources */,
+				E2A4857915DE8218004A26B5 /* FixtureBlockSaver.m in Sources */,
+				E2A4857A15DE8218004A26B5 /* Unknown8Saver.m in Sources */,
+				E2A4857B15DE8218004A26B5 /* ShortFixtureSaver.m in Sources */,
+				E2A4857C15DE8218004A26B5 /* AlliterationSaver.m in Sources */,
+				E2A4857D15DE8218004A26B5 /* AwardSaver.m in Sources */,
+				E2A4857E15DE8218004A26B5 /* CitySaver.m in Sources */,
+				E2A4857F15DE8218004A26B5 /* ClubSaver.m in Sources */,
+				E2A4858015DE8218004A26B5 /* CompetitionSaver.m in Sources */,
+				E2A4858115DE8218004A26B5 /* ContinentSaver.m in Sources */,
+				E2A4858215DE8218004A26B5 /* CurrencySaver.m in Sources */,
+				E2A4858315DE8218004A26B5 /* DescriptionSaver.m in Sources */,
+				E2A4858415DE8218004A26B5 /* FootballStadiumSaver.m in Sources */,
+				E2A4858515DE8218004A26B5 /* InjurySaver.m in Sources */,
+				E2A4858615DE8218004A26B5 /* LanguageSaver.m in Sources */,
+				E2A4858715DE8218004A26B5 /* LocalAreaSaver.m in Sources */,
+				E2A4858815DE8218004A26B5 /* MediaSaver.m in Sources */,
+				E2A4858915DE8218004A26B5 /* NameSaver.m in Sources */,
+				E2A4858A15DE8218004A26B5 /* NationSaver.m in Sources */,
+				E2A4858B15DE8218004A26B5 /* SponsorSaver.m in Sources */,
+				E2A4858C15DE8218004A26B5 /* Unknown7Saver.m in Sources */,
+				E2A4858D15DE8218004A26B5 /* StadiumChangeSaver.m in Sources */,
+				E2A4858E15DE8218004A26B5 /* WeatherSaver.m in Sources */,
+				E2A4858F15DE8218004A26B5 /* StageNameSaver.m in Sources */,
+				E2A4859015DE8218004A26B5 /* TeamSaver.m in Sources */,
+				E2A4859115DE8218004A26B5 /* PersonSaver.m in Sources */,
+				E2A4859215DE8218004A26B5 /* PersonStatsSaver.m in Sources */,
+				E2A4859315DE8218004A26B5 /* NonPlayerStatsSaver.m in Sources */,
+				E2A4859415DE8218004A26B5 /* PlayerStatsSaver.m in Sources */,
+				E2A4859515DE8218004A26B5 /* ActualPersonLoader.m in Sources */,
+				E2A4859615DE8218004A26B5 /* BookingCountLoader.m in Sources */,
+				E2A4859715DE8218004A26B5 /* BookmarkFolderLoader.m in Sources */,
+				E2A4859815DE8218004A26B5 /* ContractLoader.m in Sources */,
+				E2A4859915DE8218004A26B5 /* ContractClauseLoader.m in Sources */,
+				E2A4859A15DE8218004A26B5 /* ContractOfferLoader.m in Sources */,
+				E2A4859B15DE8218004A26B5 /* HumanLoader.m in Sources */,
+				E2A4859C15DE8218004A26B5 /* InterestedClubLoader.m in Sources */,
+				E2A4859D15DE8218004A26B5 /* JournalistLoader.m in Sources */,
+				E2A4859E15DE8218004A26B5 /* MatchFormLoader.m in Sources */,
+				E2A4859F15DE8218004A26B5 /* NewsFilterListLoader.m in Sources */,
+				E2A485A015DE8218004A26B5 /* NewsFilterLoader.m in Sources */,
+				E2A485A115DE8218004A26B5 /* NewsInfoLoader.m in Sources */,
+				E2A485A215DE8218004A26B5 /* NonPlayerLoader.m in Sources */,
+				E2A485A315DE8218004A26B5 /* OfficialLoader.m in Sources */,
+				E2A485A415DE8218004A26B5 /* OfficialPastGameLoader.m in Sources */,
+				E2A485A515DE8218004A26B5 /* PersonNicknameLoader.m in Sources */,
+				E2A485A615DE8218004A26B5 /* PlayerBanLoader.m in Sources */,
+				E2A485A715DE8218004A26B5 /* PlayerFormLoader.m in Sources */,
+				E2A485A815DE8218004A26B5 /* PlayerLoader.m in Sources */,
+				E2A485A915DE8218004A26B5 /* PlayerAndNonPlayerLoader.m in Sources */,
+				E2A485AA15DE8218004A26B5 /* PlayerInjuryLoader.m in Sources */,
+				E2A485AB15DE8218004A26B5 /* RetiredPersonLoader.m in Sources */,
+				E2A485AC15DE8218004A26B5 /* SpokespersonLoader.m in Sources */,
+				E2A485AD15DE8218004A26B5 /* StaffLoader.m in Sources */,
+				E2A485AE15DE8218004A26B5 /* StaffTendencyLoader.m in Sources */,
+				E2A485AF15DE8218004A26B5 /* VirtualPlayerLoader.m in Sources */,
+				E2A485B015DE8218004A26B5 /* AlternativeKitLoader.m in Sources */,
+				E2A485B115DE8218004A26B5 /* AlternativeStadiumLoader.m in Sources */,
+				E2A485B215DE8218004A26B5 /* ClubFinanceLoader.m in Sources */,
+				E2A485B315DE8218004A26B5 /* ClubFinanceRecordLoader.m in Sources */,
+				E2A485B415DE8218004A26B5 /* ClubFinanceRevenueRecordLoader.m in Sources */,
+				E2A485B515DE8218004A26B5 /* ClubSponsorLoader.m in Sources */,
+				E2A485B615DE8218004A26B5 /* ColourLoader.m in Sources */,
+				E2A485B715DE8218004A26B5 /* FamousPlayerLoader.m in Sources */,
+				E2A485B815DE8218004A26B5 /* FifaRankingMatchLoader.m in Sources */,
+				E2A485B915DE8218004A26B5 /* FixtureLoader.m in Sources */,
+				E2A485BA15DE8218004A26B5 /* FixtureBlockLoader.m in Sources */,
+				E2A485BB15DE8218004A26B5 /* FMDateLoader.m in Sources */,
+				E2A485BC15DE8218004A26B5 /* FutureRegenLoader.m in Sources */,
+				E2A485BD15DE8218004A26B5 /* GeneralInfoLoader.m in Sources */,
+				E2A485BE15DE8218004A26B5 /* IDPCLoader.m in Sources */,
+				E2A485BF15DE8218004A26B5 /* MediaClubLoader.m in Sources */,
+				E2A485C015DE8218004A26B5 /* PlayerReplacementLoader.m in Sources */,
+				E2A485C115DE8218004A26B5 /* RegionalDivisionLoader.m in Sources */,
+				E2A485C215DE8218004A26B5 /* RelationshipLoader.m in Sources */,
+				E2A485C315DE8218004A26B5 /* ScoutingKnowledgeLoader.m in Sources */,
+				E2A485C415DE8218004A26B5 /* ShortFixtureLoader.m in Sources */,
+				E2A485C515DE8218004A26B5 /* ShortlistedPersonLoader.m in Sources */,
+				E2A485C615DE8218004A26B5 /* SpokenLanguageLoader.m in Sources */,
+				E2A485C715DE8218004A26B5 /* TeamContainerLoader.m in Sources */,
+				E2A485C815DE8218004A26B5 /* TransferInfoLoader.m in Sources */,
+				E2A485C915DE8218004A26B5 /* TransferPreferenceLoader.m in Sources */,
+				E2A485CA15DE8218004A26B5 /* Unknown1Loader.m in Sources */,
+				E2A485CB15DE8218004A26B5 /* Unknown2Loader.m in Sources */,
+				E2A485CC15DE8218004A26B5 /* Unknown3Loader.m in Sources */,
+				E2A485CD15DE8218004A26B5 /* Unknown4Loader.m in Sources */,
+				E2A485CE15DE8218004A26B5 /* Unknown5Loader.m in Sources */,
+				E2A485CF15DE8218004A26B5 /* Unknown6Loader.m in Sources */,
+				E2A485D015DE8218004A26B5 /* Unknown8Loader.m in Sources */,
+				E2A485D115DE8218004A26B5 /* Loader.m in Sources */,
+				E2A485D215DE8218004A26B5 /* LangDBLoader.m in Sources */,
+				E2A485D315DE8218004A26B5 /* AlliterationLoader.m in Sources */,
+				E2A485D415DE8218004A26B5 /* AwardLoader.m in Sources */,
+				E2A485D515DE8218004A26B5 /* CityLoader.m in Sources */,
+				E2A485D615DE8218004A26B5 /* ClubLoader.m in Sources */,
+				E2A485D715DE8218004A26B5 /* ClubLinkLoader.m in Sources */,
+				E2A485D815DE8218004A26B5 /* CompetitionLoader.m in Sources */,
+				E2A485D915DE8218004A26B5 /* ContinentLoader.m in Sources */,
+				E2A485DA15DE8218004A26B5 /* CurrencyLoader.m in Sources */,
+				E2A485DB15DE8218004A26B5 /* DescriptionLoader.m in Sources */,
+				E2A485DC15DE8218004A26B5 /* FootballStadiumLoader.m in Sources */,
+				E2A485DD15DE8218004A26B5 /* InjuryLoader.m in Sources */,
+				E2A485DE15DE8218004A26B5 /* LanguageLoader.m in Sources */,
+				E2A485DF15DE8218004A26B5 /* LocalAreaLoader.m in Sources */,
+				E2A485E015DE8218004A26B5 /* MediaLoader.m in Sources */,
+				E2A485E115DE8218004A26B5 /* NameLoader.m in Sources */,
+				E2A485E215DE8218004A26B5 /* NationLoader.m in Sources */,
+				E2A485E315DE8218004A26B5 /* NonPlayerStatsLoader.m in Sources */,
+				E2A485E415DE8218004A26B5 /* PersonLoader.m in Sources */,
+				E2A485E515DE8218004A26B5 /* PersonStatsLoader.m in Sources */,
+				E2A485E615DE8218004A26B5 /* PlayerStatsLoader.m in Sources */,
+				E2A485E715DE8218004A26B5 /* RegionLoader.m in Sources */,
+				E2A485E815DE8218004A26B5 /* SponsorLoader.m in Sources */,
+				E2A485E915DE8218004A26B5 /* StadiumChangeLoader.m in Sources */,
+				E2A485EA15DE8218004A26B5 /* StageNameLoader.m in Sources */,
+				E2A485EB15DE8218004A26B5 /* TeamLoader.m in Sources */,
+				E2A485EC15DE8218004A26B5 /* Unknown7Loader.m in Sources */,
+				E2A485ED15DE8218004A26B5 /* WeatherLoader.m in Sources */,
+				E2A485EE15DE8218004A26B5 /* Alliteration.m in Sources */,
+				E2A485EF15DE8218004A26B5 /* Award.m in Sources */,
+				E2A485F015DE8218004A26B5 /* City.m in Sources */,
+				E2A485F115DE8218004A26B5 /* Club.m in Sources */,
+				E2A485F215DE8218004A26B5 /* Competition.m in Sources */,
+				E2A485F315DE8218004A26B5 /* Continent.m in Sources */,
+				E2A485F415DE8218004A26B5 /* Currency.m in Sources */,
+				E2A485F515DE8218004A26B5 /* Description.m in Sources */,
+				E2A485F615DE8218004A26B5 /* Injury.m in Sources */,
+				E2A485F715DE8218004A26B5 /* Language.m in Sources */,
+				E2A485F815DE8218004A26B5 /* LocalArea.m in Sources */,
+				E2A485F915DE8218004A26B5 /* Media.m in Sources */,
+				E2A485FA15DE8218004A26B5 /* Name.m in Sources */,
+				E2A485FB15DE8218004A26B5 /* Nation.m in Sources */,
+				E2A485FC15DE8218004A26B5 /* NonPlayerStats.m in Sources */,
+				E2A485FD15DE8218004A26B5 /* Person.m in Sources */,
+				E2A485FE15DE8218004A26B5 /* PersonStats.m in Sources */,
+				E2A485FF15DE8218004A26B5 /* PlayerStats.m in Sources */,
+				E2A4860015DE8218004A26B5 /* Region.m in Sources */,
+				E2A4860115DE8218004A26B5 /* Sponsor.m in Sources */,
+				E2A4860215DE8218004A26B5 /* Stadium.m in Sources */,
+				E2A4860315DE8218004A26B5 /* StadiumChange.m in Sources */,
+				E2A4860415DE8218004A26B5 /* StageName.m in Sources */,
+				E2A4860515DE8218004A26B5 /* Team.m in Sources */,
+				E2A4860615DE8218004A26B5 /* Weather.m in Sources */,
+				E2A4860715DE8218004A26B5 /* Unknown7.m in Sources */,
+				E2A4860815DE8218004A26B5 /* AlternativeStadium.m in Sources */,
+				E2A4860915DE8218004A26B5 /* ClubFinance.m in Sources */,
+				E2A4860A15DE8218004A26B5 /* ClubFinanceRecord.m in Sources */,
+				E2A4860B15DE8218004A26B5 /* ClubFinanceRevenueRecord.m in Sources */,
+				E2A4860C15DE8218004A26B5 /* AlternativeKit.m in Sources */,
+				E2A4860D15DE8218004A26B5 /* ClubSponsor.m in Sources */,
+				E2A4860E15DE8218004A26B5 /* FamousPlayer.m in Sources */,
+				E2A4860F15DE8218004A26B5 /* FifaRankingMatch.m in Sources */,
+				E2A4861015DE8218004A26B5 /* FutureRegen.m in Sources */,
+				E2A4861115DE8218004A26B5 /* IDPC.m in Sources */,
+				E2A4861215DE8218004A26B5 /* MediaClub.m in Sources */,
+				E2A4861315DE8218004A26B5 /* RegionalDivision.m in Sources */,
+				E2A4861415DE8218004A26B5 /* ScoutingKnowledge.m in Sources */,
+				E2A4861515DE8218004A26B5 /* ShortlistedPerson.m in Sources */,
+				E2A4861615DE8218004A26B5 /* SpokenLanguage.m in Sources */,
+				E2A4861715DE8218004A26B5 /* TransferPreference.m in Sources */,
+				E2A4861815DE8218004A26B5 /* PlayerReplacement.m in Sources */,
+				E2A4861915DE8218004A26B5 /* FixtureBlock.m in Sources */,
+				E2A4861A15DE8218004A26B5 /* ContractClause.m in Sources */,
+				E2A4861B15DE8218004A26B5 /* ShortFixture.m in Sources */,
+				E2A4861C15DE8218004A26B5 /* Fixture.m in Sources */,
+				E2A4861D15DE8218004A26B5 /* Unknown1.m in Sources */,
+				E2A4861E15DE8218004A26B5 /* Unknown2.m in Sources */,
+				E2A4861F15DE8218004A26B5 /* Unknown3.m in Sources */,
+				E2A4862015DE8218004A26B5 /* Unknown4.m in Sources */,
+				E2A4862115DE8218004A26B5 /* Unknown5.m in Sources */,
+				E2A4862215DE8218004A26B5 /* Unknown6.m in Sources */,
+				E2A4862315DE8218004A26B5 /* Unknown8.m in Sources */,
+				E2A4862415DE8218004A26B5 /* ActualPerson.m in Sources */,
+				E2A4862515DE8218004A26B5 /* Contract.m in Sources */,
+				E2A4862615DE8218004A26B5 /* ContractOffer.m in Sources */,
+				E2A4862715DE8218004A26B5 /* NonPlayer.m in Sources */,
+				E2A4862815DE8218004A26B5 /* Player.m in Sources */,
+				E2A4862915DE8218004A26B5 /* Staff.m in Sources */,
+				E2A4862A15DE8218004A26B5 /* PersonNickname.m in Sources */,
+				E2A4862B15DE8218004A26B5 /* InterestedClub.m in Sources */,
+				E2A4862C15DE8218004A26B5 /* OfficialPastGame.m in Sources */,
+				E2A4862D15DE8218004A26B5 /* PlayerInjury.m in Sources */,
+				E2A4862E15DE8218004A26B5 /* PlayerBan.m in Sources */,
+				E2A4862F15DE8218004A26B5 /* BookingCount.m in Sources */,
+				E2A4863015DE8218004A26B5 /* PlayerForm.m in Sources */,
+				E2A4863115DE8218004A26B5 /* MatchForm.m in Sources */,
+				E2A4863215DE8218004A26B5 /* PlayerAndNonPlayer.m in Sources */,
+				E2A4863315DE8218004A26B5 /* Official.m in Sources */,
+				E2A4863415DE8218004A26B5 /* RetiredPerson.m in Sources */,
+				E2A4863515DE8218004A26B5 /* VirtualPlayer.m in Sources */,
+				E2A4863615DE8218004A26B5 /* Spokesperson.m in Sources */,
+				E2A4863715DE8218004A26B5 /* Journalist.m in Sources */,
+				E2A4863815DE8218004A26B5 /* Human.m in Sources */,
+				E2A4863915DE8218004A26B5 /* BookmarkFolder.m in Sources */,
+				E2A4863A15DE8218004A26B5 /* NewsFilterList.m in Sources */,
+				E2A4863B15DE8218004A26B5 /* NewsFilter.m in Sources */,
+				E2A4863C15DE8218004A26B5 /* NewsInfo.m in Sources */,
+				E2A4863D15DE8218004A26B5 /* StaffTendency.m in Sources */,
+				E2A4863E15DE8218004A26B5 /* Colour.m in Sources */,
+				E2A4863F15DE8218004A26B5 /* FMDate.m in Sources */,
+				E2A4864015DE8218004A26B5 /* FMString.m in Sources */,
+				E2A4864115DE8218004A26B5 /* GeneralInfo.m in Sources */,
+				E2A4864215DE8218004A26B5 /* Relationship.m in Sources */,
+				E2A4864315DE8218004A26B5 /* TeamContainer.m in Sources */,
+				E2A4864415DE8218004A26B5 /* TransferInfo.m in Sources */,
+				E2A4864515DE8218004A26B5 /* SupportFunctions.m in Sources */,
+				E2A4864615DE8218004A26B5 /* SXImageXMLParser.m in Sources */,
+				E2A4864715DE8218004A26B5 /* SXzlib.m in Sources */,
+				E2A4864815DE8218004A26B5 /* LangDB.m in Sources */,
+				E2A4864915DE8218004A26B5 /* FMFArchiver.m in Sources */,
+				E2A4864A15DE8218004A26B5 /* Sidebar.m in Sources */,
+				E2A4864B15DE8218004A26B5 /* SidebarNode.m in Sources */,
+				E2A4864C15DE8218004A26B5 /* SidebarBadgeCell.m in Sources */,
+				E2A4864D15DE8218004A26B5 /* PlayerStatsTransformer.m in Sources */,
+				E2A4864E15DE8218004A26B5 /* PlayerRatingTransformer.m in Sources */,
+				E2A4864F15DE8218004A26B5 /* ContentController.m in Sources */,
+				E2A4865015DE8218004A26B5 /* SXGeneralViewController.m in Sources */,
+				E2A4865115DE8218004A26B5 /* SXLanguagesViewController.m in Sources */,
+				E2A4865215DE8218004A26B5 /* SXMainMediaController.m in Sources */,
+				E2A4865315DE8218004A26B5 /* MBPreferencesController.m in Sources */,
+				E2A4865415DE8218004A26B5 /* SXUpdatesViewController.m in Sources */,
+				E2A4865515DE8218004A26B5 /* LocationDaysSaver.m in Sources */,
+				E2A4865615DE8218004A26B5 /* LocationDaysLoader.m in Sources */,
+				E2A4865715DE8218004A26B5 /* LocationDays.m in Sources */,
+				E2A4865815DE8218004A26B5 /* ContractBonus.m in Sources */,
+				E2A4865915DE8218004A26B5 /* ContractBonusLoader.m in Sources */,
+				E2A4865A15DE8218004A26B5 /* ContractBonusSaver.m in Sources */,
+				E2A4865B15DE8218004A26B5 /* TreatedNations.m in Sources */,
+				E2A4865C15DE8218004A26B5 /* TreatedNationsLoader.m in Sources */,
+				E2A4865D15DE8218004A26B5 /* TreatedNationsSaver.m in Sources */,
+				E2A4865E15DE8218004A26B5 /* SXOutlineViewCell.m in Sources */,
+				E2A4865F15DE8218004A26B5 /* Derby.m in Sources */,
+				E2A4866015DE8218004A26B5 /* DerbyLoader.m in Sources */,
+				E2A4866115DE8218004A26B5 /* DerbySaver.m in Sources */,
+				E2A4866215DE8218004A26B5 /* Agent.m in Sources */,
+				E2A4866315DE8218004A26B5 /* AgentLoader.m in Sources */,
+				E2A4866415DE8218004A26B5 /* AgentSaver.m in Sources */,
+				E2A4866515DE8218004A26B5 /* Agreement.m in Sources */,
+				E2A4866615DE8218004A26B5 /* AgreementLoader.m in Sources */,
+				E2A4866715DE8218004A26B5 /* AgreementSaver.m in Sources */,
+				E2A4866815DE8218004A26B5 /* ClubLink.m in Sources */,
+				E2A4866915DE8218004A26B5 /* ClubLinkSaver.m in Sources */,
+				E2A4866A15DE8218004A26B5 /* CompetitionHistory.m in Sources */,
+				E2A4866B15DE8218004A26B5 /* CompetitionHistoryLoader.m in Sources */,
+				E2A4866C15DE8218004A26B5 /* CompetitionHistorySaver.m in Sources */,
+				E2A4866D15DE8218004A26B5 /* MAView.m in Sources */,
+				E2A4866E15DE8218004A26B5 /* CurrencyFormatTransformer.m in Sources */,
+				E2A4866F15DE8218004A26B5 /* PreferencesController.m in Sources */,
+				E2A4867015DE8218004A26B5 /* PlayerStatusTransformer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -2344,6 +3068,7 @@
 					"\"$(SRCROOT)/../../Downloads\"",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 					"\"$(SRCROOT)\"",
+					/Developer/Local/Frameworks,
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
@@ -2353,7 +3078,7 @@
 				INFOPLIST_FILE = "MacAssistant-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = MacAssistant;
 				SDKROOT = macosx;
 			};
@@ -2373,6 +3098,7 @@
 					"\"$(SRCROOT)/../../Downloads\"",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 					"\"$(SRCROOT)\"",
+					/Developer/Local/Frameworks,
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2380,7 +3106,8 @@
 				INFOPLIST_FILE = "MacAssistant-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = MacAssistant;
 				SDKROOT = macosx;
@@ -2414,6 +3141,72 @@
 			};
 			name = Release;
 		};
+		E2A4867815DE8218004A26B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Legacy";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Downloads\"",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)\"",
+					/Developer/Local/Frameworks,
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MacAssistant_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				INFOPLIST_FILE = "MacAssistant10.6-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-lz";
+				PRODUCT_NAME = MacAssistant;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		E2A4867915DE8218004A26B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Legacy";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Downloads\"",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)\"",
+					/Developer/Local/Frameworks,
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MacAssistant_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				INFOPLIST_FILE = "MacAssistant10.6-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-lz";
+				PRODUCT_NAME = MacAssistant;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2431,6 +3224,15 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2A4867715DE8218004A26B5 /* Build configuration list for PBXNativeTarget "MacAssistant-Legacy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2A4867815DE8218004A26B5 /* Debug */,
+				E2A4867915DE8218004A26B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

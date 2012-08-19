@@ -20,6 +20,10 @@
 #import "PlayerRatingTransformer.h"
 #import "SupportFunctions.h"
 
+// Use RegExKit for OS X < 10.7
+#if __MAC_OS_X_VERSION_MAX_ALLOWED < 1070
+#import <RegexKit/RegexKit.h>
+#endif
 
 @implementation ContentController
 
@@ -124,6 +128,8 @@
         NSString *tmp = [[[statsFilter predicate] predicateFormat] stringByReplacingOccurrencesOfString:@"\"" withString:@"\'"];
         
         NSMutableString *strToMakeReplacements = [[NSMutableString alloc] initWithString:tmp];
+        
+#if __MAC_OS_X_VERSION_MAX_ALLOWED > 1070
         NSError *error = nil;
         NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"([0-9]+)" options:NSRegularExpressionCaseInsensitive error:&error];
         
@@ -139,7 +145,20 @@
             
             [strToMakeReplacements replaceCharactersInRange:match.range withString:replacementValue];
         }
-        
+#else
+        NSString *regex = @"([0-9]+)";
+        RKEnumerator *matches = [tmp matchEnumeratorWithRegex: regex];
+        while ([matches nextRanges] != NULL) {
+            NSRange matchRange = [matches currentRange];
+            NSString *numString = [tmp substringWithRange:NSMakeRange(matchRange.location, matchRange.length)];
+            NSInteger num = [numString intValue];
+            
+            NSString * replacementValue = [NSString stringWithFormat:@"%i", (int)(num / 0.2)];
+            
+            [strToMakeReplacements replaceCharactersInRange:[matches currentRange] withString:replacementValue];
+        }
+#endif        
+         
         tmp = strToMakeReplacements;
         
         tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Corners\'" withString:@"playerStats.corners"];
