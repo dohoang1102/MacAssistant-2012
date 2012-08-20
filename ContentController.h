@@ -34,6 +34,7 @@
 }
 
 - (IBAction)searchPlayers:(id)sender;
+- (IBAction)clearSearchTerms:(id)sender;
 - (BOOL)shouldCloseSheet:(id)sender;
 
 @property(readwrite, copy) NSMutableArray		*playerSearchResults;

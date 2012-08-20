@@ -45,7 +45,7 @@
 	[statsFilter removeRowAtIndex:1];
 	
 	// [playerFilter removeRowAtIndex:2];
-	NSView * v = [[predicateRow templateViews] lastObject];
+	NSView *v = [[predicateRow templateViews] lastObject];
 	if([v isKindOfClass:[NSTextField class]]){
 		NSRect frame = [v frame];
 		frame.size.width = 200;
@@ -245,6 +245,24 @@
 
 - (BOOL)shouldCloseSheet:(id)sender {
 	return YES;
+}
+
+- (IBAction)clearSearchTerms:(id)sender {
+    // Remove all rows except the first one
+    
+    int totalRows = [playerFilter numberOfRows];
+    for (int i=totalRows; i>1; i--) {
+        if (i > 1) {
+            [playerFilter removeRowAtIndex:(i - 1) ];
+        }
+    }
+    
+    totalRows = [statsFilter numberOfRows];
+    for (int i=totalRows; i>1; i--) {
+        if (i > 1) {
+            [statsFilter removeRowAtIndex:(i - 1)];
+        }
+    }
 }
 
 - (void) showPlayerPanel:(id)sender {
