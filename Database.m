@@ -211,8 +211,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Cities
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
     
 	pool = [[NSAutoreleasePool alloc] init];
@@ -265,8 +268,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Clubs
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
     
 	pool = [[NSAutoreleasePool alloc] init];
@@ -316,8 +322,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Competitions
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Competitions...", @"editor status")];
@@ -373,8 +382,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Continents
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Continents...", @"editor status")];
@@ -420,8 +432,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Currencies
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Currencies...", @"editor status")];
@@ -465,8 +480,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Injuries
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Injuries...", @"editor status")];
@@ -513,8 +531,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Media
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Media...", @"editor status")];
@@ -601,8 +622,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Nations
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Nations...", @"editor status")];
@@ -648,8 +672,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark First Names
 	if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading First names...", @"editor status")];
@@ -690,8 +717,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		
 #pragma mark Surnames
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Surnames...", @"editor status")];
@@ -732,8 +762,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Common Names
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Common names...", @"editor status")];
@@ -774,8 +807,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Unknowns 1
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Unknowns 1...", @"editor status")];
@@ -818,8 +854,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Local Areas
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Local areas...", @"editor status")];
@@ -871,8 +910,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Sponsors
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Sponsors...", @"editor status")];
@@ -915,8 +957,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Stadiums
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Stadiums...", @"editor status")];
@@ -968,8 +1013,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Stadium Changes
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Stadium changes...", @"editor status")];
@@ -1005,8 +1053,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Stage Names
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Stage names...", @"editor status")];
@@ -1052,8 +1103,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Teams
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Teams...", @"editor status")];
@@ -1099,8 +1153,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Weather
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Weather...", @"editor status")];
@@ -1143,8 +1200,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Descriptions
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Descriptions...", @"editor status")];
@@ -1188,8 +1248,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Derbies
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Derbies...", @"editor status")];
@@ -1230,8 +1293,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 
 #pragma mark Agreements
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Agreements...", @"editor status")];
@@ -1284,8 +1350,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark People
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading People...", @"editor status")];
@@ -1382,8 +1451,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Player Stats
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Player stats...", @"editor status")];
@@ -1426,8 +1498,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	
 #pragma mark Non-Player Stats
     if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"Loading Non-player stats...", @"editor status")];
@@ -1470,8 +1545,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 
 #pragma mark Competition Histories
 	if ([controller gameDBVersion] >= FM2012_12_1) {
-        // 0x05 ???
-        *byteOffset += 5;
+        // Not sure what this array is for here?
+        [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+        *byteOffset += (count * 12);
+        
+        *byteOffset += 1;
     }
 	[self setStatus:NSLocalizedString(@"Loading Competition histories...", @"editor status")];
 	[self setCurrentRecord:0];
@@ -1511,8 +1589,11 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[tempArray removeAllObjects];
 	
 	// ???
-	[self setUnknownData1:[data subdataWithRange:NSMakeRange(*byteOffset, 213)]]; 
-	*byteOffset += 209;
+	[self setUnknownData1:[data subdataWithRange:NSMakeRange(*byteOffset, 205)]];
+	*byteOffset += 205;
+    
+    [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+    *byteOffset += (count * 8);
     
     [data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
     *byteOffset += (count * 8);

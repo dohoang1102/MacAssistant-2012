@@ -109,6 +109,10 @@
 	else if ([object type]==14) {
 		[object setStringValue:[FMString readFromData:data atOffset:&offset]];
 	}
+    else if ([object type]==15) {
+        // Unknowns
+        offset += 8;
+    }
 	else if ([object type]==16) {
 		if ([[object name] isEqualToString:@"lsdm"]) {
 			[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 21)]]; 
