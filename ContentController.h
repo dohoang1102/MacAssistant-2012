@@ -33,6 +33,7 @@
     IBOutlet NSTextField                    *playerPA;
 }
 
+- (void)setupImageTextCells;
 - (IBAction)searchPlayers:(id)sender;
 - (IBAction)clearSearchTerms:(id)sender;
 - (BOOL)shouldCloseSheet:(id)sender;

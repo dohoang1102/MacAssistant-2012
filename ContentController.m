@@ -19,6 +19,7 @@
 #import "PlayerStatsTransformer.h"
 #import "PlayerRatingTransformer.h"
 #import "SupportFunctions.h"
+#import "ImageTextCell.h"
 
 // Use RegExKit for OS X < 10.7
 #if __MAC_OS_X_VERSION_MAX_ALLOWED < 1070
@@ -62,6 +63,11 @@
 	[playersTableView setFont:[NSFont fontWithName:@"Helvetica" size:10.0f]];
     [playersTableView setTarget:self];
     [playersTableView setDoubleAction:@selector(showPlayerPanel:)];
+    [self setupImageTextCells];
+}
+
+- (void)setupImageTextCells {
+    
 }
 
 - (IBAction)searchPlayers:(id)sender {
