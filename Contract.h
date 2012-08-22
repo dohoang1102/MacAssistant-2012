@@ -89,6 +89,7 @@ agreedPrice, unknownInt1;
 
 - (NSArray *)squadStatusStrings;
 - (NSArray *)statusStrings;
+- (NSArray *)typeStrings;
 - (BOOL)isLoanContract;
 - (BOOL)isFullContract;
 - (BOOL)isYouthContract;

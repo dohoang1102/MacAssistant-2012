@@ -44,6 +44,18 @@ unknownChar8, unknownInt1, unknownData3;
 	return strings;
 }
 
+- (NSArray *)typeStrings {
+    NSArray *strings = [NSArray arrayWithObjects:
+                        NSLocalizedString(@"Full Time", @"contract type"),
+                        NSLocalizedString(@"Loan", @"contract type"),
+                        NSLocalizedString(@"Trial", @"contract type"),
+                        NSLocalizedString(@"First Option", @"contract type"),
+                        NSLocalizedString(@"Co-Ownership", @"contract type"),
+                        NSLocalizedString(@"League Contract", @"contract type"),
+                        nil];
+    return strings;
+}
+
 - (BOOL)transferListedByClub { return (transferStatus & TS_TRANSFER_LISTED_BY_CLUB); }
 - (void)setTransferListedByClub:(BOOL)val {
 	if (transferStatus & TS_TRANSFER_LISTED_BY_CLUB) {

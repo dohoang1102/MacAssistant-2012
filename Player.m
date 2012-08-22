@@ -329,6 +329,7 @@ MLSRightsClubID, MLSLastDraftClubID, MLSLastDraftYear, MLSDiscoveryPlayerDate, M
 }
 
 - (int)conditionPercent { return (condition / 100); }
+- (int)fitnessPercent { return (fitness / 100); }
 
 - (NSString *)heightString { return [NSString stringWithFormat:@"%d cm",height]; }
 - (NSString *)weightString { return [NSString stringWithFormat:@"%d kg",weight]; }

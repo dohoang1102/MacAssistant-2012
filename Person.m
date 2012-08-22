@@ -50,6 +50,118 @@ unknownData1, unknownChar1, theNewFirstName, theNewSurname, theNewCommonName, tr
 	return @"---";
 }
 
+- (NSString *)mainContractStartDate {
+    if (staffData) {
+        if ([[staffData contracts] count] > 0) {
+            Contract *mainContract = [[staffData contracts] objectAtIndex:0];
+            NSCalendar *gregorian = [[NSCalendar alloc]
+                                     initWithCalendarIdentifier:NSGregorianCalendar];
+            
+            NSDateComponents *components =
+            [gregorian components:(NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit) fromDate:[[mainContract startDate] date]];
+            
+            NSString *str = [[NSString alloc] initWithFormat:@"%ld.%ld.%ld",[components day],[components month],[components year]];
+            [gregorian release];
+            return str;
+        }
+    }
+    return @"---";
+}
+
+- (NSString *)secondContractStartDate {
+    if (staffData) {
+        if ([[staffData contracts] count] > 1) {
+            Contract *secondContract = [[staffData contracts] objectAtIndex:1];
+            NSCalendar *gregorian = [[NSCalendar alloc]
+                                     initWithCalendarIdentifier:NSGregorianCalendar];
+            
+            NSDateComponents *components =
+            [gregorian components:(NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit) fromDate:[[secondContract startDate] date]];
+            
+            NSString *str = [[NSString alloc] initWithFormat:@"%ld.%ld.%ld",[components day],[components month],[components year]];
+            [gregorian release];
+            return str;
+        }
+    }
+    return @"---";
+}
+
+- (NSString *)mainContractEndDate {
+    if (staffData) {
+        if ([[staffData contracts] count] > 0) {
+            Contract *mainContract = [[staffData contracts] objectAtIndex:0];
+            NSCalendar *gregorian = [[NSCalendar alloc]
+                                     initWithCalendarIdentifier:NSGregorianCalendar];
+            
+            NSDateComponents *components =
+            [gregorian components:(NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit) fromDate:[[mainContract endDate] date]];
+            
+            NSString *str = [[NSString alloc] initWithFormat:@"%ld.%ld.%ld",[components day],[components month],[components year]];
+            [gregorian release];
+            return str;
+        }
+    }
+    return @"---";
+}
+
+- (NSString *)secondContractEndDate {
+    if (staffData) {
+        if ([[staffData contracts] count] > 1) {
+            Contract *secondContract = [[staffData contracts] objectAtIndex:1];
+            NSCalendar *gregorian = [[NSCalendar alloc]
+                                     initWithCalendarIdentifier:NSGregorianCalendar];
+            
+            NSDateComponents *components =
+            [gregorian components:(NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit) fromDate:[[secondContract endDate] date]];
+            
+            NSString *str = [[NSString alloc] initWithFormat:@"%ld.%ld.%ld",[components day],[components month],[components year]];
+            [gregorian release];
+            return str;
+        }
+    }
+    return @"---";
+}
+
+- (NSString *)mainContractSquadStatus {
+    if (staffData) {
+        if ([[staffData contracts] count] > 0) {
+            Contract *mainContract = [[staffData contracts] objectAtIndex:0];
+            return [[mainContract squadStatusStrings] objectAtIndex:[mainContract currentSquadStatus]];
+        }
+    }
+    return @"---";
+}
+
+- (NSString *)secondContractSquadStatus {
+    if (staffData) {
+        if ([[staffData contracts] count] > 1) {
+            Contract *secondContract = [[staffData contracts] objectAtIndex:1];
+            return [[secondContract squadStatusStrings] objectAtIndex:[secondContract currentSquadStatus]];
+        }
+    }
+    return @"---";
+}
+
+- (int)mainContractHappiness {
+    if (staffData) {
+        if ([[staffData contracts] count] > 0) {
+            Contract *mainContract = [[staffData contracts] objectAtIndex:0];
+            return [mainContract happiness];
+        }
+    }
+    return 0;
+}
+
+- (int)secondContractHappiness {
+    if (staffData) {
+        if ([[staffData contracts] count] > 1) {
+            Contract *secondContract = [[staffData contracts] objectAtIndex:1];
+            return [secondContract happiness];
+        }
+    }
+    return 0;
+}
+
 - (NSString *)name {
 	if (personData) {
 		if ([personData commonNameID]>-1 && [personData commonNameID]<[(NSMutableArray *)[controller valueForKeyPath:@"database.commonNames"] count]) {
@@ -136,6 +248,41 @@ unknownData1, unknownChar1, theNewFirstName, theNewSurname, theNewCommonName, tr
 	return @"---";
 }
 
+- (NSString *)secondContractClubName {
+    if ([[staffData contracts] count] > 1) {
+        Contract *secondContract = [[staffData contracts] objectAtIndex:1];
+        if ([secondContract clubID] > 1) {
+            if (![[[[[controller database] clubs] objectAtIndex:[secondContract clubID]] name] isEqualToString:@"---"]) {
+                return [[[[controller database] clubs] objectAtIndex:[secondContract clubID]] name];
+            }
+        }
+    }
+    
+    return @"---";
+}
+
+- (NSString *)mainContractClubName {
+    if ([[staffData contracts] count] > 0) {
+        Contract *mainContract = [[staffData contracts] objectAtIndex:0];
+        if ([mainContract clubID] > 1) {
+            if (![[[[[controller database] clubs] objectAtIndex:[mainContract clubID]] name] isEqualToString:@"---"]) {
+                return [[[[controller database] clubs] objectAtIndex:[mainContract clubID]] name];
+            }
+        }
+    }
+    
+    return @"---";
+}
+
+- (int) secondContractWage {
+    if ([[staffData contracts] count] > 1) {
+        return [[[staffData contracts] objectAtIndex:1] weeklyWage];
+    }
+    else {
+        return 0;
+    }
+}
+
 - (NSString *)typeString {
 	if (playerData && nonPlayerData) { return NSLocalizedString(@"Player / Non-Player", @"person job"); }
 	else if (playerData) { return NSLocalizedString(@"Player", @"person job"); }
@@ -151,6 +298,30 @@ unknownData1, unknownChar1, theNewFirstName, theNewSurname, theNewCommonName, tr
 	else if (databaseClass==DBC_VIRTUAL_PLAYER) { return NSLocalizedString(@"Virtual Player", @"person job"); }
 	else if (retiredPersonData) { return NSLocalizedString(@"Retired Person", @"person job"); }
 	else { return @"---"; }
+}
+
+- (NSString *) mainContractType {
+    if ([[staffData contracts] count] > 0) {
+        Contract *mainContract = [[staffData contracts] objectAtIndex:0];
+        
+        int contractTypeIndex = [[NSNumber numberWithChar:[mainContract type]] intValue];
+        return [[mainContract typeStrings] objectAtIndex:contractTypeIndex];
+    }
+    else {
+        return @"Free Agent";
+    }
+}
+
+- (NSString *) secondContractType {
+    if ([[staffData contracts] count] > 1) {
+        Contract *secondContract = [[staffData contracts] objectAtIndex:1];
+        
+        int contractTypeIndex = [[NSNumber numberWithChar:[secondContract type]] intValue];
+        return [[secondContract typeStrings] objectAtIndex:contractTypeIndex];
+    }
+    else {
+        return @"Free Agent";
+    }
 }
 
 - (NSString *)jobString {
