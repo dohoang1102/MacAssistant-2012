@@ -266,8 +266,8 @@
 		E2975E1B15E3046000A07581 /* Holy See.png in Resources */ = {isa = PBXBuildFile; fileRef = E2975CC015E3045E00A07581 /* Holy See.png */; };
 		E2975E1C15E3046000A07581 /* Honduras.png in Resources */ = {isa = PBXBuildFile; fileRef = E2975CC115E3045E00A07581 /* Honduras.png */; };
 		E2975E1D15E3046000A07581 /* Honduras.png in Resources */ = {isa = PBXBuildFile; fileRef = E2975CC115E3045E00A07581 /* Honduras.png */; };
-		E2975E1E15E3046000A07581 /* Hong Kong.png in Resources */ = {isa = PBXBuildFile; fileRef = E2975CC215E3045E00A07581 /* Hong Kong.png */; };
-		E2975E1F15E3046000A07581 /* Hong Kong.png in Resources */ = {isa = PBXBuildFile; fileRef = E2975CC215E3045E00A07581 /* Hong Kong.png */; };
+		E2975E1E15E3046000A07581 /* Hong Kong (China PR).png in Resources */ = {isa = PBXBuildFile; fileRef = E2975CC215E3045E00A07581 /* Hong Kong (China PR).png */; };
+		E2975E1F15E3046000A07581 /* Hong Kong (China PR).png in Resources */ = {isa = PBXBuildFile; fileRef = E2975CC215E3045E00A07581 /* Hong Kong (China PR).png */; };
 		E2975E2015E3046000A07581 /* Hungary.png in Resources */ = {isa = PBXBuildFile; fileRef = E2975CC315E3045E00A07581 /* Hungary.png */; };
 		E2975E2115E3046000A07581 /* Hungary.png in Resources */ = {isa = PBXBuildFile; fileRef = E2975CC315E3045E00A07581 /* Hungary.png */; };
 		E2975E2215E3046000A07581 /* Iceland.png in Resources */ = {isa = PBXBuildFile; fileRef = E2975CC415E3045E00A07581 /* Iceland.png */; };
@@ -1405,7 +1405,7 @@
 		E2975CBF15E3045E00A07581 /* Heard Island and McDonald Islands.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Heard Island and McDonald Islands.png"; sourceTree = "<group>"; };
 		E2975CC015E3045E00A07581 /* Holy See.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Holy See.png"; sourceTree = "<group>"; };
 		E2975CC115E3045E00A07581 /* Honduras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Honduras.png; sourceTree = "<group>"; };
-		E2975CC215E3045E00A07581 /* Hong Kong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hong Kong.png"; sourceTree = "<group>"; };
+		E2975CC215E3045E00A07581 /* Hong Kong (China PR).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hong Kong (China PR).png"; sourceTree = "<group>"; };
 		E2975CC315E3045E00A07581 /* Hungary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hungary.png; sourceTree = "<group>"; };
 		E2975CC415E3045E00A07581 /* Iceland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Iceland.png; sourceTree = "<group>"; };
 		E2975CC515E3045E00A07581 /* India.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = India.png; sourceTree = "<group>"; };
@@ -3139,7 +3139,7 @@
 				E2975CBF15E3045E00A07581 /* Heard Island and McDonald Islands.png */,
 				E2975CC015E3045E00A07581 /* Holy See.png */,
 				E2975CC115E3045E00A07581 /* Honduras.png */,
-				E2975CC215E3045E00A07581 /* Hong Kong.png */,
+				E2975CC215E3045E00A07581 /* Hong Kong (China PR).png */,
 				E2975CC315E3045E00A07581 /* Hungary.png */,
 				E2975CC415E3045E00A07581 /* Iceland.png */,
 				E2975CC515E3045E00A07581 /* India.png */,
@@ -3482,7 +3482,7 @@
 				E2975E1815E3046000A07581 /* Heard Island and McDonald Islands.png in Resources */,
 				E2975E1A15E3046000A07581 /* Holy See.png in Resources */,
 				E2975E1C15E3046000A07581 /* Honduras.png in Resources */,
-				E2975E1E15E3046000A07581 /* Hong Kong.png in Resources */,
+				E2975E1E15E3046000A07581 /* Hong Kong (China PR).png in Resources */,
 				E2975E2015E3046000A07581 /* Hungary.png in Resources */,
 				E2975E2215E3046000A07581 /* Iceland.png in Resources */,
 				E2975E2415E3046000A07581 /* India.png in Resources */,
@@ -3756,7 +3756,7 @@
 				E2975E1915E3046000A07581 /* Heard Island and McDonald Islands.png in Resources */,
 				E2975E1B15E3046000A07581 /* Holy See.png in Resources */,
 				E2975E1D15E3046000A07581 /* Honduras.png in Resources */,
-				E2975E1F15E3046000A07581 /* Hong Kong.png in Resources */,
+				E2975E1F15E3046000A07581 /* Hong Kong (China PR).png in Resources */,
 				E2975E2115E3046000A07581 /* Hungary.png in Resources */,
 				E2975E2315E3046000A07581 /* Iceland.png in Resources */,
 				E2975E2515E3046000A07581 /* India.png in Resources */,
