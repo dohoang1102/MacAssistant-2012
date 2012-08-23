@@ -104,6 +104,19 @@
 		tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Sale Value\'" withString:@"playerData.value"];
 		tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Asking Price\'" withString:@"playerData.askingPrice"];
         tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Condition\'" withString:@"playerData.conditionPercent"];
+        tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Adaptability\'" withString:@"personStats.adaptability"];
+        tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Ambition\'" withString:@"personStats.admbition"];
+        tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Controversy\'" withString:@"personStats.controversy"];
+        tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Loyalty\'" withString:@"personStats.loyalty"];
+        tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Pressure\'" withString:@"personStats.pressure"];
+        tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Professionalism\'" withString:@"personStats.professionalism"];
+        tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Sportsmanship\'" withString:@"personStats.sportsmanship"];
+        tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Temperament\'" withString:@"personStats.temperament"];
+        tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Home Reputation\'" withString:@"playerData.homeReputation"];
+        tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Current Reputation\'" withString:@"playerData.currentReputation"];
+        tmp = [tmp stringByReplacingOccurrencesOfString:@"\'World Reputation\'" withString:@"playerData.worldReputation"];
+        tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Fitness\'" withString:@"playerData.fitnessPercent"];
+        tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Jadedness\'" withString:@"playerData.jadedness"];
         
         // 3rd Predicate
 		tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Position\' == \'GK\'" withString:@"playerStats.goalkeeper >= 15"];
@@ -121,6 +134,17 @@
 		tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Position\' == \'AM C\'" withString:@"playerStats.centralAttackingMidfielder >= 15"];
 		tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Position\' == \'AM L\'" withString:@"playerStats.leftAttackingMidfielder >= 15"];
 		tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Position\' == \'F C\'" withString:@"playerStats.centreForward >= 15"];
+        
+        // 4th Predicate
+        tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Contract Start Date\'" withString:@"mainContractStartNSDate"];
+        tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Contract End Date\'" withString:@"mainContractEndNSDate"];
+        
+        // 5th Predicate
+        tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Main Contract Type\'" withString:@"mainContractType"];
+        tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Second Contract Type\'" withString:@"secondContractType"];
+        
+        // 6th Predicate
+        tmp = [tmp stringByReplacingOccurrencesOfString:@"\'Squad Status\'" withString:@"mainContractSquadStatus"];
 		
 		[expression appendFormat:@"(%@)", tmp];
 	}

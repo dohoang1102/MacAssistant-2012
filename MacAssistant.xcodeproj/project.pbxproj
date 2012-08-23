@@ -69,8 +69,6 @@
 		E271961F15E6514D00547633 /* 10star.png in Resources */ = {isa = PBXBuildFile; fileRef = E271960915E6514D00547633 /* 10star.png */; };
 		E271962115E659AC00547633 /* FYR of Macedonia.png in Resources */ = {isa = PBXBuildFile; fileRef = E271962015E659AC00547633 /* FYR of Macedonia.png */; };
 		E271962215E659AC00547633 /* FYR of Macedonia.png in Resources */ = {isa = PBXBuildFile; fileRef = E271962015E659AC00547633 /* FYR of Macedonia.png */; };
-		E271962415E659BD00547633 /* Holland.png in Resources */ = {isa = PBXBuildFile; fileRef = E271962315E659BD00547633 /* Holland.png */; };
-		E271962515E659BD00547633 /* Holland.png in Resources */ = {isa = PBXBuildFile; fileRef = E271962315E659BD00547633 /* Holland.png */; };
 		E271962715E659CE00547633 /* The Netherlands.png in Resources */ = {isa = PBXBuildFile; fileRef = E271962615E659CE00547633 /* The Netherlands.png */; };
 		E271962815E659CE00547633 /* The Netherlands.png in Resources */ = {isa = PBXBuildFile; fileRef = E271962615E659CE00547633 /* The Netherlands.png */; };
 		E28116E015D97BA900FAD7DD /* defaultperson_male.png in Resources */ = {isa = PBXBuildFile; fileRef = E28116DF15D97BA900FAD7DD /* defaultperson_male.png */; };
@@ -220,8 +218,6 @@
 		E2975DD715E3046000A07581 /* Egypt.png in Resources */ = {isa = PBXBuildFile; fileRef = E2975C9E15E3045D00A07581 /* Egypt.png */; };
 		E2975DD815E3046000A07581 /* El Salvador.png in Resources */ = {isa = PBXBuildFile; fileRef = E2975C9F15E3045D00A07581 /* El Salvador.png */; };
 		E2975DD915E3046000A07581 /* El Salvador.png in Resources */ = {isa = PBXBuildFile; fileRef = E2975C9F15E3045D00A07581 /* El Salvador.png */; };
-		E2975DDA15E3046000A07581 /* England.png in Resources */ = {isa = PBXBuildFile; fileRef = E2975CA015E3045D00A07581 /* England.png */; };
-		E2975DDB15E3046000A07581 /* England.png in Resources */ = {isa = PBXBuildFile; fileRef = E2975CA015E3045D00A07581 /* England.png */; };
 		E2975DDC15E3046000A07581 /* Equatorial Guinea.png in Resources */ = {isa = PBXBuildFile; fileRef = E2975CA115E3045D00A07581 /* Equatorial Guinea.png */; };
 		E2975DDD15E3046000A07581 /* Equatorial Guinea.png in Resources */ = {isa = PBXBuildFile; fileRef = E2975CA115E3045D00A07581 /* Equatorial Guinea.png */; };
 		E2975DDE15E3046000A07581 /* Eritrea.png in Resources */ = {isa = PBXBuildFile; fileRef = E2975CA215E3045D00A07581 /* Eritrea.png */; };
@@ -1300,7 +1296,6 @@
 		E271960815E6514D00547633 /* 9star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9star.png; sourceTree = "<group>"; };
 		E271960915E6514D00547633 /* 10star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10star.png; sourceTree = "<group>"; };
 		E271962015E659AC00547633 /* FYR of Macedonia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FYR of Macedonia.png"; sourceTree = "<group>"; };
-		E271962315E659BD00547633 /* Holland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Holland.png; sourceTree = "<group>"; };
 		E271962615E659CE00547633 /* The Netherlands.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The Netherlands.png"; sourceTree = "<group>"; };
 		E28116DF15D97BA900FAD7DD /* defaultperson_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultperson_male.png; sourceTree = "<group>"; };
 		E28116E115D9848800FAD7DD /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
@@ -1384,7 +1379,6 @@
 		E2975C9D15E3045D00A07581 /* Ecuador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ecuador.png; sourceTree = "<group>"; };
 		E2975C9E15E3045D00A07581 /* Egypt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Egypt.png; sourceTree = "<group>"; };
 		E2975C9F15E3045D00A07581 /* El Salvador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "El Salvador.png"; sourceTree = "<group>"; };
-		E2975CA015E3045D00A07581 /* England.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = England.png; sourceTree = "<group>"; };
 		E2975CA115E3045D00A07581 /* Equatorial Guinea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Equatorial Guinea.png"; sourceTree = "<group>"; };
 		E2975CA215E3045D00A07581 /* Eritrea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eritrea.png; sourceTree = "<group>"; };
 		E2975CA315E3045D00A07581 /* Estonia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Estonia.png; sourceTree = "<group>"; };
@@ -3048,7 +3042,6 @@
 			isa = PBXGroup;
 			children = (
 				E2975C5D15E3045D00A07581 /* Afghanistan.png */,
-				E271962315E659BD00547633 /* Holland.png */,
 				E271962615E659CE00547633 /* The Netherlands.png */,
 				E271962015E659AC00547633 /* FYR of Macedonia.png */,
 				E2975C5E15E3045D00A07581 /* Aland Islands.png */,
@@ -3117,7 +3110,6 @@
 				E2975C9D15E3045D00A07581 /* Ecuador.png */,
 				E2975C9E15E3045D00A07581 /* Egypt.png */,
 				E2975C9F15E3045D00A07581 /* El Salvador.png */,
-				E2975CA015E3045D00A07581 /* England.png */,
 				E2975CA115E3045D00A07581 /* Equatorial Guinea.png */,
 				E2975CA215E3045D00A07581 /* Eritrea.png */,
 				E2975CA315E3045D00A07581 /* Estonia.png */,
@@ -3460,7 +3452,6 @@
 				E2975DD415E3046000A07581 /* Ecuador.png in Resources */,
 				E2975DD615E3046000A07581 /* Egypt.png in Resources */,
 				E2975DD815E3046000A07581 /* El Salvador.png in Resources */,
-				E2975DDA15E3046000A07581 /* England.png in Resources */,
 				E2975DDC15E3046000A07581 /* Equatorial Guinea.png in Resources */,
 				E2975DDE15E3046000A07581 /* Eritrea.png in Resources */,
 				E2975DE015E3046000A07581 /* Estonia.png in Resources */,
@@ -3652,7 +3643,6 @@
 				E271961C15E6514D00547633 /* 9star.png in Resources */,
 				E271961E15E6514D00547633 /* 10star.png in Resources */,
 				E271962115E659AC00547633 /* FYR of Macedonia.png in Resources */,
-				E271962415E659BD00547633 /* Holland.png in Resources */,
 				E271962715E659CE00547633 /* The Netherlands.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3748,7 +3738,6 @@
 				E2975DD515E3046000A07581 /* Ecuador.png in Resources */,
 				E2975DD715E3046000A07581 /* Egypt.png in Resources */,
 				E2975DD915E3046000A07581 /* El Salvador.png in Resources */,
-				E2975DDB15E3046000A07581 /* England.png in Resources */,
 				E2975DDD15E3046000A07581 /* Equatorial Guinea.png in Resources */,
 				E2975DDF15E3046000A07581 /* Eritrea.png in Resources */,
 				E2975DE115E3046000A07581 /* Estonia.png in Resources */,
@@ -3940,7 +3929,6 @@
 				E271961D15E6514D00547633 /* 9star.png in Resources */,
 				E271961F15E6514D00547633 /* 10star.png in Resources */,
 				E271962215E659AC00547633 /* FYR of Macedonia.png in Resources */,
-				E271962515E659BD00547633 /* Holland.png in Resources */,
 				E271962815E659CE00547633 /* The Netherlands.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

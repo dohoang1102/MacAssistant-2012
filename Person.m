@@ -68,6 +68,26 @@ unknownData1, unknownChar1, theNewFirstName, theNewSurname, theNewCommonName, tr
     return @"---";
 }
 
+- (NSDate *)mainContractStartNSDate {
+    if (staffData) {
+        if ([[staffData contracts] count] > 0) {
+            Contract *mainContract = [[staffData contracts] objectAtIndex:0];
+            return [[mainContract startDate] date];
+        }
+    }
+    return nil;
+}
+
+- (NSDate *)mainContractEndNSDate {
+    if (staffData) {
+        if ([[staffData contracts] count] > 0) {
+            Contract *mainContract = [[staffData contracts] objectAtIndex:0];
+            return [[mainContract endDate] date];
+        }
+    }
+    return nil;
+}
+
 - (NSString *)secondContractStartDate {
     if (staffData) {
         if ([[staffData contracts] count] > 1) {
@@ -126,7 +146,12 @@ unknownData1, unknownChar1, theNewFirstName, theNewSurname, theNewCommonName, tr
     if (staffData) {
         if ([[staffData contracts] count] > 0) {
             Contract *mainContract = [[staffData contracts] objectAtIndex:0];
-            return [[mainContract squadStatusStrings] objectAtIndex:[mainContract currentSquadStatus]];
+            if ([mainContract currentSquadStatus] >= 0 && [mainContract currentSquadStatus] <= 7) {
+                return [[mainContract squadStatusStrings] objectAtIndex:[mainContract currentSquadStatus]];
+            }
+            else {
+                NSLog(@"Out of Bounds for player %d, value was %d", [self rowID], [mainContract currentSquadStatus]);
+            }
         }
     }
     return @"---";
@@ -136,7 +161,12 @@ unknownData1, unknownChar1, theNewFirstName, theNewSurname, theNewCommonName, tr
     if (staffData) {
         if ([[staffData contracts] count] > 1) {
             Contract *secondContract = [[staffData contracts] objectAtIndex:1];
-            return [[secondContract squadStatusStrings] objectAtIndex:[secondContract currentSquadStatus]];
+            if ([secondContract currentSquadStatus] >= 0 && [secondContract currentSquadStatus] <= 7) {
+                return [[secondContract squadStatusStrings] objectAtIndex:[secondContract currentSquadStatus]];
+            }
+            else {
+                NSLog(@"Out of Bounds for player %d, value was %d", [self rowID], [secondContract currentSquadStatus]);
+            }
         }
     }
     return @"---";

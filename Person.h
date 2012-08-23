@@ -84,16 +84,16 @@
 - (NSString *)dobPreviewString;
 - (NSString *)mainContractType;
 - (NSString *)mainContractStartDate;
+- (NSDate *)mainContractStartNSDate;
+- (NSDate *)mainContractEndNSDate;
 - (NSString *)mainContractEndDate;
 - (NSString *)mainContractSquadStatus;
-- (NSString *)mainContractTransferStatus;
 - (NSString *)mainContractClubName;
 - (int)mainContractHappiness;
 - (NSString *)secondContractType;
 - (NSString *)secondContractStartDate;
 - (NSString *)secondContractEndDate;
 - (NSString *)secondContractSquadStatus;
-- (NSString *)secondContractTransferStatus;
 - (NSString *)secondContractClubName;
 - (int)secondContractWage;
 - (int)secondContractHappiness;
