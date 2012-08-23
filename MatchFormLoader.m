@@ -14,7 +14,6 @@
 + (MatchForm *)readFromData:(NSData *)data atOffset:(unsigned int *)byteOffset
 {
 	char cbuffer;
-    short sbuffer;
 	int ibuffer;
 	
 	unsigned int offset = *byteOffset;

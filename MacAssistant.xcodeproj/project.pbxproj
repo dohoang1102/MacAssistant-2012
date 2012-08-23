@@ -12,11 +12,6 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		E20D2BC812D9F32E00A0238C /* SXGeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BC312D9F32E00A0238C /* SXGeneralViewController.m */; };
-		E20D2BC912D9F32E00A0238C /* SXLanguagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BC512D9F32E00A0238C /* SXLanguagesViewController.m */; };
-		E20D2BCA12D9F32E00A0238C /* SXMainMediaController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BC712D9F32E00A0238C /* SXMainMediaController.m */; };
-		E20D2BD512D9F34200A0238C /* MBPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BD412D9F34200A0238C /* MBPreferencesController.m */; };
-		E20D2BE012D9F35700A0238C /* SXUpdatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BDF12D9F35700A0238C /* SXUpdatesViewController.m */; };
 		E20D2BF512D9F3A500A0238C /* LocationDaysSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BF412D9F3A500A0238C /* LocationDaysSaver.m */; };
 		E20D2BF812D9F3AF00A0238C /* LocationDaysLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BF712D9F3AF00A0238C /* LocationDaysLoader.m */; };
 		E20D2C0312D9F3C100A0238C /* LocationDays.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C0212D9F3C100A0238C /* LocationDays.m */; };
@@ -26,7 +21,6 @@
 		E20D2C2112D9F3FA00A0238C /* TreatedNations.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C2012D9F3FA00A0238C /* TreatedNations.m */; };
 		E20D2C2412D9F40200A0238C /* TreatedNationsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C2312D9F40200A0238C /* TreatedNationsLoader.m */; };
 		E20D2C2712D9F41000A0238C /* TreatedNationsSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C2612D9F41000A0238C /* TreatedNationsSaver.m */; };
-		E20D2C3712D9F42400A0238C /* SXOutlineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C3612D9F42400A0238C /* SXOutlineViewCell.m */; };
 		E20D2C4F12D9F4D200A0238C /* Derby.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C4E12D9F4D200A0238C /* Derby.m */; };
 		E20D2C5212D9F4DE00A0238C /* DerbyLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C5112D9F4DE00A0238C /* DerbyLoader.m */; };
 		E20D2C5512D9F4E700A0238C /* DerbySaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C5412D9F4E700A0238C /* DerbySaver.m */; };
@@ -1120,11 +1114,6 @@
 		E2A4864D15DE8218004A26B5 /* PlayerStatsTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E26586601236C7BB00545D25 /* PlayerStatsTransformer.m */; };
 		E2A4864E15DE8218004A26B5 /* PlayerRatingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E26586621236C7BB00545D25 /* PlayerRatingTransformer.m */; };
 		E2A4864F15DE8218004A26B5 /* ContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = E26586781236CDF400545D25 /* ContentController.m */; };
-		E2A4865015DE8218004A26B5 /* SXGeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BC312D9F32E00A0238C /* SXGeneralViewController.m */; };
-		E2A4865115DE8218004A26B5 /* SXLanguagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BC512D9F32E00A0238C /* SXLanguagesViewController.m */; };
-		E2A4865215DE8218004A26B5 /* SXMainMediaController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BC712D9F32E00A0238C /* SXMainMediaController.m */; };
-		E2A4865315DE8218004A26B5 /* MBPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BD412D9F34200A0238C /* MBPreferencesController.m */; };
-		E2A4865415DE8218004A26B5 /* SXUpdatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BDF12D9F35700A0238C /* SXUpdatesViewController.m */; };
 		E2A4865515DE8218004A26B5 /* LocationDaysSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BF412D9F3A500A0238C /* LocationDaysSaver.m */; };
 		E2A4865615DE8218004A26B5 /* LocationDaysLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2BF712D9F3AF00A0238C /* LocationDaysLoader.m */; };
 		E2A4865715DE8218004A26B5 /* LocationDays.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C0212D9F3C100A0238C /* LocationDays.m */; };
@@ -1134,7 +1123,6 @@
 		E2A4865B15DE8218004A26B5 /* TreatedNations.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C2012D9F3FA00A0238C /* TreatedNations.m */; };
 		E2A4865C15DE8218004A26B5 /* TreatedNationsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C2312D9F40200A0238C /* TreatedNationsLoader.m */; };
 		E2A4865D15DE8218004A26B5 /* TreatedNationsSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C2612D9F41000A0238C /* TreatedNationsSaver.m */; };
-		E2A4865E15DE8218004A26B5 /* SXOutlineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C3612D9F42400A0238C /* SXOutlineViewCell.m */; };
 		E2A4865F15DE8218004A26B5 /* Derby.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C4E12D9F4D200A0238C /* Derby.m */; };
 		E2A4866015DE8218004A26B5 /* DerbyLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C5112D9F4DE00A0238C /* DerbyLoader.m */; };
 		E2A4866115DE8218004A26B5 /* DerbySaver.m in Sources */ = {isa = PBXBuildFile; fileRef = E20D2C5412D9F4E700A0238C /* DerbySaver.m */; };
@@ -1167,8 +1155,6 @@
 		E2EF10E2122C606A00F08172 /* boss-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E2EF10E1122C606A00F08172 /* boss-icon.png */; };
 		E2F2F5D015C1C96C00BF7661 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2F2F5CF15C1C96C00BF7661 /* Preferences.xib */; };
 		E2F2F5D415C1D2F100BF7661 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F2F5D315C1D2F100BF7661 /* PreferencesController.m */; };
-		E2FA5ED615E285C4008C82DE /* ImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E23EB9FD15E26F0D0081BEFA /* ImageTextCell.m */; };
-		E2FA5ED715E285C5008C82DE /* ImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E23EB9FD15E26F0D0081BEFA /* ImageTextCell.m */; };
 		E2FA5EDA15E28D8E008C82DE /* MAImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FA5ED915E28D8E008C82DE /* MAImageTextCell.m */; };
 		E2FA5EDB15E28D8E008C82DE /* MAImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FA5ED915E28D8E008C82DE /* MAImageTextCell.m */; };
 		E2FA5EDE15E29B24008C82DE /* England.png in Resources */ = {isa = PBXBuildFile; fileRef = E2FA5EDD15E29B24008C82DE /* England.png */; };
@@ -1212,17 +1198,6 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* MacAssistant-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MacAssistant-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* MacAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E20D2BB812D9F31100A0238C /* MGScopeBarDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGScopeBarDelegateProtocol.h; sourceTree = "<group>"; };
-		E20D2BC212D9F32E00A0238C /* SXGeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXGeneralViewController.h; sourceTree = "<group>"; };
-		E20D2BC312D9F32E00A0238C /* SXGeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXGeneralViewController.m; sourceTree = "<group>"; };
-		E20D2BC412D9F32E00A0238C /* SXLanguagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXLanguagesViewController.h; sourceTree = "<group>"; };
-		E20D2BC512D9F32E00A0238C /* SXLanguagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXLanguagesViewController.m; sourceTree = "<group>"; };
-		E20D2BC612D9F32E00A0238C /* SXMainMediaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXMainMediaController.h; sourceTree = "<group>"; };
-		E20D2BC712D9F32E00A0238C /* SXMainMediaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXMainMediaController.m; sourceTree = "<group>"; };
-		E20D2BD312D9F34200A0238C /* MBPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPreferencesController.h; sourceTree = "<group>"; };
-		E20D2BD412D9F34200A0238C /* MBPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPreferencesController.m; sourceTree = "<group>"; };
-		E20D2BDE12D9F35700A0238C /* SXUpdatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXUpdatesViewController.h; sourceTree = "<group>"; };
-		E20D2BDF12D9F35700A0238C /* SXUpdatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXUpdatesViewController.m; sourceTree = "<group>"; };
 		E20D2BF312D9F3A500A0238C /* LocationDaysSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDaysSaver.h; sourceTree = "<group>"; };
 		E20D2BF412D9F3A500A0238C /* LocationDaysSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDaysSaver.m; sourceTree = "<group>"; };
 		E20D2BF612D9F3AF00A0238C /* LocationDaysLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDaysLoader.h; sourceTree = "<group>"; };
@@ -1241,8 +1216,6 @@
 		E20D2C2312D9F40200A0238C /* TreatedNationsLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreatedNationsLoader.m; sourceTree = "<group>"; };
 		E20D2C2512D9F41000A0238C /* TreatedNationsSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreatedNationsSaver.h; sourceTree = "<group>"; };
 		E20D2C2612D9F41000A0238C /* TreatedNationsSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreatedNationsSaver.m; sourceTree = "<group>"; };
-		E20D2C3512D9F42400A0238C /* SXOutlineViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXOutlineViewCell.h; sourceTree = "<group>"; };
-		E20D2C3612D9F42400A0238C /* SXOutlineViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXOutlineViewCell.m; sourceTree = "<group>"; };
 		E20D2C4D12D9F4D200A0238C /* Derby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Derby.h; sourceTree = "<group>"; };
 		E20D2C4E12D9F4D200A0238C /* Derby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Derby.m; sourceTree = "<group>"; };
 		E20D2C5012D9F4DE00A0238C /* DerbyLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DerbyLoader.h; sourceTree = "<group>"; };
@@ -1278,8 +1251,6 @@
 		E20D2CF312D9F99900A0238C /* CompetitionHistorySaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompetitionHistorySaver.m; sourceTree = "<group>"; };
 		E211183515C20D2F00CEEFB6 /* ma12icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ma12icon.icns; sourceTree = "<group>"; };
 		E23EB9F915E1A1DC0081BEFA /* RegexKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RegexKit.framework; sourceTree = "<group>"; };
-		E23EB9FC15E26F0D0081BEFA /* ImageTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageTextCell.h; sourceTree = "<group>"; };
-		E23EB9FD15E26F0D0081BEFA /* ImageTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageTextCell.m; sourceTree = "<group>"; };
 		E25EDE9915BEB4AD00019FA3 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		E25EDE9D15BEBE2F00019FA3 /* CurrencyFormatTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyFormatTransformer.h; sourceTree = "<group>"; };
 		E25EDE9E15BEBE2F00019FA3 /* CurrencyFormatTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyFormatTransformer.m; sourceTree = "<group>"; };
@@ -2176,7 +2147,6 @@
 			isa = PBXGroup;
 			children = (
 				E221ED1815BB071700B79B32 /* User Interface */,
-				E20D2BAF12D9F30600A0238C /* OtherDefaultSources */,
 				E29AC7761221AE8D00097EB5 /* Support Classes */,
 				E29AC7721221AE7C00097EB5 /* Definitions */,
 				E29AC75C1221AE7500097EB5 /* Common Classes */,
@@ -2226,26 +2196,6 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E20D2BAF12D9F30600A0238C /* OtherDefaultSources */ = {
-			isa = PBXGroup;
-			children = (
-				E20D2C3512D9F42400A0238C /* SXOutlineViewCell.h */,
-				E20D2C3612D9F42400A0238C /* SXOutlineViewCell.m */,
-				E20D2BDE12D9F35700A0238C /* SXUpdatesViewController.h */,
-				E20D2BDF12D9F35700A0238C /* SXUpdatesViewController.m */,
-				E20D2BD312D9F34200A0238C /* MBPreferencesController.h */,
-				E20D2BD412D9F34200A0238C /* MBPreferencesController.m */,
-				E20D2BC212D9F32E00A0238C /* SXGeneralViewController.h */,
-				E20D2BC312D9F32E00A0238C /* SXGeneralViewController.m */,
-				E20D2BC412D9F32E00A0238C /* SXLanguagesViewController.h */,
-				E20D2BC512D9F32E00A0238C /* SXLanguagesViewController.m */,
-				E20D2BC612D9F32E00A0238C /* SXMainMediaController.h */,
-				E20D2BC712D9F32E00A0238C /* SXMainMediaController.m */,
-				E20D2BB812D9F31100A0238C /* MGScopeBarDelegateProtocol.h */,
-			);
-			name = OtherDefaultSources;
 			sourceTree = "<group>";
 		};
 		E221ED1815BB071700B79B32 /* User Interface */ = {
@@ -2310,8 +2260,6 @@
 		E28A614315BB891000089DE0 /* SubClasses */ = {
 			isa = PBXGroup;
 			children = (
-				E23EB9FC15E26F0D0081BEFA /* ImageTextCell.h */,
-				E23EB9FD15E26F0D0081BEFA /* ImageTextCell.m */,
 				E28CD09E15BDB52C003BE96B /* MAView.h */,
 				E28CD09F15BDB52C003BE96B /* MAView.m */,
 				E2FA5ED815E28D8E008C82DE /* MAImageTextCell.h */,
@@ -4188,11 +4136,6 @@
 				E26586631236C7BB00545D25 /* PlayerStatsTransformer.m in Sources */,
 				E26586641236C7BB00545D25 /* PlayerRatingTransformer.m in Sources */,
 				E26586791236CDF400545D25 /* ContentController.m in Sources */,
-				E20D2BC812D9F32E00A0238C /* SXGeneralViewController.m in Sources */,
-				E20D2BC912D9F32E00A0238C /* SXLanguagesViewController.m in Sources */,
-				E20D2BCA12D9F32E00A0238C /* SXMainMediaController.m in Sources */,
-				E20D2BD512D9F34200A0238C /* MBPreferencesController.m in Sources */,
-				E20D2BE012D9F35700A0238C /* SXUpdatesViewController.m in Sources */,
 				E20D2BF512D9F3A500A0238C /* LocationDaysSaver.m in Sources */,
 				E20D2BF812D9F3AF00A0238C /* LocationDaysLoader.m in Sources */,
 				E20D2C0312D9F3C100A0238C /* LocationDays.m in Sources */,
@@ -4202,7 +4145,6 @@
 				E20D2C2112D9F3FA00A0238C /* TreatedNations.m in Sources */,
 				E20D2C2412D9F40200A0238C /* TreatedNationsLoader.m in Sources */,
 				E20D2C2712D9F41000A0238C /* TreatedNationsSaver.m in Sources */,
-				E20D2C3712D9F42400A0238C /* SXOutlineViewCell.m in Sources */,
 				E20D2C4F12D9F4D200A0238C /* Derby.m in Sources */,
 				E20D2C5212D9F4DE00A0238C /* DerbyLoader.m in Sources */,
 				E20D2C5512D9F4E700A0238C /* DerbySaver.m in Sources */,
@@ -4221,7 +4163,6 @@
 				E25EDE9F15BEBE2F00019FA3 /* CurrencyFormatTransformer.m in Sources */,
 				E2F2F5D415C1D2F100BF7661 /* PreferencesController.m in Sources */,
 				E2864E5215C2AA0000E5F46B /* PlayerStatusTransformer.m in Sources */,
-				E2FA5ED615E285C4008C82DE /* ImageTextCell.m in Sources */,
 				E2FA5EDA15E28D8E008C82DE /* MAImageTextCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4506,11 +4447,6 @@
 				E2A4864D15DE8218004A26B5 /* PlayerStatsTransformer.m in Sources */,
 				E2A4864E15DE8218004A26B5 /* PlayerRatingTransformer.m in Sources */,
 				E2A4864F15DE8218004A26B5 /* ContentController.m in Sources */,
-				E2A4865015DE8218004A26B5 /* SXGeneralViewController.m in Sources */,
-				E2A4865115DE8218004A26B5 /* SXLanguagesViewController.m in Sources */,
-				E2A4865215DE8218004A26B5 /* SXMainMediaController.m in Sources */,
-				E2A4865315DE8218004A26B5 /* MBPreferencesController.m in Sources */,
-				E2A4865415DE8218004A26B5 /* SXUpdatesViewController.m in Sources */,
 				E2A4865515DE8218004A26B5 /* LocationDaysSaver.m in Sources */,
 				E2A4865615DE8218004A26B5 /* LocationDaysLoader.m in Sources */,
 				E2A4865715DE8218004A26B5 /* LocationDays.m in Sources */,
@@ -4520,7 +4456,6 @@
 				E2A4865B15DE8218004A26B5 /* TreatedNations.m in Sources */,
 				E2A4865C15DE8218004A26B5 /* TreatedNationsLoader.m in Sources */,
 				E2A4865D15DE8218004A26B5 /* TreatedNationsSaver.m in Sources */,
-				E2A4865E15DE8218004A26B5 /* SXOutlineViewCell.m in Sources */,
 				E2A4865F15DE8218004A26B5 /* Derby.m in Sources */,
 				E2A4866015DE8218004A26B5 /* DerbyLoader.m in Sources */,
 				E2A4866115DE8218004A26B5 /* DerbySaver.m in Sources */,
@@ -4539,7 +4474,6 @@
 				E2A4866E15DE8218004A26B5 /* CurrencyFormatTransformer.m in Sources */,
 				E2A4866F15DE8218004A26B5 /* PreferencesController.m in Sources */,
 				E2A4867015DE8218004A26B5 /* PlayerStatusTransformer.m in Sources */,
-				E2FA5ED715E285C5008C82DE /* ImageTextCell.m in Sources */,
 				E2FA5EDB15E28D8E008C82DE /* MAImageTextCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

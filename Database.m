@@ -1387,7 +1387,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 					[NSString stringWithFormat:@"%d",i],				// entity
 					[NSString stringWithFormat:@"%d",startingOffset],	// entity start
 					@"Invalid ID",										// entity error
-					nil]; 
+					nil];
 		}
 		else { 
 			[object setController:controller];

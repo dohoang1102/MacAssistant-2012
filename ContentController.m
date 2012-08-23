@@ -19,7 +19,6 @@
 #import "PlayerStatsTransformer.h"
 #import "PlayerRatingTransformer.h"
 #import "SupportFunctions.h"
-#import "ImageTextCell.h"
 
 // Use RegExKit for OS X < 10.7
 #if __MAC_OS_X_VERSION_MAX_ALLOWED < 1070
