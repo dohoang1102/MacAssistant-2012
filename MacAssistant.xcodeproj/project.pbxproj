@@ -67,6 +67,12 @@
 		E271961D15E6514D00547633 /* 9star.png in Resources */ = {isa = PBXBuildFile; fileRef = E271960815E6514D00547633 /* 9star.png */; };
 		E271961E15E6514D00547633 /* 10star.png in Resources */ = {isa = PBXBuildFile; fileRef = E271960915E6514D00547633 /* 10star.png */; };
 		E271961F15E6514D00547633 /* 10star.png in Resources */ = {isa = PBXBuildFile; fileRef = E271960915E6514D00547633 /* 10star.png */; };
+		E271962115E659AC00547633 /* FYR of Macedonia.png in Resources */ = {isa = PBXBuildFile; fileRef = E271962015E659AC00547633 /* FYR of Macedonia.png */; };
+		E271962215E659AC00547633 /* FYR of Macedonia.png in Resources */ = {isa = PBXBuildFile; fileRef = E271962015E659AC00547633 /* FYR of Macedonia.png */; };
+		E271962415E659BD00547633 /* Holland.png in Resources */ = {isa = PBXBuildFile; fileRef = E271962315E659BD00547633 /* Holland.png */; };
+		E271962515E659BD00547633 /* Holland.png in Resources */ = {isa = PBXBuildFile; fileRef = E271962315E659BD00547633 /* Holland.png */; };
+		E271962715E659CE00547633 /* The Netherlands.png in Resources */ = {isa = PBXBuildFile; fileRef = E271962615E659CE00547633 /* The Netherlands.png */; };
+		E271962815E659CE00547633 /* The Netherlands.png in Resources */ = {isa = PBXBuildFile; fileRef = E271962615E659CE00547633 /* The Netherlands.png */; };
 		E28116E015D97BA900FAD7DD /* defaultperson_male.png in Resources */ = {isa = PBXBuildFile; fileRef = E28116DF15D97BA900FAD7DD /* defaultperson_male.png */; };
 		E28116E215D9848800FAD7DD /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = E28116E115D9848800FAD7DD /* dsa_pub.pem */; };
 		E2864E4715C2A88700E5F46B /* status_bid.png in Resources */ = {isa = PBXBuildFile; fileRef = E2864E3E15C2A88700E5F46B /* status_bid.png */; };
@@ -1293,6 +1299,9 @@
 		E271960715E6514D00547633 /* 8star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8star.png; sourceTree = "<group>"; };
 		E271960815E6514D00547633 /* 9star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9star.png; sourceTree = "<group>"; };
 		E271960915E6514D00547633 /* 10star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10star.png; sourceTree = "<group>"; };
+		E271962015E659AC00547633 /* FYR of Macedonia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FYR of Macedonia.png"; sourceTree = "<group>"; };
+		E271962315E659BD00547633 /* Holland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Holland.png; sourceTree = "<group>"; };
+		E271962615E659CE00547633 /* The Netherlands.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The Netherlands.png"; sourceTree = "<group>"; };
 		E28116DF15D97BA900FAD7DD /* defaultperson_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultperson_male.png; sourceTree = "<group>"; };
 		E28116E115D9848800FAD7DD /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		E2864E3E15C2A88700E5F46B /* status_bid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status_bid.png; sourceTree = "<group>"; };
@@ -3039,6 +3048,9 @@
 			isa = PBXGroup;
 			children = (
 				E2975C5D15E3045D00A07581 /* Afghanistan.png */,
+				E271962315E659BD00547633 /* Holland.png */,
+				E271962615E659CE00547633 /* The Netherlands.png */,
+				E271962015E659AC00547633 /* FYR of Macedonia.png */,
 				E2975C5E15E3045D00A07581 /* Aland Islands.png */,
 				E2975C5F15E3045D00A07581 /* Albania.png */,
 				E2975C6015E3045D00A07581 /* Algeria.png */,
@@ -3639,6 +3651,9 @@
 				E271961A15E6514D00547633 /* 8star.png in Resources */,
 				E271961C15E6514D00547633 /* 9star.png in Resources */,
 				E271961E15E6514D00547633 /* 10star.png in Resources */,
+				E271962115E659AC00547633 /* FYR of Macedonia.png in Resources */,
+				E271962415E659BD00547633 /* Holland.png in Resources */,
+				E271962715E659CE00547633 /* The Netherlands.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3924,6 +3939,9 @@
 				E271961B15E6514D00547633 /* 8star.png in Resources */,
 				E271961D15E6514D00547633 /* 9star.png in Resources */,
 				E271961F15E6514D00547633 /* 10star.png in Resources */,
+				E271962215E659AC00547633 /* FYR of Macedonia.png in Resources */,
+				E271962515E659BD00547633 /* Holland.png in Resources */,
+				E271962815E659CE00547633 /* The Netherlands.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

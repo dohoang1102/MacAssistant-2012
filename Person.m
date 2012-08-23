@@ -192,6 +192,34 @@ unknownData1, unknownChar1, theNewFirstName, theNewSurname, theNewCommonName, tr
 	return @"---";
 }
 
+- (NSImage *)nationFlag {
+    int numberOfNationalities = 1;
+    
+    NSArray *nationalities = [[NSArray alloc] init];
+    NSString *nationality = [self nationString];
+    
+    // Lookup for the country's image, and draw it if the file exists
+    // But first split the countries if they're multiple
+    // So check for the country divider '/'
+    if ([nationality rangeOfString:@" / "].location != NSNotFound) {
+        // Multiple countries, so split
+        nationalities = [nationality componentsSeparatedByString:@" / "];
+        numberOfNationalities = [nationalities count];
+    }
+    
+    if (numberOfNationalities > 1) {
+        // Get the first nationality only for the flag. This is the primary nationality
+        nationality = [nationalities objectAtIndex:0];
+    }
+    
+    NSString *iconFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", nationality]];
+    
+    [[NSGraphicsContext currentContext] saveGraphicsState];
+    NSImage *icon = [[NSImage alloc] initWithContentsOfFile:iconFileName];
+        
+    return icon;
+}
+
 - (NSString *)nationString {
 	NSMutableString *string = [[NSMutableString alloc] init];
 	if (personData && ([personData nationID] > -1)) {
@@ -320,7 +348,7 @@ unknownData1, unknownChar1, theNewFirstName, theNewSurname, theNewCommonName, tr
         return [[secondContract typeStrings] objectAtIndex:contractTypeIndex];
     }
     else {
-        return @"Free Agent";
+        return @"---";
     }
 }
 

@@ -75,6 +75,7 @@
 @property(assign,readwrite) NonPlayerStats *nonPlayerStats;
 
 - (NSString *)nationString;
+- (NSImage *)nationFlag;
 - (NSString *)nationalTeamString;
 - (NSString *)teamString;
 - (NSString *)jobString;
