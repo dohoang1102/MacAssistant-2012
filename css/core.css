@@ -26,6 +26,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	display: block;
 }
 
+img {
+	display: block;
+}
+
 #navigation {
   background: #6C8D6D url("../images/texture.png") 0 0 repeat;
   box-shadow: 0 -3px 3px 0 rgba(0, 0, 0, 0.15) inset;
@@ -131,13 +135,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 #headline .sliderContainer {
 	width: 850px;
-	
+	height: 368px;
+	top: 56px;
+	margin-left: 4px;
+	position: absolute;
 }
 
 #headline .relwrapper {
 	position: relative;
 	width: 850px;
 	margin: 0 auto;
+	height: 533px;
 }
 
 #headline img.macbookpro {
@@ -145,8 +153,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 #headline img.screenie {
-	top: 56px;
-	margin-left: 4px;
+	margin: 0 auto;
 }
 
 .abstl {
