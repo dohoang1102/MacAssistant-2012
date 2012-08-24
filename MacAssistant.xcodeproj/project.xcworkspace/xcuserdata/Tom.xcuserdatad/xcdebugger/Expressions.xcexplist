@@ -3,7 +3,15 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "+[Loader(CityLoader) readCityFromData:atOffset:]:CityLoader.m">
+         contextName = "+[Loader(ClubLoader) readClubFromData:atOffset:version:]:ClubLoader.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Controller resetdb]:Controller.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "database">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "+[Loader(AwardLoader) readAwardFromData:atOffset:]:AwardLoader.m">
@@ -14,9 +22,6 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "+[Loader(ClubLoader) readClubFromData:atOffset:version:]:ClubLoader.m">
-      </ContextState>
-      <ContextState
          contextName = "-[Database readGameDB:atOffset:]:Database.m">
          <PersistentStrings>
             <PersistentString
@@ -24,6 +29,28 @@
             </PersistentString>
             <PersistentString
                value = "[self awards]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[Loader(CityLoader) readCityFromData:atOffset:]:CityLoader.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Controller initGame:]:Controller.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "database">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__23-[Controller loadGame:]_block_invoke_0:Controller.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataLoaded">
+            </PersistentString>
+            <PersistentString
+               value = "database">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

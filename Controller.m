@@ -98,7 +98,7 @@
 	[filesearch setAllowedFileTypes:[NSArray arrayWithObjects:@"fm",nil]];
 	
 	[filesearch beginSheetModalForWindow:mainWin completionHandler:^(NSInteger result) {
-		NSLog(@"handler closed with %ld", result);
+		NSLog(@"handler closed with %d", result);
 		if (result == NSFileHandlingPanelOKButton) {
             [self setIdle:FALSE];
             [self validateToolbarItem:loadGameToolbarItem];
