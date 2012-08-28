@@ -89,7 +89,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[self setCurrentRecord:0];
 	[self setTotalRecords:1];
 	
-	graphics = [[SXImageXMLParser alloc] init];
+	// graphics = [[SXImageXMLParser alloc] init];
 	firstNames = [[NSMutableArray alloc] init];
 	surnames = [[NSMutableArray alloc] init];
 	commonNames = [[NSMutableArray alloc] init];
@@ -99,7 +99,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 
 - (void)dealloc
 {
-	[graphics release];
+	// [graphics release];
 	[firstNames release];
 	[surnames release];
 	[commonNames release];

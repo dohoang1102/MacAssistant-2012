@@ -33,6 +33,7 @@
 {
 	[super init];
     selectedRows = [[NSMutableDictionary alloc] init];
+    [controller setContent:self];
     
 	return self;
 }
@@ -62,11 +63,6 @@
 	[playersTableView setFont:[NSFont fontWithName:@"Helvetica" size:10.0f]];
     [playersTableView setTarget:self];
     [playersTableView setDoubleAction:@selector(showPlayerPanel:)];
-    [self setupImageTextCells];
-}
-
-- (void)setupImageTextCells {
-    
 }
 
 - (IBAction)searchPlayers:(id)sender {

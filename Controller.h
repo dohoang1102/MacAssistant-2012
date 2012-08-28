@@ -13,6 +13,7 @@
 #import "PreferencesController.h"
 
 @class Database;
+@class ContentController;
 @class FMDate;
 
 @interface Controller : NSWindowController<NSAnimationDelegate> {
@@ -20,6 +21,7 @@
 	BOOL                                idle, dataLoaded, compressed;
 	unsigned short                      gameDBVersion;
 	Database                            *database;
+    ContentController                   *content;
 	FMDate                              *currentDate, *startDate;
 	NSThread                            *gameDBThread;
 	NSThread                            *parseGraphicsThread;
@@ -40,13 +42,12 @@
 - (IBAction) loadGame: (id) sender;
 - (void) resetdb;
 - (void) initGame: (NSString *)path;
-- (void) resetDB;
 - (void) populateOutlineContents:(id)inObject;
 - (void) setBadgeNumber: (NSInteger)total atIndex: (NSString *)index;
 - (void) revealLoaderContainer;
 - (void) hideLoaderContainer;
-- (void)setStatusViewTextFieldText: (NSString *)text;
-- (void)doneLoadingSaveGame;
+- (void) setStatusViewTextFieldText: (NSString *)text;
+- (void) doneLoadingSaveGame;
 
 @property(nonatomic, retain) IBOutlet NSProgressIndicator *loader;
 @property(nonatomic, retain) IBOutlet PreferencesController *prefWindow;
@@ -55,6 +56,7 @@
 @property(copy, readwrite) FMDate *currentDate;
 
 @property(assign, readwrite) Database *database;
+@property(assign, readwrite) ContentController *content;
 @property(assign, readwrite) BOOL idle, dataLoaded;
 @property(assign, readwrite) unsigned short gameDBVersion;
 

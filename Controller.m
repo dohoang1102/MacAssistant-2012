@@ -13,13 +13,16 @@
 #import "FMDateLoader.h"
 #import "FMString.h"
 #import "Database.h"
+#import "ContentController.h"
 #import "SupportFunctions.h"
 #import "SXzlib.h"
 
+// Set 1 to dump data on desktop
+#define DEBUGMODE 0
 
 @implementation Controller
 
-@synthesize gamePath, dataLoaded, gameDBVersion, database, currentDate, idle, loader, prefWindow;
+@synthesize gamePath, dataLoaded, gameDBVersion, database, currentDate, idle, loader, prefWindow, content;
 
 - (id)init
 {
@@ -32,6 +35,10 @@
 	idle = TRUE;
 	
 	return self;
+}
+
+- (void) setContentController: (ContentController *) ctrl {
+    [self setContent:ctrl];
 }
 
 - (void)awakeFromNib {
@@ -98,7 +105,6 @@
 	[filesearch setAllowedFileTypes:[NSArray arrayWithObjects:@"fm",nil]];
 	
 	[filesearch beginSheetModalForWindow:mainWin completionHandler:^(NSInteger result) {
-		NSLog(@"handler closed with %d", result);
 		if (result == NSFileHandlingPanelOKButton) {
             [self setIdle:FALSE];
             [self validateToolbarItem:loadGameToolbarItem];
@@ -121,14 +127,19 @@
 			if ([[NSUserDefaults standardUserDefaults] boolForKey:@"parseGraphics"]==TRUE) { [parseGraphicsThread start]; }
 			
 			[gameDBThread start];
+            [gameDBThread release];
 		}
 	}];
 }
 
 - (void) resetdb {
-	[self setDataLoaded:FALSE];
-	[database release];
-	database = [[Database alloc] init];
+    [[self database] release];
+    [self setDatabase:[[Database alloc] init]];
+    [database setController:self];
+    [self setDataLoaded:FALSE];
+    [[self content] setPlayerSearchResults:[[NSMutableArray alloc] init]];
+    
+    [sidebar unsetBadge:@"1.1"];
 }
 
 - (void) revealLoaderContainer {
@@ -219,6 +230,7 @@
 		
 	unsigned int fileLength, gameLength;
 	
+    [loader setIndeterminate:NO];
 	[database setStatus:NSLocalizedString(@"Reading File Header...", @"editor status")];
 	
 	// Create file data object
@@ -499,8 +511,13 @@
 	
 	if (!compressed) { saveStartOffset += 18; }
 	
+#pragma mark DumpFile
+#if DEBUGMODE == 1
     // Write uncompressed data to desktop (for debug purposes)
-    [fileData writeToFile:@"/Users/Tom/Desktop/data.tad" atomically:YES];
+    NSString *desktop = [@"~/Desktop" stringByExpandingTildeInPath];
+    NSString *datFile = [desktop stringByAppendingPathComponent:@"data.dat"];
+    [fileData writeToFile:datFile atomically:YES];
+#endif
     
 	// read game DB
 	[database readGameDB:fileData atOffset:&fileOffset];
@@ -521,33 +538,6 @@
     
 	[pool drain];
 	/////////////////////////////////
-}
-
-- (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
-{
-	// check it still exists
-	BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:filename];
-	
-	//	10.6 >
-	//	[self setGamePath:[NSURL fileURLWithPath:filename]];
-	//	10.5
-	[self setGamePath:filename];
-	
-	if (dataLoaded) { [self resetDB]; }
-	
-	parseGraphicsThread = [[NSThread alloc] initWithTarget:database selector:@selector(parseGraphics:) object:[[NSUserDefaults standardUserDefaults] stringForKey:@"graphicsLocation"]];
-	gameDBThread = [[NSThread alloc] initWithTarget:self selector:@selector(initGame:) object:filename];
-	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"parseGraphics"]==TRUE) { [parseGraphicsThread start]; }
-	[gameDBThread start];
-	
-	return fileExists;
-}
-
-- (void)resetDB
-{
-	[self setDataLoaded:FALSE];
-	[database release];
-	database = [[Database alloc] init];
 }
 
 - (void)setStatusViewTextFieldText: (NSString *)text {
