@@ -133,7 +133,11 @@
     
     offset += 28;
     
-    offset += 24;
+    offset += 1;
+    [FMString readFromData:data atOffset:&offset];
+    [FMString readFromData:data atOffset:&offset];
+    
+    offset += 15;
     
     NSLog(@"at home page at %d",offset);
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
